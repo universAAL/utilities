@@ -134,7 +134,7 @@ public class SelectMulti extends InputControl{
      * @return The index of the initial value
      */
     public Integer getInitialIndex() {
-        return initialValue.intValue();
+        return initialValue;
     }
 
     /**

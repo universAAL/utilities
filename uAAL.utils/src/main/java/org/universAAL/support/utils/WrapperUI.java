@@ -38,7 +38,7 @@ public class WrapperUI extends UICaller {
     /**
      * The associated IUIListener.
      */
-    IUIListener listener;
+    private IUIListener listener;
 
     /**
      * Constructor.

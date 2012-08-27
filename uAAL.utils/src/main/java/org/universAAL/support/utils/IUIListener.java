@@ -41,5 +41,5 @@ public interface IUIListener {
      *            The received UI Response.
      * @see org.universAAL.middleware.ui.UICaller#handleUIResponse(org.universAAL.middleware.ui.UIResponse)
      */
-    public void handleUIResponse(UIResponse response);
+    void handleUIResponse(UIResponse response);
 }

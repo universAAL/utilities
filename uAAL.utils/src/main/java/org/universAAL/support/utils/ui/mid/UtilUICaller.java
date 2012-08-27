@@ -148,6 +148,7 @@ public abstract class UtilUICaller extends UICaller {
 		bw.newLine();
 		bw.close();
 	    }
+	    br.close();
 	}
     }
 

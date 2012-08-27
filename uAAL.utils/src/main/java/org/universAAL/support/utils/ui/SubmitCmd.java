@@ -100,6 +100,9 @@ public class SubmitCmd extends Control{
 	    case Submit.CONFIRMATION_TYPE_YES_NO:
 		sub.setConfirmationYesNo(confirmMessage);
 		break;
+	    default :
+		sub.setConfirmationOkCancel(confirmMessage);
+		break;
 	    }
 	}
 	if(!l.isEmpty()){

@@ -39,7 +39,7 @@ public class WrapperC extends ContextSubscriber {
     /**
      * The associated ICListener.
      */
-    ICListener listener;
+    private ICListener listener;
 
     /**
      * Constructor that takes the listener to associate.

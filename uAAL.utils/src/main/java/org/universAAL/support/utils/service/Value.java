@@ -51,7 +51,7 @@ public abstract class Value {
 	    else if (c.equals(Duration.class))
 		return DatatypeFactory.newInstance().newDuration(0);
 	    else if (c.equals(Boolean.class))
-		return new Boolean(false);
+		return Boolean.FALSE;
 	    else if (c.equals(Locale.class))
 		return Locale.getDefault();
 	    else if (c.equals(Integer.class) || c.equals(Double.class)

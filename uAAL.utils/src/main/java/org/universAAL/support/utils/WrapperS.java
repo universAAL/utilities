@@ -40,7 +40,7 @@ public class WrapperS extends ServiceCallee {
     /**
      * The associated ISListener.
      */
-    ISListener listener;
+    private ISListener listener;
 
     /**
      * Constructor that takes the listener to associate.
