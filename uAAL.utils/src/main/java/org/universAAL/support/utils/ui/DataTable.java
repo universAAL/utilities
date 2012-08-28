@@ -54,11 +54,26 @@ import org.universAAL.middleware.ui.rdf.Repeat;
  * 
  */
 public class DataTable extends Control implements IContainer{
-    
+
+    /**
+     * Holds the data model.
+     */
     private Group model;
-    protected List l = new ArrayList();
+    /**
+     * Holds the items repeated.
+     */
+    private List l = new ArrayList();
+    /**
+     * Table parameter.
+     */
     private Boolean deletable=Boolean.FALSE;
+    /**
+     * Table parameter.
+     */
     private Boolean editable=Boolean.FALSE;
+    /**
+     * Table parameter.
+     */
     private Boolean expandable=Boolean.FALSE;
 
     /**
@@ -154,17 +169,23 @@ public class DataTable extends Control implements IContainer{
     }
     
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleControl#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
-	if(ref==null){
-	    setReference(MY_NAMESPACE+StringUtils.createUniqueID());
+	if (ref == null) {
+	    setReference(MY_NAMESPACE + StringUtils.createUniqueID());
 	}
-	Repeat r=new Repeat(group, label, ref, null, l.isEmpty()?null:l);
-	if(!deletable.booleanValue())r.banEntryDeletion();
-	if(!editable.booleanValue())r.banEntryEdit();
-	if(!expandable.booleanValue())r.banEntryAddition();
-	model=new Group(r, null, null, null, null);
+	Repeat r = new Repeat(group, label, ref, null, l.isEmpty() ? null : l);
+	if (!deletable.booleanValue()) {
+	    r.banEntryDeletion();
+	}
+	if (!editable.booleanValue()) {
+	    r.banEntryEdit();
+	}
+	if (!expandable.booleanValue()) {
+	    r.banEntryAddition();
+	}
+	model = new Group(r, null, null, null, null);
 	return ref.getThePath();
     }
 
@@ -209,43 +230,43 @@ public class DataTable extends Control implements IContainer{
 	return ctrl.create(model);
     }
     
-    /**
-     * @return if entries can  be removed by the user
+    /** Check if entries can  be removed by the user.
+     * @return If entries can  be removed by the user.
      */
     public Boolean isDeletable() {
         return deletable;
     }
 
-    /** Set if entries can  be removed by the user
-     * @param deletable
+    /** Set if entries can  be removed by the user.
+     * @param deletable If entries can  be removed by the user.
      */
     public void setDeletable(Boolean deletable) {
         this.deletable = deletable;
     }
 
-    /**
-     * @return if entries can be edited by the user
+    /** Check if entries can be edited by the user.
+     * @return If entries can be edited by the user.
      */
     public Boolean isEditable() {
         return editable;
     }
 
-    /** Set if entries can be edited by the user
-     * @param editable
+    /** Set if entries can be edited by the user.
+     * @param editable If entries can be edited by the user.
      */
     public void setEditable(Boolean editable) {
         this.editable = editable;
     }
 
-    /**
-     * @return if entries can be added by the user
+    /** Check if entries can be added by the user.
+     * @return If entries can be added by the user.
      */
     public Boolean isExpandable() {
         return expandable;
     }
 
-    /** Set if entries can be added by the user
-     * @param expandable
+    /** Set if entries can be added by the user.
+     * @param expandable If entries can be added by the user.
      */
     public void setExpandable(Boolean expandable) {
         this.expandable = expandable;

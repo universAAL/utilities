@@ -29,7 +29,13 @@ import org.universAAL.middleware.service.CallStatus;
 import org.universAAL.middleware.service.ServiceRequest;
 import org.universAAL.middleware.service.ServiceResponse;
 import org.universAAL.middleware.service.owl.Service;
-import org.universAAL.support.utils.service.*;
+import org.universAAL.support.utils.service.Add;
+import org.universAAL.support.utils.service.Change;
+import org.universAAL.support.utils.service.Output;
+import org.universAAL.support.utils.service.Path;
+import org.universAAL.support.utils.service.Remove;
+import org.universAAL.support.utils.service.Typematch;
+import org.universAAL.support.utils.service.Variable;
 
 /**
  * A helper class that extends ServiceRequest and adds utility methods to build
@@ -56,6 +62,9 @@ import org.universAAL.support.utils.service.*;
  */
 public class Request extends ServiceRequest {
 
+    /**
+     * Default namespace.
+     */
     public static final String MY_NAMESPACE = "http://org.universAAL.ontology/SimpleUtils.owl#";
 
     /**
@@ -312,7 +321,7 @@ public class Request extends ServiceRequest {
      * 
      * @param sr
      *            The ServiceResponse returned by the .call method
-     * @param output
+     * @param outputURI
      *            The URI (the ID) you used to refer to the output when building
      *            the request
      * @return An array of Objects that contain all the returned values stored
@@ -327,10 +336,12 @@ public class Request extends ServiceRequest {
 	    List outs = sr.getOutput(outputURI, true);
 	    if (outs == null) {
 		System.out
-			.println("···SIMPLE UTILS TIP: No outputs in the response. Review your requests.");
+			.println("···SIMPLE UTILS TIP: No outputs in the " +
+					"response. Review your requests.");
 	    } else if (outs.size() == 0) {
 		System.out
-			.println("···SIMPLE UTILS TIP: No outputs with this URI in the response. Review your requests.");
+			.println("···SIMPLE UTILS TIP: No outputs with this URI" +
+					" in the response. Review your requests.");
 	    } else {
 		Object[] values = (Object[]) outs.toArray(new Object[outs
 			.size()]);
@@ -345,8 +356,10 @@ public class Request extends ServiceRequest {
 
     /**
      * I have to put this because of all service refactoring stuff.
+     * 
+     * @return Nothing, null.
      */
     protected Hashtable getInput() {
 	return null;
-    } 
+    }
 }

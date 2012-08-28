@@ -38,13 +38,19 @@ import org.universAAL.middleware.ui.rdf.Range;
  * <pre>
  * Label min[---|--------]max 
  *         initialValue
- * <pre>
+ * </pre>
  * @author alfiva
  * 
  */
 public class SelectRange extends InputControl{
 
+    /**
+     * Min value.
+     */
     private Integer min=Integer.valueOf(0);
+    /**
+     * Initial value.
+     */
     private Integer initialValue=Integer.valueOf(0);
     private Integer max=Integer.valueOf(1);
     private Integer step=null;
@@ -116,7 +122,7 @@ public class SelectRange extends InputControl{
     }
 
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleControl#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	if(ref==null){

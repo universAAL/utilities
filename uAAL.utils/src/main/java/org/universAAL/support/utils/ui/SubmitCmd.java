@@ -39,14 +39,23 @@ import org.universAAL.middleware.ui.rdf.Submit;
  * <p>
  * <pre>
  * [Label]
- * <pre>
+ * </pre>
  * @author alfiva
  * 
  */
 public class SubmitCmd extends Control{
     
+    /**
+     * Confirmation message for submit.
+     */
     protected String confirmMessage=null;
+    /**
+     * Type of confirmation message.
+     */
     protected int confirmType=Submit.CONFIRMATION_TYPE_OK_CANCEL;
+    /**
+     * List of required mandatory inputs.
+     */
     protected List l = new ArrayList();
     
     /**
@@ -85,7 +94,7 @@ public class SubmitCmd extends Control{
     }
 
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleControl#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	if(ref==null){
@@ -131,7 +140,7 @@ public class SubmitCmd extends Control{
      * selected by the user. Confirmation is for avoiding accidental selection
      * of important Submits.
      * 
-     * @return The confirmation message
+     * @return The confirmation message.
      */
     public String getConfirmMessage() {
         return confirmMessage;
@@ -143,7 +152,7 @@ public class SubmitCmd extends Control{
      * of important Submits.
      * 
      * @param confirmMessage
-     *            The confirmation message
+     *            The confirmation message.
      */
     public void setConfirmMessage(String confirmMessage) {
         this.confirmMessage = confirmMessage;
@@ -155,7 +164,7 @@ public class SubmitCmd extends Control{
      * of important Submits.
      * 
      * @param confirmMessage
-     *            The confirmation message
+     *            The confirmation message.
      * @param confirmType
      *            The type of confirmation. One of
      *            org.universAAL.middleware.ui.rdf
@@ -169,7 +178,7 @@ public class SubmitCmd extends Control{
     }
 
     /**
-     * Get the type of confirmation message
+     * Get the type of confirmation message.
      * 
      * @return The type of confirmation. One of org.universAAL.middleware.ui.rdf
      *         .Submit.CONFIRMATION_TYPE_OK_CANCEL (0) or
@@ -181,7 +190,7 @@ public class SubmitCmd extends Control{
     }
 
     /**
-     * Set the type of confirmation message
+     * Set the type of confirmation message.
      * 
      * @param confirmType
      *            The type of confirmation. One of

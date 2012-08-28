@@ -51,7 +51,7 @@ public abstract class UtilActuatorCallee extends ServiceCallee {
     /**
      * Default error response.
      */
-    ServiceResponse errorResponse = new ServiceResponse(
+    private ServiceResponse errorResponse = new ServiceResponse(
 	    CallStatus.serviceSpecificFailure);
 
     /**
@@ -81,13 +81,13 @@ public abstract class UtilActuatorCallee extends ServiceCallee {
      */
     @Override
     public ServiceResponse handleCall(ServiceCall call) {
-	if (call == null)
+	if (call == null){
 	    return null;
-
+	}
 	String operation = call.getProcessURI();
-	if (operation == null)
+	if (operation == null){
 	    return null;
-
+	}
 	if (operation.startsWith(calleeNamespace
 		+ UtilActuator.SERVICE_GET_ON_OFF)) {
 	    boolean result = executeGet();

@@ -51,7 +51,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
     /**
      * Default error response when an input parameter does not match.
      */
-    private static final ServiceResponse errorInput = new ServiceResponse(
+    private static final ServiceResponse ERROR_INPUT = new ServiceResponse(
 	    CallStatus.serviceSpecificFailure);
 
     /**
@@ -88,18 +88,18 @@ public abstract class UtilEditorCallee extends ServiceCallee {
      */
     @Override
     public ServiceResponse handleCall(ServiceCall call) {
-	if (call == null)
+	if (call == null){
 	    return null;
-
+	}
 	String operation = call.getProcessURI();
-	if (operation == null)
+	if (operation == null){
 	    return null;
-
+	}
 	if (operation.startsWith(calleeNamespace + UtilEditor.SERVICE_GET)) {
 	    Object input = call.getInputValue(calleeNamespace
 		    + UtilEditor.IN_GET);
 	    if (input == null) {
-		return errorInput;
+		return ERROR_INPUT;
 	    }
 	    Resource result = executeGet((Resource) input);
 	    ServiceResponse response = new ServiceResponse(CallStatus.succeeded);
@@ -112,7 +112,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
 	    Object input = call.getInputValue(calleeNamespace
 		    + UtilEditor.IN_ADD);
 	    if (input == null) {
-		return errorInput;
+		return ERROR_INPUT;
 	    }
 	    ServiceResponse response = new ServiceResponse(
 		    CallStatus.serviceSpecificFailure);
@@ -126,7 +126,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
 	    Object input = call.getInputValue(calleeNamespace
 		    + UtilEditor.IN_CHANGE);
 	    if (input == null) {
-		return errorInput;
+		return ERROR_INPUT;
 	    }
 	    ServiceResponse response = new ServiceResponse(
 		    CallStatus.serviceSpecificFailure);
@@ -140,7 +140,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
 	    Object input = call.getInputValue(calleeNamespace
 		    + UtilEditor.IN_REMOVE);
 	    if (input == null) {
-		return errorInput;
+		return ERROR_INPUT;
 	    }
 	    ServiceResponse response = new ServiceResponse(
 		    CallStatus.serviceSpecificFailure);

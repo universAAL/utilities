@@ -45,14 +45,20 @@ import org.universAAL.middleware.ui.rdf.Select;
  *       |[ val3 ]|
  *       |  val4  |
  *       |  val5  |
- * <pre>
+ * </pre>
  * @author alfiva
  * 
  */
 public class SelectMulti extends InputControl{
 
+    /**
+     * Initial selected index.
+     */
     protected Integer initialValue;
-    protected List l = new ArrayList();
+    /**
+     * List of options.
+     */
+    private List l = new ArrayList();
     
     /**
      * Generic empty constructor. The Input will be generated with default
@@ -116,7 +122,7 @@ public class SelectMulti extends InputControl{
     }
 
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleControl#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	if(ref==null){

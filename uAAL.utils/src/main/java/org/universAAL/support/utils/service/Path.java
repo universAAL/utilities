@@ -25,8 +25,8 @@ package org.universAAL.support.utils.service;
  * Helper class to build property paths in a service request. Property Paths are
  * the routes from the root service concept to the arguments of the requests,
  * through the ontology concepts. This class adds an additional help level to
- * using Request and Profile. Following the example in
- * Profile, thanks to Path it could be:
+ * using Request and Profile. Following the example in Profile, thanks to Path
+ * it could be:
  * <p/>
  * Example: Calling a Lighting service that controls LightSources of type
  * ElectricLight, find the light with URI "desiredURI" and turn it off (set to
@@ -43,7 +43,9 @@ package org.universAAL.support.utils.service;
  * 
  */
 public class Path {
-    
+    /**
+     * Holds the value of the path.
+     */
     public String[] path;
 
     /**
@@ -57,7 +59,7 @@ public class Path {
     public Path(String path) {
 	this.path = new String[] { path };
     }
-    
+
     /**
      * Additional constructor if you already have a property path but want to
      * turn it into a Path object. You can add more steps to the path
@@ -69,24 +71,30 @@ public class Path {
     public Path(String[] path) {
 	this.path = path;
     }
-    
-    /** Deprecated. Use at() instead. You save 2 letters.
-     * @param to  The first property of the path, coming from the service root
+
+    /**
+     * Deprecated. Use at() instead. You save 2 letters.
+     * 
+     * @param to
+     *            The first property of the path, coming from the service root
      * @return New Path instance
      */
     @Deprecated
-    public static Path start(String to){
+    public static Path start(String to) {
 	return new Path(to);
     }
-    
-    /** Return a new instance of Path starting its branch path at parameter to.
-     * @param to  The first property of the path, coming from the service root
+
+    /**
+     * Return a new instance of Path starting its branch path at parameter to.
+     * 
+     * @param to
+     *            The first property of the path, coming from the service root
      * @return New Path instance
      */
-    public static Path at(String to){
+    public static Path at(String to) {
 	return new Path(to);
     }
-    
+
     /**
      * Puts a new step (a new property) in the branch path. Allows successive
      * calls to add further properties.
@@ -96,16 +104,16 @@ public class Path {
      *            .start
      * @return Itself
      */
-    public Path to(String to){
-	String[] obj=new String[this.path.length+1];
-	for(int i=0;i<this.path.length;i++){
-	    obj[i]=this.path[i];
+    public Path to(String to) {
+	String[] obj = new String[this.path.length + 1];
+	for (int i = 0; i < this.path.length; i++) {
+	    obj[i] = this.path[i];
 	}
-	obj[obj.length-1]=to;
-	this.path=obj;
+	obj[obj.length - 1] = to;
+	this.path = obj;
 	return this;
     }
-    
+
     /**
      * Get a Path object with the given property path.
      * 
@@ -113,10 +121,10 @@ public class Path {
      *            The property path
      * @return The Path object representing it
      */
-    public static Path parse(String[] path){
+    public static Path parse(String[] path) {
 	return new Path(path);
     }
-    
+
     /**
      * Get a Path object with the given property path.
      * 
@@ -124,7 +132,7 @@ public class Path {
      *            The single step property path
      * @return The Path object representing it
      */
-    public static Path parse(String path){
+    public static Path parse(String path) {
 	return new Path(path);
     }
 

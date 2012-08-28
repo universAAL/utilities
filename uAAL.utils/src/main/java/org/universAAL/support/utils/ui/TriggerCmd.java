@@ -40,7 +40,7 @@ import org.universAAL.middleware.ui.rdf.Submit;
  * <p>
  * <pre>
  * [Label]
- * <pre>
+ * </pre>
  * @author alfiva
  * 
  */
@@ -81,7 +81,7 @@ public class TriggerCmd extends SubmitCmd{
     }
 
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleSubmit#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.SubmitCmd#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	if(ref==null){

@@ -31,7 +31,10 @@ import org.universAAL.middleware.service.owls.process.ProcessOutput;
 import org.universAAL.middleware.service.owls.profile.ServiceProfile;
 import org.universAAL.ontology.phThing.DeviceService;
 import org.universAAL.ontology.phThing.OnOffSensor;
-import org.universAAL.support.utils.service.*;
+import org.universAAL.support.utils.service.Arg;
+import org.universAAL.support.utils.service.Output;
+import org.universAAL.support.utils.service.Path;
+import org.universAAL.support.utils.service.Variable;
 import org.universAAL.support.utils.service.low.Request;
 
 /**
@@ -45,9 +48,19 @@ import org.universAAL.support.utils.service.low.Request;
  * 
  */
 public class UtilSensor {
+    /**
+     * Service suffix.
+     */
     public static final String SERVICE_GET_ON_OFF = "servSensorGet";
+    /**
+     * Argument suffix.
+     */
     public static final String OUT_GET_ON_OFF = "outputSensorGet";
+    /**
+     * Argument suffix.
+     */
     public static final String IN_DEVICE = "inputSensorAll";
+    
 
     /**
      * Gives you the typical service profile of an on/off sensor service: Get
@@ -233,9 +246,9 @@ public class UtilSensor {
      * @return The ServiceRequest that will call the matching GET STATUS service
      *         of an sensor
      */
-    public static ServiceRequest requestGetOnOff(OnOffSensor actuator,
+    public static ServiceRequest requestGetOnOff(OnOffSensor sensor,
 	    Output argOut) {
-	return requestGetOnOff(DeviceService.MY_URI, actuator, argOut);
+	return requestGetOnOff(DeviceService.MY_URI, sensor, argOut);
     }
     
     /**
@@ -252,9 +265,9 @@ public class UtilSensor {
      * @return The ServiceRequest that will call the matching GET STATUS service
      *         of an sensor
      */
-    public static ServiceRequest requestGetOnOff(OnOffSensor actuator,
+    public static ServiceRequest requestGetOnOff(OnOffSensor sensor,
 	    String out) {
-	return requestGetOnOff(DeviceService.MY_URI, actuator, out);
+	return requestGetOnOff(DeviceService.MY_URI, sensor, out);
     }
 
 }

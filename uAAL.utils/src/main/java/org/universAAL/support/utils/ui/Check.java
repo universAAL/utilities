@@ -37,12 +37,15 @@ import org.universAAL.middleware.ui.rdf.Label;
  * <p>
  * <pre>
  * [X] Label
- * <pre>
+ * </pre>
  * @author alfiva
  * 
  */
 public class Check extends InputControl{
 
+    /**
+     * Initial value.
+     */
     private Boolean initialValue=Boolean.FALSE;
     
     /**
@@ -107,7 +110,7 @@ public class Check extends InputControl{
     }
 
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleControl#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	if(ref==null){
@@ -120,19 +123,19 @@ public class Check extends InputControl{
     }
     
     /**
-     * Get the initial value of the input by default
+     * Get the initial value of the input by default.
      * 
-     * @return The initial value
+     * @return The initial value.
      */
     public Boolean getInitialValue() {
         return initialValue;
     }
 
     /**
-     * Set the initial value of the input by default
+     * Set the initial value of the input by default.
      * 
      * @param initialValue
-     *            The initial value
+     *            The initial value.
      */
     public void setInitialValue(Boolean initialValue) {
         this.initialValue = initialValue;

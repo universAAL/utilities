@@ -38,13 +38,19 @@ import org.universAAL.middleware.ui.rdf.MediaObject;
  * Label |          |
  *       |    :)    |
  *       |__________|
- * <pre>
+ * </pre>
  * @author alfiva
  * 
  */
 public class Media extends Control{
 
+    /**
+     * Type of media.
+     */
     private String type="IMG";
+    /**
+     * URL to media in resource server.
+     */
     private String url;
     
     /**
@@ -98,7 +104,7 @@ public class Media extends Control{
     }
 
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleControl#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	new MediaObject(group, label, type, url);

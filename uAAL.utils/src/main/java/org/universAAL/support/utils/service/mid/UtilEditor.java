@@ -28,7 +28,12 @@ import org.universAAL.middleware.service.owl.Service;
 import org.universAAL.middleware.service.owls.process.ProcessInput;
 import org.universAAL.middleware.service.owls.process.ProcessOutput;
 import org.universAAL.middleware.service.owls.profile.ServiceProfile;
-import org.universAAL.support.utils.service.*;
+import org.universAAL.support.utils.service.Add;
+import org.universAAL.support.utils.service.Arg;
+import org.universAAL.support.utils.service.Change;
+import org.universAAL.support.utils.service.Output;
+import org.universAAL.support.utils.service.Remove;
+import org.universAAL.support.utils.service.Variable;
 import org.universAAL.support.utils.service.low.Profile;
 import org.universAAL.support.utils.service.low.Request;
 
@@ -43,16 +48,45 @@ import org.universAAL.support.utils.service.low.Request;
  * 
  */
 public class UtilEditor {
-
+    /**
+     * Service suffix.
+     */
     public static final String SERVICE_GET = "servEditorGet";
+    /**
+     * Service suffix.
+     */
     public static final String SERVICE_ADD = "servEditorAdd";
+    /**
+     * Service suffix.
+     */
     public static final String SERVICE_CHANGE = "servEditorChange";
+    /**
+     * Service suffix.
+     */
     public static final String SERVICE_REMOVE = "servEditorRemove";
+    /**
+     * Argument suffix.
+     */
     public static final String FAKE_URI = "placeholderURI";
+    /**
+     * Argument suffix.
+     */
     public static final String IN_GET = "inputEditorGet";
+    /**
+     * Argument suffix.
+     */
     public static final String OUT_GET = "outputEditorGet";
+    /**
+     * Argument suffix.
+     */
     public static final String IN_ADD = "inputEditorAdd";
+    /**
+     * Argument suffix.
+     */
     public static final String IN_CHANGE = "inputEditorChange";
+    /**
+     * Argument suffix.
+     */
     public static final String IN_REMOVE = "inputEditorRemove";
 
     /**
@@ -318,7 +352,7 @@ public class UtilEditor {
      * @param path
      *            The property path from the root of the Service ontology
      *            concept to the exact concept you want to manage
-     * @param remove
+     * @param argRemove
      *            Object representing the input you want to pass as
      *            parameter. The editor REMOVE service will remove all
      *            occurences of the Resource of the same URI of this argument
@@ -333,6 +367,22 @@ public class UtilEditor {
 	return req;
     }
     
+    /**
+     * Gives you the typical REMOVE service request for editor services. If the
+     * editor service also used UtilEditor the match is guaranteed.
+     * 
+     * @param ontologyURI
+     *            The MY_URI of the class of Service ontology you want to call
+     * @param path
+     *            The property path from the root of the Service ontology
+     *            concept to the exact concept you want to manage
+     * @param remove
+     *            Object representing the input you want to pass as
+     *            parameter. The editor REMOVE service will remove all
+     *            occurences of the Resource of the same URI of this object
+     * @return The ServiceRequest that will call the matching CHANGE service of
+     *         an editor
+     */
     public static ServiceRequest requestRemove(String ontologyURI,
 	    String[] path, Object remove) {
 	Request req = new Request((Service) OntologyManagement

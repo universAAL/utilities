@@ -37,6 +37,9 @@ import org.universAAL.middleware.rdf.TypeMapper;
  */
 public class Add extends Value {
 
+    /**
+     * Holds the value of the argument.
+     */
     private Object value;
 
     /**

@@ -36,7 +36,7 @@ import org.universAAL.middleware.ui.rdf.TextArea;
  * Label | initialValue     | 
  *       |                  |
  *       |__________________|
- * <pre>
+ * </pre>
  * @author alfiva
  * 
  */
@@ -101,7 +101,7 @@ public class Area extends Text{
     }
 
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleText#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.Text#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	if(ref==null){

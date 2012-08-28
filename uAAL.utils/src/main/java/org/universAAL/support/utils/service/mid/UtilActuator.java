@@ -31,7 +31,10 @@ import org.universAAL.middleware.service.owls.process.ProcessOutput;
 import org.universAAL.middleware.service.owls.profile.ServiceProfile;
 import org.universAAL.ontology.phThing.DeviceService;
 import org.universAAL.ontology.phThing.OnOffActuator;
-import org.universAAL.support.utils.service.*;
+import org.universAAL.support.utils.service.Arg;
+import org.universAAL.support.utils.service.Output;
+import org.universAAL.support.utils.service.Path;
+import org.universAAL.support.utils.service.Variable;
 import org.universAAL.support.utils.service.low.Request;
 
 /**
@@ -47,10 +50,25 @@ import org.universAAL.support.utils.service.low.Request;
  */
 public class UtilActuator {
 
+    /**
+     * Service suffix.
+     */
     public static final String SERVICE_GET_ON_OFF = "servActuatorGet";
+    /**
+     * Argument suffix.
+     */
     public static final String OUT_GET_ON_OFF = "outputActuatorGet";
+    /**
+     * Service suffix.
+     */
     public static final String SERVICE_TURN_OFF = "servActuatorOff";
+    /**
+     * Service suffix.
+     */
     public static final String SERVICE_TURN_ON = "servActuatorOn";
+    /**
+     * Argument suffix.
+     */
     public static final String IN_DEVICE = "inputActuatorAll";
 
     /**

@@ -46,6 +46,6 @@ public interface IContainer {
      * @return The Array of Strings representing the reference Property Path for
      *         Input Controls, or with a single String for Submits IDs.
      */
-    public String[] add(Control ctrl);
+    String[] add(Control ctrl);
 
 }

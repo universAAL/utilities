@@ -39,7 +39,7 @@ import org.universAAL.middleware.ui.rdf.Select1;
  *       | val3         |
  *       | val4         |
  *       |______________|
- * <pre>      
+ * </pre>      
  * @author alfiva
  * 
  */
@@ -104,7 +104,7 @@ public class SelectOne extends SelectMulti{
     }
     
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleSelectMulti#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.SelectMulti#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	if(ref==null){

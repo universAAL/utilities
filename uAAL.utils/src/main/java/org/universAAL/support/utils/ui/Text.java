@@ -35,12 +35,15 @@ import org.universAAL.middleware.ui.rdf.Label;
  * <p>
  * <pre>
  * Label [_initialValue_____]
- * <pre>
+ * </pre>
  * @author alfiva
  * 
  */
 public class Text extends InputControl{
 
+    /**
+     * Initial value.
+     */
     protected String initialValue;
     
     /**
@@ -105,7 +108,7 @@ public class Text extends InputControl{
     }
 
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleControl#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	if(ref==null){
@@ -116,19 +119,19 @@ public class Text extends InputControl{
     }
     
     /**
-     * Get the initial value of the input by default
+     * Get the initial value of the input by default.
      * 
-     * @return The initial value
+     * @return The initial value.
      */
     public String getInitialValue() {
         return initialValue;
     }
 
     /**
-     * Set the initial value of the input by default
+     * Set the initial value of the input by default.
      * 
      * @param initialValue
-     *            The initial value
+     *            The initial value.
      */
     public void setInitialValue(String initialValue) {
         this.initialValue = initialValue;

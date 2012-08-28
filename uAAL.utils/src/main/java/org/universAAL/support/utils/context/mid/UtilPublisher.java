@@ -138,7 +138,7 @@ public class UtilPublisher extends DefaultContextPublisher {
      * @param type
      *            The type of Context Provider, one of Gauge, Controller or
      *            Reasoner.
-     * @param subj
+     * @param sub
      *            The exact instance that the provided events subject must
      *            equal. Null for any.
      * @param predicate

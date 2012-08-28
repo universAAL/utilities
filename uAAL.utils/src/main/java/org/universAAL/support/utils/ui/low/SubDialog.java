@@ -28,7 +28,9 @@ import org.universAAL.middleware.ui.UIRequest;
 import org.universAAL.middleware.ui.owl.PrivacyLevel;
 import org.universAAL.middleware.ui.rdf.Form;
 import org.universAAL.ontology.profile.User;
-import org.universAAL.support.utils.ui.*;
+import org.universAAL.support.utils.ui.Control;
+import org.universAAL.support.utils.ui.IContainer;
+import org.universAAL.support.utils.ui.SubmitCmd;
 
 /**
  * A helper class that lets you build UIRequests easily so you can send them
@@ -124,8 +126,8 @@ public class SubDialog extends UIRequest implements IContainer{
      *            The user to which the request is addressed.
      * @param title
      *            The title of the Dialog.
-     * @param root
-     *            The Resource to use as root for the contained Form Controls.
+     * @param parentDialogURI
+     *            The URI of the Dialog that triggered this SubDialog.
      * @param priority
      *            Set a custom priority for the SubDialog.
      * @param privacy
@@ -140,7 +142,7 @@ public class SubDialog extends UIRequest implements IContainer{
     }
     
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.IContainer#add(org.universAAL.samples.ui.utils.SimpleControl)
+     * @see org.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.utils.SimpleControl)
      */
     public String[] add(Control ctrl){
 	return ctrl.create(getDialogForm().getIOControls());

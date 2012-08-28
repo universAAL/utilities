@@ -41,15 +41,24 @@ import org.universAAL.middleware.rdf.Resource;
  * 
  */
 public class Pattern extends ContextEventPattern{
-    private static final String MSG_STR = "···SIMPLE UTILS TIP: You must pass a valid "
-	    + "\"MY URI\" of a ManagedIndivdual to this "
-	    + "UtilSubscriber constructor, or null.";
-    private static final String MSG_PRED = "···SIMPLE UTILS TIP: You must pass a valid "
-	    + "\"URI\" of a Property to this "
-	    + "UtilSubscriber constructor, or null.";
-    private static final String MSG_INST = "···SIMPLE UTILS TIP: You must pass a valid "
-	    + "ManagedIndivdual or DataType to this "
-	    + "UtilSubscriber constructor, or null.";
+    /**
+     * Helper error message.
+     */
+    private static final String MSG_STR = "···SIMPLE UTILS TIP: You must " +
+    		"pass a valid \"MY URI\" of a ManagedIndivdual to this " +
+    		"UtilSubscriber constructor, or null.";
+    /**
+     * Helper error message.
+     */
+    private static final String MSG_PRED = "···SIMPLE UTILS TIP: You must " +
+    		"pass a valid \"URI\" of a Property to this " +
+    		"UtilSubscriber constructor, or null.";
+    /**
+     * Helper error message.
+     */
+    private static final String MSG_INST = "···SIMPLE UTILS TIP: You must " +
+    		"pass a valid ManagedIndivdual or DataType to this " +
+    		"UtilSubscriber constructor, or null.";
 
     /**
      * Simple constructor to create a Context Event Pattern with restrictions on

@@ -43,5 +43,5 @@ public interface ISListener {
      * @return The Service Response to return to the caller.
      * @see org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL.middleware.service.ServiceCall)
      */
-    public ServiceResponse handleCall(ServiceCall call);
+    ServiceResponse handleCall(ServiceCall call);
 }

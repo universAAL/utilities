@@ -27,7 +27,13 @@ import org.universAAL.middleware.service.owl.Service;
 import org.universAAL.middleware.service.owls.process.ProcessInput;
 import org.universAAL.middleware.service.owls.process.ProcessOutput;
 import org.universAAL.middleware.service.owls.profile.ServiceProfile;
-import org.universAAL.support.utils.service.*;
+import org.universAAL.support.utils.service.Add;
+import org.universAAL.support.utils.service.Change;
+import org.universAAL.support.utils.service.Output;
+import org.universAAL.support.utils.service.Path;
+import org.universAAL.support.utils.service.Remove;
+import org.universAAL.support.utils.service.Typematch;
+import org.universAAL.support.utils.service.Variable;
 
 /**
  * A helper class that lets you build ServiceProfile easily so you can use them
@@ -63,7 +69,13 @@ import org.universAAL.support.utils.service.*;
  */
 public class Profile {
 
+    /**
+     * Default namespace.
+     */
     public static final String MY_NAMESPACE = "http://org.universAAL.ontology/SimpleUtils.owl#";
+    /**
+     * Allocate a service.
+     */
     public Service service;
 
     /**
@@ -149,8 +161,9 @@ public class Profile {
      */
     public void put(Path branch, Typematch leaf, int minCard, int maxCard) {
 	this.service.addInstanceLevelRestriction(MergedRestriction
-		.getAllValuesRestrictionWithCardinality(branch.path[branch.path.length - 1],
-			leaf.getURI(), maxCard, maxCard), branch.path);
+		.getAllValuesRestrictionWithCardinality(
+			branch.path[branch.path.length - 1], leaf.getURI(),
+			maxCard, maxCard), branch.path);
     }
 
     /**
@@ -175,20 +188,20 @@ public class Profile {
      *            built with a specific instance value then it means that this
      *            profile will answer only to calls with that value in this
      *            variable input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(String[] branch, Variable leaf, String URI_ID) {
+    public String put(String[] branch, Variable leaf, String uriID) {
 	// like this.service.addFilteringInput(URI_ID,
 	// ManagedIndividual.getTypeURI(leaf.getObject()), 0, 0,branch);
 	// only that it큦 not visible, so we have to make it "manually"
-	if (URI_ID == null) {
-	    URI_ID = MY_NAMESPACE + StringUtils.createUniqueID();
+	if (uriID == null) {
+	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
-	ProcessInput input = new ProcessInput(URI_ID);
+	ProcessInput input = new ProcessInput(uriID);
 	input.setParameterType(leaf.getURI());
 	MergedRestriction restr;
 	if(leaf.byURI()){
@@ -200,7 +213,7 @@ public class Profile {
 	}
 	this.service.addInstanceLevelRestriction(restr, branch);
 	this.service.getProfile().addInput(input);
-	return URI_ID;
+	return uriID;
     }
 
     /**
@@ -225,14 +238,14 @@ public class Profile {
      *            built with a specific instance value then it means that this
      *            profile will answer only to calls with that value in this
      *            variable input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(Path branch, Variable leaf, String URI_ID) {
-	return put(branch.path, leaf, URI_ID);
+    public String put(Path branch, Variable leaf, String uriID) {
+	return put(branch.path, leaf, uriID);
     }
     
     /**
@@ -258,7 +271,7 @@ public class Profile {
      *            built with a specific instance value then it means that this
      *            profile will answer only to calls with that value in this
      *            variable input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @param minCard
@@ -268,24 +281,26 @@ public class Profile {
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(Path branch, Variable leaf, String URI_ID, int minCard, int maxCard) {
-	if (URI_ID == null) {
-	    URI_ID = MY_NAMESPACE + StringUtils.createUniqueID();
+    public String put(Path branch, Variable leaf, String uriID, int minCard,
+	    int maxCard) {
+	if (uriID == null) {
+	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
-	ProcessInput input = new ProcessInput(URI_ID);
+	ProcessInput input = new ProcessInput(uriID);
 	input.setParameterType(leaf.getURI());
 	input.setCardinality(maxCard, minCard);
 	MergedRestriction restr;
-	if(leaf.byURI()){
+	if (leaf.byURI()) {
 	    restr = MergedRestriction.getFixedValueRestriction(
-		    branch.path[branch.path.length - 1], input.asVariableReference());
-	}else{
+		    branch.path[branch.path.length - 1],
+		    input.asVariableReference());
+	} else {
 	    restr = MergedRestriction.getFixedValueRestriction(
-			branch.path[branch.path.length - 1], leaf.getObject());
-	}	
+		    branch.path[branch.path.length - 1], leaf.getObject());
+	}
 	this.service.addInstanceLevelRestriction(restr, branch.path);
 	this.service.getProfile().addInput(input);
-	return URI_ID;
+	return uriID;
     }
 
     /**
@@ -306,29 +321,29 @@ public class Profile {
      *            returning. Take into account that this differs from how it is
      *            used in Request. Here you must create it with a Type URI
      *            (a ManagedIndividual.MY_URI).
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(String[] branch, Output leaf, String URI_ID) {
+    public String put(String[] branch, Output leaf, String uriID) {
 	// like this.service.addOutput(URI_ID, leaf.getURI(), 0, 0, branch);
 	// only that it큦 not visible, so we have to make it "manually"
-	if (URI_ID == null) {
-	    URI_ID = MY_NAMESPACE + StringUtils.createUniqueID();
+	if (uriID == null) {
+	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
-	ProcessOutput output = new ProcessOutput(URI_ID);
+	ProcessOutput output = new ProcessOutput(uriID);
 	output.setParameterType(leaf.getURI());
 	this.service.getProfile().addOutput(output);
 	this.service.getProfile().addSimpleOutputBinding(output, branch);
-	return URI_ID;
+	return uriID;
     }
 
     /**
      * Use this helper method to declare an argument over a Profile,
      * specifying that <b>you will return an output</b> in the given branch of
-     * properties, and will be of the <b>type<b> specified with the Output
+     * properties, and will be of the <b>type</b> specified with the Output
      * argument.
      * <p/>
      * Example: <code>
@@ -343,20 +358,20 @@ public class Profile {
      *            returning. Take into account that this differs from how it is
      *            used in Request. Here you must create it with a Type URI
      *            (a ManagedIndividual.MY_URI).
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(Path branch, Output leaf, String URI_ID) {
-	return put(branch.path, leaf, URI_ID);
+    public String put(Path branch, Output leaf, String uriID) {
+	return put(branch.path, leaf, uriID);
     }
     
     /**
      * Use this helper method to declare an argument over a Profile,
      * specifying that <b>you will return an output</b> in the given branch of
-     * properties, and will be of the <b>type<b> specified with the Output
+     * properties, and will be of the <b>type</b> specified with the Output
      * argument, and with the specific allowed cardinality.
      * <p/>
      * Example: <code>
@@ -371,7 +386,7 @@ public class Profile {
      *            returning. Take into account that this differs from how it is
      *            used in Request. Here you must create it with a Type URI
      *            (a ManagedIndividual.MY_URI).
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @param minCard
@@ -381,16 +396,17 @@ public class Profile {
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(Path branch, Output leaf, String URI_ID, int minCard, int maxCard) {
-	if (URI_ID == null) {
-	    URI_ID = MY_NAMESPACE + StringUtils.createUniqueID();
+    public String put(Path branch, Output leaf, String uriID, int minCard,
+	    int maxCard) {
+	if (uriID == null) {
+	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
-	ProcessOutput output = new ProcessOutput(URI_ID);
+	ProcessOutput output = new ProcessOutput(uriID);
 	output.setParameterType(leaf.getURI());
 	output.setCardinality(maxCard, minCard);
 	this.service.getProfile().addOutput(output);
 	this.service.getProfile().addSimpleOutputBinding(output, branch.path);
-	return  URI_ID;
+	return uriID;
     }
 
     /**
@@ -413,20 +429,20 @@ public class Profile {
      *            the end of the branch. If it is built with a specific instance
      *            value then it means that this profile will answer only to
      *            calls with that value in this added input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(String[] branch, Add leaf, String URI_ID) {
+    public String put(String[] branch, Add leaf, String uriID) {
 	// like this.service.addInputWithAddEffect(URI_ID,
 	// ManagedIndividual.getTypeURI(leaf.getObject()), 0, 0,branch);
 	// only that it큦 not visible, so we have to make it "manually"
-	if (URI_ID == null) {
-	    URI_ID = MY_NAMESPACE + StringUtils.createUniqueID();
+	if (uriID == null) {
+	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
-	ProcessInput input = new ProcessInput(URI_ID);
+	ProcessInput input = new ProcessInput(uriID);
 	input.setParameterType(leaf.getURI());
 	this.service.getProfile().addInput(input);
 	if (leaf.byURI()) {
@@ -435,7 +451,7 @@ public class Profile {
 	} else {
 	    this.service.getProfile().addAddEffect(branch, leaf.getObject());
 	}
-	return URI_ID;
+	return uriID;
     }
 
     /**
@@ -458,14 +474,14 @@ public class Profile {
      *            the end of the branch. If it is built with a specific instance
      *            value then it means that this profile will answer only to
      *            calls with that value in this added input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(Path branch, Add leaf, String URI_ID) {
-	return put(branch.path, leaf, URI_ID);
+    public String put(Path branch, Add leaf, String uriID) {
+	return put(branch.path, leaf, uriID);
     }
     
     /**
@@ -489,7 +505,7 @@ public class Profile {
      *            the end of the branch. If it is built with a specific instance
      *            value then it means that this profile will answer only to
      *            calls with that value in this added input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @param minCard
@@ -499,12 +515,12 @@ public class Profile {
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(Path branch, Add leaf, String URI_ID, int minCard,
+    public String put(Path branch, Add leaf, String uriID, int minCard,
 	    int maxCard) {
-	if (URI_ID == null) {
-	    URI_ID = MY_NAMESPACE + StringUtils.createUniqueID();
+	if (uriID == null) {
+	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
-	ProcessInput input = new ProcessInput(URI_ID);
+	ProcessInput input = new ProcessInput(uriID);
 	input.setParameterType(leaf.getURI());
 	input.setCardinality(maxCard, minCard);
 	this.service.getProfile().addInput(input);
@@ -515,7 +531,7 @@ public class Profile {
 	    this.service.getProfile().addAddEffect(branch.path,
 		    leaf.getObject());
 	}
-	return URI_ID;
+	return uriID;
     }
 
     /**
@@ -538,20 +554,20 @@ public class Profile {
      *            at the end of the branch. If it is built with a specific
      *            instance value then it means that this profile will answer
      *            only to calls with that value in this removed input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(String[] branch, Remove leaf, String URI_ID) {
+    public String put(String[] branch, Remove leaf, String uriID) {
 	// like this.service.addInputWithRemoveEffect(URI_ID,
 	// ManagedIndividual.getTypeURI(leaf.getObject()), 0, 0,branch);
 	// only that it큦 not visible, so we have to make it "manually"
-	if (URI_ID == null) {
-	    URI_ID = MY_NAMESPACE + StringUtils.createUniqueID();
+	if (uriID == null) {
+	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
-	ProcessInput input = new ProcessInput(URI_ID);
+	ProcessInput input = new ProcessInput(uriID);
 	input.setParameterType(leaf.getURI());
 	this.service.getProfile().addInput(input);
 	// TODO The addRemoveEffect does not take value to remove!!! Will this
@@ -566,7 +582,7 @@ public class Profile {
 	}
 	this.service.addInstanceLevelRestriction(restr, branch);
 	this.service.getProfile().addRemoveEffect(branch);
-	return URI_ID;
+	return uriID;
     }
 
     /**
@@ -589,14 +605,14 @@ public class Profile {
      *            at the end of the branch. If it is built with a specific
      *            instance value then it means that this profile will answer
      *            only to calls with that value in this removed input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(Path branch, Remove leaf, String URI_ID) {
-	return put(branch.path, leaf, URI_ID);
+    public String put(Path branch, Remove leaf, String uriID) {
+	return put(branch.path, leaf, uriID);
     }
     
     /**
@@ -620,7 +636,7 @@ public class Profile {
      *            at the end of the branch. If it is built with a specific
      *            instance value then it means that this profile will answer
      *            only to calls with that value in this removed input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @param minCard
@@ -630,12 +646,12 @@ public class Profile {
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(Path branch, Remove leaf, String URI_ID,
+    public String put(Path branch, Remove leaf, String uriID,
 	    int minCard, int maxCard) {
-	if (URI_ID == null) {
-	    URI_ID = MY_NAMESPACE + StringUtils.createUniqueID();
+	if (uriID == null) {
+	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
-	ProcessInput input = new ProcessInput(URI_ID);
+	ProcessInput input = new ProcessInput(uriID);
 	input.setParameterType(leaf.getURI());
 	input.setCardinality(maxCard, minCard);
 	this.service.getProfile().addInput(input);
@@ -650,7 +666,7 @@ public class Profile {
 	}
 	this.service.addInstanceLevelRestriction(restr, branch.path);
 	this.service.getProfile().addRemoveEffect(branch.path);
-	return URI_ID;
+	return uriID;
     }
 
     /**
@@ -674,20 +690,20 @@ public class Profile {
      *            at the end of the branch. If it is built with a specific
      *            instance value then it means that this profile will answer
      *            only to calls with that value in this changed input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(String[] branch, Change leaf, String URI_ID) {
+    public String put(String[] branch, Change leaf, String uriID) {
 	// like this.service.addInputWithChangeEffect(URI_ID,
 	// ManagedIndividual.getTypeURI(leaf.getObject()), 0, 0,branch);
 	// only that it큦 not visible, so we have to make it "manually"
-	if (URI_ID == null) {
-	    URI_ID = MY_NAMESPACE + StringUtils.createUniqueID();
+	if (uriID == null) {
+	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
-	ProcessInput input = new ProcessInput(URI_ID);
+	ProcessInput input = new ProcessInput(uriID);
 	input.setParameterType(leaf.getURI());
 	this.service.getProfile().addInput(input);
 	if (leaf.byURI()) {
@@ -696,7 +712,7 @@ public class Profile {
 	} else {
 	    this.service.getProfile().addChangeEffect(branch, leaf.getObject());
 	}
-	return URI_ID;
+	return uriID;
     }
 
     /**
@@ -720,14 +736,14 @@ public class Profile {
      *            the end of the branch. If it is built with a specific
      *            instance value then it means that this profile will answer
      *            only to calls with that value in this changed input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(Path branch, Change leaf, String URI_ID) {
-	return put(branch.path, leaf, URI_ID);
+    public String put(Path branch, Change leaf, String uriID) {
+	return put(branch.path, leaf, uriID);
     }
     
     /**
@@ -751,7 +767,7 @@ public class Profile {
      *            at the end of the branch. If it is built with a specific
      *            instance value then it means that this profile will answer
      *            only to calls with that value in this changed input.
-     * @param URI_ID
+     * @param uriID
      *            The reference URI to be used by the ServiceCallee when dealing
      *            with this value. Set to null to return an auto-generated one
      * @param minCard
@@ -761,12 +777,12 @@ public class Profile {
      * @return The URI_ID. If it was set to null, it will be automatically
      *         generated.
      */
-    public String put(Path branch, Change leaf, String URI_ID,
+    public String put(Path branch, Change leaf, String uriID,
 	    int minCard, int maxCard) {
-	if (URI_ID == null) {
-	    URI_ID = MY_NAMESPACE + StringUtils.createUniqueID();
+	if (uriID == null) {
+	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
-	ProcessInput input = new ProcessInput(URI_ID);
+	ProcessInput input = new ProcessInput(uriID);
 	input.setParameterType(leaf.getURI());
 	input.setCardinality(maxCard, minCard);
 	this.service.getProfile().addInput(input);
@@ -777,7 +793,7 @@ public class Profile {
 	    this.service.getProfile().addChangeEffect(branch.path,
 		    leaf.getObject());
 	}
-	return URI_ID;
+	return uriID;
     }
     
     /**

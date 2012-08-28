@@ -61,7 +61,7 @@ public abstract class UtilUICaller extends UICaller {
     /**
      * The root directory of the runtime configuration.
      */
-    public static final String uAAL_CONF_ROOT_DIR = "bundles.configuration.location";
+    public static final String UAAL_CONF_ROOT_DIR = "bundles.configuration.location";
 
     /**
      * Associated Service Callee.
@@ -87,9 +87,9 @@ public abstract class UtilUICaller extends UICaller {
 	    String url, String title) {
 	super(context);
 	callee = new UIcallee(context, namespace, url, title, this);
-	File dm = new File(new File(System.getProperty(uAAL_CONF_ROOT_DIR,
+	File dm = new File(new File(System.getProperty(UAAL_CONF_ROOT_DIR,
 		System.getProperty("user.dir"))), "ui.dm");
-	File dmmob = new File(new File(System.getProperty(uAAL_CONF_ROOT_DIR,
+	File dmmob = new File(new File(System.getProperty(UAAL_CONF_ROOT_DIR,
 		System.getProperty("user.dir"))), "ui.dm.mobile");
 	try {
 	    if (dm.exists()) {
@@ -166,7 +166,7 @@ public abstract class UtilUICaller extends UICaller {
     /*
      * (non-Javadoc)
      * 
-     * @see org.universAAL.middleware.ui.UICaller#communicationChannelBroken()
+     * @see org.universAAL.support.utils.ui.UICaller#communicationChannelBroken()
      */
     @Override
     public void communicationChannelBroken() {
@@ -194,7 +194,13 @@ public abstract class UtilUICaller extends UICaller {
      */
     private class UIcallee extends ServiceCallee {
 
+	/**
+	 * Placeholder for composed URI for start service.
+	 */
 	private String startUI = "";
+	/**
+	 * Reference to UI caller.
+	 */
 	private UtilUICaller ui;
 
 	/**

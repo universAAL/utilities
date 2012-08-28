@@ -28,7 +28,9 @@ import org.universAAL.middleware.ui.UIRequest;
 import org.universAAL.middleware.ui.owl.PrivacyLevel;
 import org.universAAL.middleware.ui.rdf.Form;
 import org.universAAL.ontology.profile.User;
-import org.universAAL.support.utils.ui.*;
+import org.universAAL.support.utils.ui.Control;
+import org.universAAL.support.utils.ui.IContainer;
+import org.universAAL.support.utils.ui.SubmitCmd;
 
 /**
  * A helper class that lets you build UIRequests easily so you can send them
@@ -127,7 +129,7 @@ public class Message extends UIRequest implements IContainer{
     }
     
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.IContainer#add(org.universAAL.samples.ui.utils.SimpleControl)
+     * @see oorg.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.utils.SimpleControl)
      */
     public String[] add(Control ctrl){
 	return ctrl.create(getDialogForm().getIOControls());

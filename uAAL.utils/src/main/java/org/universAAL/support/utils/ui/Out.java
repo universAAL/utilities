@@ -35,12 +35,15 @@ import org.universAAL.middleware.ui.rdf.SimpleOutput;
  * <p>
  * <pre>
  * Label <b>Value</b>
- * <pre>
+ * </pre>
  * @author alfiva
  * 
  */
 public class Out extends Control{
 
+    /**
+     * Output value.
+     */
     private String value;
     
     /**
@@ -96,7 +99,7 @@ public class Out extends Control{
     }
 
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleControl#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	if(ref==null){

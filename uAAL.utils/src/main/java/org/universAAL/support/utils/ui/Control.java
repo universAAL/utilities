@@ -35,11 +35,26 @@ import org.universAAL.middleware.ui.rdf.Label;
  */
 public abstract class Control {
     
+    /**
+     * Default namespace
+     */
     public static final String MY_NAMESPACE = "http://org.universAAL.ontology/SimpleUtils.owl#";
     
+    /**
+     * Path for ID.
+     */
     protected PropertyPath ref;
+    /**
+     * Text label.
+     */
     protected Label label;
+    /**
+     * Help text popup.
+     */
     protected String help;
+    /**
+     * Hint text popup.
+     */
     protected String hint;
     
     /**
@@ -112,10 +127,11 @@ public abstract class Control {
      * @param reference The String representing the reference Property path or ID
      */
     public void setReference(String reference){
-	if(reference!=null)
+	if(reference!=null){
 	    ref=new PropertyPath(null, false, new String[]{reference});
-	else
+	}else{
 	    ref=null;
+	}
     }
     
     /**
@@ -128,10 +144,11 @@ public abstract class Control {
      *            or ID
      */
     public void setReference(String[] reference){
-	if(reference!=null)
+	if(reference!=null){
 	    ref=new PropertyPath(null, false, reference);
-	else
+	}else{
 	    ref=null;
+	}
     }
     
     /**

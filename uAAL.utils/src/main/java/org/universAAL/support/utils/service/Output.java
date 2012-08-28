@@ -65,8 +65,8 @@ public class Output extends Value {
     }
 
     /**
-     * <b>For use only by SimpleRequests</b>. Value used to define the URI
-     * (the ID) of an output.
+     * <b>For use only by SimpleRequests</b>. Value used to define the URI (the
+     * ID) of an output.
      * <p>
      * DEPRECATED: The use of this constructor is discouraged as it behaves
      * differently to other constructors of SimpleValues that take instance
@@ -79,6 +79,9 @@ public class Output extends Value {
      * you want to output.
      * 
      * @param byValue
+     *            An instance of a ManagedIndividual or native type representing
+     *            the value to output in this argument, but only its type is
+     *            relevant.
      */
     @Deprecated
     public Output(Object byValue) {

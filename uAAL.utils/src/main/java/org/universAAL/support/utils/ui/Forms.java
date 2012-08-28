@@ -43,6 +43,10 @@ package org.universAAL.support.utils.ui;
  */
 public class Forms {
     
+    private Forms(){
+	// Disallow instantiating
+    }
+    
     /**
      * Create a Area control.
      * 
@@ -94,8 +98,8 @@ public class Forms {
      *            The output value to be displayed.
      * @return The Out
      */
-    public static Out out(String label, String text){
-	return new Out(label,text);
+    public static Out out(String label, String value){
+	return new Out(label,value);
     }
 
     /**

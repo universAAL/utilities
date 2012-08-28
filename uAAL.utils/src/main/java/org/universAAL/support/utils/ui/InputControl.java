@@ -34,6 +34,9 @@ import org.universAAL.middleware.ui.rdf.Input;
  */
 public abstract class InputControl extends Control{
     
+    /**
+     * Holds the input model.
+     */
     protected Input model;
 
     /**

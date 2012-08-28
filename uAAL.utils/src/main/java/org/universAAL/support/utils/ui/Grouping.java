@@ -41,13 +41,19 @@ import org.universAAL.middleware.ui.rdf.Label;
  *  | [X] Child    |
  *  | [_Child_]    |
  *  |______________|
- * <pre>
+ * </pre>
  * @author alfiva
  * 
  */
 public class Grouping extends Control implements IContainer{
     
+    /**
+     * Resource backing up data in group.
+     */
     private Resource root=null;
+    /**
+     * Holds the group model.
+     */
     private Group model;
     
     /**
@@ -111,7 +117,7 @@ public class Grouping extends Control implements IContainer{
     }
 
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.SimpleControl#create(org.universAAL.middleware.ui.rdf.Group)
+     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
      */
     public String[] create(Group group) {
 	if(ref==null){
@@ -122,7 +128,7 @@ public class Grouping extends Control implements IContainer{
     }
     
     /* (non-Javadoc)
-     * @see org.universAAL.samples.ui.utils.IContainer#add(org.universAAL.samples.ui.utils.SimpleControl)
+     * @see org.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.utils.SimpleControl)
      */
     public String[] add(Control ctrl){
 	return ctrl.create(model);

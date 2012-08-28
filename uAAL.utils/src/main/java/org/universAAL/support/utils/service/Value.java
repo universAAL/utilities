@@ -39,27 +39,33 @@ import org.universAAL.middleware.xsd.NonNegativeInteger;
  * 
  */
 public abstract class Value {
-    
+    /**
+     * Holds the URI of the argument.
+     */
     protected String uri;
+    /**
+     * Determines if it was set by Value or by type URI.
+     */
     protected boolean isByURI=true;
 
-    public static Object createEmptyInstance(String uri) {
+    protected static Object createEmptyInstance(String uri) {
 	try {
 	    Class c = TypeMapper.getJavaClass(uri);
-	    if (c.equals(XMLGregorianCalendar.class))
+	    if (c.equals(XMLGregorianCalendar.class)){
 		return DatatypeFactory.newInstance().newXMLGregorianCalendar();
-	    else if (c.equals(Duration.class))
+	    }else if (c.equals(Duration.class)){
 		return DatatypeFactory.newInstance().newDuration(0);
-	    else if (c.equals(Boolean.class))
+	    }else if (c.equals(Boolean.class)){
 		return Boolean.FALSE;
-	    else if (c.equals(Locale.class))
+	    }else if (c.equals(Locale.class)){
 		return Locale.getDefault();
-	    else if (c.equals(Integer.class) || c.equals(Double.class)
+	    }else if (c.equals(Integer.class) || c.equals(Double.class)
 		    || c.equals(Float.class) || c.equals(Long.class)
-		    || c.equals(NonNegativeInteger.class))
+		    || c.equals(NonNegativeInteger.class)){
 		return c.getConstructor(String.class).newInstance("0");
-	    else
+	    }else{
 		return c.getConstructor().newInstance();
+	    }
 	} catch (Exception e) {
 	    System.out.println("···SIMPLE UTILS TIP: it was not possible to "
 		    + "create an empty instance of this Variable "

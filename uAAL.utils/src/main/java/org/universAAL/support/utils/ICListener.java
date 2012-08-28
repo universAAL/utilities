@@ -40,5 +40,5 @@ public interface ICListener {
      *            The received Context Event.
      * @see org.universAAL.middleware.context.ContextSubscriber#handleContextEvent(org.universAAL.middleware.context.ContextEvent)
      */
-    public void handleContextEvent(ContextEvent event);
+    void handleContextEvent(ContextEvent event);
 }
