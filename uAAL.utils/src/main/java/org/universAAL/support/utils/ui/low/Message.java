@@ -149,5 +149,22 @@ public class Message extends UIRequest implements IContainer{
 	String[] ref=ctrl.create(getDialogForm().getSubmits());
 	return ref[ref.length-1];
     }
+    
+    /**
+     * Add a hidden object so it is sent within the UI request, but not shown to
+     * the user. When the UI response is being handled by the UI caller, this
+     * hidden input can be retrieved by calling
+     * <code>uiresponse.getUserInput(new String[]{ref});</code> , being
+     * <code>ref</code> the one you used in this method.
+     * 
+     * @param ref
+     *            The reference you will use to access the hidden object later
+     *            from the response
+     * @param hidden
+     *            The object you want to hide
+     */
+    public void addHidden(String ref, Object hidden){
+	this.getDialogForm().getData().setPropertyPath(new String[]{ref}, hidden);
+    }
 
 }

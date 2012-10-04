@@ -30,6 +30,7 @@ import org.universAAL.middleware.ui.rdf.Group;
 import org.universAAL.middleware.ui.rdf.Input;
 import org.universAAL.middleware.ui.rdf.Label;
 import org.universAAL.middleware.ui.rdf.Submit;
+import org.universAAL.support.utils.service.Path;
 
 /**
  * Class representing a Submit UI element. Submits are commands that can be issued by the user,
@@ -57,6 +58,14 @@ public class SubmitCmd extends Control{
      * List of required mandatory inputs.
      */
     protected List l = new ArrayList();
+    /**
+     * Hidden object associated with the submit
+     */
+    protected Object h = null;
+    /**
+     * Auxiliary property URI for the path to reach the hidden object.
+     */
+    public static final String HIDDENREF = MY_NAMESPACE+"hiddenRef";
     
     /**
      * Generic empty constructor. The Submit will be generated with default
@@ -120,6 +129,10 @@ public class SubmitCmd extends Control{
 		sub.addMandatoryInput((Input)iter.next());
 	    }
 	}
+	if(h!=null){
+	    Path hiddenPath=Path.parse(ref.getThePath());
+	    sub.getFormObject().getData().setPropertyPath(hiddenPath.to(HIDDENREF).path, h, true);
+	}
 	return ref.getThePath();
     }
     
@@ -133,6 +146,27 @@ public class SubmitCmd extends Control{
     public void addMandatoryInput(InputControl input){
 	Input in=input.getModel();
 	l.add(in);
+    }
+    
+    /**
+     * Associate an object to a submit so it is sent within the UI request, but
+     * not shown to the user. When the UI response is being handled by the UI
+     * caller, this hidden input can be retrieved by calling
+     * <code>uiresponse.getUserInput( new String[] { REFSUBMIT, SubmitCmd.HIDDENREF });</code>
+     * <p>
+     * This is useful when you are building a list of items in a form, each of
+     * which has a Submit associated to them. You can use this method to know,
+     * later when handling the response, which item of the list had its Submit
+     * pressed. Tip: to do this it´s useful that all the references of these
+     * listed submits start with the same string, so you can detect any of them
+     * when handling the response, and then get the exact submission ID for use
+     * as REFSUBMIT in the example above.
+     * 
+     * @param hidden
+     *            The InputControl to make mandatory for this Submit.
+     */
+    public void setHiddenObject(Object hidden){
+	h=hidden;
     }
 
     /**
