@@ -23,7 +23,6 @@ package org.universAAL.support.utils.ui;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 import org.universAAL.middleware.container.utils.StringUtils;
@@ -33,12 +32,13 @@ import org.universAAL.middleware.ui.rdf.Select;
 
 /**
  * Class representing a Multi-selection Input UI element. Multi-selection Inputs
- * get one or many textual values from a list, whether it´s a list of
- * checkboxes, sorted column or any other way, depending on the UI renderer. The
- * input is represented as a String.
+ * get one or many Object values from a list, whether it´s a list of checkboxes,
+ * sorted column or any other way, depending on the UI renderer. The input is
+ * represented as the same type of Object stored in the list.
  * <p>
  * Example render:
  * <p>
+ * 
  * <pre>
  * Label |  val1  |
  *       |[ val2 ]|
@@ -46,6 +46,12 @@ import org.universAAL.middleware.ui.rdf.Select;
  *       |  val4  |
  *       |  val5  |
  * </pre>
+ * <p>
+ * The Objects in the list are displayed in a textual form by trying to convert
+ * them to a readable String, by using their .toString() method or their URI if
+ * they are Resources. When retrieving the input, remember to cast to the
+ * appropriate original type of Object.
+ * 
  * @author alfiva
  * 
  */
@@ -112,10 +118,10 @@ public class SelectMulti extends InputControl{
      * @param label
      *            The label text that identifies the input to the user.
      * @param initialOptions
-     *            An array of Strings that represent the different possible
+     *            An array of Objects that represent the different possible
      *            options to select.
      */
-    public SelectMulti(String ref, String label, String[] initialOptions){
+    public SelectMulti(String ref, String label, Object[] initialOptions){
 	setReference(ref);
 	this.label=new Label(label,null);
 	setOptions(initialOptions);
@@ -160,15 +166,18 @@ public class SelectMulti extends InputControl{
      * @return An array of Strings representing the different options to select,
      *         or null if none were set.
      */
-    public String[] getOptions() {
+    public Object[] getOptions() {
 	if(l!=null && !l.isEmpty()){
-	    int i=0;
-		String[] res=new String[l.size()];
-	    Iterator iter=l.iterator();
-	    while(iter.hasNext()){
-		res[i++]=(String)iter.next();
-	    }
-	    return res;
+	    
+	    return l.toArray();
+	    
+//	    int i=0;
+//		String[] res=new String[l.size()];
+//	    Iterator iter=l.iterator();
+//	    while(iter.hasNext()){
+//		res[i++]=(String)iter.next();
+//	    }
+//	    return res;
 	}
 	return null;
     }
@@ -180,7 +189,7 @@ public class SelectMulti extends InputControl{
      * @param option
      *            The option to add
      */
-    public void addOption(String option){
+    public void addOption(Object option){
 	l.add(option);
     }
 
@@ -191,7 +200,7 @@ public class SelectMulti extends InputControl{
      *            The array of Strings representing the different options to
      *            select
      */
-    public void setOptions(String[] options) {
+    public void setOptions(Object[] options) {
         this.l = Arrays.asList(options);
     }
     

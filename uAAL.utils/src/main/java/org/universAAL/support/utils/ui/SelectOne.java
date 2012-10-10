@@ -27,19 +27,26 @@ import org.universAAL.middleware.ui.rdf.Select1;
 
 /**
  * Class representing a Single-selection Input UI element. Single-selection
- * Inputs get a single textual value from a list, whether it´s a drop-down,
+ * Inputs get a single Object value from a list, whether it´s a drop-down,
  * sorted column or any other way, depending on the UI renderer. The input is
- * represented as a String.
+ * represented as the same type of Object stored in the list.
  * <p>
  * Example render:
  * <p>
+ * 
  * <pre>
  * Label [_initialValue_|V]
  *       | val2         |
  *       | val3         |
  *       | val4         |
  *       |______________|
- * </pre>      
+ * </pre>
+ * <p>
+ * The Objects in the list are displayed in a textual form by trying to convert
+ * them to a readable String, by using their .toString() method or their URI if
+ * they are Resources. When retrieving the input, remember to cast to the
+ * appropriate original type of Object.
+ * 
  * @author alfiva
  * 
  */
@@ -96,10 +103,10 @@ public class SelectOne extends SelectMulti{
      * @param label
      *            The label text that identifies the input to the user.
      * @param initialOptions
-     *            An array of Strings that represent the different possible
+     *            An array of Objects that represent the different possible
      *            options to select.
      */
-    public SelectOne(String ref, String label, String[] initialOptions){
+    public SelectOne(String ref, String label, Object[] initialOptions){
 	super(ref,label,initialOptions);
     }
     
