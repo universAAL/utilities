@@ -178,5 +178,23 @@ public class SubDialog extends UIRequest implements IContainer{
     public void addHidden(String ref, Object hidden){
 	this.getDialogForm().getData().setPropertyPath(new String[]{ref}, hidden);
     }
+    
+    /**
+     * Add an extra property to the form used in this UI request. Extra
+     * properties may be used by I/O Handlers to allow the developer to
+     * fine-tune things like the layout. The equivalent in native API is to call
+     * setProperty() on a Form object. Use this only as recommended by the
+     * Handler you intend to use, since it is the Handler the one who will
+     * interpret the property.
+     * 
+     * @param property
+     *            The property of a Form that a certain Handler will inspect for
+     *            its own purposes.
+     * @param extra
+     *            The value to be set into the property.
+     */
+    public void addExtra(String property, Object extra){
+	this.getDialogForm().setProperty(property, extra);
+    }
 
 }
