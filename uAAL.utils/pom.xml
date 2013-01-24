@@ -10,7 +10,7 @@
 	<artifactId>uAAL.utils</artifactId>
 	<version>0.3.0-SNAPSHOT</version>
 	
-	<name>Utilities API for universAAL</name>
+	<name>universAAL Support Utilities API</name>
 	<description>A suite of helpful tools to make usage of universAAL a bit easier</description>
 	
 	<dependencies>
