@@ -136,6 +136,7 @@ public class SelectMulti extends InputControl{
 	}
 	model = new Select(group, label, ref, null, initialValue!=null?getOptions()[initialValue.intValue()]:null);
 	((Select)model).generateChoices(getOptions());
+	//TODO: use storeUserInput for the initial value, because it seems generatechoices overrides it
 	return ref.getThePath();
     }
     

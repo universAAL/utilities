@@ -120,6 +120,7 @@ public class SelectOne extends SelectMulti{
 //	if(initialValue==null)initialValue=Integer.valueOf(0);
 	model = new Select1(group, label, ref, null, initialValue!=null?getOptions()[initialValue.intValue()]:null);
 	((Select1)model).generateChoices(getOptions());
+	//TODO: use storeUserInput for the initial value, because it seems generatechoices overrides it
 	return ref.getThePath();
     }
 
