@@ -27,7 +27,9 @@ import org.universAAL.middleware.service.ServiceCall;
 import org.universAAL.middleware.service.ServiceCallee;
 import org.universAAL.middleware.service.ServiceResponse;
 import org.universAAL.middleware.service.owls.process.ProcessOutput;
-import org.universAAL.ontology.phThing.OnOffSensor;
+import org.universAAL.ontology.device.Sensor;
+import org.universAAL.ontology.device.StatusValue;
+import org.universAAL.support.utils.service.mid.InvalidOntologyUtilException;
 import org.universAAL.support.utils.service.mid.UtilSensor;
 
 /**
@@ -57,6 +59,9 @@ public abstract class UtilSensorCallee extends ServiceCallee {
     /**
      * Default constructor of the class. Takes the same parameters needed by a
      * UtilSensor profile method, in addition to the ModuleContext.
+     * <p>
+     * BE CAREFUL: This will only work with sensors that have StatusValue as
+     * HAS_VALUE property. Others, like DimmerSensor, will throw an exception.
      * 
      * @param context
      *            The Module Context of uAAL
@@ -65,9 +70,11 @@ public abstract class UtilSensorCallee extends ServiceCallee {
      * @param sensor
      *            The ontology instance of the sensor you are controlling. The
      *            more properties it has set, the better.
+     * @throws InvalidOntologyUtilException when an sensor is passed that is does not have StatusValue as
+     *             type restriction of its HAS_VALUE property.
      */
     public UtilSensorCallee(ModuleContext context, String namespace,
-	    OnOffSensor sensor) {
+	    Sensor sensor) throws InvalidOntologyUtilException {
 	super(context, UtilSensor.getServiceProfiles(namespace, sensor));
 	this.calleeNamespace = namespace;
     }
@@ -93,7 +100,8 @@ public abstract class UtilSensorCallee extends ServiceCallee {
 	    boolean result = executeGet();
 	    ServiceResponse response = new ServiceResponse(CallStatus.succeeded);
 	    response.addOutput(new ProcessOutput(calleeNamespace
-		    + UtilSensor.OUT_GET_ON_OFF, Boolean.valueOf(result)));
+		    + UtilSensor.OUT_GET_ON_OFF, result ? StatusValue.Activated
+		    : StatusValue.NotActivated));
 	    return response;
 	}
 

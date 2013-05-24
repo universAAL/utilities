@@ -29,8 +29,9 @@ import org.universAAL.middleware.service.owl.Service;
 import org.universAAL.middleware.service.owls.process.ProcessInput;
 import org.universAAL.middleware.service.owls.process.ProcessOutput;
 import org.universAAL.middleware.service.owls.profile.ServiceProfile;
+import org.universAAL.ontology.device.Sensor;
+import org.universAAL.ontology.device.StatusValue;
 import org.universAAL.ontology.phThing.DeviceService;
-import org.universAAL.ontology.phThing.OnOffSensor;
 import org.universAAL.support.utils.service.Arg;
 import org.universAAL.support.utils.service.Output;
 import org.universAAL.support.utils.service.Path;
@@ -68,6 +69,9 @@ public class UtilSensor {
      * to services and arguments URIs prepending <code>namespace</code> to
      * UtilSensor constants.
      * <p>
+     * BE CAREFUL: This will only work with sensors that have StatusValue as
+     * HAS_VALUE property. Others, like DimmerSensor, will throw an exception.
+     * <p>
      * Example:
      * <p>
      * <code>
@@ -86,14 +90,32 @@ public class UtilSensor {
      *            The ontology instance of the sensor you are controlling. The
      *            more properties it has set, the better.
      * @return An array with the 1 typical service profiles
+     * @throws InvalidOntologyUtilException
+     *             when an sensor is passed that is does not have StatusValue as
+     *             type restriction of its HAS_VALUE property.
      */
     public static ServiceProfile[] getServiceProfiles(String namespace,
-	    String ontologyURI, OnOffSensor sensor) {
-
+	    String ontologyURI, Sensor sensor)
+	    throws InvalidOntologyUtilException {
+	try {
+	    if (sensor.getOntClassInfo()
+		    .getRestrictionsOnProp(Sensor.PROP_HAS_VALUE)
+		    .getPropTypeURI().equals(StatusValue.MY_URI)) {
+		throw new InvalidOntologyUtilException(
+			"The Actuator ontology passed as parameter "
+				+ "is not an on/off Actuator: its HAS_VALUE"
+				+ " property must be of type StatusValue");
+	    }
+	} catch (NullPointerException e) {
+	    throw new InvalidOntologyUtilException(
+		    "The Actuator ontology passed as parameter"
+			    + " misses some restriction on its HAS_VALUE"
+			    + " property. It must be of type StatusValue");
+	}
 	ServiceProfile[] profiles = new ServiceProfile[1];
 
 	PropertyPath ppath = new PropertyPath(null, true, new String[] {
-		DeviceService.PROP_CONTROLS, OnOffSensor.PROP_MEASURED_VALUE });
+		DeviceService.PROP_CONTROLS, Sensor.PROP_HAS_VALUE });
 
 	ProcessInput input = new ProcessInput(namespace + IN_DEVICE);
 	input.setParameterType(sensor.getClassURI());
@@ -121,6 +143,9 @@ public class UtilSensor {
      * status. When handling requests in your Callee, you can use the references
      * to services and arguments URIs prepending <code>namespace</code> to
      * UtilSensor constants.
+     * <p>
+     * BE CAREFUL: This will only work with sensors that have StatusValue as
+     * HAS_VALUE property. Others, like DimmerSensor, will throw an exception.
      * 
      * @param namespace
      *            The namespace of your server, ending with the character #. You
@@ -130,9 +155,12 @@ public class UtilSensor {
      *            The ontology instance of the sensor you are controlling. The
      *            more properties it has set, the better.
      * @return An array with the 1 typical service profiles
+     * @throws InvalidOntologyUtilException
+     *             when an sensor is passed that is does not have StatusValue as
+     *             type restriction of its HAS_VALUE property.
      */
     public static ServiceProfile[] getServiceProfiles(String namespace,
-	    OnOffSensor sensor) {
+	    Sensor sensor) throws InvalidOntologyUtilException {
 	return getServiceProfiles(namespace, DeviceService.MY_URI, sensor);
     }
 
@@ -159,7 +187,7 @@ public class UtilSensor {
 		.getInstance().getResource(ontologyURI, null));
 	req.put(Path.at(DeviceService.PROP_CONTROLS), argIn);
 	req.put(Path.at(DeviceService.PROP_CONTROLS).to(
-		OnOffSensor.PROP_MEASURED_VALUE), argOut);
+		Sensor.PROP_HAS_VALUE), argOut);
 	return req;
     }
     
@@ -186,7 +214,7 @@ public class UtilSensor {
 		.getInstance().getResource(ontologyURI, null));
 	req.put(Path.at(DeviceService.PROP_CONTROLS), Arg.in(in));
 	req.put(Path.at(DeviceService.PROP_CONTROLS).to(
-		OnOffSensor.PROP_MEASURED_VALUE), Arg.out(out));
+		Sensor.PROP_HAS_VALUE), Arg.out(out));
 	return req;
     }
 
@@ -207,7 +235,7 @@ public class UtilSensor {
      *         of an sensor
      */
     public static ServiceRequest requestGetOnOff(String ontologyURI,
-	    OnOffSensor sensor, Output argOut) {
+	    Sensor sensor, Output argOut) {
 	return requestGetOnOff(ontologyURI, Arg.in(sensor), argOut);
     }
     
@@ -228,7 +256,7 @@ public class UtilSensor {
      *         of an sensor
      */
     public static ServiceRequest requestGetOnOff(String ontologyURI,
-	    OnOffSensor sensor, String out) {
+	    Sensor sensor, String out) {
 	return requestGetOnOff(ontologyURI, Arg.in(sensor), Arg.out(out));
     }
 
@@ -246,7 +274,7 @@ public class UtilSensor {
      * @return The ServiceRequest that will call the matching GET STATUS service
      *         of an sensor
      */
-    public static ServiceRequest requestGetOnOff(OnOffSensor sensor,
+    public static ServiceRequest requestGetOnOff(Sensor sensor,
 	    Output argOut) {
 	return requestGetOnOff(DeviceService.MY_URI, sensor, argOut);
     }
@@ -265,7 +293,7 @@ public class UtilSensor {
      * @return The ServiceRequest that will call the matching GET STATUS service
      *         of an sensor
      */
-    public static ServiceRequest requestGetOnOff(OnOffSensor sensor,
+    public static ServiceRequest requestGetOnOff(Sensor sensor,
 	    String out) {
 	return requestGetOnOff(DeviceService.MY_URI, sensor, out);
     }

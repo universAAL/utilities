@@ -27,7 +27,9 @@ import org.universAAL.middleware.service.ServiceCall;
 import org.universAAL.middleware.service.ServiceCallee;
 import org.universAAL.middleware.service.ServiceResponse;
 import org.universAAL.middleware.service.owls.process.ProcessOutput;
-import org.universAAL.ontology.phThing.OnOffActuator;
+import org.universAAL.ontology.device.Actuator;
+import org.universAAL.ontology.device.StatusValue;
+import org.universAAL.support.utils.service.mid.InvalidOntologyUtilException;
 import org.universAAL.support.utils.service.mid.UtilActuator;
 
 /**
@@ -57,6 +59,9 @@ public abstract class UtilActuatorCallee extends ServiceCallee {
     /**
      * Default constructor of the class. Takes the same parameters needed by a
      * UtilActuator profile method, in addition to the ModuleContext.
+     * <p>
+     * BE CAREFUL: This will only work with actuators that have StatusValue as
+     * HAS_VALUE property. Others, like DimmerActuator, will throw an exception.
      * 
      * @param context
      *            The Module Context of uAAL
@@ -65,9 +70,12 @@ public abstract class UtilActuatorCallee extends ServiceCallee {
      * @param actuator
      *            The ontology instance of the actuator you are controlling. The
      *            more properties it has set, the better.
+     * @throws InvalidOntologyUtilException
+     *             when an actuator is passed that is does not have StatusValue
+     *             as type restriction of its HAS_VALUE property
      */
     public UtilActuatorCallee(ModuleContext context, String namespace,
-	    OnOffActuator actuator) {
+	    Actuator actuator) throws InvalidOntologyUtilException {
 	super(context, UtilActuator.getServiceProfiles(namespace, actuator));
 	this.calleeNamespace = namespace;
     }
@@ -93,7 +101,8 @@ public abstract class UtilActuatorCallee extends ServiceCallee {
 	    boolean result = executeGet();
 	    ServiceResponse response = new ServiceResponse(CallStatus.succeeded);
 	    response.addOutput(new ProcessOutput(calleeNamespace
-		    + UtilActuator.OUT_GET_ON_OFF, Boolean.valueOf(result)));
+		    + UtilActuator.OUT_GET_ON_OFF,
+		    result ? StatusValue.Activated : StatusValue.NotActivated));
 	    return response;
 	}
 
