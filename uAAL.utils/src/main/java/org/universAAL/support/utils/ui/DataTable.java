@@ -1,3 +1,24 @@
+/*
+	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
+	Instituto Tecnologico de Aplicaciones de Comunicacion 
+	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Bienestar (TSB)
+	
+	See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	  http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+ */
 package org.universAAL.support.utils.ui;
 
 import java.util.ArrayList;
@@ -13,7 +34,7 @@ import org.universAAL.middleware.ui.rdf.Repeat;
 
 /**
  * Class representing a Data Table UI element. Data Tables show data from a repetitive
- * data model composed by equally structured entries, whether it´s a table, list
+ * data model composed by equally structured entries, whether itï¿½s a table, list
  * of groups or any other way, depending on the UI renderer.
  * <p>
  * A Data Table is composed by the Data Model backing up the actual content and an
@@ -26,13 +47,13 @@ import org.universAAL.middleware.ui.rdf.Repeat;
  * <p>
  * <b>WARNING:</b> A Data Table is like a Group, it must be added to a
  * SimpleUIRequest or a Group BEFORE any element can be added to its Entry
- * Model. This is because the Tables´s Entry Model is not actually created until
+ * Model. This is because the Tablesï¿½s Entry Model is not actually created until
  * it's added. The Data Model however must be set BEFORE the Data Table is added,
  * thus the order of operations is the following: 1) Create Data Table. 2) Set Data
  * Model. 3) Add Data Table to parent. 4) Add Controls to Entry Model.
  * <p>
  * There are two ways of constructing Data Tables: Inferring the Data Model entries
- * from the parent´s root resource or setting the Data Model entries explicitly.
+ * from the parentï¿½s root resource or setting the Data Model entries explicitly.
  * <p>
  * Example render:
  * <p>
@@ -193,8 +214,8 @@ public class DataTable extends Control implements IContainer{
      * Add the given Simple Control UI element to the Table Entry Model. Submits
      * and Data Tables ARE NOT ALLOWED and will not be added. The initial value
      * of the Control MUST be null, because the value will be set to the Data
-     * Model entry property specified by the reference. The Control´s reference
-     * path must follow a valid path starting where the Table´s own path
+     * Model entry property specified by the reference. The Controlï¿½s reference
+     * path must follow a valid path starting where the Tableï¿½s own path
      * finished. Example:
      * 
      * <pre>
