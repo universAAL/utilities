@@ -59,7 +59,7 @@ import org.universAAL.support.utils.context.mid.UtilPublisher;
  * implementation in the method calls themselves without much complication.
  * <p>
  * Notice that for allowing this, this UAAL class takes care of instantiating
- * and maintaining all needed uAAL wrapper classes, so for as long as you don´t
+ * and maintaining all needed uAAL wrapper classes, so for as long as you don't
  * call <code>terminate()</code> it will keep hold of these resources. This also
  * means that the performance might not be as polite as it could if you handled
  * your own implementations of uAAL wrappers with the native API or the other
@@ -127,7 +127,7 @@ public class UAAL {
      * This constructor just assigns the Module Context: the rest of resources
      * used by this class are not initialized. They will be automatically
      * initialized as they are needed when you use the uAAL features methods of
-     * the class, so you don´t have to do anything else. All resources will be
+     * the class, so you don't have to do anything else. All resources will be
      * maintained until you call <code>terminate()</code>.
      * <p>
      * Although it is possible to have as many instances of this class as

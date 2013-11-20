@@ -57,7 +57,7 @@ public class Output extends Value {
 	this.uri = byTypeURIorPLACEHOLDER;
 	if (!Resource.isQualifiedName(byTypeURIorPLACEHOLDER)) {
 	    System.out
-		    .println("···SIMPLE UTILS TIP: You must pass a valid " +
+		    .println("---SIMPLE UTILS TIP: You must pass a valid " +
 			    "\"MY URI\" of a ManagedIndivdual to this " +
 			    "Typematch constructor if you are calling " +
 			    "this from a Profile.");
@@ -74,7 +74,7 @@ public class Output extends Value {
      * specify it as explicit output.
      * <p>
      * This is a helper constructor that takes an instance of the type you want
-     * and extracts its type. The value of the instance is irrelevant, it´s just
+     * and extracts its type. The value of the instance is irrelevant, it's just
      * intended for situations in which you already have an instance which type
      * you want to output.
      * 

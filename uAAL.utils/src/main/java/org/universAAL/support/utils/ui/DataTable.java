@@ -34,7 +34,7 @@ import org.universAAL.middleware.ui.rdf.Repeat;
 
 /**
  * Class representing a Data Table UI element. Data Tables show data from a repetitive
- * data model composed by equally structured entries, whether it�s a table, list
+ * data model composed by equally structured entries, whether it's a table, list
  * of groups or any other way, depending on the UI renderer.
  * <p>
  * A Data Table is composed by the Data Model backing up the actual content and an
@@ -53,7 +53,7 @@ import org.universAAL.middleware.ui.rdf.Repeat;
  * Model. 3) Add Data Table to parent. 4) Add Controls to Entry Model.
  * <p>
  * There are two ways of constructing Data Tables: Inferring the Data Model entries
- * from the parent�s root resource or setting the Data Model entries explicitly.
+ * from the parent's root resource or setting the Data Model entries explicitly.
  * <p>
  * Example render:
  * <p>

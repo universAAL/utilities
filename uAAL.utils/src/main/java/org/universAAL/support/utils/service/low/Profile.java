@@ -61,7 +61,7 @@ import org.universAAL.support.utils.service.Variable;
  * anonymous LightSource and an Integer with value 0.
  * <p/>
  * This is not necessarily faster nor better than the usual way of doing it with
- * ServiceProfile and Service. It큦 just an alternative way that might help
+ * ServiceProfile and Service. It's just an alternative way that might help
  * those less familiarized with universAAL.
  * 
  * @author alfiva
@@ -197,7 +197,7 @@ public class Profile {
     public String put(String[] branch, Variable leaf, String uriID) {
 	// like this.service.addFilteringInput(URI_ID,
 	// ManagedIndividual.getTypeURI(leaf.getObject()), 0, 0,branch);
-	// only that it큦 not visible, so we have to make it "manually"
+	// only that it's not visible, so we have to make it "manually"
 	if (uriID == null) {
 	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
@@ -329,7 +329,7 @@ public class Profile {
      */
     public String put(String[] branch, Output leaf, String uriID) {
 	// like this.service.addOutput(URI_ID, leaf.getURI(), 0, 0, branch);
-	// only that it큦 not visible, so we have to make it "manually"
+	// only that it's not visible, so we have to make it "manually"
 	if (uriID == null) {
 	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
@@ -438,7 +438,7 @@ public class Profile {
     public String put(String[] branch, Add leaf, String uriID) {
 	// like this.service.addInputWithAddEffect(URI_ID,
 	// ManagedIndividual.getTypeURI(leaf.getObject()), 0, 0,branch);
-	// only that it큦 not visible, so we have to make it "manually"
+	// only that it's not visible, so we have to make it "manually"
 	if (uriID == null) {
 	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
@@ -563,7 +563,7 @@ public class Profile {
     public String put(String[] branch, Remove leaf, String uriID) {
 	// like this.service.addInputWithRemoveEffect(URI_ID,
 	// ManagedIndividual.getTypeURI(leaf.getObject()), 0, 0,branch);
-	// only that it큦 not visible, so we have to make it "manually"
+	// only that it's not visible, so we have to make it "manually"
 	if (uriID == null) {
 	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}
@@ -699,7 +699,7 @@ public class Profile {
     public String put(String[] branch, Change leaf, String uriID) {
 	// like this.service.addInputWithChangeEffect(URI_ID,
 	// ManagedIndividual.getTypeURI(leaf.getObject()), 0, 0,branch);
-	// only that it큦 not visible, so we have to make it "manually"
+	// only that it's not visible, so we have to make it "manually"
 	if (uriID == null) {
 	    uriID = MY_NAMESPACE + StringUtils.createUniqueID();
 	}

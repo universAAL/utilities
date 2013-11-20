@@ -54,7 +54,7 @@ import org.universAAL.support.utils.service.Variable;
  * </code>
  * <p/>
  * This is not necessarily faster nor better than the usual way of doing it with
- * ServiceRequest. It´s just an alternative way that might help those less
+ * ServiceRequest. It's just an alternative way that might help those less
  * familiarized with universAAL.
  * 
  * @author alfiva
@@ -336,11 +336,11 @@ public class Request extends ServiceRequest {
 	    List outs = sr.getOutput(outputURI, true);
 	    if (outs == null) {
 		System.out
-			.println("···SIMPLE UTILS TIP: No outputs in the " +
+			.println("---SIMPLE UTILS TIP: No outputs in the " +
 					"response. Review your requests.");
 	    } else if (outs.size() == 0) {
 		System.out
-			.println("···SIMPLE UTILS TIP: No outputs with this URI" +
+			.println("---SIMPLE UTILS TIP: No outputs with this URI" +
 					" in the response. Review your requests.");
 	    } else {
 		Object[] values = (Object[]) outs.toArray(new Object[outs
@@ -348,7 +348,7 @@ public class Request extends ServiceRequest {
 		return values;
 	    }
 	} else {
-	    System.out.println("···SIMPLE UTILS TIP: Service call failed: "
+	    System.out.println("---SIMPLE UTILS TIP: Service call failed: "
 		    + sr.getCallStatus() + ". Review your requests.");
 	}
 	return null;

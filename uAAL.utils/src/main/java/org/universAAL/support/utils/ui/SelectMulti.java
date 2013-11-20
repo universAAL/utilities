@@ -32,7 +32,7 @@ import org.universAAL.middleware.ui.rdf.Select;
 
 /**
  * Class representing a Multi-selection Input UI element. Multi-selection Inputs
- * get one or many Object values from a list, whether it´s a list of checkboxes,
+ * get one or many Object values from a list, whether it's a list of checkboxes,
  * sorted column or any other way, depending on the UI renderer. The input is
  * represented as the same type of Object stored in the list.
  * <p>

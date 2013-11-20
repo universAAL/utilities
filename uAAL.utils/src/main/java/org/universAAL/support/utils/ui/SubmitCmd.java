@@ -34,7 +34,7 @@ import org.universAAL.support.utils.service.Path;
 
 /**
  * Class representing a Submit UI element. Submits are commands that can be issued by the user,
- * whether it´s a button, spoken command or any other way, depending on the UI renderer.
+ * whether it's a button, spoken command or any other way, depending on the UI renderer.
  * <p>
  * Example render:
  * <p>
@@ -157,7 +157,7 @@ public class SubmitCmd extends Control{
      * This is useful when you are building a list of items in a form, each of
      * which has a Submit associated to them. You can use this method to know,
      * later when handling the response, which item of the list had its Submit
-     * pressed. Tip: to do this it´s useful that all the references of these
+     * pressed. Tip: to do this it's useful that all the references of these
      * listed submits start with the same string, so you can detect any of them
      * when handling the response, and then get the exact submission ID for use
      * as REFSUBMIT in the example above.

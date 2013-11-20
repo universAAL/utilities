@@ -30,7 +30,7 @@ import org.universAAL.middleware.ui.rdf.Range;
 
 /**
  * Class representing a Range Input UI element. Range Inputs get a numeric value
- * within a range, whether it´s a spinner, slider or any other way, depending on
+ * within a range, whether it's a spinner, slider or any other way, depending on
  * the UI renderer. The input is represented as an Integer.
  * <p>
  * Example render:

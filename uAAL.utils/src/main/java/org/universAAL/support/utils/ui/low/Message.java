@@ -58,7 +58,7 @@ import org.universAAL.support.utils.ui.SubmitCmd;
  * controls can be added to those Groups.
  * <p/>
  * This is not necessarily faster nor better than the usual way of doing it with
- * Form and UIRequest. It´s just an alternative way that might help those less
+ * Form and UIRequest. It's just an alternative way that might help those less
  * familiarized with universAAL.
  * 
  * @author alfiva

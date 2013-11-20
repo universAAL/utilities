@@ -30,7 +30,7 @@ import org.universAAL.middleware.ui.rdf.Label;
 
 /**
  * Class representing a Boolean Input UI element. Boolean Inputs get a binary
- * value, whether it´s a checkbox, switch or any other way, depending on the UI
+ * value, whether it's a checkbox, switch or any other way, depending on the UI
  * renderer. The input is represented as a Boolean.
  * <p>
  * Example render:

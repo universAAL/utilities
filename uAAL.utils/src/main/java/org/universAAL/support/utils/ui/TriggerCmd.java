@@ -31,7 +31,7 @@ import org.universAAL.middleware.ui.rdf.Submit;
 
 /**
  * Class representing a SubDialog TriggerCmd UI element. Triggers are commands that
- * can be issued by the user, whether it´s a button, spoken command or any other
+ * can be issued by the user, whether it's a button, spoken command or any other
  * way, depending on the UI renderer. Triggers differ from Submits in that they
  * can lead to SubDialogs without closing previous dialogs, which normal Submits
  * do.

@@ -170,7 +170,7 @@ public class UtilActuator {
      * Get status, Set On, and Set Off. When handling requests in your Callee,
      * you can use the references to services and arguments URIs prepending
      * <code>namespace</code> to UtilActuator constants. The service is treated
-     * as the default DeviceService, in case you don´t have a specific service
+     * as the default DeviceService, in case you don't have a specific service
      * ontology for the type of actuator you are handling.
      * <p>
      * BE CAREFUL: This will only work with actuators that have StatusValue as

@@ -48,7 +48,7 @@ public class Typematch extends Value {
 	this.uri = byTypeURI;
 	if (!Resource.isQualifiedName(byTypeURI)) {
 	    System.out
-		    .println("···SIMPLE UTILS TIP: You must pass a valid " +
+		    .println("---SIMPLE UTILS TIP: You must pass a valid " +
 			    "\"MY URI\" of a ManagedIndivdual to this "
 			    + "Typematch constructor");
 	}
@@ -65,7 +65,7 @@ public class Typematch extends Value {
      * <p>
      * This is a helper constructor that takes an instance of the
      * type you want and extracts its type. The value of the instance is
-     * irrelevant, it´s just intended for situations in which you already have
+     * irrelevant, it's just intended for situations in which you already have
      * an instance which type you want to match.
      * 
      * @param byValue

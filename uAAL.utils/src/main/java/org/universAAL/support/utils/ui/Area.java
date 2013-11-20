@@ -27,7 +27,7 @@ import org.universAAL.middleware.ui.rdf.TextArea;
 
 /**
  * Class representing a Text Area Input UI element. Text Area Inputs get an
- * usually long textual value, whether it´s written, spoken or any other way,
+ * usually long textual value, whether it's written, spoken or any other way,
  * depending on the UI renderer. The input is represented as a String.
  * <p>
  * Example render:

@@ -28,7 +28,7 @@ import org.universAAL.middleware.ui.rdf.Label;
 
 /**
  * Class representing a Grouping of UI element. Groups round up UI elements to 
- * be logically and visually arranged , whether it´s a frame line, layout or 
+ * be logically and visually arranged , whether it's a frame line, layout or 
  * any other way, depending on the UI renderer. <b>WARNING:</b> A Grouping must
  * be added to a SimpleUIRequest or other Group BEFORE any element can be added
  * to it. This is because the Grouping is not actually created until it's added.

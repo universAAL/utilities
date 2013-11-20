@@ -67,10 +67,10 @@ public abstract class Value {
 		return c.getConstructor().newInstance();
 	    }
 	} catch (Exception e) {
-	    System.out.println("···SIMPLE UTILS TIP: it was not possible to "
+	    System.out.println("---SIMPLE UTILS TIP: it was not possible to "
 		    + "create an empty instance of this Variable "
 		    + "type. This is not a problem if you are calling this "
-		    + "constructor from a Profile, but if it´s from "
+		    + "constructor from a Profile, but if it's from "
 		    + "a Request you should use an Object instance "
 		    + "with the other constructor.");
 	    e.printStackTrace();

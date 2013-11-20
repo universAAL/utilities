@@ -27,7 +27,7 @@ import org.universAAL.middleware.ui.rdf.Select1;
 
 /**
  * Class representing a Single-selection Input UI element. Single-selection
- * Inputs get a single Object value from a list, whether it´s a drop-down,
+ * Inputs get a single Object value from a list, whether it's a drop-down,
  * sorted column or any other way, depending on the UI renderer. The input is
  * represented as the same type of Object stored in the list.
  * <p>

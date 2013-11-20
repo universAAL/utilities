@@ -28,7 +28,7 @@ import org.universAAL.middleware.ui.rdf.SimpleOutput;
 
 /**
  * Class representing a Text Output UI element. Text Output show a textual value,
- * whether it´s displayed, played or any other way, depending on the UI renderer.
+ * whether it's displayed, played or any other way, depending on the UI renderer.
  * The output is represented as a String.
  * <p>
  * Example render:

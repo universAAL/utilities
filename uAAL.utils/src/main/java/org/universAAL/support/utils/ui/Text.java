@@ -28,7 +28,7 @@ import org.universAAL.middleware.ui.rdf.Label;
 
 /**
  * Class representing a Text Input UI element. Text Inputs get a textual value,
- * whether it´s written, spoken or any other way, depending on the UI renderer.
+ * whether it's written, spoken or any other way, depending on the UI renderer.
  * The input is represented as a String.
  * <p>
  * Example render:
