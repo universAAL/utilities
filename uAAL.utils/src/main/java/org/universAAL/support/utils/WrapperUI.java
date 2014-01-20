@@ -22,6 +22,7 @@
 package org.universAAL.support.utils;
 
 import org.universAAL.middleware.container.ModuleContext;
+import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.middleware.ui.UICaller;
 import org.universAAL.middleware.ui.UIResponse;
 
@@ -67,7 +68,7 @@ public class WrapperUI extends UICaller {
      * org.universAAL.middleware.ui.UICaller#dialogAborted(java.lang.String)
      */
     @Override
-    public void dialogAborted(String arg0) {
+    public void dialogAborted(String arg0, Resource data) {
 	// TODO Auto-generated method stub
     }
 
