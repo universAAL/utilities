@@ -28,6 +28,7 @@ import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.context.ContextEvent;
 import org.universAAL.middleware.context.ContextEventPattern;
 import org.universAAL.middleware.context.ContextPublisher;
+import org.universAAL.middleware.context.owl.ContextProvider;
 import org.universAAL.middleware.context.owl.ContextProviderType;
 import org.universAAL.middleware.service.DefaultServiceCaller;
 import org.universAAL.middleware.service.ServiceCaller;
@@ -146,27 +147,60 @@ public class UAAL {
      * Sends a Context Event.
      * <p>
      * UAAL helper automatically creates its own internal Context Publisher if
-     * this is the first time the method is called. The Publisher is described
-     * as either a Gauge or a Controller depending on if you are providing
-     * Services (you called method <code>provideS()</code>). The URI of the
-     * Provider is automatically set to
+     * this is the first time the method is called. If the passed event contains
+     * ContextProvider information, it is used to instantiate the Publisher.
+     * Otherwise the missing information is automatically generated: The
+     * Publisher is described as either a Gauge or a Controller depending on if
+     * you are providing Services (you called method <code>provideS()</code>
+     * before). The URI of the Provider is then set to
      * <i>http://ontology.universAAL.org/SimpleUAAL
      * .owl#ContextEventsProvider</i> and it cannot be changed. Currently, the
      * pattern that describes the provided events of this provider is empty,
-     * which means it can publish any type of event.
+     * which means it can publish any type of event. Notice this Provider info
+     * is set ONLY THE FIRST TIME and cannot be changed by later calls.
      * 
      * @param e
      *            The Context Event to send.
      */
     public void sendC(ContextEvent e) {
 	// TODO: Handle multiple provided patterns
+	ContextProvider cp = e.getProvider();
+	// Because we are building the provider here, it will not be the same object
+	// This would fail the match in bus and not send the event. Remove it so it is set by the bus:
+	if(cp!=null) e.changeProperty(ContextEvent.PROP_CONTEXT_PROVIDER,null);
+	// This only happens the first time:
 	if (publisher == null) {
+	    // Yeah lots of ifs and returns, ugly but easy to read
+	    if (cp != null) {
+		ContextProviderType cpt = cp.getProviderType();
+		if (cpt != null) {
+		    ContextEventPattern[] cpe = cp.getProvidedEvents();
+		    if (cpe != null) {
+			publisher = new UtilPublisher(context, cp.getURI(),
+				cpt, cpe);
+			publisher.publish(e);
+			return;
+		    }
+		    publisher = new UtilPublisher(context, cp.getURI(), cpt,
+			    (String) null, null, null);
+		    publisher.publish(e);
+		    return;
+		}
+		publisher = new UtilPublisher(
+			context,
+			cp.getURI(),
+			(callees != null && !callees.isEmpty()) ? ContextProviderType.controller
+				: ContextProviderType.gauge, (String) null,
+			null, null);
+		publisher.publish(e);
+		return;
+	    }
 	    publisher = new UtilPublisher(
 		    context,
 		    "http://ontology.universAAL.org/SimpleUAAL.owl#ContextEventsProvider",
 		    (callees != null && !callees.isEmpty()) ? ContextProviderType.controller
-			    : ContextProviderType.gauge, e.getSubjectTypeURI(),
-		    e.getRDFPredicate(), null);
+			    : ContextProviderType.gauge, (String) null, null,
+		    null);
 
 	}
 	publisher.publish(e);
