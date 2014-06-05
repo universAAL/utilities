@@ -5,11 +5,11 @@
   <parent>
     <groupId>org.universAAL.support</groupId>
     <artifactId>support.pom</artifactId>
-    <version>3.1.0</version>
+    <version>3.1.1-SNAPSHOT</version>
     <relativePath>../../pom/pom.xml</relativePath>
   </parent>
   <artifactId>uAAL.utils</artifactId>
-  <version>3.1.0</version>
+  <version>3.1.1-SNAPSHOT</version>
   <name>universAAL Support Utilities API</name>
   <description>A suite of helpful tools to make usage of universAAL a bit easier</description>
   <dependencyManagement>
@@ -17,21 +17,21 @@
       <dependency>
         <groupId>org.universAAL.middleware</groupId>
         <artifactId>mw.pom</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.1-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.middleware</groupId>
         <artifactId>mw.pom.osgi</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.1-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.ontology</groupId>
         <artifactId>ont.pom</artifactId>
-        <version>3.1.0</version>
+        <version>3.1.1-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
