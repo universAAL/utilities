@@ -722,7 +722,7 @@ public class Profile {
      * expressed with Change argument. However it can also be used to
      * specify that the changed input that can only be handled by this profile
      * is a specific instance. This can be done by using the byValue constructor
-     * of the Remove.
+     * of the Change.
      * <p/>
      * Example: <code>
      * req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_SOURCE_BRIGHTNESS }, new Change(new Integer(0)));
@@ -753,7 +753,7 @@ public class Profile {
      * expressed with Change argument, and with the specific allowed
      * cardinality. However it can also be used to specify that the changed
      * input that can only be handled by this profile is a specific instance.
-     * This can be done by using the byValue constructor of the Remove.
+     * This can be done by using the byValue constructor of the Change.
      * <p/>
      * Example: <code>
      * req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_SOURCE_BRIGHTNESS }, new Change(new Integer(0)));
