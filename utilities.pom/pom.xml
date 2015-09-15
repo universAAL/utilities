@@ -5,11 +5,11 @@
   <parent>
     <groupId>org.universAAL</groupId>
     <artifactId>uAAL.pom</artifactId>
-    <version>3.4.0</version>
+    <version>3.4.1-SNAPSHOT</version>
   </parent>
   <groupId>org.universAAL.support</groupId>
   <artifactId>utilities.pom</artifactId>
-  <version>3.4.0</version>
+  <version>3.4.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>universAAL Utilities Suite</name>
   <modules>
@@ -29,28 +29,28 @@
       <dependency>
         <groupId>org.universAAL.middleware</groupId>
         <artifactId>mw.pom.core</artifactId>
-        <version>3.4.0</version>
+        <version>3.4.1-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.middleware</groupId>
         <artifactId>mw.pom.osgi</artifactId>
-        <version>3.4.0</version>
+        <version>3.4.1-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.ontology</groupId>
         <artifactId>ont.pom</artifactId>
-        <version>3.4.0</version>
+        <version>3.4.1-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
   	<groupId>org.universAAL.support</groupId>
         <artifactId>uAAL.utils</artifactId>
-  	<version>3.4.0</version>
+  	<version>3.4.1-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -60,7 +60,7 @@
         <enabled>false</enabled>
       </releases>
       <id>uaal-snapshots</id>
-      <name>universAAL Snapshot Repositories</name>
+      <name>universAAL snapshots Repositories</name>
       <url>http://depot.universaal.org/maven-repo/snapshots/</url>
     </repository>
     <repository>
