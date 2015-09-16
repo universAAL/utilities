@@ -6,7 +6,7 @@
     <groupId>org.universAAL.support</groupId>
     <artifactId>utilities.pom</artifactId>
     <version>3.4.1-SNAPSHOT</version>
-    <relativePath>../utilities.pom/pom.xml</relativePath>
+    <relativePath>../utilities.pom</relativePath>
   </parent>
   <artifactId>uAAL.utils</artifactId>
   <version>3.4.1-SNAPSHOT</version>
