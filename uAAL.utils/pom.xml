@@ -12,31 +12,7 @@
   <version>3.4.1-SNAPSHOT</version>
   <name>universAAL Support Utilities API</name>
   <description>A suite of helpful tools to make usage of universAAL a bit easier</description>
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.universAAL.middleware</groupId>
-        <artifactId>mw.pom</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.universAAL.middleware</groupId>
-        <artifactId>mw.pom.osgi</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.universAAL.ontology</groupId>
-        <artifactId>ont.pom</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+  
   <dependencies>
     <dependency>
       <groupId>org.universAAL.middleware</groupId>

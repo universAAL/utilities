@@ -14,6 +14,7 @@
   <name>universAAL Utilities Suite</name>
   <modules>
     <module>../uAAL.utils</module>
+    <module>../utilities.ioc</module>
   </modules>
   <scm>
     <connection>scm:git:https://github.com/universAAL/utilities.git</connection>
@@ -48,9 +49,14 @@
         <scope>import</scope>
       </dependency>
       <dependency>
-  	<groupId>org.universAAL.support</groupId>
+		<groupId>org.universAAL.support</groupId>
         <artifactId>uAAL.utils</artifactId>
-  	<version>3.4.1-SNAPSHOT</version>
+		<version>3.4.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+		<groupId>org.universAAL.support</groupId>
+        <artifactId>utilities.ioc</artifactId>
+		<version>3.4.1-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
