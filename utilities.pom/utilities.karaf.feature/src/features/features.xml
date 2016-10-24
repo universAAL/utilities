@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="universAAL-Feature" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+
+	<!-- Import Mw and Ontologies Feature Repositories -->
+	<repository>mvn:org.universAAL.middleware/mw.karaf.feature/${mw.karaf.feature.version}/xml/features</repository>
+	<repository>mvn:org.universAAL.ontology/ont.karaf.feature/${ont.karaf.feature.version}/xml/features</repository>
+
+	<!-- sample feature -->
+<!--
+	<feature name="uAAL-Ont.PhWorld" description="The Physical World Ontolgy."
+		version="${pom.version}" resolver='(obr)'>
+		<feature>uAAL-MW</feature> 
+		<bundle>wrap:mvn:jp.go.ipa/jgcl/1.0</bundle>
+		<bundle start-level='60' start='true'>mvn:org.universAAL.support/ont.phWorld/3.4.1-SNAPSHOT</bundle>
+	</feature>
+-->
+	<feature name="uAAL-Support.utils" description="Library for provinding helper methods."
+		version="${pom.version}" resolver='(obr)'>
+		<feature>uAAL-MW</feature> 
+		<feature>uAAL-Ont.Profile</feature> 
+		<feature>uAAL-Ont.Device</feature> 
+		<bundle start-level='75' start='true'>wrap:mvn:org.universAAL.support/uAAL.utils/${uAAL.utils.version}</bundle>
+	</feature>	
+
+	<feature name="uAAL-Support.IoC" description="Library for managing module dependencies."
+		version="${pom.version}" resolver='(obr)'>
+		<feature>uAAL-MW</feature> 
+		<bundle start-level='60' start='true'>wrap:mvn:org.universAAL.support/utilities.ioc/${utilities.ioc.version}</bundle>
+	</feature>	
+</features>
