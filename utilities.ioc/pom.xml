@@ -11,9 +11,10 @@
   
   <artifactId>utilities.ioc</artifactId>
   <version>3.4.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>bundle</packaging>
 
-  <name>Inversion of Control for Dependencies</name>
+  <name>universAAL Inversion of Control for Dependencies</name>
+  <description>An utility library to help manage getting sharedObjects in an container independent way.</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,7 +24,6 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -31,4 +31,23 @@
       <artifactId>mw.container.xfaces.core</artifactId>
     </dependency>
   </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <configuration>
+          <instructions>
+            <Bundle-Name>${project.name}</Bundle-Name>
+            <Bundle-Description>${project.description}</Bundle-Description>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Export-Package>org.universAAL.ioc.dependencies,org.universAAL.ioc.dependencies.impl</Export-Package>
+            <DynamicImport-Package>*</DynamicImport-Package>
+          </instructions>
+        </configuration>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
