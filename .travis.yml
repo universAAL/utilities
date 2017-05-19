@@ -2,9 +2,9 @@ language: java
 jdk: oraclejdk8
 sudo: false
  
-#cache:
-#  directories:
-#    - ~/.m2
+cache:
+  directories:
+    - ~/.m2
 
 branches: 
  only:
@@ -23,7 +23,7 @@ before_install:
  - cd utilities.pom
  - (curl -s https://raw.githubusercontent.com/universAAL/platform/master/uAAL.pom/src/scripts/settings.xml) > settings.xml
  - cp settings.xml $HOME/.m2/settings.xml
-# - (curl -s https://raw.githubusercontent.com/universAAL/platform/master/uAAL.pom/src/scripts/ci.sh) > ci.sh
+ - (curl -s https://raw.githubusercontent.com/universAAL/platform/master/uAAL.pom/src/scripts/ci.sh) > ci.sh
  - chmod +x ci.sh
  - export MY_REPO="utilities"
 
