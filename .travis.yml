@@ -26,7 +26,7 @@ before_install:
  - (curl -s https://raw.githubusercontent.com/universAAL/platform/master/uAAL.pom/src/scripts/ci.sh) > ci.sh
  - chmod +x ci.sh
  - export MY_REPO="utilities"
- - export $XTRAS="xtras/"
+ - export XTRAS="xtras/"
 
 install:
  -
