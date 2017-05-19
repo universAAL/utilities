@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="c3280" href="./Remove.html" title="org.universAAL.support.utils.service.Remove" alt="" coords="16,113,85,138"/>
+<area shape="rect" id="node1" href="./Remove.html" title="&lt;TABLE&gt;" alt="" coords="5,101,96,149"/>
+<area shape="rect" id="c3281" href="./Change.html" title="org.universAAL.support.utils.service.Change" alt="" coords="130,113,195,138"/>
+<area shape="rect" id="node2" href="./Change.html" title="&lt;TABLE&gt;" alt="" coords="120,101,205,149"/>
+<area shape="rect" id="c3282" href="./Typematch.html" title="org.universAAL.support.utils.service.Typematch" alt="" coords="240,113,325,138"/>
+<area shape="rect" id="node3" href="./Typematch.html" title="&lt;TABLE&gt;" alt="" coords="229,101,336,149"/>
+<area shape="rect" id="c3284" href="./Add.html" title="org.universAAL.support.utils.service.Add" alt="" coords="374,113,418,138"/>
+<area shape="rect" id="node4" href="./Add.html" title="&lt;TABLE&gt;" alt="" coords="360,101,432,149"/>
+<area shape="rect" id="c3285" href="./Output.html" title="org.universAAL.support.utils.service.Output" alt="" coords="466,113,526,138"/>
+<area shape="rect" id="node5" href="./Output.html" title="&lt;TABLE&gt;" alt="" coords="456,101,536,149"/>
+<area shape="rect" id="c3286" href="./Value.html" title="org.universAAL.support.utils.service.Value" alt="" coords="312,17,365,42"/>
+<area shape="rect" id="node6" href="./Value.html" title="&lt;TABLE&gt;" alt="" coords="301,5,376,53"/>
+<area shape="rect" id="c3287" href="./Variable.html" title="org.universAAL.support.utils.service.Variable" alt="" coords="570,113,638,138"/>
+<area shape="rect" id="node7" href="./Variable.html" title="&lt;TABLE&gt;" alt="" coords="560,101,648,149"/>
+</map>

@@ -1,0 +1,13 @@
+org.universAAL.ioc.dependencies
+org.universAAL.ioc.dependencies.impl
+org.universAAL.support.utils
+org.universAAL.support.utils.context
+org.universAAL.support.utils.context.low
+org.universAAL.support.utils.context.mid
+org.universAAL.support.utils.service
+org.universAAL.support.utils.service.low
+org.universAAL.support.utils.service.mid
+org.universAAL.support.utils.service.top
+org.universAAL.support.utils.ui
+org.universAAL.support.utils.ui.low
+org.universAAL.support.utils.ui.mid
