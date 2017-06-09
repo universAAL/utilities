@@ -29,23 +29,23 @@ package org.universAAL.support.utils.ui;
  * 
  */
 public interface IContainer {
-    
-    /**
-     * Add the given Simple Control UI element to this container. Once the
-     * control is added it cannot be modified. Controls are renedered in the
-     * same order they are added. Controls that are Containers and can add
-     * elements as well, like Group or Repeat, must be added BEFORE other
-     * controls can be added to them. Controls that need references, like Inputs
-     * (with property paths), or Submits (with IDs) will be given an automatic
-     * reference if none was set. This reference will be returned by this
-     * method, in the form of an Array of Strings representing the reference: a
-     * Path for Inputs, or a single String for Submits IDs.
-     * 
-     * @param ctrl
-     *            The Simple Control UI element to be added.
-     * @return The Array of Strings representing the reference Property Path for
-     *         Input Controls, or with a single String for Submits IDs.
-     */
-    String[] add(Control ctrl);
+
+	/**
+	 * Add the given Simple Control UI element to this container. Once the
+	 * control is added it cannot be modified. Controls are renedered in the
+	 * same order they are added. Controls that are Containers and can add
+	 * elements as well, like Group or Repeat, must be added BEFORE other
+	 * controls can be added to them. Controls that need references, like Inputs
+	 * (with property paths), or Submits (with IDs) will be given an automatic
+	 * reference if none was set. This reference will be returned by this
+	 * method, in the form of an Array of Strings representing the reference: a
+	 * Path for Inputs, or a single String for Submits IDs.
+	 * 
+	 * @param ctrl
+	 *            The Simple Control UI element to be added.
+	 * @return The Array of Strings representing the reference Property Path for
+	 *         Input Controls, or with a single String for Submits IDs.
+	 */
+	String[] add(Control ctrl);
 
 }

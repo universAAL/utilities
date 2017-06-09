@@ -37,50 +37,48 @@ import org.universAAL.middleware.service.owls.profile.ServiceProfile;
  */
 public class WrapperS extends ServiceCallee {
 
-    /**
-     * The associated ISListener.
-     */
-    private ISListener listener;
+	/**
+	 * The associated ISListener.
+	 */
+	private ISListener listener;
 
-    /**
-     * Constructor that takes the listener to associate.
-     * 
-     * @param context
-     *            The uAAL Module Context.
-     * @param realizedServices
-     *            Service Profiles describing the services to provide.
-     * @param l
-     *            The associated ISListener.
-     */
-    protected WrapperS(ModuleContext context,
-	    ServiceProfile[] realizedServices, ISListener l) {
-	super(context, realizedServices);
-	listener = l;
-    }
+	/**
+	 * Constructor that takes the listener to associate.
+	 * 
+	 * @param context
+	 *            The uAAL Module Context.
+	 * @param realizedServices
+	 *            Service Profiles describing the services to provide.
+	 * @param l
+	 *            The associated ISListener.
+	 */
+	protected WrapperS(ModuleContext context, ServiceProfile[] realizedServices, ISListener l) {
+		super(context, realizedServices);
+		listener = l;
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.universAAL.middleware.service.ServiceCallee#communicationChannelBroken
-     * ()
-     */
-    @Override
-    public void communicationChannelBroken() {
-	// TODO Auto-generated method stub
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.universAAL.middleware.service.ServiceCallee#
+	 * communicationChannelBroken ()
+	 */
+	@Override
+	public void communicationChannelBroken() {
+		// TODO Auto-generated method stub
 
-    }
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL
-     * .middleware.service.ServiceCall)
-     */
-    @Override
-    public ServiceResponse handleCall(ServiceCall s) {
-	return listener.handleCall(s);
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL
+	 * .middleware.service.ServiceCall)
+	 */
+	@Override
+	public ServiceResponse handleCall(ServiceCall s) {
+		return listener.handleCall(s);
+	}
 
 }

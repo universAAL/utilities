@@ -42,158 +42,158 @@ package org.universAAL.support.utils.ui;
  * 
  */
 public class Forms {
-    
-    private Forms(){
-	// Disallow instantiating
-    }
-    
-    /**
-     * Create a Area control.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @return The Area
-     */
-    public static Area area(String ref, String label){
-	return new Area(ref,label);
-    }
-    
-    /**
-     * Create a Area control.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @return The Area
-     */
-    public static Check check(String ref, String label){
-	return new Check(ref,label);
-    }
-    
-    /**
-     * Create a Media control.
-     * 
-     * @param label
-     *            The label text that identifies the output to the user.
-     * @param url
-     *            The URL to the value to be displayed, from the Resource
-     *            server.
-     * @return The Media
-     */
-    public static Media media(String label, String url){
-	return new Media(label,url);
-    }
-    
-    /**
-     * Create a Out control.
-     * 
-     * @param label
-     *            The label text that identifies the output to the user.
-     * @param value
-     *            The output value to be displayed.
-     * @return The Out
-     */
-    public static Out out(String label, String value){
-	return new Out(label,value);
-    }
 
-    /**
-     * Create a SelectRange control.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @param min
-     *            The low end of the range that the value can get (inclusive)
-     * @param max
-     *            The high end of the range that the value can get (inclusive)
-     * @return The SelectRange
-     */
-    public static SelectRange range(String ref, String label, int min, int max){
- 	return new SelectRange(ref,label,min,max,min);
-    }
-    
-    /**
-     * Create a SelectMulti control.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @param initialOptions
-     *            An array of Strings that represent the different possible
-     *            options to select.
-     * @return The SelectMulti
-     */
-    public static SelectMulti multi(String ref, String label, String[] initialOptions){
-	return new SelectMulti(ref,label,initialOptions);
-    }
-    
-    /**
-     * Create a SelectOne control.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @param initialOptions
-     *            An array of Strings that represent the different possible
-     *            options to select.
-     * @return The SelectOne
-     */
-    public static SelectOne one(String ref, String label, String[] initialOptions){
-	return new SelectOne(ref,label,initialOptions);
-    }
-    
-    /**
-     * Create a SubmitCmd control.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the submit to the user.
-     * @return The SubmitCmd
-     */
-    public static SubmitCmd submit(String ref, String label){
-	return new SubmitCmd(ref,label);
-    }
-    
-    /**
-     * Create a Text control.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @return The Text
-     */
-    public static Text text(String ref, String label){
-	return new Text(ref,label);
-    }
-    
-    /**
-     * Create a TriggerCmd control.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the submit to the user.
-     * @return The TriggerCmd
-     */
-    public static TriggerCmd trigger(String ref, String label){
-	return new TriggerCmd(ref,label);
-    }
+	private Forms() {
+		// Disallow instantiating
+	}
+
+	/**
+	 * Create a Area control.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @return The Area
+	 */
+	public static Area area(String ref, String label) {
+		return new Area(ref, label);
+	}
+
+	/**
+	 * Create a Area control.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @return The Area
+	 */
+	public static Check check(String ref, String label) {
+		return new Check(ref, label);
+	}
+
+	/**
+	 * Create a Media control.
+	 * 
+	 * @param label
+	 *            The label text that identifies the output to the user.
+	 * @param url
+	 *            The URL to the value to be displayed, from the Resource
+	 *            server.
+	 * @return The Media
+	 */
+	public static Media media(String label, String url) {
+		return new Media(label, url);
+	}
+
+	/**
+	 * Create a Out control.
+	 * 
+	 * @param label
+	 *            The label text that identifies the output to the user.
+	 * @param value
+	 *            The output value to be displayed.
+	 * @return The Out
+	 */
+	public static Out out(String label, String value) {
+		return new Out(label, value);
+	}
+
+	/**
+	 * Create a SelectRange control.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @param min
+	 *            The low end of the range that the value can get (inclusive)
+	 * @param max
+	 *            The high end of the range that the value can get (inclusive)
+	 * @return The SelectRange
+	 */
+	public static SelectRange range(String ref, String label, int min, int max) {
+		return new SelectRange(ref, label, min, max, min);
+	}
+
+	/**
+	 * Create a SelectMulti control.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @param initialOptions
+	 *            An array of Strings that represent the different possible
+	 *            options to select.
+	 * @return The SelectMulti
+	 */
+	public static SelectMulti multi(String ref, String label, String[] initialOptions) {
+		return new SelectMulti(ref, label, initialOptions);
+	}
+
+	/**
+	 * Create a SelectOne control.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @param initialOptions
+	 *            An array of Strings that represent the different possible
+	 *            options to select.
+	 * @return The SelectOne
+	 */
+	public static SelectOne one(String ref, String label, String[] initialOptions) {
+		return new SelectOne(ref, label, initialOptions);
+	}
+
+	/**
+	 * Create a SubmitCmd control.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the submit to the user.
+	 * @return The SubmitCmd
+	 */
+	public static SubmitCmd submit(String ref, String label) {
+		return new SubmitCmd(ref, label);
+	}
+
+	/**
+	 * Create a Text control.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @return The Text
+	 */
+	public static Text text(String ref, String label) {
+		return new Text(ref, label);
+	}
+
+	/**
+	 * Create a TriggerCmd control.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the submit to the user.
+	 * @return The TriggerCmd
+	 */
+	public static TriggerCmd trigger(String ref, String label) {
+		return new TriggerCmd(ref, label);
+	}
 
 }

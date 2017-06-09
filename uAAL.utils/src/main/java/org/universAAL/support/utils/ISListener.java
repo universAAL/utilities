@@ -33,15 +33,15 @@ import org.universAAL.middleware.service.ServiceResponse;
  * 
  */
 public interface ISListener {
-    /**
-     * When a service call request matches a service profile associated to this
-     * listener by UAAL helper, this method is called and is passed the call. It
-     * must then act accordingly and return the appropriate Service Response.
-     * 
-     * @param call
-     *            The received Service Call request.
-     * @return The Service Response to return to the caller.
-     * @see org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL.middleware.service.ServiceCall)
-     */
-    ServiceResponse handleCall(ServiceCall call);
+	/**
+	 * When a service call request matches a service profile associated to this
+	 * listener by UAAL helper, this method is called and is passed the call. It
+	 * must then act accordingly and return the appropriate Service Response.
+	 * 
+	 * @param call
+	 *            The received Service Call request.
+	 * @return The Service Response to return to the caller.
+	 * @see org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL.middleware.service.ServiceCall)
+	 */
+	ServiceResponse handleCall(ServiceCall call);
 }

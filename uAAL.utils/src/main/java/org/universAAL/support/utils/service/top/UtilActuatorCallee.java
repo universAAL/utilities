@@ -45,116 +45,109 @@ import org.universAAL.support.utils.service.mid.UtilActuator;
  */
 public abstract class UtilActuatorCallee extends ServiceCallee {
 
-    /**
-     * Namespace for auxiliary URIs used in this class.
-     */
-    private String calleeNamespace;
+	/**
+	 * Namespace for auxiliary URIs used in this class.
+	 */
+	private String calleeNamespace;
 
-    /**
-     * Default error response.
-     */
-    private ServiceResponse errorResponse = new ServiceResponse(
-	    CallStatus.serviceSpecificFailure);
+	/**
+	 * Default error response.
+	 */
+	private ServiceResponse errorResponse = new ServiceResponse(CallStatus.serviceSpecificFailure);
 
-    /**
-     * Default constructor of the class. Takes the same parameters needed by a
-     * UtilActuator profile method, in addition to the ModuleContext.
-     * <p>
-     * BE CAREFUL: This will only work with actuators that have StatusValue as
-     * HAS_VALUE property. Others, like DimmerActuator, will throw an exception.
-     * 
-     * @param context
-     *            The Module Context of uAAL
-     * @param namespace
-     *            The namespace of your server, ending with the character #
-     * @param actuator
-     *            The ontology instance of the actuator you are controlling. The
-     *            more properties it has set, the better.
-     * @throws InvalidOntologyUtilException
-     *             when an actuator is passed that is does not have StatusValue
-     *             as type restriction of its HAS_VALUE property
-     */
-    public UtilActuatorCallee(ModuleContext context, String namespace,
-	    Actuator actuator) throws InvalidOntologyUtilException {
-	super(context, UtilActuator.getServiceProfiles(namespace, actuator));
-	this.calleeNamespace = namespace;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL
-     * .middleware.service.ServiceCall)
-     */
-    @Override
-    public ServiceResponse handleCall(ServiceCall call) {
-	if (call == null){
-	    return null;
-	}
-	String operation = call.getProcessURI();
-	if (operation == null){
-	    return null;
-	}
-	if (operation.startsWith(calleeNamespace
-		+ UtilActuator.SERVICE_GET_ON_OFF)) {
-	    boolean result = executeGet();
-	    ServiceResponse response = new ServiceResponse(CallStatus.succeeded);
-	    response.addOutput(new ProcessOutput(calleeNamespace
-		    + UtilActuator.OUT_GET_ON_OFF,
-		    result ? StatusValue.Activated : StatusValue.NotActivated));
-	    return response;
+	/**
+	 * Default constructor of the class. Takes the same parameters needed by a
+	 * UtilActuator profile method, in addition to the ModuleContext.
+	 * <p>
+	 * BE CAREFUL: This will only work with actuators that have StatusValue as
+	 * HAS_VALUE property. Others, like DimmerActuator, will throw an exception.
+	 * 
+	 * @param context
+	 *            The Module Context of uAAL
+	 * @param namespace
+	 *            The namespace of your server, ending with the character #
+	 * @param actuator
+	 *            The ontology instance of the actuator you are controlling. The
+	 *            more properties it has set, the better.
+	 * @throws InvalidOntologyUtilException
+	 *             when an actuator is passed that is does not have StatusValue
+	 *             as type restriction of its HAS_VALUE property
+	 */
+	public UtilActuatorCallee(ModuleContext context, String namespace, Actuator actuator)
+			throws InvalidOntologyUtilException {
+		super(context, UtilActuator.getServiceProfiles(namespace, actuator));
+		this.calleeNamespace = namespace;
 	}
 
-	if (operation.startsWith(calleeNamespace
-		+ UtilActuator.SERVICE_TURN_OFF)) {
-	    if (executeOff()) {
-		return new ServiceResponse(CallStatus.succeeded);
-	    } else {
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL
+	 * .middleware.service.ServiceCall)
+	 */
+	@Override
+	public ServiceResponse handleCall(ServiceCall call) {
+		if (call == null) {
+			return null;
+		}
+		String operation = call.getProcessURI();
+		if (operation == null) {
+			return null;
+		}
+		if (operation.startsWith(calleeNamespace + UtilActuator.SERVICE_GET_ON_OFF)) {
+			boolean result = executeGet();
+			ServiceResponse response = new ServiceResponse(CallStatus.succeeded);
+			response.addOutput(new ProcessOutput(calleeNamespace + UtilActuator.OUT_GET_ON_OFF,
+					result ? StatusValue.Activated : StatusValue.NotActivated));
+			return response;
+		}
+
+		if (operation.startsWith(calleeNamespace + UtilActuator.SERVICE_TURN_OFF)) {
+			if (executeOff()) {
+				return new ServiceResponse(CallStatus.succeeded);
+			} else {
+				return errorResponse;
+			}
+
+		}
+
+		if (operation.startsWith(calleeNamespace + UtilActuator.SERVICE_TURN_ON)) {
+			if (executeOn()) {
+				return new ServiceResponse(CallStatus.succeeded);
+			} else {
+				return errorResponse;
+			}
+		}
+
+		errorResponse.addOutput(new ProcessOutput(ServiceResponse.PROP_SERVICE_SPECIFIC_ERROR,
+				"The service requested has not been implemented in this simple editor callee"));
 		return errorResponse;
-	    }
-
 	}
 
-	if (operation.startsWith(calleeNamespace
-		+ UtilActuator.SERVICE_TURN_ON)) {
-	    if (executeOn()) {
-		return new ServiceResponse(CallStatus.succeeded);
-	    } else {
-		return errorResponse;
-	    }
-	}
+	/**
+	 * When a SET ON service request is received, this method is called
+	 * automatically.
+	 * 
+	 * @return <code>true</code> if the actuator could be set to ON
+	 */
+	public abstract boolean executeOn();
 
-	errorResponse
-		.addOutput(new ProcessOutput(
-			ServiceResponse.PROP_SERVICE_SPECIFIC_ERROR,
-			"The service requested has not been implemented in this simple editor callee"));
-	return errorResponse;
-    }
+	/**
+	 * When a SET OFF service request is received, this method is called
+	 * automatically.
+	 * 
+	 * @return <code>true</code> if the actuator could be set to OFF
+	 */
+	public abstract boolean executeOff();
 
-    /**
-     * When a SET ON service request is received, this method is called
-     * automatically.
-     * 
-     * @return <code>true</code> if the actuator could be set to ON
-     */
-    public abstract boolean executeOn();
-
-    /**
-     * When a SET OFF service request is received, this method is called
-     * automatically.
-     * 
-     * @return <code>true</code> if the actuator could be set to OFF
-     */
-    public abstract boolean executeOff();
-
-    /**
-     * When a GET STATUS service request is received, this method is called
-     * automatically.
-     * 
-     * @return The Boolean value representing the status property of the
-     *         actuator.
-     */
-    public abstract boolean executeGet();
+	/**
+	 * When a GET STATUS service request is received, this method is called
+	 * automatically.
+	 * 
+	 * @return The Boolean value representing the status property of the
+	 *         actuator.
+	 */
+	public abstract boolean executeGet();
 
 }

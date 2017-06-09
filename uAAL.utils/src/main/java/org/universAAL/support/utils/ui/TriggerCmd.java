@@ -30,87 +30,92 @@ import org.universAAL.middleware.ui.rdf.SubdialogTrigger;
 import org.universAAL.middleware.ui.rdf.Submit;
 
 /**
- * Class representing a SubDialog TriggerCmd UI element. Triggers are commands that
- * can be issued by the user, whether it's a button, spoken command or any other
- * way, depending on the UI renderer. Triggers differ from Submits in that they
- * can lead to SubDialogs without closing previous dialogs, which normal Submits
- * do.
+ * Class representing a SubDialog TriggerCmd UI element. Triggers are commands
+ * that can be issued by the user, whether it's a button, spoken command or any
+ * other way, depending on the UI renderer. Triggers differ from Submits in that
+ * they can lead to SubDialogs without closing previous dialogs, which normal
+ * Submits do.
  * <p>
  * Example render:
  * <p>
+ * 
  * <pre>
  * [Label]
  * </pre>
+ * 
  * @author alfiva
  * 
  */
-public class TriggerCmd extends SubmitCmd{
-    
-    /**
-     * Generic empty constructor. The TriggerCmd will be generated with default
-     * values (empty).
-     */
-    public TriggerCmd(){
-    }
-    
-    /**
-     * Constructor with the reference of the trigger to be used in request and
-     * response. The reference is a single ID String. All other properties of
-     * the input are set to defaults (empty).
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     */
-    public TriggerCmd(String ref){
-	super(ref);
-    }
-    
-    /**
-     * Constructor with the reference of the trigger to be used in request and
-     * response. The reference is a single ID String.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the trigger to the user.
-     */
-    public TriggerCmd(String ref, String label){
-	super(ref,label);
-    }
+public class TriggerCmd extends SubmitCmd {
 
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.SubmitCmd#create(org.universAAL.middleware.ui.rdf.Group)
-     */
-    public String[] create(Group group) {
-	if(ref==null){
-	    setReference(MY_NAMESPACE+StringUtils.createUniqueID());
+	/**
+	 * Generic empty constructor. The TriggerCmd will be generated with default
+	 * values (empty).
+	 */
+	public TriggerCmd() {
 	}
-	SubdialogTrigger sub=new SubdialogTrigger(group, label, ref.getLastPathElement());
-	if(confirmMessage!=null){
-	    switch (confirmType) {
-	    case Submit.CONFIRMATION_TYPE_OK_CANCEL:
-		sub.setConfirmationOkCancel(confirmMessage);
-		break;
-	    case Submit.CONFIRMATION_TYPE_YES_NO:
-		sub.setConfirmationYesNo(confirmMessage);
-		break;
-	    default :
-		sub.setConfirmationOkCancel(confirmMessage);
-		break;
-	    }
+
+	/**
+	 * Constructor with the reference of the trigger to be used in request and
+	 * response. The reference is a single ID String. All other properties of
+	 * the input are set to defaults (empty).
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 */
+	public TriggerCmd(String ref) {
+		super(ref);
 	}
-	if(!l.isEmpty()){
-	    Iterator iter=l.iterator();
-	    while(iter.hasNext()){
-		sub.addMandatoryInput((Input)iter.next());
-	    }
+
+	/**
+	 * Constructor with the reference of the trigger to be used in request and
+	 * response. The reference is a single ID String.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the trigger to the user.
+	 */
+	public TriggerCmd(String ref, String label) {
+		super(ref, label);
 	}
-	if(sub.needsSelection()){
-	    sub.setRepeatableIDPrefix(ref.getLastPathElement());
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.universAAL.support.utils.ui.SubmitCmd#create(org.universAAL.
+	 * middleware.ui.rdf.Group)
+	 */
+	public String[] create(Group group) {
+		if (ref == null) {
+			setReference(MY_NAMESPACE + StringUtils.createUniqueID());
+		}
+		SubdialogTrigger sub = new SubdialogTrigger(group, label, ref.getLastPathElement());
+		if (confirmMessage != null) {
+			switch (confirmType) {
+			case Submit.CONFIRMATION_TYPE_OK_CANCEL:
+				sub.setConfirmationOkCancel(confirmMessage);
+				break;
+			case Submit.CONFIRMATION_TYPE_YES_NO:
+				sub.setConfirmationYesNo(confirmMessage);
+				break;
+			default:
+				sub.setConfirmationOkCancel(confirmMessage);
+				break;
+			}
+		}
+		if (!l.isEmpty()) {
+			Iterator iter = l.iterator();
+			while (iter.hasNext()) {
+				sub.addMandatoryInput((Input) iter.next());
+			}
+		}
+		if (sub.needsSelection()) {
+			sub.setRepeatableIDPrefix(ref.getLastPathElement());
+		}
+		return ref.getThePath();
 	}
-	return ref.getThePath();
-    }
 
 }

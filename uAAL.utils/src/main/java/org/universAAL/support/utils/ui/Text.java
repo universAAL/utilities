@@ -33,108 +33,114 @@ import org.universAAL.middleware.ui.rdf.Label;
  * <p>
  * Example render:
  * <p>
+ * 
  * <pre>
- * Label [_initialValue_____]
+ * Label[_initialValue_____]
  * </pre>
+ * 
  * @author alfiva
  * 
  */
-public class Text extends InputControl{
+public class Text extends InputControl {
 
-    /**
-     * Initial value.
-     */
-    protected String initialValue;
-    
-    /**
-     * Generic empty constructor. The Input will be generated with default
-     * values (empty).
-     */
-    public Text(){
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). All other
-     * properties of the input are set to defaults (empty). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     */
-    public Text(String ref){
-	setReference(ref);
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     */
-    public Text(String ref, String label){
-	setReference(ref);
-	this.label=new Label(label,null);
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @param initialValue
-     *            The value the text input field has by default. If it is not
-     *            changed by the user this will be the value of the input in the
-     *            response.
-     */
-    public Text(String ref, String label, String initialValue){
-	setReference(ref);
-	this.label=new Label(label,null);
-	this.initialValue=initialValue;
-    }
+	/**
+	 * Initial value.
+	 */
+	protected String initialValue;
 
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
-     */
-    public String[] create(Group group) {
-	if(ref==null){
-	    setReference(MY_NAMESPACE+StringUtils.createUniqueID());
+	/**
+	 * Generic empty constructor. The Input will be generated with default
+	 * values (empty).
+	 */
+	public Text() {
 	}
-	model=new InputField(group, label, ref, null, initialValue);
-	return ref.getThePath();
-    }
-    
-    /**
-     * Get the initial value of the input by default.
-     * 
-     * @return The initial value.
-     */
-    public String getInitialValue() {
-        return initialValue;
-    }
 
-    /**
-     * Set the initial value of the input by default.
-     * 
-     * @param initialValue
-     *            The initial value.
-     */
-    public void setInitialValue(String initialValue) {
-        this.initialValue = initialValue;
-    }
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). All other
+	 * properties of the input are set to defaults (empty). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 */
+	public Text(String ref) {
+		setReference(ref);
+	}
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 */
+	public Text(String ref, String label) {
+		setReference(ref);
+		this.label = new Label(label, null);
+	}
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @param initialValue
+	 *            The value the text input field has by default. If it is not
+	 *            changed by the user this will be the value of the input in the
+	 *            response.
+	 */
+	public Text(String ref, String label, String initialValue) {
+		setReference(ref);
+		this.label = new Label(label, null);
+		this.initialValue = initialValue;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.
+	 * ui.rdf.Group)
+	 */
+	public String[] create(Group group) {
+		if (ref == null) {
+			setReference(MY_NAMESPACE + StringUtils.createUniqueID());
+		}
+		model = new InputField(group, label, ref, null, initialValue);
+		return ref.getThePath();
+	}
+
+	/**
+	 * Get the initial value of the input by default.
+	 * 
+	 * @return The initial value.
+	 */
+	public String getInitialValue() {
+		return initialValue;
+	}
+
+	/**
+	 * Set the initial value of the input by default.
+	 * 
+	 * @param initialValue
+	 *            The initial value.
+	 */
+	public void setInitialValue(String initialValue) {
+		this.initialValue = initialValue;
+	}
 
 }

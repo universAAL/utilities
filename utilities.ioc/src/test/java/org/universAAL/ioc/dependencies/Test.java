@@ -23,7 +23,7 @@ import junit.framework.TestCase;
  */
 public class Test extends TestCase {
 
-	public void testDummy(){
+	public void testDummy() {
 		assertTrue(true);
 	}
 }

@@ -55,154 +55,160 @@ import org.universAAL.middleware.ui.rdf.Select;
  * @author alfiva
  * 
  */
-public class SelectMulti extends InputControl{
+public class SelectMulti extends InputControl {
 
-    /**
-     * Initial selected index.
-     */
-    protected Integer initialValue;
-    /**
-     * List of options.
-     */
-    private List l = new ArrayList();
-    
-    /**
-     * Generic empty constructor. The Input will be generated with default
-     * values (first).
-     */
-    public SelectMulti(){
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). All other
-     * properties of the input are set to defaults (first). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     */
-    public SelectMulti(String ref){
-	setReference(ref);
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     */
-    public SelectMulti(String ref, String label){
-	setReference(ref);
-	this.label=new Label(label,null);
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). All other
-     * properties of the input are set to defaults (first). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @param initialOptions
-     *            An array of Objects that represent the different possible
-     *            options to select.
-     */
-    public SelectMulti(String ref, String label, Object[] initialOptions){
-	setReference(ref);
-	this.label=new Label(label,null);
-	setOptions(initialOptions);
-    }
+	/**
+	 * Initial selected index.
+	 */
+	protected Integer initialValue;
+	/**
+	 * List of options.
+	 */
+	private List l = new ArrayList();
 
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
-     */
-    public String[] create(Group group) {
-	if(ref==null){
-	    setReference(MY_NAMESPACE+StringUtils.createUniqueID());
+	/**
+	 * Generic empty constructor. The Input will be generated with default
+	 * values (first).
+	 */
+	public SelectMulti() {
 	}
-	model = new Select(group, label, ref, null, initialValue!=null?getOptions()[initialValue.intValue()]:null);
-	((Select)model).generateChoices(getOptions());
-	//TODO: use storeUserInput for the initial value, because it seems generatechoices overrides it
-	return ref.getThePath();
-    }
-    
-    /**
-     * Get the initial value of the selection as an index in the array of
-     * options.
-     * 
-     * @return The index of the initial value
-     */
-    public Integer getInitialIndex() {
-        return initialValue;
-    }
 
-    /**
-     * Set the initial value of the selection as the index in the array of
-     * options.
-     * 
-     * @param initialIndex
-     *            The index of the initial value
-     */
-    public void setInitialIndex(Integer initialIndex) {
-        this.initialValue = initialIndex;
-    }
-
-    /**
-     * Get the possible options to select.
-     * 
-     * @return An array of Strings representing the different options to select,
-     *         or null if none were set.
-     */
-    public Object[] getOptions() {
-	if(l!=null && !l.isEmpty()){
-	    
-	    return l.toArray();
-	    
-//	    int i=0;
-//		String[] res=new String[l.size()];
-//	    Iterator iter=l.iterator();
-//	    while(iter.hasNext()){
-//		res[i++]=(String)iter.next();
-//	    }
-//	    return res;
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). All other
+	 * properties of the input are set to defaults (first). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 */
+	public SelectMulti(String ref) {
+		setReference(ref);
 	}
-	return null;
-    }
-    
-    /**
-     * Add an option to the list of possible options. It will be added in the
-     * last place.
-     * 
-     * @param option
-     *            The option to add
-     */
-    public void addOption(Object option){
-	l.add(option);
-    }
 
-    /**
-     * Get the possible options to select. Overrides any previous values.
-     * 
-     * @param options
-     *            The array of Strings representing the different options to
-     *            select
-     */
-    public void setOptions(Object[] options) {
-        this.l = Arrays.asList(options);
-    }
-    
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 */
+	public SelectMulti(String ref, String label) {
+		setReference(ref);
+		this.label = new Label(label, null);
+	}
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). All other
+	 * properties of the input are set to defaults (first). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @param initialOptions
+	 *            An array of Objects that represent the different possible
+	 *            options to select.
+	 */
+	public SelectMulti(String ref, String label, Object[] initialOptions) {
+		setReference(ref);
+		this.label = new Label(label, null);
+		setOptions(initialOptions);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.
+	 * ui.rdf.Group)
+	 */
+	public String[] create(Group group) {
+		if (ref == null) {
+			setReference(MY_NAMESPACE + StringUtils.createUniqueID());
+		}
+		model = new Select(group, label, ref, null,
+				initialValue != null ? getOptions()[initialValue.intValue()] : null);
+		((Select) model).generateChoices(getOptions());
+		// TODO: use storeUserInput for the initial value, because it seems
+		// generatechoices overrides it
+		return ref.getThePath();
+	}
+
+	/**
+	 * Get the initial value of the selection as an index in the array of
+	 * options.
+	 * 
+	 * @return The index of the initial value
+	 */
+	public Integer getInitialIndex() {
+		return initialValue;
+	}
+
+	/**
+	 * Set the initial value of the selection as the index in the array of
+	 * options.
+	 * 
+	 * @param initialIndex
+	 *            The index of the initial value
+	 */
+	public void setInitialIndex(Integer initialIndex) {
+		this.initialValue = initialIndex;
+	}
+
+	/**
+	 * Get the possible options to select.
+	 * 
+	 * @return An array of Strings representing the different options to select,
+	 *         or null if none were set.
+	 */
+	public Object[] getOptions() {
+		if (l != null && !l.isEmpty()) {
+
+			return l.toArray();
+
+			// int i=0;
+			// String[] res=new String[l.size()];
+			// Iterator iter=l.iterator();
+			// while(iter.hasNext()){
+			// res[i++]=(String)iter.next();
+			// }
+			// return res;
+		}
+		return null;
+	}
+
+	/**
+	 * Add an option to the list of possible options. It will be added in the
+	 * last place.
+	 * 
+	 * @param option
+	 *            The option to add
+	 */
+	public void addOption(Object option) {
+		l.add(option);
+	}
+
+	/**
+	 * Get the possible options to select. Overrides any previous values.
+	 * 
+	 * @param options
+	 *            The array of Strings representing the different options to
+	 *            select
+	 */
+	public void setOptions(Object[] options) {
+		this.l = Arrays.asList(options);
+	}
+
 }

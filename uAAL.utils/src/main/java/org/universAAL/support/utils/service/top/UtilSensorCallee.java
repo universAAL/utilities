@@ -45,80 +45,76 @@ import org.universAAL.support.utils.service.mid.UtilSensor;
  */
 public abstract class UtilSensorCallee extends ServiceCallee {
 
-    /**
-     * Namespace for auxiliary URIs used in this class.
-     */
-    private String calleeNamespace;
+	/**
+	 * Namespace for auxiliary URIs used in this class.
+	 */
+	private String calleeNamespace;
 
-    /**
-     * Default error response.
-     */
-    private ServiceResponse errorResponse = new ServiceResponse(
-	    CallStatus.serviceSpecificFailure);
+	/**
+	 * Default error response.
+	 */
+	private ServiceResponse errorResponse = new ServiceResponse(CallStatus.serviceSpecificFailure);
 
-    /**
-     * Default constructor of the class. Takes the same parameters needed by a
-     * UtilSensor profile method, in addition to the ModuleContext.
-     * <p>
-     * BE CAREFUL: This will only work with sensors that have StatusValue as
-     * HAS_VALUE property. Others, like DimmerSensor, will throw an exception.
-     * 
-     * @param context
-     *            The Module Context of uAAL
-     * @param namespace
-     *            The namespace of your server, ending with the character #
-     * @param sensor
-     *            The ontology instance of the sensor you are controlling. The
-     *            more properties it has set, the better.
-     * @throws InvalidOntologyUtilException when an sensor is passed that is does not have StatusValue as
-     *             type restriction of its HAS_VALUE property.
-     */
-    public UtilSensorCallee(ModuleContext context, String namespace,
-	    Sensor sensor) throws InvalidOntologyUtilException {
-	super(context, UtilSensor.getServiceProfiles(namespace, sensor));
-	this.calleeNamespace = namespace;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL
-     * .middleware.service.ServiceCall)
-     */
-    @Override
-    public ServiceResponse handleCall(ServiceCall call) {
-	if (call == null){
-	    return null;
-	}
-	String operation = call.getProcessURI();
-	if (operation == null){
-	    return null;
-	}
-	if (operation.startsWith(calleeNamespace
-		+ UtilSensor.SERVICE_GET_ON_OFF)) {
-	    boolean result = executeGet();
-	    ServiceResponse response = new ServiceResponse(CallStatus.succeeded);
-	    response.addOutput(new ProcessOutput(calleeNamespace
-		    + UtilSensor.OUT_GET_ON_OFF, result ? StatusValue.Activated
-		    : StatusValue.NotActivated));
-	    return response;
+	/**
+	 * Default constructor of the class. Takes the same parameters needed by a
+	 * UtilSensor profile method, in addition to the ModuleContext.
+	 * <p>
+	 * BE CAREFUL: This will only work with sensors that have StatusValue as
+	 * HAS_VALUE property. Others, like DimmerSensor, will throw an exception.
+	 * 
+	 * @param context
+	 *            The Module Context of uAAL
+	 * @param namespace
+	 *            The namespace of your server, ending with the character #
+	 * @param sensor
+	 *            The ontology instance of the sensor you are controlling. The
+	 *            more properties it has set, the better.
+	 * @throws InvalidOntologyUtilException
+	 *             when an sensor is passed that is does not have StatusValue as
+	 *             type restriction of its HAS_VALUE property.
+	 */
+	public UtilSensorCallee(ModuleContext context, String namespace, Sensor sensor)
+			throws InvalidOntologyUtilException {
+		super(context, UtilSensor.getServiceProfiles(namespace, sensor));
+		this.calleeNamespace = namespace;
 	}
 
-	errorResponse
-		.addOutput(new ProcessOutput(
-			ServiceResponse.PROP_SERVICE_SPECIFIC_ERROR,
-			"The service requested has not been implemented in this simple editor callee"));
-	return errorResponse;
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL
+	 * .middleware.service.ServiceCall)
+	 */
+	@Override
+	public ServiceResponse handleCall(ServiceCall call) {
+		if (call == null) {
+			return null;
+		}
+		String operation = call.getProcessURI();
+		if (operation == null) {
+			return null;
+		}
+		if (operation.startsWith(calleeNamespace + UtilSensor.SERVICE_GET_ON_OFF)) {
+			boolean result = executeGet();
+			ServiceResponse response = new ServiceResponse(CallStatus.succeeded);
+			response.addOutput(new ProcessOutput(calleeNamespace + UtilSensor.OUT_GET_ON_OFF,
+					result ? StatusValue.Activated : StatusValue.NotActivated));
+			return response;
+		}
 
-    /**
-     * When a GET STATUS service request is received, this method is called
-     * automatically.
-     * 
-     * @return The Boolean value representing the measured value property of the
-     *         sensor.
-     */
-    public abstract boolean executeGet();
+		errorResponse.addOutput(new ProcessOutput(ServiceResponse.PROP_SERVICE_SPECIFIC_ERROR,
+				"The service requested has not been implemented in this simple editor callee"));
+		return errorResponse;
+	}
+
+	/**
+	 * When a GET STATUS service request is received, this method is called
+	 * automatically.
+	 * 
+	 * @return The Boolean value representing the measured value property of the
+	 *         sensor.
+	 */
+	public abstract boolean executeGet();
 
 }

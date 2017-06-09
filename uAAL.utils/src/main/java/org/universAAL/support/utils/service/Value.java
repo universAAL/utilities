@@ -39,53 +39,51 @@ import org.universAAL.middleware.xsd.NonNegativeInteger;
  * 
  */
 public abstract class Value {
-    /**
-     * Holds the URI of the argument.
-     */
-    protected String uri;
-    /**
-     * Determines if it was set by Value or by type URI.
-     */
-    protected boolean isByURI=true;
+	/**
+	 * Holds the URI of the argument.
+	 */
+	protected String uri;
+	/**
+	 * Determines if it was set by Value or by type URI.
+	 */
+	protected boolean isByURI = true;
 
-    protected static Object createEmptyInstance(String uri) {
-	try {
-	    Class c = TypeMapper.getJavaClass(uri);
-	    if (c.equals(XMLGregorianCalendar.class)){
-		return DatatypeFactory.newInstance().newXMLGregorianCalendar();
-	    }else if (c.equals(Duration.class)){
-		return DatatypeFactory.newInstance().newDuration(0);
-	    }else if (c.equals(Boolean.class)){
-		return Boolean.FALSE;
-	    }else if (c.equals(Locale.class)){
-		return Locale.getDefault();
-	    }else if (c.equals(Integer.class) || c.equals(Double.class)
-		    || c.equals(Float.class) || c.equals(Long.class)
-		    || c.equals(NonNegativeInteger.class)){
-		return c.getConstructor(String.class).newInstance("0");
-	    }else{
-		return c.getConstructor().newInstance();
-	    }
-	} catch (Exception e) {
-	    System.out.println("---SIMPLE UTILS TIP: it was not possible to "
-		    + "create an empty instance of this Variable "
-		    + "type. This is not a problem if you are calling this "
-		    + "constructor from a Profile, but if it's from "
-		    + "a Request you should use an Object instance "
-		    + "with the other constructor.");
-	    e.printStackTrace();
-	    return null;
+	protected static Object createEmptyInstance(String uri) {
+		try {
+			Class c = TypeMapper.getJavaClass(uri);
+			if (c.equals(XMLGregorianCalendar.class)) {
+				return DatatypeFactory.newInstance().newXMLGregorianCalendar();
+			} else if (c.equals(Duration.class)) {
+				return DatatypeFactory.newInstance().newDuration(0);
+			} else if (c.equals(Boolean.class)) {
+				return Boolean.FALSE;
+			} else if (c.equals(Locale.class)) {
+				return Locale.getDefault();
+			} else if (c.equals(Integer.class) || c.equals(Double.class) || c.equals(Float.class)
+					|| c.equals(Long.class) || c.equals(NonNegativeInteger.class)) {
+				return c.getConstructor(String.class).newInstance("0");
+			} else {
+				return c.getConstructor().newInstance();
+			}
+		} catch (Exception e) {
+			System.out.println(
+					"---SIMPLE UTILS TIP: it was not possible to " + "create an empty instance of this Variable "
+							+ "type. This is not a problem if you are calling this "
+							+ "constructor from a Profile, but if it's from "
+							+ "a Request you should use an Object instance " + "with the other constructor.");
+			e.printStackTrace();
+			return null;
+		}
 	}
-    }
-    
-    /**
-     * This is only supposed to be used internally.
-     * 
-     * @return true if constructed for type URI. false if constructed for
-     *         specific value.
-     */
-    public boolean byURI() {
-	return isByURI;
-    }
+
+	/**
+	 * This is only supposed to be used internally.
+	 * 
+	 * @return true if constructed for type URI. false if constructed for
+	 *         specific value.
+	 */
+	public boolean byURI() {
+		return isByURI;
+	}
 
 }

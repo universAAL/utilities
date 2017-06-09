@@ -36,65 +36,63 @@ import org.universAAL.middleware.rdf.Resource;
  */
 public class Output extends Value {
 
-    /**
-     * <b>Recommended for use by SimpleRequests and
-     * SimpleProfiles</b>.SimpleValue used to define the URI (the ID) of an
-     * output. It can be used for two purposes.
-     * <p/>
-     * If you use it from a Request, you must put a newly created
-     * placeholder URI where outputs will be placed in ServiceResponses.
-     * <p/>
-     * If you use it from a Profile, you must put the type URI of the kind
-     * of Output the profile will be handling, like ManagedIndividual.MY_URI.
-     * Use only this constructor
-     * 
-     * @param byTypeURIorPLACEHOLDER
-     *            In Request: An URI used by ServiceResponse to place
-     *            matching outputs. In Profile: The URI of the type that
-     *            is handled by the Profile
-     */
-    public Output(String byTypeURIorPLACEHOLDER) {
-	this.uri = byTypeURIorPLACEHOLDER;
-	if (!Resource.isQualifiedName(byTypeURIorPLACEHOLDER)) {
-	    System.out
-		    .println("---SIMPLE UTILS TIP: You must pass a valid " +
-			    "\"MY URI\" of a ManagedIndivdual to this " +
-			    "Typematch constructor if you are calling " +
-			    "this from a Profile.");
+	/**
+	 * <b>Recommended for use by SimpleRequests and
+	 * SimpleProfiles</b>.SimpleValue used to define the URI (the ID) of an
+	 * output. It can be used for two purposes.
+	 * <p/>
+	 * If you use it from a Request, you must put a newly created placeholder
+	 * URI where outputs will be placed in ServiceResponses.
+	 * <p/>
+	 * If you use it from a Profile, you must put the type URI of the kind of
+	 * Output the profile will be handling, like ManagedIndividual.MY_URI. Use
+	 * only this constructor
+	 * 
+	 * @param byTypeURIorPLACEHOLDER
+	 *            In Request: An URI used by ServiceResponse to place matching
+	 *            outputs. In Profile: The URI of the type that is handled by
+	 *            the Profile
+	 */
+	public Output(String byTypeURIorPLACEHOLDER) {
+		this.uri = byTypeURIorPLACEHOLDER;
+		if (!Resource.isQualifiedName(byTypeURIorPLACEHOLDER)) {
+			System.out
+					.println("---SIMPLE UTILS TIP: You must pass a valid " + "\"MY URI\" of a ManagedIndivdual to this "
+							+ "Typematch constructor if you are calling " + "this from a Profile.");
+		}
 	}
-    }
 
-    /**
-     * <b>For use only by SimpleRequests</b>. Value used to define the URI (the
-     * ID) of an output.
-     * <p>
-     * DEPRECATED: The use of this constructor is discouraged as it behaves
-     * differently to other constructors of SimpleValues that take instance
-     * values. This one uses the passed value to extract its type, not to
-     * specify it as explicit output.
-     * <p>
-     * This is a helper constructor that takes an instance of the type you want
-     * and extracts its type. The value of the instance is irrelevant, it's just
-     * intended for situations in which you already have an instance which type
-     * you want to output.
-     * 
-     * @param byValue
-     *            An instance of a ManagedIndividual or native type representing
-     *            the value to output in this argument, but only its type is
-     *            relevant.
-     */
-    @Deprecated
-    public Output(Object byValue) {
-	this.uri = ManagedIndividual.getTypeURI(byValue);
-    }
+	/**
+	 * <b>For use only by SimpleRequests</b>. Value used to define the URI (the
+	 * ID) of an output.
+	 * <p>
+	 * DEPRECATED: The use of this constructor is discouraged as it behaves
+	 * differently to other constructors of SimpleValues that take instance
+	 * values. This one uses the passed value to extract its type, not to
+	 * specify it as explicit output.
+	 * <p>
+	 * This is a helper constructor that takes an instance of the type you want
+	 * and extracts its type. The value of the instance is irrelevant, it's just
+	 * intended for situations in which you already have an instance which type
+	 * you want to output.
+	 * 
+	 * @param byValue
+	 *            An instance of a ManagedIndividual or native type representing
+	 *            the value to output in this argument, but only its type is
+	 *            relevant.
+	 */
+	@Deprecated
+	public Output(Object byValue) {
+		this.uri = ManagedIndividual.getTypeURI(byValue);
+	}
 
-    /**
-     * This is only supposed to be used internally.
-     * 
-     * @return The type URI/placeholder to output
-     */
-    public String getURI() {
-	return uri;
-    }
+	/**
+	 * This is only supposed to be used internally.
+	 * 
+	 * @return The type URI/placeholder to output
+	 */
+	public String getURI() {
+		return uri;
+	}
 
 }

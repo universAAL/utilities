@@ -40,203 +40,184 @@ import org.universAAL.middleware.rdf.Resource;
  * @author alfiva
  * 
  */
-public class Pattern extends ContextEventPattern{
-    /**
-     * Helper error message.
-     */
-    private static final String MSG_STR = "---SIMPLE UTILS TIP: You must " +
-    		"pass a valid \"MY URI\" of a ManagedIndivdual to this " +
-    		"UtilSubscriber constructor, or null.";
-    /**
-     * Helper error message.
-     */
-    private static final String MSG_PRED = "---SIMPLE UTILS TIP: You must " +
-    		"pass a valid \"URI\" of a Property to this " +
-    		"UtilSubscriber constructor, or null.";
-    /**
-     * Helper error message.
-     */
-    private static final String MSG_INST = "---SIMPLE UTILS TIP: You must " +
-    		"pass a valid ManagedIndivdual or DataType to this " +
-    		"UtilSubscriber constructor, or null.";
+public class Pattern extends ContextEventPattern {
+	/**
+	 * Helper error message.
+	 */
+	private static final String MSG_STR = "---SIMPLE UTILS TIP: You must "
+			+ "pass a valid \"MY URI\" of a ManagedIndivdual to this " + "UtilSubscriber constructor, or null.";
+	/**
+	 * Helper error message.
+	 */
+	private static final String MSG_PRED = "---SIMPLE UTILS TIP: You must "
+			+ "pass a valid \"URI\" of a Property to this " + "UtilSubscriber constructor, or null.";
+	/**
+	 * Helper error message.
+	 */
+	private static final String MSG_INST = "---SIMPLE UTILS TIP: You must "
+			+ "pass a valid ManagedIndivdual or DataType to this " + "UtilSubscriber constructor, or null.";
 
-    /**
-     * Simple constructor to create a Context Event Pattern with restrictions on
-     * the type of subject, the predicate, and the type of object. Any of these
-     * can be null if no restriction is desired over that concept.
-     * 
-     * @param subjTypeURI
-     *            The type URI that the event subject must have. Null for any.
-     * @param predicate
-     *            The exact predicate that the event must equal. Null for any.
-     * @param objTypeURI
-     *            The type URI that the event object must have. Null for any.
-     */
-    public Pattern(String subjTypeURI,String predicate, String objTypeURI){
-	super();
-	if (subjTypeURI != null) {
-	    if (Resource.isQualifiedName(subjTypeURI)) {
-		this.addRestriction(MergedRestriction
-			.getAllValuesRestriction(ContextEvent.PROP_RDF_SUBJECT,
-				subjTypeURI));
-	    } else {
-		System.out.println(MSG_STR);
-	    }
+	/**
+	 * Simple constructor to create a Context Event Pattern with restrictions on
+	 * the type of subject, the predicate, and the type of object. Any of these
+	 * can be null if no restriction is desired over that concept.
+	 * 
+	 * @param subjTypeURI
+	 *            The type URI that the event subject must have. Null for any.
+	 * @param predicate
+	 *            The exact predicate that the event must equal. Null for any.
+	 * @param objTypeURI
+	 *            The type URI that the event object must have. Null for any.
+	 */
+	public Pattern(String subjTypeURI, String predicate, String objTypeURI) {
+		super();
+		if (subjTypeURI != null) {
+			if (Resource.isQualifiedName(subjTypeURI)) {
+				this.addRestriction(
+						MergedRestriction.getAllValuesRestriction(ContextEvent.PROP_RDF_SUBJECT, subjTypeURI));
+			} else {
+				System.out.println(MSG_STR);
+			}
+		}
+		if (predicate != null) {
+			if (Resource.isQualifiedName(predicate)) {
+				this.addRestriction(
+						MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE, predicate));
+			} else {
+				System.out.println(MSG_PRED);
+			}
+		}
+		if (objTypeURI != null) {
+			if (Resource.isQualifiedName(objTypeURI)) {
+				this.addRestriction(
+						MergedRestriction.getAllValuesRestriction(ContextEvent.PROP_RDF_OBJECT, objTypeURI));
+			} else {
+				System.out.println(MSG_STR);
+			}
+		}
 	}
-	if (predicate != null) {
-	    if (Resource.isQualifiedName(predicate)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE,
-				predicate));
-	    } else {
-		System.out.println(MSG_PRED);
-	    }
+
+	/**
+	 * Simple constructor to create a Context Event Pattern with restrictions on
+	 * the type of subject, the predicate, and the exact object. Any of these
+	 * can be null if no restriction is desired over that concept.
+	 * 
+	 * @param subjTypeURI
+	 *            The type URI that the event subject must have. Null for any.
+	 * @param predicate
+	 *            The exact predicate that the event must equal. Null for any.
+	 * @param obj
+	 *            The exact instance that the event object must equal. Null for
+	 *            any.
+	 */
+	public Pattern(String subjTypeURI, String predicate, Object obj) {
+		super();
+		if (subjTypeURI != null) {
+			if (Resource.isQualifiedName(subjTypeURI)) {
+				this.addRestriction(
+						MergedRestriction.getAllValuesRestriction(ContextEvent.PROP_RDF_SUBJECT, subjTypeURI));
+			} else {
+				System.out.println(MSG_STR);
+			}
+		}
+		if (predicate != null) {
+			if (Resource.isQualifiedName(predicate)) {
+				this.addRestriction(
+						MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE, predicate));
+			} else {
+				System.out.println(MSG_PRED);
+			}
+		}
+		if (obj != null) {
+			String uri = ManagedIndividual.getTypeURI(obj);
+			if (uri != null && Resource.isQualifiedName(uri)) {
+				this.addRestriction(MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_OBJECT, obj));
+			} else {
+				System.out.println(MSG_INST);
+			}
+		}
 	}
-	if (objTypeURI != null) {
-	    if (Resource.isQualifiedName(objTypeURI)) {
-		this.addRestriction(MergedRestriction
-			.getAllValuesRestriction(ContextEvent.PROP_RDF_OBJECT,
-				objTypeURI));
-	    } else {
-		System.out.println(MSG_STR);
-	    }
+
+	/**
+	 * Simple constructor to create a Context Event Pattern with restrictions on
+	 * the exact subject, the predicate, and the type of object. Any of these
+	 * can be null if no restriction is desired over that concept.
+	 * 
+	 * @param subj
+	 *            The exact instance that the event subject must equal. Null for
+	 *            any.
+	 * @param predicate
+	 *            The exact predicate that the event must equal. Null for any.
+	 * @param objTypeURI
+	 *            The type URI that the event object must have. Null for any.
+	 */
+	public Pattern(ManagedIndividual subj, String predicate, String objTypeURI) {
+		super();
+		if (subj != null) {
+			String uri = ManagedIndividual.getTypeURI(subj);
+			if (uri != null && Resource.isQualifiedName(uri)) {
+				this.addRestriction(MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_SUBJECT, subj));
+			} else {
+				System.out.println(MSG_INST);
+			}
+		}
+		if (predicate != null) {
+			if (Resource.isQualifiedName(predicate)) {
+				this.addRestriction(
+						MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE, predicate));
+			} else {
+				System.out.println(MSG_PRED);
+			}
+		}
+		if (objTypeURI != null) {
+			if (Resource.isQualifiedName(objTypeURI)) {
+				this.addRestriction(
+						MergedRestriction.getAllValuesRestriction(ContextEvent.PROP_RDF_OBJECT, objTypeURI));
+			} else {
+				System.out.println(MSG_STR);
+			}
+		}
 	}
-    }
-    
-    /**
-     * Simple constructor to create a Context Event Pattern with restrictions on
-     * the type of subject, the predicate, and the exact object. Any of these
-     * can be null if no restriction is desired over that concept.
-     * 
-     * @param subjTypeURI
-     *            The type URI that the event subject must have. Null for any.
-     * @param predicate
-     *            The exact predicate that the event must equal. Null for any.
-     * @param obj
-     *            The exact instance that the event object must equal. Null for
-     *            any.
-     */
-    public Pattern(String subjTypeURI, String predicate, Object obj){
-	super();
-	if (subjTypeURI != null) {
-	    if (Resource.isQualifiedName(subjTypeURI)) {
-		this.addRestriction(MergedRestriction
-			.getAllValuesRestriction(ContextEvent.PROP_RDF_SUBJECT,
-				subjTypeURI));
-	    } else {
-		System.out.println(MSG_STR);
-	    }
+
+	/**
+	 * Simple constructor to create a Context Event Pattern with restrictions on
+	 * the exact subject, the predicate, and the exact object. Any of these can
+	 * be null if no restriction is desired over that concept.
+	 * 
+	 * @param subj
+	 *            The exact instance that the event subject must equal. Null for
+	 *            any.
+	 * @param predicate
+	 *            The exact predicate that the event must equal. Null for any.
+	 * @param obj
+	 *            The exact instance that the event object must equal. Null for
+	 *            any.
+	 */
+	public Pattern(ManagedIndividual subj, String predicate, Object obj) {
+		super();
+		if (subj != null) {
+			String uri = ManagedIndividual.getTypeURI(subj);
+			if (uri != null && Resource.isQualifiedName(uri)) {
+				this.addRestriction(MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_SUBJECT, subj));
+			} else {
+				System.out.println(MSG_INST);
+			}
+		}
+		if (predicate != null) {
+			if (Resource.isQualifiedName(predicate)) {
+				this.addRestriction(
+						MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE, predicate));
+			} else {
+				System.out.println(MSG_PRED);
+			}
+		}
+		if (obj != null) {
+			String uri = ManagedIndividual.getTypeURI(obj);
+			if (uri != null && Resource.isQualifiedName(uri)) {
+				this.addRestriction(MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_OBJECT, obj));
+			} else {
+				System.out.println(MSG_INST);
+			}
+		}
 	}
-	if (predicate != null) {
-	    if (Resource.isQualifiedName(predicate)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE,
-				predicate));
-	    } else {
-		System.out.println(MSG_PRED);
-	    }
-	}
-	if (obj != null) {
-	    String uri = ManagedIndividual.getTypeURI(obj);
-	    if (uri != null && Resource.isQualifiedName(uri)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(
-				ContextEvent.PROP_RDF_OBJECT, obj));
-	    } else {
-		System.out.println(MSG_INST);
-	    }
-	}
-    }
-    
-    /**
-     * Simple constructor to create a Context Event Pattern with restrictions on
-     * the exact subject, the predicate, and the type of object. Any of these
-     * can be null if no restriction is desired over that concept.
-     * 
-     * @param subj
-     *            The exact instance that the event subject must equal. Null for
-     *            any.
-     * @param predicate
-     *            The exact predicate that the event must equal. Null for any.
-     * @param objTypeURI
-     *            The type URI that the event object must have. Null for any.
-     */
-    public Pattern(ManagedIndividual subj, String predicate, String objTypeURI){
-	super();
-	if (subj != null) {
-	    String uri = ManagedIndividual.getTypeURI(subj);
-	    if (uri != null && Resource.isQualifiedName(uri)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(
-				ContextEvent.PROP_RDF_SUBJECT, subj));
-	    } else {
-		System.out.println(MSG_INST);
-	    }
-	}
-	if (predicate != null) {
-	    if (Resource.isQualifiedName(predicate)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE,
-				predicate));
-	    } else {
-		System.out.println(MSG_PRED);
-	    }
-	}
-	if (objTypeURI != null) {
-	    if (Resource.isQualifiedName(objTypeURI)) {
-		this.addRestriction(MergedRestriction
-			.getAllValuesRestriction(ContextEvent.PROP_RDF_OBJECT,
-				objTypeURI));
-	    } else {
-		System.out.println(MSG_STR);
-	    }
-	}
-    }
-    
-    /**
-     * Simple constructor to create a Context Event Pattern with restrictions on
-     * the exact subject, the predicate, and the exact object. Any of these
-     * can be null if no restriction is desired over that concept.
-     * 
-     * @param subj
-     *            The exact instance that the event subject must equal. Null for
-     *            any.
-     * @param predicate
-     *            The exact predicate that the event must equal. Null for any.
-     * @param obj
-     *            The exact instance that the event object must equal. Null for
-     *            any.
-     */
-    public Pattern(ManagedIndividual subj, String predicate, Object obj){
-	super();
-	if (subj != null) {
-	    String uri = ManagedIndividual.getTypeURI(subj);
-	    if (uri != null && Resource.isQualifiedName(uri)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(
-				ContextEvent.PROP_RDF_SUBJECT, subj));
-	    } else {
-		System.out.println(MSG_INST);
-	    }
-	}
-	if (predicate != null) {
-	    if (Resource.isQualifiedName(predicate)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE,
-				predicate));
-	    } else {
-		System.out.println(MSG_PRED);
-	    }
-	}
-	if (obj != null) {
-	    String uri = ManagedIndividual.getTypeURI(obj);
-	    if (uri != null && Resource.isQualifiedName(uri)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(
-				ContextEvent.PROP_RDF_OBJECT, obj));
-	    } else {
-		System.out.println(MSG_INST);
-	    }
-	}
-    }
 }

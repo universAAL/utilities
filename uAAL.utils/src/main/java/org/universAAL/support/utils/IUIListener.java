@@ -32,14 +32,14 @@ import org.universAAL.middleware.ui.UIResponse;
  * 
  */
 public interface IUIListener {
-    /**
-     * When a UI response is received to a UI request associated to this
-     * listener by UAAL helper, this method is called and is passed the
-     * response.
-     * 
-     * @param response
-     *            The received UI Response.
-     * @see org.universAAL.middleware.ui.UICaller#handleUIResponse(org.universAAL.middleware.ui.UIResponse)
-     */
-    void handleUIResponse(UIResponse response);
+	/**
+	 * When a UI response is received to a UI request associated to this
+	 * listener by UAAL helper, this method is called and is passed the
+	 * response.
+	 * 
+	 * @param response
+	 *            The received UI Response.
+	 * @see org.universAAL.middleware.ui.UICaller#handleUIResponse(org.universAAL.middleware.ui.UIResponse)
+	 */
+	void handleUIResponse(UIResponse response);
 }

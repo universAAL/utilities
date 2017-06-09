@@ -43,97 +43,97 @@ package org.universAAL.support.utils.service;
  * 
  */
 public class Path {
-    /**
-     * Holds the value of the path.
-     */
-    public String[] path;
+	/**
+	 * Holds the value of the path.
+	 */
+	public String[] path;
 
-    /**
-     * Main constructor. It can be used to type
-     * <code>new Path(firstproperty)...</code> instead of
-     * <code>Path.at(firstproperty)...</code>
-     * 
-     * @param path
-     *            The first property of the path, coming from the service root
-     */
-    public Path(String path) {
-	this.path = new String[] { path };
-    }
-
-    /**
-     * Additional constructor if you already have a property path but want to
-     * turn it into a Path object. You can add more steps to the path
-     * afterwards.
-     * 
-     * @param path
-     *            The property path, coming from the service root
-     */
-    public Path(String[] path) {
-	this.path = path;
-    }
-
-    /**
-     * Deprecated. Use at() instead. You save 2 letters.
-     * 
-     * @param to
-     *            The first property of the path, coming from the service root
-     * @return New Path instance
-     */
-    @Deprecated
-    public static Path start(String to) {
-	return new Path(to);
-    }
-
-    /**
-     * Return a new instance of Path starting its branch path at parameter to.
-     * 
-     * @param to
-     *            The first property of the path, coming from the service root
-     * @return New Path instance
-     */
-    public static Path at(String to) {
-	return new Path(to);
-    }
-
-    /**
-     * Puts a new step (a new property) in the branch path. Allows successive
-     * calls to add further properties.
-     * 
-     * @param to
-     *            The next property in the path, coming from a previous call to
-     *            .start
-     * @return Itself
-     */
-    public Path to(String to) {
-	String[] obj = new String[this.path.length + 1];
-	for (int i = 0; i < this.path.length; i++) {
-	    obj[i] = this.path[i];
+	/**
+	 * Main constructor. It can be used to type
+	 * <code>new Path(firstproperty)...</code> instead of
+	 * <code>Path.at(firstproperty)...</code>
+	 * 
+	 * @param path
+	 *            The first property of the path, coming from the service root
+	 */
+	public Path(String path) {
+		this.path = new String[] { path };
 	}
-	obj[obj.length - 1] = to;
-	this.path = obj;
-	return this;
-    }
 
-    /**
-     * Get a Path object with the given property path.
-     * 
-     * @param path
-     *            The property path
-     * @return The Path object representing it
-     */
-    public static Path parse(String[] path) {
-	return new Path(path);
-    }
+	/**
+	 * Additional constructor if you already have a property path but want to
+	 * turn it into a Path object. You can add more steps to the path
+	 * afterwards.
+	 * 
+	 * @param path
+	 *            The property path, coming from the service root
+	 */
+	public Path(String[] path) {
+		this.path = path;
+	}
 
-    /**
-     * Get a Path object with the given property path.
-     * 
-     * @param path
-     *            The single step property path
-     * @return The Path object representing it
-     */
-    public static Path parse(String path) {
-	return new Path(path);
-    }
+	/**
+	 * Deprecated. Use at() instead. You save 2 letters.
+	 * 
+	 * @param to
+	 *            The first property of the path, coming from the service root
+	 * @return New Path instance
+	 */
+	@Deprecated
+	public static Path start(String to) {
+		return new Path(to);
+	}
+
+	/**
+	 * Return a new instance of Path starting its branch path at parameter to.
+	 * 
+	 * @param to
+	 *            The first property of the path, coming from the service root
+	 * @return New Path instance
+	 */
+	public static Path at(String to) {
+		return new Path(to);
+	}
+
+	/**
+	 * Puts a new step (a new property) in the branch path. Allows successive
+	 * calls to add further properties.
+	 * 
+	 * @param to
+	 *            The next property in the path, coming from a previous call to
+	 *            .start
+	 * @return Itself
+	 */
+	public Path to(String to) {
+		String[] obj = new String[this.path.length + 1];
+		for (int i = 0; i < this.path.length; i++) {
+			obj[i] = this.path[i];
+		}
+		obj[obj.length - 1] = to;
+		this.path = obj;
+		return this;
+	}
+
+	/**
+	 * Get a Path object with the given property path.
+	 * 
+	 * @param path
+	 *            The property path
+	 * @return The Path object representing it
+	 */
+	public static Path parse(String[] path) {
+		return new Path(path);
+	}
+
+	/**
+	 * Get a Path object with the given property path.
+	 * 
+	 * @param path
+	 *            The single step property path
+	 * @return The Path object representing it
+	 */
+	public static Path parse(String path) {
+		return new Path(path);
+	}
 
 }

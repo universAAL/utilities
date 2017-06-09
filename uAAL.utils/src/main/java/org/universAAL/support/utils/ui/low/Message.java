@@ -64,107 +64,111 @@ import org.universAAL.support.utils.ui.SubmitCmd;
  * @author alfiva
  * 
  */
-public class Message extends UIRequest implements IContainer{
-    
-    /**
-     * Use this helper class to create a UIRequest that is easy to use. This
-     * Message extends UIRequest so you can use it with a UICaller.
-     * Default values are used for priority (low) and privacy (insensible).
-     * 
-     * @param user
-     *            The user to which the request is addressed.
-     * @param title
-     *            The title of the Message.
-     * @param message
-     *            The default output message to be shown to the user.
-     */
-    public Message(User user, String title, String message) {
-	super();
-	addType(MY_URI, true);
-	configInstance(user, title, message, LevelRating.low, PrivacyLevel.insensible);
-    }
-   
-    /**
-     * Use this helper class to create a UIRequest that is easy to use. This
-     * Message extends UIRequest so you can use it with a UICaller.
-     * 
-     * @param user
-     *            The user to which the request is addressed.
-     * @param title
-     *            The title of the Message.
-     * @param message
-     *            The default output message to be shown to the user.
-     * @param priority
-     *            Set a custom priority for the Message.
-     * @param privacy
-     *            Set the required privacy level for the Message.
-     */
-    public Message(User user, String title, String message, LevelRating priority, PrivacyLevel privacy) {
-	super();
-	addType(MY_URI, true);
-	configInstance(user, title, message, priority, privacy);
-    }
-    
-    /**
-     * Sets the properties of the request to the right initial values specified
-     * by the constructors.
-     * 
-     * @param user
-     *            The user to which the request is addressed.
-     * @param title
-     *            The title of the Message.
-     * @param message
-     *            The default output message to be shown to the user.
-     * @param priority
-     *            Set a custom priority for the Message.
-     * @param privacy
-     *            Set the required privacy level for the Message.
-     */
-    private void configInstance(User user, String title, String message, LevelRating priority, PrivacyLevel privacy){
-	props.put(PROP_ADDRESSED_USER, user);
-	props.put(PROP_DIALOG_FORM, Form.newMessage(title, message));
-	props.put(PROP_DIALOG_PRIORITY, priority);
-	props.put(PROP_DIALOG_LANGUAGE, Locale.getDefault());
-	props.put(PROP_DIALOG_PRIVACY_LEVEL, privacy);
-    }
-    
-    /* (non-Javadoc)
-     * @see oorg.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.utils.SimpleControl)
-     */
-    public String[] add(Control ctrl){
-	return ctrl.create(getDialogForm().getIOControls());
-    }
-    
-    /**
-     * Add a Submit Form Control to the Submit group of the Message. Submit
-     * group is for Submits that end the message. By default two Submits are
-     * added by the system, Delete and Preserve.
-     * 
-     * @param ctrl
-     *            The Submit to add
-     * @return The String representing the ID to be used to identify the Submit
-     *         in the response.
-     */
-    public String addSubmit(SubmitCmd ctrl){
-	String[] ref=ctrl.create(getDialogForm().getSubmits());
-	return ref[ref.length-1];
-    }
-    
-    /**
-     * Add a hidden object so it is sent within the UI request, but not shown to
-     * the user. When the UI response is being handled by the UI caller, this
-     * hidden input can be retrieved by calling
-     * <code>uiresponse.getUserInput(new String[]{ref});</code> , being
-     * <code>ref</code> the one you used in this method.
-     * 
-     * @param ref
-     *            The reference you will use to access the hidden object later
-     *            from the response
-     * @param hidden
-     *            The object you want to hide
-     */
-    public void addHidden(String ref, Object hidden){
-	this.getDialogForm().getData().setPropertyPath(new String[]{ref}, hidden);
-    }
+public class Message extends UIRequest implements IContainer {
+
+	/**
+	 * Use this helper class to create a UIRequest that is easy to use. This
+	 * Message extends UIRequest so you can use it with a UICaller. Default
+	 * values are used for priority (low) and privacy (insensible).
+	 * 
+	 * @param user
+	 *            The user to which the request is addressed.
+	 * @param title
+	 *            The title of the Message.
+	 * @param message
+	 *            The default output message to be shown to the user.
+	 */
+	public Message(User user, String title, String message) {
+		super();
+		addType(MY_URI, true);
+		configInstance(user, title, message, LevelRating.low, PrivacyLevel.insensible);
+	}
+
+	/**
+	 * Use this helper class to create a UIRequest that is easy to use. This
+	 * Message extends UIRequest so you can use it with a UICaller.
+	 * 
+	 * @param user
+	 *            The user to which the request is addressed.
+	 * @param title
+	 *            The title of the Message.
+	 * @param message
+	 *            The default output message to be shown to the user.
+	 * @param priority
+	 *            Set a custom priority for the Message.
+	 * @param privacy
+	 *            Set the required privacy level for the Message.
+	 */
+	public Message(User user, String title, String message, LevelRating priority, PrivacyLevel privacy) {
+		super();
+		addType(MY_URI, true);
+		configInstance(user, title, message, priority, privacy);
+	}
+
+	/**
+	 * Sets the properties of the request to the right initial values specified
+	 * by the constructors.
+	 * 
+	 * @param user
+	 *            The user to which the request is addressed.
+	 * @param title
+	 *            The title of the Message.
+	 * @param message
+	 *            The default output message to be shown to the user.
+	 * @param priority
+	 *            Set a custom priority for the Message.
+	 * @param privacy
+	 *            Set the required privacy level for the Message.
+	 */
+	private void configInstance(User user, String title, String message, LevelRating priority, PrivacyLevel privacy) {
+		props.put(PROP_ADDRESSED_USER, user);
+		props.put(PROP_DIALOG_FORM, Form.newMessage(title, message));
+		props.put(PROP_DIALOG_PRIORITY, priority);
+		props.put(PROP_DIALOG_LANGUAGE, Locale.getDefault());
+		props.put(PROP_DIALOG_PRIVACY_LEVEL, privacy);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * oorg.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui
+	 * .utils.SimpleControl)
+	 */
+	public String[] add(Control ctrl) {
+		return ctrl.create(getDialogForm().getIOControls());
+	}
+
+	/**
+	 * Add a Submit Form Control to the Submit group of the Message. Submit
+	 * group is for Submits that end the message. By default two Submits are
+	 * added by the system, Delete and Preserve.
+	 * 
+	 * @param ctrl
+	 *            The Submit to add
+	 * @return The String representing the ID to be used to identify the Submit
+	 *         in the response.
+	 */
+	public String addSubmit(SubmitCmd ctrl) {
+		String[] ref = ctrl.create(getDialogForm().getSubmits());
+		return ref[ref.length - 1];
+	}
+
+	/**
+	 * Add a hidden object so it is sent within the UI request, but not shown to
+	 * the user. When the UI response is being handled by the UI caller, this
+	 * hidden input can be retrieved by calling
+	 * <code>uiresponse.getUserInput(new String[]{ref});</code> , being
+	 * <code>ref</code> the one you used in this method.
+	 * 
+	 * @param ref
+	 *            The reference you will use to access the hidden object later
+	 *            from the response
+	 * @param hidden
+	 *            The object you want to hide
+	 */
+	public void addHidden(String ref, Object hidden) {
+		this.getDialogForm().getData().setPropertyPath(new String[] { ref }, hidden);
+	}
 
 }

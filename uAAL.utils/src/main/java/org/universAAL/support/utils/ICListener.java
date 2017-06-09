@@ -32,13 +32,13 @@ import org.universAAL.middleware.context.ContextEvent;
  * 
  */
 public interface ICListener {
-    /**
-     * When an event matches a pattern associated to this listener by UAAL
-     * helper, this method is called and is passed the event.
-     * 
-     * @param event
-     *            The received Context Event.
-     * @see org.universAAL.middleware.context.ContextSubscriber#handleContextEvent(org.universAAL.middleware.context.ContextEvent)
-     */
-    void handleContextEvent(ContextEvent event);
+	/**
+	 * When an event matches a pattern associated to this listener by UAAL
+	 * helper, this method is called and is passed the event.
+	 * 
+	 * @param event
+	 *            The received Context Event.
+	 * @see org.universAAL.middleware.context.ContextSubscriber#handleContextEvent(org.universAAL.middleware.context.ContextEvent)
+	 */
+	void handleContextEvent(ContextEvent event);
 }

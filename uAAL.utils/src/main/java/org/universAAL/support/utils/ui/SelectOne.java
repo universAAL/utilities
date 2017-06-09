@@ -50,78 +50,83 @@ import org.universAAL.middleware.ui.rdf.Select1;
  * @author alfiva
  * 
  */
-public class SelectOne extends SelectMulti{
-    
-    /**
-     * Generic empty constructor. The Input will be generated with default
-     * values (first).
-     */
-    public SelectOne(){
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). All other
-     * properties of the input are set to defaults (first). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     */
-    public SelectOne(String ref){
-	super(ref);
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     */
-    public SelectOne(String ref, String label){
-	super(ref,label);
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). All other
-     * properties of the input are set to defaults (first). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @param initialOptions
-     *            An array of Objects that represent the different possible
-     *            options to select.
-     */
-    public SelectOne(String ref, String label, Object[] initialOptions){
-	super(ref,label,initialOptions);
-    }
-    
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.SelectMulti#create(org.universAAL.middleware.ui.rdf.Group)
-     */
-    public String[] create(Group group) {
-	if(ref==null){
-	    setReference(MY_NAMESPACE+StringUtils.createUniqueID());
+public class SelectOne extends SelectMulti {
+
+	/**
+	 * Generic empty constructor. The Input will be generated with default
+	 * values (first).
+	 */
+	public SelectOne() {
 	}
-//	if(initialValue==null)initialValue=Integer.valueOf(0);
-	model = new Select1(group, label, ref, null, initialValue!=null?getOptions()[initialValue.intValue()]:null);
-	((Select1)model).generateChoices(getOptions());
-	//TODO: use storeUserInput for the initial value, because it seems generatechoices overrides it
-	return ref.getThePath();
-    }
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). All other
+	 * properties of the input are set to defaults (first). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 */
+	public SelectOne(String ref) {
+		super(ref);
+	}
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 */
+	public SelectOne(String ref, String label) {
+		super(ref, label);
+	}
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). All other
+	 * properties of the input are set to defaults (first). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @param initialOptions
+	 *            An array of Objects that represent the different possible
+	 *            options to select.
+	 */
+	public SelectOne(String ref, String label, Object[] initialOptions) {
+		super(ref, label, initialOptions);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.universAAL.support.utils.ui.SelectMulti#create(org.universAAL.
+	 * middleware.ui.rdf.Group)
+	 */
+	public String[] create(Group group) {
+		if (ref == null) {
+			setReference(MY_NAMESPACE + StringUtils.createUniqueID());
+		}
+		// if(initialValue==null)initialValue=Integer.valueOf(0);
+		model = new Select1(group, label, ref, null,
+				initialValue != null ? getOptions()[initialValue.intValue()] : null);
+		((Select1) model).generateChoices(getOptions());
+		// TODO: use storeUserInput for the initial value, because it seems
+		// generatechoices overrides it
+		return ref.getThePath();
+	}
 
 }

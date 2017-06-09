@@ -35,110 +35,115 @@ import org.universAAL.middleware.ui.rdf.Label;
  * <p>
  * Example render:
  * <p>
+ * 
  * <pre>
  * [X] Label
  * </pre>
+ * 
  * @author alfiva
  * 
  */
-public class Check extends InputControl{
+public class Check extends InputControl {
 
-    /**
-     * Initial value.
-     */
-    private Boolean initialValue=Boolean.FALSE;
-    
-    /**
-     * Generic empty constructor. The Input will be generated with default
-     * values (false).
-     */
-    public Check() {
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). All other
-     * properties of the input are set to defaults (false). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     */
-    public Check(String ref){
-	setReference(ref);
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     */
-    public Check(String ref, String label){
-	setReference(ref);
-	this.label=new Label(label,null);
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @param initialValue
-     *            The value the boolean input field has by default. If it is not
-     *            changed by the user this will be the value of the input in the
-     *            response.
-     */
-    public Check(String ref, String label, Boolean initialValue){
-	setReference(ref);
-	this.label=new Label(label,null);
-	this.initialValue=initialValue;
-    }
+	/**
+	 * Initial value.
+	 */
+	private Boolean initialValue = Boolean.FALSE;
 
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
-     */
-    public String[] create(Group group) {
-	if(ref==null){
-	    setReference(MY_NAMESPACE+StringUtils.createUniqueID());
+	/**
+	 * Generic empty constructor. The Input will be generated with default
+	 * values (false).
+	 */
+	public Check() {
 	}
-	model=new InputField(group, label, ref, MergedRestriction.getAllValuesRestrictionWithCardinality(
-		ref.getLastPathElement(),
-		TypeMapper.getDatatypeURI(Boolean.class), 1, 1), initialValue);
-	return ref.getThePath();
-    }
-    
-    /**
-     * Get the initial value of the input by default.
-     * 
-     * @return The initial value.
-     */
-    public Boolean getInitialValue() {
-        return initialValue;
-    }
 
-    /**
-     * Set the initial value of the input by default.
-     * 
-     * @param initialValue
-     *            The initial value.
-     */
-    public void setInitialValue(Boolean initialValue) {
-        this.initialValue = initialValue;
-    }
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). All other
+	 * properties of the input are set to defaults (false). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 */
+	public Check(String ref) {
+		setReference(ref);
+	}
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 */
+	public Check(String ref, String label) {
+		setReference(ref);
+		this.label = new Label(label, null);
+	}
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @param initialValue
+	 *            The value the boolean input field has by default. If it is not
+	 *            changed by the user this will be the value of the input in the
+	 *            response.
+	 */
+	public Check(String ref, String label, Boolean initialValue) {
+		setReference(ref);
+		this.label = new Label(label, null);
+		this.initialValue = initialValue;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.
+	 * ui.rdf.Group)
+	 */
+	public String[] create(Group group) {
+		if (ref == null) {
+			setReference(MY_NAMESPACE + StringUtils.createUniqueID());
+		}
+		model = new InputField(group, label, ref, MergedRestriction.getAllValuesRestrictionWithCardinality(
+				ref.getLastPathElement(), TypeMapper.getDatatypeURI(Boolean.class), 1, 1), initialValue);
+		return ref.getThePath();
+	}
+
+	/**
+	 * Get the initial value of the input by default.
+	 * 
+	 * @return The initial value.
+	 */
+	public Boolean getInitialValue() {
+		return initialValue;
+	}
+
+	/**
+	 * Set the initial value of the input by default.
+	 * 
+	 * @param initialValue
+	 *            The initial value.
+	 */
+	public void setInitialValue(Boolean initialValue) {
+		this.initialValue = initialValue;
+	}
 
 }

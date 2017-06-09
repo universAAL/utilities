@@ -25,85 +25,83 @@ import java.util.Arrays;
 
 import org.universAAL.ioc.dependencies.DependencyProxy;
 
-
-
 /**
  *
  * @author <a href="mailto:stefano.lenzi@isti.cnr.it">Stefano "Kismet" Lenzi</a>
  * @version $LastChangedRevision$ ($LastChangedDate$)
  *
  */
-public class WaitingDependencyProxy<T> implements DependencyProxy<T>  {
+public class WaitingDependencyProxy<T> implements DependencyProxy<T> {
 
-    private static final long DEFAULT_SLEEP_STEP = 500;
-    private static final long DEFAULT_TIMEOUT = 60 * 1000;
-    private static final long NO_TIMEOUT = 0;
-    private Object[] filters;
-    private T proxy;
-    private long sleep;
-    private long timeout;
+	private static final long DEFAULT_SLEEP_STEP = 500;
+	private static final long DEFAULT_TIMEOUT = 60 * 1000;
+	private static final long NO_TIMEOUT = 0;
+	private Object[] filters;
+	private T proxy;
+	private long sleep;
+	private long timeout;
 
-    public WaitingDependencyProxy(Object[] filters)  {
-        this(filters, DEFAULT_SLEEP_STEP, DEFAULT_TIMEOUT);
-    }
+	public WaitingDependencyProxy(Object[] filters) {
+		this(filters, DEFAULT_SLEEP_STEP, DEFAULT_TIMEOUT);
+	}
 
-    public WaitingDependencyProxy(Object[] filters, long sleep, long timeout)  {
-        this.filters = Arrays.copyOf(filters, filters.length);
-        this.sleep = sleep;
-        this.timeout = timeout;
-    }
+	public WaitingDependencyProxy(Object[] filters, long sleep, long timeout) {
+		this.filters = Arrays.copyOf(filters, filters.length);
+		this.sleep = sleep;
+		this.timeout = timeout;
+	}
 
-    public boolean isResolved() {
-        synchronized (this) {
-            return proxy != null;
-        }
-    }
+	public boolean isResolved() {
+		synchronized (this) {
+			return proxy != null;
+		}
+	}
 
-    public Object[] getFilters() {
-        return filters;
-    }
+	public Object[] getFilters() {
+		return filters;
+	}
 
-    public T getObject() {
-        if ( timeout < NO_TIMEOUT ) {
-            return getNoTimeout();
-        } else {
-            return getWithTimeout();
-        }
-    }
+	public T getObject() {
+		if (timeout < NO_TIMEOUT) {
+			return getNoTimeout();
+		} else {
+			return getWithTimeout();
+		}
+	}
 
-    private T getWithTimeout() {
-        long now = System.currentTimeMillis();
-        long end = System.currentTimeMillis() + timeout;
-        synchronized (this) {
-            while ( proxy == null && now < end ) {
-                try {
-                    wait(sleep);
-                    now = System.currentTimeMillis();
-                } catch (InterruptedException e) {
-                    return proxy;
-                }
-            }
-            return proxy;
-        }
-    }
+	private T getWithTimeout() {
+		long now = System.currentTimeMillis();
+		long end = System.currentTimeMillis() + timeout;
+		synchronized (this) {
+			while (proxy == null && now < end) {
+				try {
+					wait(sleep);
+					now = System.currentTimeMillis();
+				} catch (InterruptedException e) {
+					return proxy;
+				}
+			}
+			return proxy;
+		}
+	}
 
-    private T getNoTimeout() {
-        synchronized (this) {
-            while ( proxy == null ) {
-                try {
-                    wait();
-                } catch (InterruptedException e) {
-                    return proxy;
-                }
-            }
-            return proxy;
-        }
-    }
+	private T getNoTimeout() {
+		synchronized (this) {
+			while (proxy == null) {
+				try {
+					wait();
+				} catch (InterruptedException e) {
+					return proxy;
+				}
+			}
+			return proxy;
+		}
+	}
 
-    public void setObject(T value){
-        synchronized (this) {
-            this.proxy = value;
-            notifyAll();
-        }
-    }
+	public void setObject(T value) {
+		synchronized (this) {
+			this.proxy = value;
+			notifyAll();
+		}
+	}
 }

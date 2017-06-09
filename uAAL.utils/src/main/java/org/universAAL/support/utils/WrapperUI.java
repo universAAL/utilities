@@ -36,63 +36,63 @@ import org.universAAL.middleware.ui.UIResponse;
  */
 public class WrapperUI extends UICaller {
 
-    /**
-     * The associated IUIListener.
-     */
-    private IUIListener listener;
+	/**
+	 * The associated IUIListener.
+	 */
+	private IUIListener listener;
 
-    /**
-     * Constructor.
-     * 
-     * @param context
-     *            The uAAL Module Context.
-     */
-    protected WrapperUI(ModuleContext context) {
-	super(context);
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see org.universAAL.middleware.ui.UICaller#communicationChannelBroken()
-     */
-    @Override
-    public void communicationChannelBroken() {
-	// TODO Auto-generated method stub
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.universAAL.middleware.ui.UICaller#dialogAborted(java.lang.String)
-     */
-    @Override
-    public void dialogAborted(String arg0, Resource data) {
-	// TODO Auto-generated method stub
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.universAAL.middleware.ui.UICaller#handleUIResponse(org.universAAL
-     * .middleware.ui.UIResponse)
-     */
-    @Override
-    public void handleUIResponse(UIResponse r) {
-	if (listener != null) {
-	    listener.handleUIResponse(r);
+	/**
+	 * Constructor.
+	 * 
+	 * @param context
+	 *            The uAAL Module Context.
+	 */
+	protected WrapperUI(ModuleContext context) {
+		super(context);
 	}
-    }
 
-    /**
-     * Set the IUIListener.
-     * 
-     * @param listener
-     *            The IUIListener to associate.
-     */
-    public void setListener(IUIListener listener) {
-	this.listener = listener;
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.universAAL.middleware.ui.UICaller#communicationChannelBroken()
+	 */
+	@Override
+	public void communicationChannelBroken() {
+		// TODO Auto-generated method stub
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.middleware.ui.UICaller#dialogAborted(java.lang.String)
+	 */
+	@Override
+	public void dialogAborted(String arg0, Resource data) {
+		// TODO Auto-generated method stub
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.middleware.ui.UICaller#handleUIResponse(org.universAAL
+	 * .middleware.ui.UIResponse)
+	 */
+	@Override
+	public void handleUIResponse(UIResponse r) {
+		if (listener != null) {
+			listener.handleUIResponse(r);
+		}
+	}
+
+	/**
+	 * Set the IUIListener.
+	 * 
+	 * @param listener
+	 *            The IUIListener to associate.
+	 */
+	public void setListener(IUIListener listener) {
+		this.listener = listener;
+	}
 }

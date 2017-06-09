@@ -32,21 +32,21 @@ import org.universAAL.middleware.ui.rdf.Input;
  * @author alfiva
  * 
  */
-public abstract class InputControl extends Control{
-    
-    /**
-     * Holds the input model.
-     */
-    protected Input model;
+public abstract class InputControl extends Control {
 
-    /**
-     * Because Inputs can be mandatory when a Submit is activated, these have to
-     * be represented by a model to be referenced by the Submit.
-     * 
-     * @return The model of the Input.
-     */
-    public Input getModel() {
-	return model;
-    }
+	/**
+	 * Holds the input model.
+	 */
+	protected Input model;
+
+	/**
+	 * Because Inputs can be mandatory when a Submit is activated, these have to
+	 * be represented by a model to be referenced by the Submit.
+	 * 
+	 * @return The model of the Input.
+	 */
+	public Input getModel() {
+		return model;
+	}
 
 }

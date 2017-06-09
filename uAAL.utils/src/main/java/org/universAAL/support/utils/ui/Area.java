@@ -32,83 +32,89 @@ import org.universAAL.middleware.ui.rdf.TextArea;
  * <p>
  * Example render:
  * <p>
+ * 
  * <pre>
  * Label | initialValue     | 
  *       |                  |
  *       |__________________|
  * </pre>
+ * 
  * @author alfiva
  * 
  */
-public class Area extends Text{
-    
-    /**
-     * Generic empty constructor. The Input will be generated with default
-     * values (empty).
-     */
-    public Area(){
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). All other
-     * properties of the input are set to defaults (empty). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     */
-    public Area(String ref){
-	super(ref);
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     */
-    public Area(String ref, String label){
-	super(ref,label);
-    }
-    
-    /**
-     * Constructor with the reference of the input to be used in request and
-     * response. The reference is a property path, but in this constructor it is
-     * simplified as a single String (a single-property path). Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the input to the user.
-     * @param initialValue
-     *            The value the text input field has by default. If it is not
-     *            changed by the user this will be the value of the input in the
-     *            response.
-     */
-    public Area(String ref, String label, String initialValue){
-	super(ref,label,initialValue);
-    }
+public class Area extends Text {
 
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.Text#create(org.universAAL.middleware.ui.rdf.Group)
-     */
-    public String[] create(Group group) {
-	if(ref==null){
-	    setReference(MY_NAMESPACE+StringUtils.createUniqueID());
+	/**
+	 * Generic empty constructor. The Input will be generated with default
+	 * values (empty).
+	 */
+	public Area() {
 	}
-	model=new TextArea(group, label, ref, null, initialValue);
-	return ref.getThePath();
-    }
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). All other
+	 * properties of the input are set to defaults (empty). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 */
+	public Area(String ref) {
+		super(ref);
+	}
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 */
+	public Area(String ref, String label) {
+		super(ref, label);
+	}
+
+	/**
+	 * Constructor with the reference of the input to be used in request and
+	 * response. The reference is a property path, but in this constructor it is
+	 * simplified as a single String (a single-property path). Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the input to the user.
+	 * @param initialValue
+	 *            The value the text input field has by default. If it is not
+	 *            changed by the user this will be the value of the input in the
+	 *            response.
+	 */
+	public Area(String ref, String label, String initialValue) {
+		super(ref, label, initialValue);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.support.utils.ui.Text#create(org.universAAL.middleware.ui.
+	 * rdf.Group)
+	 */
+	public String[] create(Group group) {
+		if (ref == null) {
+			setReference(MY_NAMESPACE + StringUtils.createUniqueID());
+		}
+		model = new TextArea(group, label, ref, null, initialValue);
+		return ref.getThePath();
+	}
 
 }

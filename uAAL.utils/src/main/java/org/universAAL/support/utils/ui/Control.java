@@ -34,140 +34,143 @@ import org.universAAL.middleware.ui.rdf.Label;
  * 
  */
 public abstract class Control {
-    
-    /**
-     * Default namespace
-     */
-    public static final String MY_NAMESPACE = "http://org.universAAL.ontology/SimpleUtils.owl#";
-    
-    /**
-     * Path for ID.
-     */
-    protected PropertyPath ref;
-    /**
-     * Text label.
-     */
-    protected Label label;
-    /**
-     * Help text popup.
-     */
-    protected String help;
-    /**
-     * Hint text popup.
-     */
-    protected String hint;
-    
-    /**
-     * This method is for internal use of utils only. It creates the actual
-     * official uaal control configured with the properties defined by this
-     * class. Once it is created it cannot be modified.
-     * 
-     * @param group
-     *            The UI group to which the control is being added.
-     * @return An array of Strings representing the property path used to
-     *         identify the control in the response. This is only of interest
-     *         for Input Controls. Submits and Triggers have only one String
-     *         value. If the path has not been set manually by the time this
-     *         method is called, an automatic one must be generated.
-     */
-    public abstract String[] create(Group group);
-    
-    /**
-     * Get the Help string associated with this control.
-     * 
-     * @return The Help String
-     */
-    public String getHelp() {
-        return help;
-    }
 
-    /**
-     * Set the Help string associated with this control.
-     * 
-     * @param help
-     *            The Help String
-     */
-    public void setHelp(String help) {
-        this.help = help;
-    }
+	/**
+	 * Default namespace
+	 */
+	public static final String MY_NAMESPACE = "http://org.universAAL.ontology/SimpleUtils.owl#";
 
-    /**
-     * Get the Hint string associated with this control.
-     * 
-     * @return The Help String
-     */
-    public String getHint() {
-        return hint;
-    }
+	/**
+	 * Path for ID.
+	 */
+	protected PropertyPath ref;
+	/**
+	 * Text label.
+	 */
+	protected Label label;
+	/**
+	 * Help text popup.
+	 */
+	protected String help;
+	/**
+	 * Hint text popup.
+	 */
+	protected String hint;
 
-    /**
-     * Set the Hint string associated with this control.
-     * 
-     * @param hint
-     *            The Hint String
-     */
-    public void setHint(String hint) {
-        this.hint = hint;
-    }
+	/**
+	 * This method is for internal use of utils only. It creates the actual
+	 * official uaal control configured with the properties defined by this
+	 * class. Once it is created it cannot be modified.
+	 * 
+	 * @param group
+	 *            The UI group to which the control is being added.
+	 * @return An array of Strings representing the property path used to
+	 *         identify the control in the response. This is only of interest
+	 *         for Input Controls. Submits and Triggers have only one String
+	 *         value. If the path has not been set manually by the time this
+	 *         method is called, an automatic one must be generated.
+	 */
+	public abstract String[] create(Group group);
 
-    /**
-     * Get the reference Property Path that identifies this control within the
-     * request and the response in the case of Input Controls. For Submits, it is a single String ID.
-     * 
-     * @return The Array of Strings representing the reference Property path
-     */
-    public String[] getReference() {
-        return ref.getThePath();
-    }
-
-    /**
-     * Set the reference Property Path that identifies this control within the
-     * request and the response in the case of Input Controls. For Submits, it is a single String ID. 
-     * 
-     * @param reference The String representing the reference Property path or ID
-     */
-    public void setReference(String reference){
-	if(reference!=null){
-	    ref=new PropertyPath(null, false, new String[]{reference});
-	}else{
-	    ref=null;
+	/**
+	 * Get the Help string associated with this control.
+	 * 
+	 * @return The Help String
+	 */
+	public String getHelp() {
+		return help;
 	}
-    }
-    
-    /**
-     * Set the reference Property Path that identifies this control within the
-     * request and the response in the case of Input Controls. For Submits, it
-     * is a single String ID, so it only counts the last value.
-     * 
-     * @param reference
-     *            The Array of Strings representing the reference Property path
-     *            or ID
-     */
-    public void setReference(String[] reference){
-	if(reference!=null){
-	    ref=new PropertyPath(null, false, reference);
-	}else{
-	    ref=null;
+
+	/**
+	 * Set the Help string associated with this control.
+	 * 
+	 * @param help
+	 *            The Help String
+	 */
+	public void setHelp(String help) {
+		this.help = help;
 	}
-    }
-    
-    /**
-     * Get the Label string associated with this control.
-     * 
-     * @return The Label String
-     */
-    public String getLabel() {
-        return label.getText();
-    }
-    
-    /**
-     * Set the Label string associated with this control.
-     * 
-     * @param txt
-     *            The Label String
-     */
-    public void setLabel(String txt){
-	label=new Label(txt,null);
-    }
+
+	/**
+	 * Get the Hint string associated with this control.
+	 * 
+	 * @return The Help String
+	 */
+	public String getHint() {
+		return hint;
+	}
+
+	/**
+	 * Set the Hint string associated with this control.
+	 * 
+	 * @param hint
+	 *            The Hint String
+	 */
+	public void setHint(String hint) {
+		this.hint = hint;
+	}
+
+	/**
+	 * Get the reference Property Path that identifies this control within the
+	 * request and the response in the case of Input Controls. For Submits, it
+	 * is a single String ID.
+	 * 
+	 * @return The Array of Strings representing the reference Property path
+	 */
+	public String[] getReference() {
+		return ref.getThePath();
+	}
+
+	/**
+	 * Set the reference Property Path that identifies this control within the
+	 * request and the response in the case of Input Controls. For Submits, it
+	 * is a single String ID.
+	 * 
+	 * @param reference
+	 *            The String representing the reference Property path or ID
+	 */
+	public void setReference(String reference) {
+		if (reference != null) {
+			ref = new PropertyPath(null, false, new String[] { reference });
+		} else {
+			ref = null;
+		}
+	}
+
+	/**
+	 * Set the reference Property Path that identifies this control within the
+	 * request and the response in the case of Input Controls. For Submits, it
+	 * is a single String ID, so it only counts the last value.
+	 * 
+	 * @param reference
+	 *            The Array of Strings representing the reference Property path
+	 *            or ID
+	 */
+	public void setReference(String[] reference) {
+		if (reference != null) {
+			ref = new PropertyPath(null, false, reference);
+		} else {
+			ref = null;
+		}
+	}
+
+	/**
+	 * Get the Label string associated with this control.
+	 * 
+	 * @return The Label String
+	 */
+	public String getLabel() {
+		return label.getText();
+	}
+
+	/**
+	 * Set the Label string associated with this control.
+	 * 
+	 * @param txt
+	 *            The Label String
+	 */
+	public void setLabel(String txt) {
+		label = new Label(txt, null);
+	}
 
 }

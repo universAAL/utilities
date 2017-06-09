@@ -20,19 +20,20 @@
  */
 package org.universAAL.ioc.dependencies;
 
-
-
 /**
  * 
  * @author <a href="mailto:stefano.lenzi@isti.cnr.it">Stefano "Kismet" Lenzi</a>
  * @version $LastChangedRevision$ ($LastChangedDate$)
  *
  */
-public interface DependencyProxy<T>  {
+public interface DependencyProxy<T> {
 
-    public Object[] getFilters();
-    public T getObject();
-    public void setObject(T value);
-    public boolean isResolved();
+	public Object[] getFilters();
+
+	public T getObject();
+
+	public void setObject(T value);
+
+	public boolean isResolved();
 
 }

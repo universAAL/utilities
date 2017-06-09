@@ -75,126 +75,131 @@ import org.universAAL.support.utils.ui.SubmitCmd;
  * @author alfiva
  * 
  */
-public class SubDialog extends UIRequest implements IContainer{
+public class SubDialog extends UIRequest implements IContainer {
 
-    /**
-     * Use this helper class to create a UIRequest that is easy to use. This
-     * SubDialog extends UIRequest so you can use it with a UICaller. This
-     * constructor needs the URI of the Dialog that triggers this SubDialog.
-     * Default values are used for priority (low) and privacy (insensible).
-     * 
-     * @param user
-     *            The user to which the request is addressed.
-     * @param title
-     *            The title of the Dialog.
-     * @param parentDialogURI
-     *            The URI of the Dialog that triggered this SubDialog.
-     */
-    public SubDialog(User user, String title, String parentDialogURI) {
-	super();
-	addType(MY_URI, true);
-	configInstance(user, title, parentDialogURI, LevelRating.low, PrivacyLevel.insensible);
-    }
-    
-    /**
-     * Use this helper class to create a UIRequest that is easy to use. This
-     * SubDialog extends UIRequest so you can use it with a UICaller. This
-     * constructor needs the URI of the Dialog that triggers this SubDialog.
-     * 
-     * @param user
-     *            The user to which the request is addressed.
-     * @param title
-     *            The title of the Dialog.
-     * @param parentDialogURI
-     *            The URI of the Dialog that triggered this SubDialog.
-     * @param priority
-     *            Set a custom priority for the SubDialog.
-     * @param privacy
-     *            Set the required privacy level for the SubDialog.
-     */
-    public SubDialog(User user, String title, String parentDialogURI, LevelRating priority, PrivacyLevel privacy) {
-	super();
-	addType(MY_URI, true);
-	configInstance(user, title, parentDialogURI, priority, privacy);
-    }
-    
-    /**
-     * Sets the properties of the request to the right initial values specified
-     * by the constructors.
-     * 
-     * @param user
-     *            The user to which the request is addressed.
-     * @param title
-     *            The title of the Dialog.
-     * @param parentDialogURI
-     *            The URI of the Dialog that triggered this SubDialog.
-     * @param priority
-     *            Set a custom priority for the SubDialog.
-     * @param privacy
-     *            Set the required privacy level for the SubDialog.
-     */
-    private void configInstance(User user, String title, String parentDialogURI, LevelRating priority, PrivacyLevel privacy){
-	props.put(PROP_ADDRESSED_USER, user);
-	props.put(PROP_DIALOG_FORM, Form.newSubdialog(title, parentDialogURI));
-	props.put(PROP_DIALOG_PRIORITY, priority);
-	props.put(PROP_DIALOG_LANGUAGE, Locale.getDefault());
-	props.put(PROP_DIALOG_PRIVACY_LEVEL, privacy);
-    }
-    
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.utils.SimpleControl)
-     */
-    public String[] add(Control ctrl){
-	return ctrl.create(getDialogForm().getIOControls());
-    }
-    
-    /**
-     * Add a Submit Form Control to the Submit group of the SubDialog. Submit
-     * group is for Submits that end the SubDialog or lead to new dialogs.
-     * 
-     * @param ctrl
-     *            The Submit to add
-     * @return The String representing the ID to be used to identify the Submit
-     *         in the response.
-     */
-    public String addSubmit(SubmitCmd ctrl){
-	String[] ref=ctrl.create(getDialogForm().getSubmits());
-	return ref[ref.length-1];
-    }
-    
-    /**
-     * Add a hidden object so it is sent within the UI request, but not shown to
-     * the user. When the UI response is being handled by the UI caller, this
-     * hidden input can be retrieved by calling
-     * <code>uiresponse.getUserInput(new String[]{ref});</code> , being
-     * <code>ref</code> the one you used in this method.
-     * 
-     * @param ref
-     *            The reference you will use to access the hidden object later
-     *            from the response
-     * @param hidden
-     *            The object you want to hide
-     */
-    public void addHidden(String ref, Object hidden){
-	this.getDialogForm().getData().setPropertyPath(new String[]{ref}, hidden);
-    }
-    
-    /**
-     * Add an extra property to the form used in this UI request. Extra
-     * properties may be used by I/O Handlers to allow the developer to
-     * fine-tune things like the layout. The equivalent in native API is to call
-     * setProperty() on a Form object. Use this only as recommended by the
-     * Handler you intend to use, since it is the Handler the one who will
-     * interpret the property.
-     * 
-     * @param property
-     *            The property of a Form that a certain Handler will inspect for
-     *            its own purposes.
-     * @param extra
-     *            The value to be set into the property.
-     */
-    public void addExtra(String property, Object extra){
-	this.getDialogForm().setProperty(property, extra);
-    }
+	/**
+	 * Use this helper class to create a UIRequest that is easy to use. This
+	 * SubDialog extends UIRequest so you can use it with a UICaller. This
+	 * constructor needs the URI of the Dialog that triggers this SubDialog.
+	 * Default values are used for priority (low) and privacy (insensible).
+	 * 
+	 * @param user
+	 *            The user to which the request is addressed.
+	 * @param title
+	 *            The title of the Dialog.
+	 * @param parentDialogURI
+	 *            The URI of the Dialog that triggered this SubDialog.
+	 */
+	public SubDialog(User user, String title, String parentDialogURI) {
+		super();
+		addType(MY_URI, true);
+		configInstance(user, title, parentDialogURI, LevelRating.low, PrivacyLevel.insensible);
+	}
+
+	/**
+	 * Use this helper class to create a UIRequest that is easy to use. This
+	 * SubDialog extends UIRequest so you can use it with a UICaller. This
+	 * constructor needs the URI of the Dialog that triggers this SubDialog.
+	 * 
+	 * @param user
+	 *            The user to which the request is addressed.
+	 * @param title
+	 *            The title of the Dialog.
+	 * @param parentDialogURI
+	 *            The URI of the Dialog that triggered this SubDialog.
+	 * @param priority
+	 *            Set a custom priority for the SubDialog.
+	 * @param privacy
+	 *            Set the required privacy level for the SubDialog.
+	 */
+	public SubDialog(User user, String title, String parentDialogURI, LevelRating priority, PrivacyLevel privacy) {
+		super();
+		addType(MY_URI, true);
+		configInstance(user, title, parentDialogURI, priority, privacy);
+	}
+
+	/**
+	 * Sets the properties of the request to the right initial values specified
+	 * by the constructors.
+	 * 
+	 * @param user
+	 *            The user to which the request is addressed.
+	 * @param title
+	 *            The title of the Dialog.
+	 * @param parentDialogURI
+	 *            The URI of the Dialog that triggered this SubDialog.
+	 * @param priority
+	 *            Set a custom priority for the SubDialog.
+	 * @param privacy
+	 *            Set the required privacy level for the SubDialog.
+	 */
+	private void configInstance(User user, String title, String parentDialogURI, LevelRating priority,
+			PrivacyLevel privacy) {
+		props.put(PROP_ADDRESSED_USER, user);
+		props.put(PROP_DIALOG_FORM, Form.newSubdialog(title, parentDialogURI));
+		props.put(PROP_DIALOG_PRIORITY, priority);
+		props.put(PROP_DIALOG_LANGUAGE, Locale.getDefault());
+		props.put(PROP_DIALOG_PRIVACY_LEVEL, privacy);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.
+	 * utils.SimpleControl)
+	 */
+	public String[] add(Control ctrl) {
+		return ctrl.create(getDialogForm().getIOControls());
+	}
+
+	/**
+	 * Add a Submit Form Control to the Submit group of the SubDialog. Submit
+	 * group is for Submits that end the SubDialog or lead to new dialogs.
+	 * 
+	 * @param ctrl
+	 *            The Submit to add
+	 * @return The String representing the ID to be used to identify the Submit
+	 *         in the response.
+	 */
+	public String addSubmit(SubmitCmd ctrl) {
+		String[] ref = ctrl.create(getDialogForm().getSubmits());
+		return ref[ref.length - 1];
+	}
+
+	/**
+	 * Add a hidden object so it is sent within the UI request, but not shown to
+	 * the user. When the UI response is being handled by the UI caller, this
+	 * hidden input can be retrieved by calling
+	 * <code>uiresponse.getUserInput(new String[]{ref});</code> , being
+	 * <code>ref</code> the one you used in this method.
+	 * 
+	 * @param ref
+	 *            The reference you will use to access the hidden object later
+	 *            from the response
+	 * @param hidden
+	 *            The object you want to hide
+	 */
+	public void addHidden(String ref, Object hidden) {
+		this.getDialogForm().getData().setPropertyPath(new String[] { ref }, hidden);
+	}
+
+	/**
+	 * Add an extra property to the form used in this UI request. Extra
+	 * properties may be used by I/O Handlers to allow the developer to
+	 * fine-tune things like the layout. The equivalent in native API is to call
+	 * setProperty() on a Form object. Use this only as recommended by the
+	 * Handler you intend to use, since it is the Handler the one who will
+	 * interpret the property.
+	 * 
+	 * @param property
+	 *            The property of a Form that a certain Handler will inspect for
+	 *            its own purposes.
+	 * @param extra
+	 *            The value to be set into the property.
+	 */
+	public void addExtra(String property, Object extra) {
+		this.getDialogForm().setProperty(property, extra);
+	}
 
 }

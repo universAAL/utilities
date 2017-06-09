@@ -47,89 +47,81 @@ import org.universAAL.support.utils.context.Pattern;
  */
 public abstract class UtilSubscriber extends ContextSubscriber {
 
-    /**
-     * Create a simple Context Subscriber that will listen to the events
-     * matching what is specified in the constructor.
-     * 
-     * @param context
-     *            The universAAL module context.
-     * @param subjTypeURI
-     *            The type URI that the provided events subject must have. Null
-     *            for any.
-     * @param predicate
-     *            The exact predicate that the provided events must equal. Null
-     *            for any.
-     * @param objTypeURI
-     *            The type URI that the provided events object must have. Null
-     *            for any.
-     */
-    protected UtilSubscriber(ModuleContext context, String subjTypeURI,
-	    String predicate, String objTypeURI) {
-	super(context, new ContextEventPattern[] { new Pattern(
-		subjTypeURI, predicate, objTypeURI) });
-    }
+	/**
+	 * Create a simple Context Subscriber that will listen to the events
+	 * matching what is specified in the constructor.
+	 * 
+	 * @param context
+	 *            The universAAL module context.
+	 * @param subjTypeURI
+	 *            The type URI that the provided events subject must have. Null
+	 *            for any.
+	 * @param predicate
+	 *            The exact predicate that the provided events must equal. Null
+	 *            for any.
+	 * @param objTypeURI
+	 *            The type URI that the provided events object must have. Null
+	 *            for any.
+	 */
+	protected UtilSubscriber(ModuleContext context, String subjTypeURI, String predicate, String objTypeURI) {
+		super(context, new ContextEventPattern[] { new Pattern(subjTypeURI, predicate, objTypeURI) });
+	}
 
-    /**
-     * Create a simple Context Subscriber that will listen to the events
-     * matching what is specified in the constructor.
-     * 
-     * @param context
-     *            The universAAL module context.
-     * @param subj
-     *            The exact instance that the provided events subject must
-     *            equal. Null for any.
-     * @param predicate
-     *            The exact predicate that the provided events must equal. Null
-     *            for any.
-     * @param objTypeURI
-     *            The type URI that the provided events object must have. Null
-     *            for any.
-     */
-    protected UtilSubscriber(ModuleContext context, ManagedIndividual subj,
-	    String predicate, String objTypeURI) {
-	super(context, new ContextEventPattern[] { new Pattern(subj,
-		predicate, objTypeURI) });
-    }
+	/**
+	 * Create a simple Context Subscriber that will listen to the events
+	 * matching what is specified in the constructor.
+	 * 
+	 * @param context
+	 *            The universAAL module context.
+	 * @param subj
+	 *            The exact instance that the provided events subject must
+	 *            equal. Null for any.
+	 * @param predicate
+	 *            The exact predicate that the provided events must equal. Null
+	 *            for any.
+	 * @param objTypeURI
+	 *            The type URI that the provided events object must have. Null
+	 *            for any.
+	 */
+	protected UtilSubscriber(ModuleContext context, ManagedIndividual subj, String predicate, String objTypeURI) {
+		super(context, new ContextEventPattern[] { new Pattern(subj, predicate, objTypeURI) });
+	}
 
-    /**
-     * Create a simple Context Subscriber that will listen to the events
-     * matching what is specified in the constructor.
-     * 
-     * @param context
-     *            The universAAL module context.
-     * @param subj
-     *            The exact instance that the event subject must equal. Null for
-     *            any.
-     * @param predicate
-     *            The exact predicate that the event must equal. Null for any.
-     * @param obj
-     *            The exact instance that the event object must equal. Null for
-     *            any.
-     */
-    protected UtilSubscriber(ModuleContext context, ManagedIndividual subj,
-	    String predicate, Object obj) {
-	super(context, new ContextEventPattern[] { new Pattern(subj,
-		predicate, obj) });
-    }
+	/**
+	 * Create a simple Context Subscriber that will listen to the events
+	 * matching what is specified in the constructor.
+	 * 
+	 * @param context
+	 *            The universAAL module context.
+	 * @param subj
+	 *            The exact instance that the event subject must equal. Null for
+	 *            any.
+	 * @param predicate
+	 *            The exact predicate that the event must equal. Null for any.
+	 * @param obj
+	 *            The exact instance that the event object must equal. Null for
+	 *            any.
+	 */
+	protected UtilSubscriber(ModuleContext context, ManagedIndividual subj, String predicate, Object obj) {
+		super(context, new ContextEventPattern[] { new Pattern(subj, predicate, obj) });
+	}
 
-    /**
-     * Create a simple Context Subscriber that will listen to the events
-     * matching what is specified in the constructor.
-     * 
-     * @param context
-     *            The universAAL module context.
-     * @param subjTypeURI
-     *            The type URI that the event subject must have. Null for any.
-     * @param predicate
-     *            The exact predicate that the event must equal. Null for any.
-     * @param obj
-     *            The exact instance that the event object must equal. Null for
-     *            any.
-     */
-    protected UtilSubscriber(ModuleContext context, String subjTypeURI,
-	    String predicate, Object obj) {
-	super(context, new ContextEventPattern[] { new Pattern(
-		subjTypeURI, predicate, obj) });
-    }
+	/**
+	 * Create a simple Context Subscriber that will listen to the events
+	 * matching what is specified in the constructor.
+	 * 
+	 * @param context
+	 *            The universAAL module context.
+	 * @param subjTypeURI
+	 *            The type URI that the event subject must have. Null for any.
+	 * @param predicate
+	 *            The exact predicate that the event must equal. Null for any.
+	 * @param obj
+	 *            The exact instance that the event object must equal. Null for
+	 *            any.
+	 */
+	protected UtilSubscriber(ModuleContext context, String subjTypeURI, String predicate, Object obj) {
+		super(context, new ContextEventPattern[] { new Pattern(subjTypeURI, predicate, obj) });
+	}
 
 }

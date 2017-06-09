@@ -33,120 +33,126 @@ import org.universAAL.middleware.ui.rdf.MediaObject;
  * <p>
  * Example render:
  * <p>
+ * 
  * <pre>
  *        __________
  * Label |          |
  *       |    :)    |
  *       |__________|
  * </pre>
+ * 
  * @author alfiva
  * 
  */
-public class Media extends Control{
+public class Media extends Control {
 
-    /**
-     * Type of media.
-     */
-    private String type="IMG";
-    /**
-     * URL to media in resource server.
-     */
-    private String url;
-    
-    /**
-     * Generic empty constructor. The Output will be generated with default
-     * values (empty).
-     */
-    public Media(){
-    }
-    
-    /**
-     * Constructor with only the url. All other properties of the input are
-     * set to defaults (empty image).
-     * 
-     * @param url
-     *            The URL to the value to be displayed, from the Resource
-     *            server.
-     */
-    public Media(String url){
-	this.url=url;
-    }
-    
-    /**
-     * Constructor with the URL value.
-     * 
-     * @param label
-     *            The label text that identifies the output to the user.
-     * @param url
-     *            The URL to the value to be displayed, from the Resource
-     *            server.
-     */
-    public Media(String label, String url){
-	this.label=new Label(label,null);
-	this.url=url;
-    }
-    
-    /**
-     * Constructor with the URL value.
-     * 
-     * @param label
-     *            The label text that identifies the output to the user.
-     * @param url
-     *            The URL to the value to be displayed, from the Resource
-     *            server.
-     * @param type
-     *            The type of media element. By default it's IMG.
-     */
-    public Media(String label, String url, String type){
-	this.label=new Label(label,null);
-	this.url=url;
-	this.type=type;
-    }
+	/**
+	 * Type of media.
+	 */
+	private String type = "IMG";
+	/**
+	 * URL to media in resource server.
+	 */
+	private String url;
 
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
-     */
-    public String[] create(Group group) {
-	new MediaObject(group, label, type, url);
-	return new String[]{};
-    }
-    
-    /**
-     * Get the URL to the the value to be displayed, from the Resource server.
-     * 
-     * @return The URL
-     */
-    public String getUrl() {
-        return url;
-    }
+	/**
+	 * Generic empty constructor. The Output will be generated with default
+	 * values (empty).
+	 */
+	public Media() {
+	}
 
-    /**
-     * Set the URL to the the value to be displayed, from the Resource server.
-     * 
-     * @param url
-     *            The URL
-     */
-    public void setUrl(String url) {
-        this.url = url;
-    }
-    
-    /**
-     * Get the type of media element of the value.
-     * 
-     * @return The media type
-     */
-    public String getType() {
-        return type;
-    }
+	/**
+	 * Constructor with only the url. All other properties of the input are set
+	 * to defaults (empty image).
+	 * 
+	 * @param url
+	 *            The URL to the value to be displayed, from the Resource
+	 *            server.
+	 */
+	public Media(String url) {
+		this.url = url;
+	}
 
-    /**
-     * Set the type of media element of the value.
-     * 
-     * @param type
-     *            The media type
-     */
-    public void setType(String type) {
-        this.type = type;
-    }
+	/**
+	 * Constructor with the URL value.
+	 * 
+	 * @param label
+	 *            The label text that identifies the output to the user.
+	 * @param url
+	 *            The URL to the value to be displayed, from the Resource
+	 *            server.
+	 */
+	public Media(String label, String url) {
+		this.label = new Label(label, null);
+		this.url = url;
+	}
+
+	/**
+	 * Constructor with the URL value.
+	 * 
+	 * @param label
+	 *            The label text that identifies the output to the user.
+	 * @param url
+	 *            The URL to the value to be displayed, from the Resource
+	 *            server.
+	 * @param type
+	 *            The type of media element. By default it's IMG.
+	 */
+	public Media(String label, String url, String type) {
+		this.label = new Label(label, null);
+		this.url = url;
+		this.type = type;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.
+	 * ui.rdf.Group)
+	 */
+	public String[] create(Group group) {
+		new MediaObject(group, label, type, url);
+		return new String[] {};
+	}
+
+	/**
+	 * Get the URL to the the value to be displayed, from the Resource server.
+	 * 
+	 * @return The URL
+	 */
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * Set the URL to the the value to be displayed, from the Resource server.
+	 * 
+	 * @param url
+	 *            The URL
+	 */
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	/**
+	 * Get the type of media element of the value.
+	 * 
+	 * @return The media type
+	 */
+	public String getType() {
+		return type;
+	}
+
+	/**
+	 * Set the type of media element of the value.
+	 * 
+	 * @param type
+	 *            The media type
+	 */
+	public void setType(String type) {
+		this.type = type;
+	}
 
 }

@@ -37,89 +37,82 @@ import org.universAAL.middleware.container.utils.LogUtils;
  * 
  * @param <T>
  */
-public class PassiveDependencyProxy<T> implements DependencyProxy<T>,
-	SharedObjectListener {
+public class PassiveDependencyProxy<T> implements DependencyProxy<T>, SharedObjectListener {
 
-    private final Object[] filters;
-    private T proxy;
-    private Object remH;
-    private Class<?> objectType;
-    private ModuleContext context;
+	private final Object[] filters;
+	private T proxy;
+	private Object remH;
+	private Class<?> objectType;
+	private ModuleContext context;
 
-    public PassiveDependencyProxy(final ModuleContext ctxt,
-	    final Object[] filters) {
-    	context = ctxt;
-	try {
-	    this.objectType = Class.forName((String) filters[0]);
-	} catch (final ClassNotFoundException ex) {
-	    throw new RuntimeException("Bad filtering", ex);
-	}
-	this.filters = filters;
-	final Object[] ref = context.getContainer().fetchSharedObject(context,
-		filters, this);
-	if (ref != null && ref.length > 0) {
-	    try {
-		proxy = (T) ref[0];
-	    } catch (final Exception e) {
-	    }
-	}
-    }
-
-    public boolean isResolved() {
-	synchronized (this) {
-	    return proxy != null;
-	}
-    }
-
-    public Object[] getFilters() {
-	return filters;
-    }
-
-    public T getObject() {
-	synchronized (this) {
-	    while (proxy == null) {
+	public PassiveDependencyProxy(final ModuleContext ctxt, final Object[] filters) {
+		context = ctxt;
 		try {
-		    wait();
-		} catch (final InterruptedException e) {
-		    return proxy;
+			this.objectType = Class.forName((String) filters[0]);
+		} catch (final ClassNotFoundException ex) {
+			throw new RuntimeException("Bad filtering", ex);
 		}
-	    }
-	    return proxy;
-	}
-    }
-
-    public void setObject(final T value) {
-	synchronized (this) {
-	    this.proxy = value;
-	    notifyAll();
-	}
-    }
-
-    public void sharedObjectAdded(final Object sharedObj,
-	    final Object removeHook) {
-	try {
-	    if (sharedObj == null
-		    || objectType.isAssignableFrom(sharedObj.getClass()) == false) {
-		return;
-		/*
-		 * //XXX This is a workaround: Workaround to avoid issue in the
-		 * middleware that notifies leaving and departing of
-		 * sharedObject that do not match the filters
-		 */
-	    }
-	    setObject((T) sharedObj);
-	    this.remH = removeHook;
-	} catch (final Exception e) {
-	    LogUtils.logError(context, getClass(),
-		    "sharedObjectAdded",
-		    new String[] { "unexpected Exception" }, e);
-	}
-    }
-
-    public void sharedObjectRemoved(final Object removeHook) {
-	if (removeHook == remH) {
-	    proxy = null;
+		this.filters = filters;
+		final Object[] ref = context.getContainer().fetchSharedObject(context, filters, this);
+		if (ref != null && ref.length > 0) {
+			try {
+				proxy = (T) ref[0];
+			} catch (final Exception e) {
+			}
+		}
 	}
 
-    }
+	public boolean isResolved() {
+		synchronized (this) {
+			return proxy != null;
+		}
+	}
+
+	public Object[] getFilters() {
+		return filters;
+	}
+
+	public T getObject() {
+		synchronized (this) {
+			while (proxy == null) {
+				try {
+					wait();
+				} catch (final InterruptedException e) {
+					return proxy;
+				}
+			}
+			return proxy;
+		}
+	}
+
+	public void setObject(final T value) {
+		synchronized (this) {
+			this.proxy = value;
+			notifyAll();
+		}
+	}
+
+	public void sharedObjectAdded(final Object sharedObj, final Object removeHook) {
+		try {
+			if (sharedObj == null || objectType.isAssignableFrom(sharedObj.getClass()) == false) {
+				return;
+				/*
+				 * //XXX This is a workaround: Workaround to avoid issue in the
+				 * middleware that notifies leaving and departing of
+				 * sharedObject that do not match the filters
+				 */
+			}
+			setObject((T) sharedObj);
+			this.remH = removeHook;
+		} catch (final Exception e) {
+			LogUtils.logError(context, getClass(), "sharedObjectAdded", new String[] { "unexpected Exception" }, e);
+		}
+	}
+
+	public void sharedObjectRemoved(final Object removeHook) {
+		if (removeHook == remH) {
+			proxy = null;
+		}
+
+	}
 }

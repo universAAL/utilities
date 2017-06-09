@@ -27,105 +27,111 @@ import org.universAAL.middleware.ui.rdf.Label;
 import org.universAAL.middleware.ui.rdf.SimpleOutput;
 
 /**
- * Class representing a Text Output UI element. Text Output show a textual value,
- * whether it's displayed, played or any other way, depending on the UI renderer.
- * The output is represented as a String.
+ * Class representing a Text Output UI element. Text Output show a textual
+ * value, whether it's displayed, played or any other way, depending on the UI
+ * renderer. The output is represented as a String.
  * <p>
  * Example render:
  * <p>
+ * 
  * <pre>
  * Label <b>Value</b>
  * </pre>
+ * 
  * @author alfiva
  * 
  */
-public class Out extends Control{
+public class Out extends Control {
 
-    /**
-     * Output value.
-     */
-    private String value;
-    
-    /**
-     * Generic empty constructor. The Output will be generated with default
-     * values (empty).
-     */
-    public Out(){
-    }
-    
-    /**
-     * Constructor with the output value. All other properties of the input are
-     * set to defaults (empty).
-     * 
-     * @param value
-     *            The output value to be displayed.
-     */
-    public Out(String value){
-	this.value=value;
-    }
-    
-    /**
-     * Constructor with the output value.
-     * 
-     * @param label
-     *            The label text that identifies the output to the user.
-     * @param value
-     *            The output value to be displayed.
-     */
-    public Out(String label, String value){
-	this.label=new Label(label,null);
-	this.value=value;
-    }
-    
-    /**
-     * Constructor with the reference of the output to be used in request. The
-     * reference is a property path, but in this constructor it is simplified as
-     * a single String (a single-property path). For outputs, references are
-     * only used in conjunction with initial root Resources. Use method
-     * setReference(String[] path) to set a path through several properties.
-     * 
-     * @param ref
-     *            The simple reference identifying the input. Set to null to
-     *            auto-generate.
-     * @param label
-     *            The label text that identifies the output to the user.
-     * @param value
-     *            The output value to be displayed.
-     */
-    public Out(String ref, String label, String value){
-	setReference(ref);
-	this.label=new Label(label,null);
-	this.value=value;
-    }
+	/**
+	 * Output value.
+	 */
+	private String value;
 
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.ui.rdf.Group)
-     */
-    public String[] create(Group group) {
-	if(ref==null){
-	    setReference(MY_NAMESPACE+StringUtils.createUniqueID());
+	/**
+	 * Generic empty constructor. The Output will be generated with default
+	 * values (empty).
+	 */
+	public Out() {
 	}
-	new SimpleOutput(group, label, ref, value);
-	return ref.getThePath();
-    }
-    
-    /**
-     * Get the output value to be displayed.
-     * 
-     * @return The output value
-     */
-    public String getValue() {
-        return value;
-    }
 
-    /**
-     * Set the output value to be displayed.
-     * 
-     * @param value
-     *            The output value
-     */
-    public void setValue(String value) {
-        this.value = value;
-    }
+	/**
+	 * Constructor with the output value. All other properties of the input are
+	 * set to defaults (empty).
+	 * 
+	 * @param value
+	 *            The output value to be displayed.
+	 */
+	public Out(String value) {
+		this.value = value;
+	}
+
+	/**
+	 * Constructor with the output value.
+	 * 
+	 * @param label
+	 *            The label text that identifies the output to the user.
+	 * @param value
+	 *            The output value to be displayed.
+	 */
+	public Out(String label, String value) {
+		this.label = new Label(label, null);
+		this.value = value;
+	}
+
+	/**
+	 * Constructor with the reference of the output to be used in request. The
+	 * reference is a property path, but in this constructor it is simplified as
+	 * a single String (a single-property path). For outputs, references are
+	 * only used in conjunction with initial root Resources. Use method
+	 * setReference(String[] path) to set a path through several properties.
+	 * 
+	 * @param ref
+	 *            The simple reference identifying the input. Set to null to
+	 *            auto-generate.
+	 * @param label
+	 *            The label text that identifies the output to the user.
+	 * @param value
+	 *            The output value to be displayed.
+	 */
+	public Out(String ref, String label, String value) {
+		setReference(ref);
+		this.label = new Label(label, null);
+		this.value = value;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.
+	 * ui.rdf.Group)
+	 */
+	public String[] create(Group group) {
+		if (ref == null) {
+			setReference(MY_NAMESPACE + StringUtils.createUniqueID());
+		}
+		new SimpleOutput(group, label, ref, value);
+		return ref.getThePath();
+	}
+
+	/**
+	 * Get the output value to be displayed.
+	 * 
+	 * @return The output value
+	 */
+	public String getValue() {
+		return value;
+	}
+
+	/**
+	 * Set the output value to be displayed.
+	 * 
+	 * @param value
+	 *            The output value
+	 */
+	public void setValue(String value) {
+		this.value = value;
+	}
 
 }

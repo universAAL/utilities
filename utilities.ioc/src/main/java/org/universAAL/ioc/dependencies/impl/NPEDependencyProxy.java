@@ -26,49 +26,46 @@ import java.util.Arrays;
 import org.universAAL.ioc.dependencies.DependencyProxy;
 import org.universAAL.middleware.container.ModuleContext;
 
-
-
 /**
  *
  * @author <a href="mailto:stefano.lenzi@isti.cnr.it">Stefano "Kismet" Lenzi</a>
  * @version $LastChangedRevision$ ($LastChangedDate$)
  *
  */
-public class NPEDependencyProxy<T> implements DependencyProxy<T>  {
+public class NPEDependencyProxy<T> implements DependencyProxy<T> {
 
-    private Object[] filters;
-    private T proxy;
-    private ModuleContext context;
+	private Object[] filters;
+	private T proxy;
+	private ModuleContext context;
 
+	public NPEDependencyProxy(ModuleContext mc, Object[] filters) {
+		this.filters = Arrays.copyOf(filters, filters.length);
+		this.context = mc;
+	}
 
-    public NPEDependencyProxy(ModuleContext mc, Object[] filters) {
-        this.filters = Arrays.copyOf(filters, filters.length);
-        this.context = mc;
-    }
+	public boolean isResolved() {
+		synchronized (this) {
+			return proxy != null;
+		}
+	}
 
-    public boolean isResolved() {
-        synchronized (this) {
-            return proxy != null;
-        }
-    }
+	public Object[] getFilters() {
+		return filters;
+	}
 
-    public Object[] getFilters() {
-        return filters;
-    }
+	public T getObject() {
+		if (isResolved() == false && context != null) {
+			setObject((T) context.getContainer().fetchSharedObject(context, getFilters()));
+		}
+		synchronized (this) {
+			return proxy;
+		}
+	}
 
-    public T getObject() {
-        if ( isResolved() == false && context != null ){
-            setObject((T) context.getContainer().fetchSharedObject(context, getFilters()));
-        }
-        synchronized (this) {
-            return proxy;
-        }
-    }
-
-    public void setObject(T value){
-        synchronized (this) {
-            this.proxy = value;
-        }
-    }
+	public void setObject(T value) {
+		synchronized (this) {
+			this.proxy = value;
+		}
+	}
 
 }

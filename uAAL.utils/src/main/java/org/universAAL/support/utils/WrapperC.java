@@ -36,48 +36,47 @@ import org.universAAL.middleware.context.ContextSubscriber;
  */
 public class WrapperC extends ContextSubscriber {
 
-    /**
-     * The associated ICListener.
-     */
-    private ICListener listener;
+	/**
+	 * The associated ICListener.
+	 */
+	private ICListener listener;
 
-    /**
-     * Constructor that takes the listener to associate.
-     * 
-     * @param context
-     *            The uAAL Module Context.
-     * @param initialSubscriptions
-     *            Event Patterns to subscriber to.
-     * @param l
-     *            The associated ICListener.
-     */
-    protected WrapperC(ModuleContext context,
-	    ContextEventPattern[] initialSubscriptions, ICListener l) {
-	super(context, initialSubscriptions);
-	listener = l;
-    }
+	/**
+	 * Constructor that takes the listener to associate.
+	 * 
+	 * @param context
+	 *            The uAAL Module Context.
+	 * @param initialSubscriptions
+	 *            Event Patterns to subscriber to.
+	 * @param l
+	 *            The associated ICListener.
+	 */
+	protected WrapperC(ModuleContext context, ContextEventPattern[] initialSubscriptions, ICListener l) {
+		super(context, initialSubscriptions);
+		listener = l;
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see org.universAAL.middleware.context.ContextSubscriber#
-     * communicationChannelBroken()
-     */
-    @Override
-    public void communicationChannelBroken() {
-	// TODO Auto-generated method stub
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.universAAL.middleware.context.ContextSubscriber#
+	 * communicationChannelBroken()
+	 */
+	@Override
+	public void communicationChannelBroken() {
+		// TODO Auto-generated method stub
 
-    }
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.universAAL.middleware.context.ContextSubscriber#handleContextEvent
-     * (org.universAAL.middleware.context.ContextEvent)
-     */
-    @Override
-    public void handleContextEvent(ContextEvent event) {
-	listener.handleContextEvent(event);
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.middleware.context.ContextSubscriber#handleContextEvent
+	 * (org.universAAL.middleware.context.ContextEvent)
+	 */
+	@Override
+	public void handleContextEvent(ContextEvent event) {
+		listener.handleContextEvent(event);
+	}
 }
