@@ -26,9 +26,9 @@ under the License.
     <copyright>&#169;2017 universAAL Consortium</copyright>
     <item>
       <title>File: 53,
-             Errors: 237,
-             Warnings: 65,
-             Infos: 2088
+             Errors: 224,
+             Warnings: 4,
+             Infos: 776
       </title>
             <link>http://xtras/utilities/utilities.pom//checkstyle.html</link>
       <description>
@@ -49,7 +49,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.IUIListener.java">org/universAAL/support/utils/IUIListener.java</a>
                 </td>
                 <td>
-                  12
+                  10
                 </td>
                 <td>
                   0
@@ -63,7 +63,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.low.Profile.java">org/universAAL/support/utils/service/low/Profile.java</a>
                 </td>
                 <td>
-                  133
+                  31
                 </td>
                 <td>
                   0
@@ -77,10 +77,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Out.java">org/universAAL/support/utils/ui/Out.java</a>
                 </td>
                 <td>
-                  53
+                  16
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   4
@@ -91,7 +91,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.TriggerCmd.java">org/universAAL/support/utils/ui/TriggerCmd.java</a>
                 </td>
                 <td>
-                  47
+                  13
                 </td>
                 <td>
                   0
@@ -105,7 +105,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Arg.java">org/universAAL/support/utils/service/Arg.java</a>
                 </td>
                 <td>
-                  44
+                  21
                 </td>
                 <td>
                   0
@@ -119,7 +119,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Output.java">org/universAAL/support/utils/service/Output.java</a>
                 </td>
                 <td>
-                  18
+                  12
                 </td>
                 <td>
                   0
@@ -133,7 +133,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Variable.java">org/universAAL/support/utils/service/Variable.java</a>
                 </td>
                 <td>
-                  20
+                  13
                 </td>
                 <td>
                   0
@@ -147,10 +147,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.SelectRange.java">org/universAAL/support/utils/ui/SelectRange.java</a>
                 </td>
                 <td>
-                  83
+                  25
                 </td>
                 <td>
-                  10
+                  0
                 </td>
                 <td>
                   13
@@ -161,13 +161,13 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Control.java">org/universAAL/support/utils/ui/Control.java</a>
                 </td>
                 <td>
-                  67
+                  19
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
-                  14
+                  10
                 </td>
               </tr>
                           <tr>
@@ -175,7 +175,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.low.Dialog.java">org/universAAL/support/utils/ui/low/Dialog.java</a>
                 </td>
                 <td>
-                  70
+                  18
                 </td>
                 <td>
                   0
@@ -189,10 +189,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.top.UtilActuatorCallee.java">org/universAAL/support/utils/service/top/UtilActuatorCallee.java</a>
                 </td>
                 <td>
-                  23
+                  14
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1
@@ -203,10 +203,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.mid.UtilEditor.java">org/universAAL/support/utils/service/mid/UtilEditor.java</a>
                 </td>
                 <td>
-                  54
+                  19
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   1
@@ -217,7 +217,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.context.mid.UtilPublisher.java">org/universAAL/support/utils/context/mid/UtilPublisher.java</a>
                 </td>
                 <td>
-                  40
+                  16
                 </td>
                 <td>
                   0
@@ -231,7 +231,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.context.mid.UtilSubscriber.java">org/universAAL/support/utils/context/mid/UtilSubscriber.java</a>
                 </td>
                 <td>
-                  34
+                  13
                 </td>
                 <td>
                   0
@@ -245,7 +245,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.mid.InvalidOntologyUtilException.java">org/universAAL/support/utils/service/mid/InvalidOntologyUtilException.java</a>
                 </td>
                 <td>
-                  11
+                  8
                 </td>
                 <td>
                   0
@@ -259,7 +259,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Forms.java">org/universAAL/support/utils/ui/Forms.java</a>
                 </td>
                 <td>
-                  83
+                  19
                 </td>
                 <td>
                   0
@@ -273,7 +273,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Typematch.java">org/universAAL/support/utils/service/Typematch.java</a>
                 </td>
                 <td>
-                  16
+                  12
                 </td>
                 <td>
                   0
@@ -287,10 +287,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.SelectOne.java">org/universAAL/support/utils/ui/SelectOne.java</a>
                 </td>
                 <td>
-                  51
+                  14
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   2
@@ -301,7 +301,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.mid.UtilSensor.java">org/universAAL/support/utils/service/mid/UtilSensor.java</a>
                 </td>
                 <td>
-                  45
+                  18
                 </td>
                 <td>
                   0
@@ -315,10 +315,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.ioc.dependencies.impl.PassiveDependencyProxy.java">org/universAAL/ioc/dependencies/impl/PassiveDependencyProxy.java</a>
                 </td>
                 <td>
-                  6
+                  3
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   18
@@ -329,10 +329,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.ioc.dependencies.impl.WaitingDependencyProxy.java">org/universAAL/ioc/dependencies/impl/WaitingDependencyProxy.java</a>
                 </td>
                 <td>
-                  12
+                  0
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   20
@@ -343,7 +343,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.IContainer.java">org/universAAL/support/utils/ui/IContainer.java</a>
                 </td>
                 <td>
-                  12
+                  10
                 </td>
                 <td>
                   0
@@ -357,13 +357,13 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.InputControl.java">org/universAAL/support/utils/ui/InputControl.java</a>
                 </td>
                 <td>
-                  13
+                  10
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  2
+                  1
                 </td>
               </tr>
                           <tr>
@@ -371,10 +371,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.context.low.Provider.java">org/universAAL/support/utils/context/low/Provider.java</a>
                 </td>
                 <td>
-                  37
+                  14
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   0
@@ -385,7 +385,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ICListener.java">org/universAAL/support/utils/ICListener.java</a>
                 </td>
                 <td>
-                  12
+                  11
                 </td>
                 <td>
                   0
@@ -399,7 +399,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Remove.java">org/universAAL/support/utils/service/Remove.java</a>
                 </td>
                 <td>
-                  23
+                  13
                 </td>
                 <td>
                   0
@@ -413,10 +413,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.ioc.dependencies.impl.NPEDependencyProxy.java">org/universAAL/ioc/dependencies/impl/NPEDependencyProxy.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
-                  3
+                  2
                 </td>
                 <td>
                   13
@@ -427,13 +427,13 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Value.java">org/universAAL/support/utils/service/Value.java</a>
                 </td>
                 <td>
-                  32
+                  10
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  4
+                  2
                 </td>
               </tr>
                           <tr>
@@ -441,10 +441,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.top.UtilSensorCallee.java">org/universAAL/support/utils/service/top/UtilSensorCallee.java</a>
                 </td>
                 <td>
-                  22
+                  12
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1
@@ -455,7 +455,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Add.java">org/universAAL/support/utils/service/Add.java</a>
                 </td>
                 <td>
-                  20
+                  13
                 </td>
                 <td>
                   0
@@ -469,7 +469,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.low.Message.java">org/universAAL/support/utils/ui/low/Message.java</a>
                 </td>
                 <td>
-                  53
+                  15
                 </td>
                 <td>
                   0
@@ -483,10 +483,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.WrapperUI.java">org/universAAL/support/utils/WrapperUI.java</a>
                 </td>
                 <td>
-                  20
+                  14
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   2
@@ -497,7 +497,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Change.java">org/universAAL/support/utils/service/Change.java</a>
                 </td>
                 <td>
-                  23
+                  13
                 </td>
                 <td>
                   0
@@ -511,10 +511,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Check.java">org/universAAL/support/utils/ui/Check.java</a>
                 </td>
                 <td>
-                  51
+                  16
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   4
@@ -525,13 +525,13 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.SelectMulti.java">org/universAAL/support/utils/ui/SelectMulti.java</a>
                 </td>
                 <td>
-                  71
+                  19
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  8
+                  7
                 </td>
               </tr>
                           <tr>
@@ -539,7 +539,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ISListener.java">org/universAAL/support/utils/ISListener.java</a>
                 </td>
                 <td>
-                  12
+                  10
                 </td>
                 <td>
                   0
@@ -553,7 +553,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.context.Pattern.java">org/universAAL/support/utils/context/Pattern.java</a>
                 </td>
                 <td>
-                  45
+                  13
                 </td>
                 <td>
                   0
@@ -567,10 +567,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Media.java">org/universAAL/support/utils/ui/Media.java</a>
                 </td>
                 <td>
-                  53
+                  18
                 </td>
                 <td>
-                  6
+                  0
                 </td>
                 <td>
                   6
@@ -581,7 +581,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.WrapperC.java">org/universAAL/support/utils/WrapperC.java</a>
                 </td>
                 <td>
-                  17
+                  12
                 </td>
                 <td>
                   0
@@ -595,10 +595,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.UAAL.java">org/universAAL/support/utils/UAAL.java</a>
                 </td>
                 <td>
-                  36
+                  16
                 </td>
                 <td>
-                  6
+                  0
                 </td>
                 <td>
                   6
@@ -609,7 +609,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.WrapperS.java">org/universAAL/support/utils/WrapperS.java</a>
                 </td>
                 <td>
-                  18
+                  12
                 </td>
                 <td>
                   0
@@ -623,7 +623,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.low.Request.java">org/universAAL/support/utils/service/low/Request.java</a>
                 </td>
                 <td>
-                  70
+                  26
                 </td>
                 <td>
                   0
@@ -637,10 +637,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.DataTable.java">org/universAAL/support/utils/ui/DataTable.java</a>
                 </td>
                 <td>
-                  85
+                  31
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   14
@@ -651,10 +651,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Grouping.java">org/universAAL/support/utils/ui/Grouping.java</a>
                 </td>
                 <td>
-                  53
+                  15
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   4
@@ -665,10 +665,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Path.java">org/universAAL/support/utils/service/Path.java</a>
                 </td>
                 <td>
-                  28
+                  16
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   2
@@ -679,13 +679,13 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Text.java">org/universAAL/support/utils/ui/Text.java</a>
                 </td>
                 <td>
-                  49
+                  16
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
-                  5
+                  4
                 </td>
               </tr>
                           <tr>
@@ -693,7 +693,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Area.java">org/universAAL/support/utils/ui/Area.java</a>
                 </td>
                 <td>
-                  41
+                  15
                 </td>
                 <td>
                   0
@@ -707,10 +707,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.mid.UtilActuator.java">org/universAAL/support/utils/service/mid/UtilActuator.java</a>
                 </td>
                 <td>
-                  50
+                  21
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1
@@ -721,7 +721,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.low.SubDialog.java">org/universAAL/support/utils/ui/low/SubDialog.java</a>
                 </td>
                 <td>
-                  56
+                  16
                 </td>
                 <td>
                   0
@@ -735,7 +735,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.mid.UtilUICaller.java">org/universAAL/support/utils/ui/mid/UtilUICaller.java</a>
                 </td>
                 <td>
-                  41
+                  19
                 </td>
                 <td>
                   0
@@ -749,7 +749,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.ioc.dependencies.DependencyProxy.java">org/universAAL/ioc/dependencies/DependencyProxy.java</a>
                 </td>
                 <td>
-                  5
+                  1
                 </td>
                 <td>
                   1
@@ -763,7 +763,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.top.UtilEditorCallee.java">org/universAAL/support/utils/service/top/UtilEditorCallee.java</a>
                 </td>
                 <td>
-                  26
+                  15
                 </td>
                 <td>
                   0
@@ -777,13 +777,13 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.SubmitCmd.java">org/universAAL/support/utils/ui/SubmitCmd.java</a>
                 </td>
                 <td>
-                  84
+                  20
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
-                  14
+                  10
                 </td>
               </tr>
                       </tbody>

@@ -135,10 +135,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
  </code>
  <p/>
  You have the advantage that it is almost the same code than you would use to
- call the service with a Request. You just need to add the reference
- URIs to each argument. Notice that you may create instances of Resources
- passed as parameters to the SimpleValues constructors. These are only used to
- get the Type URI, so you can use any given instance. In the example we use an
+ call the service with a Request. You just need to add the reference URIs to
+ each argument. Notice that you may create instances of Resources passed as
+ parameters to the SimpleValues constructors. These are only used to get the
+ Type URI, so you can use any given instance. In the example we use an
  anonymous LightSource and an Integer with value 0.
  <p/>
  This is not necessarily faster nor better than the usual way of doing it with
@@ -215,9 +215,8 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>org.universAAL.middleware.service.owls.profile.ServiceProfile</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#getTheProfile--">getTheProfile</a></span>()</code>
-<div class="block">Use this method when you are done defining your Profile in order to
- get the actual ServiceProfile that you can use in your ProvidedService
- class.</div>
+<div class="block">Use this method when you are done defining your Profile in order to get
+ the actual ServiceProfile that you can use in your ProvidedService class.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -225,9 +224,9 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-org.universAAL.support.utils.service.Path-org.universAAL.support.utils.service.Add-java.lang.String-">put</a></span>(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Add.html" title="class in org.universAAL.support.utils.service">Add</a>&nbsp;leaf,
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>add</b>, in the given branch of properties, a
- <b>value instance of type</b> expressed with Add argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>add</b>, in the given branch of properties, a <b>value
+ instance of type</b> expressed with Add argument.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -237,10 +236,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID,
    int&nbsp;minCard,
    int&nbsp;maxCard)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>add</b>, in the given branch of properties, a
- <b>value instance of type</b> expressed with Add argument, and with
- the specific allowed cardinality.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>add</b>, in the given branch of properties, a <b>value
+ instance of type</b> expressed with Add argument, and with the specific
+ allowed cardinality.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -248,10 +247,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-org.universAAL.support.utils.service.Path-org.universAAL.support.utils.service.Change-java.lang.String-">put</a></span>(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Change.html" title="class in org.universAAL.support.utils.service">Change</a>&nbsp;leaf,
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>change</b>, at the given branch of
- properties, an old value with <b>the new one</b>, an instance of type
- expressed with Change argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>change</b>, at the given branch of properties, an old
+ value with <b>the new one</b>, an instance of type expressed with Change
+ argument.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -261,11 +260,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID,
    int&nbsp;minCard,
    int&nbsp;maxCard)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>change</b>, at the given branch of
- properties, an old value with <b>the new one</b>, an instance of type
- expressed with Change argument, and with the specific allowed
- cardinality.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>change</b>, at the given branch of properties, an old
+ value with <b>the new one</b>, an instance of type expressed with Change
+ argument, and with the specific allowed cardinality.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -273,10 +271,9 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-org.universAAL.support.utils.service.Path-org.universAAL.support.utils.service.Output-java.lang.String-">put</a></span>(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Output.html" title="class in org.universAAL.support.utils.service">Output</a>&nbsp;leaf,
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that <b>you will return an output</b> in the given branch of
- properties, and will be of the <b>type</b> specified with the Output
- argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that <b>you will return an output</b> in the given branch of properties,
+ and will be of the <b>type</b> specified with the Output argument.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -286,10 +283,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID,
    int&nbsp;minCard,
    int&nbsp;maxCard)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that <b>you will return an output</b> in the given branch of
- properties, and will be of the <b>type</b> specified with the Output
- argument, and with the specific allowed cardinality.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that <b>you will return an output</b> in the given branch of properties,
+ and will be of the <b>type</b> specified with the Output argument, and
+ with the specific allowed cardinality.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -297,10 +294,9 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-org.universAAL.support.utils.service.Path-org.universAAL.support.utils.service.Remove-java.lang.String-">put</a></span>(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Remove.html" title="class in org.universAAL.support.utils.service">Remove</a>&nbsp;leaf,
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>remove</b>, from the given branch of
- properties, <b>a value instance of type</b> expressed with Remove
- argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>remove</b>, from the given branch of properties, <b>a
+ value instance of type</b> expressed with Remove argument.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -310,20 +306,19 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID,
    int&nbsp;minCard,
    int&nbsp;maxCard)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>remove</b>, from the given branch of
- properties, <b>a value instance of type</b> expressed with Remove
- argument, and with the specific allowed cardinality.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>remove</b>, from the given branch of properties, <b>a
+ value instance of type</b> expressed with Remove argument, and with the
+ specific allowed cardinality.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-org.universAAL.support.utils.service.Path-org.universAAL.support.utils.service.Typematch-">put</a></span>(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Typematch.html" title="class in org.universAAL.support.utils.service">Typematch</a>&nbsp;leaf)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile must have, in the given branch of
- properties, an instance of the <b>same type</b> expressed with
- Typematch argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile must have, in the given branch of properties, an
+ instance of the <b>same type</b> expressed with Typematch argument.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -332,10 +327,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
    <a href="../../../../../../org/universAAL/support/utils/service/Typematch.html" title="class in org.universAAL.support.utils.service">Typematch</a>&nbsp;leaf,
    int&nbsp;minCard,
    int&nbsp;maxCard)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile must have, in the given branch of
- properties, an instance of the <b>same type</b> expressed with
- Typematch argument, and with the specific allowed cardinality.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile must have, in the given branch of properties, an
+ instance of the <b>same type</b> expressed with Typematch argument, and
+ with the specific allowed cardinality.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -343,10 +338,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-org.universAAL.support.utils.service.Path-org.universAAL.support.utils.service.Variable-java.lang.String-">put</a></span>(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Variable.html" title="class in org.universAAL.support.utils.service">Variable</a>&nbsp;leaf,
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile will receive as <b>variable
- input</b>, in the given branch of properties, <b>an instance of type</b>
- expressed with Variable argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile will receive as <b>variable input</b>, in the
+ given branch of properties, <b>an instance of type</b> expressed with
+ Variable argument.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -356,11 +351,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID,
    int&nbsp;minCard,
    int&nbsp;maxCard)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile will receive as <b>variable
- input</b>, in the given branch of properties, <b>an instance of type</b>
- expressed with Variable argument, and with the specific allowed
- cardinality.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile will receive as <b>variable input</b>, in the
+ given branch of properties, <b>an instance of type</b> expressed with
+ Variable argument, and with the specific allowed cardinality.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -368,9 +362,9 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-java.lang.String:A-org.universAAL.support.utils.service.Add-java.lang.String-">put</a></span>(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Add.html" title="class in org.universAAL.support.utils.service">Add</a>&nbsp;leaf,
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>add</b>, in the given branch of properties, a
- <b>value instance of type</b> expressed with Add argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>add</b>, in the given branch of properties, a <b>value
+ instance of type</b> expressed with Add argument.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -378,10 +372,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-java.lang.String:A-org.universAAL.support.utils.service.Change-java.lang.String-">put</a></span>(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Change.html" title="class in org.universAAL.support.utils.service">Change</a>&nbsp;leaf,
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>change</b>, at the given branch of
- properties, an old value with <b>the new one</b>, an instance of type
- expressed with Change argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>change</b>, at the given branch of properties, an old
+ value with <b>the new one</b>, an instance of type expressed with Change
+ argument.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
@@ -389,10 +383,9 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-java.lang.String:A-org.universAAL.support.utils.service.Output-java.lang.String-">put</a></span>(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Output.html" title="class in org.universAAL.support.utils.service">Output</a>&nbsp;leaf,
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that <b>you will return an output</b> in the given branch of
- properties, and will be of the <b>type</b> specified with the Output
- argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that <b>you will return an output</b> in the given branch of properties,
+ and will be of the <b>type</b> specified with the Output argument.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
@@ -400,20 +393,18 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-java.lang.String:A-org.universAAL.support.utils.service.Remove-java.lang.String-">put</a></span>(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Remove.html" title="class in org.universAAL.support.utils.service">Remove</a>&nbsp;leaf,
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>remove</b>, from the given branch of
- properties, <b>a value instance of type</b> expressed with Remove
- argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>remove</b>, from the given branch of properties, <b>a
+ value instance of type</b> expressed with Remove argument.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-java.lang.String:A-org.universAAL.support.utils.service.Typematch-">put</a></span>(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Typematch.html" title="class in org.universAAL.support.utils.service">Typematch</a>&nbsp;leaf)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile must have, in the given branch of
- properties, an instance of the <b>same type</b> expressed with
- Typematch argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile must have, in the given branch of properties, an
+ instance of the <b>same type</b> expressed with Typematch argument.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
@@ -421,10 +412,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/support/utils/service/low/Profile.html#put-java.lang.String:A-org.universAAL.support.utils.service.Variable-java.lang.String-">put</a></span>(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
    <a href="../../../../../../org/universAAL/support/utils/service/Variable.html" title="class in org.universAAL.support.utils.service">Variable</a>&nbsp;leaf,
    <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</code>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile will receive as <b>variable
- input</b>, in the given branch of properties, <b>an instance of type</b>
- expressed with Variable argument.</div>
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile will receive as <b>variable input</b>, in the
+ given branch of properties, <b>an instance of type</b> expressed with
+ Variable argument.</div>
 </td>
 </tr>
 </table>
@@ -489,8 +480,8 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <h4>Profile</h4>
 <pre>public&nbsp;Profile(org.universAAL.middleware.service.owl.Service&nbsp;profiledServiceRoot)</pre>
 <div class="block">Use this helper class to create a ServiceProfile that is easy to use.
- This Profile does not extend ServiceProfile. you will have to get
- it with getTheProfile();.
+ This Profile does not extend ServiceProfile. you will have to get it with
+ getTheProfile();.
  <p/>
  Example: <code>
  Profile prof=new Profile(new ProvidedLightingService(REF_URI_NEW_SERVICE));</code></div>
@@ -517,10 +508,9 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <h4>put</h4>
 <pre>public&nbsp;void&nbsp;put(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
                 <a href="../../../../../../org/universAAL/support/utils/service/Typematch.html" title="class in org.universAAL.support.utils.service">Typematch</a>&nbsp;leaf)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile must have, in the given branch of
- properties, an instance of the <b>same type</b> expressed with
- Typematch argument.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile must have, in the given branch of properties, an
+ instance of the <b>same type</b> expressed with Typematch argument.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_HAS_TYPE}, new Typematch(ElectricLight.MY_URI));
@@ -529,8 +519,8 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be restricted</dd>
-<dd><code>leaf</code> - The Typematch describing the type of instance expected
-            at the end of the branch</dd>
+<dd><code>leaf</code> - The Typematch describing the type of instance expected at the
+            end of the branch</dd>
 </dl>
 </li>
 </ul>
@@ -542,10 +532,9 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <h4>put</h4>
 <pre>public&nbsp;void&nbsp;put(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
                 <a href="../../../../../../org/universAAL/support/utils/service/Typematch.html" title="class in org.universAAL.support.utils.service">Typematch</a>&nbsp;leaf)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile must have, in the given branch of
- properties, an instance of the <b>same type</b> expressed with
- Typematch argument.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile must have, in the given branch of properties, an
+ instance of the <b>same type</b> expressed with Typematch argument.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_HAS_TYPE}, new Typematch(ElectricLight.MY_URI));
@@ -554,8 +543,8 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be restricted</dd>
-<dd><code>leaf</code> - The Typematch describing the type of instance expected
-            at the end of the branch</dd>
+<dd><code>leaf</code> - The Typematch describing the type of instance expected at the
+            end of the branch</dd>
 </dl>
 </li>
 </ul>
@@ -569,10 +558,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
                 <a href="../../../../../../org/universAAL/support/utils/service/Typematch.html" title="class in org.universAAL.support.utils.service">Typematch</a>&nbsp;leaf,
                 int&nbsp;minCard,
                 int&nbsp;maxCard)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile must have, in the given branch of
- properties, an instance of the <b>same type</b> expressed with
- Typematch argument, and with the specific allowed cardinality.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile must have, in the given branch of properties, an
+ instance of the <b>same type</b> expressed with Typematch argument, and
+ with the specific allowed cardinality.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_HAS_TYPE}, new Typematch(ElectricLight.MY_URI));
@@ -581,8 +570,8 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be restricted</dd>
-<dd><code>leaf</code> - The Typematch describing the type of instance expected
-            at the end of the branch</dd>
+<dd><code>leaf</code> - The Typematch describing the type of instance expected at the
+            end of the branch</dd>
 <dd><code>minCard</code> - Minimum cardinality</dd>
 <dd><code>maxCard</code> - Maximum cardinality. Must be greater than minimum, of course</dd>
 </dl>
@@ -597,13 +586,13 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;put(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
                   <a href="../../../../../../org/universAAL/support/utils/service/Variable.html" title="class in org.universAAL.support.utils.service">Variable</a>&nbsp;leaf,
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile will receive as <b>variable
- input</b>, in the given branch of properties, <b>an instance of type</b>
- expressed with Variable argument. However it can also be used to
- specify that the variable input that can only be handled by this profile
- is a specific instance. This can be done by using the byValue constructor
- of the Variable.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile will receive as <b>variable input</b>, in the
+ given branch of properties, <b>an instance of type</b> expressed with
+ Variable argument. However it can also be used to specify that the
+ variable input that can only be handled by this profile is a specific
+ instance. This can be done by using the byValue constructor of the
+ Variable.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Variable(LightSource.MY_URI),REF_URI);
@@ -612,11 +601,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be received as input by the service</dd>
-<dd><code>leaf</code> - The Variable describing the type of the value that you
-            want to receive as variable input in the service. If it is
-            built with a specific instance value then it means that this
-            profile will answer only to calls with that value in this
-            variable input.</dd>
+<dd><code>leaf</code> - The Variable describing the type of the value that you want to
+            receive as variable input in the service. If it is built with
+            a specific instance value then it means that this profile will
+            answer only to calls with that value in this variable input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -634,13 +622,13 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;put(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
                   <a href="../../../../../../org/universAAL/support/utils/service/Variable.html" title="class in org.universAAL.support.utils.service">Variable</a>&nbsp;leaf,
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile will receive as <b>variable
- input</b>, in the given branch of properties, <b>an instance of type</b>
- expressed with Variable argument. However it can also be used to
- specify that the variable input that can only be handled by this profile
- is a specific instance. This can be done by using the byValue constructor
- of the Variable.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile will receive as <b>variable input</b>, in the
+ given branch of properties, <b>an instance of type</b> expressed with
+ Variable argument. However it can also be used to specify that the
+ variable input that can only be handled by this profile is a specific
+ instance. This can be done by using the byValue constructor of the
+ Variable.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Variable(new LightSource()),REF_URI);
@@ -649,11 +637,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be received as input by the service</dd>
-<dd><code>leaf</code> - The Variable describing the type of the value that you
-            want to receive as variable input in the service. If it is
-            built with a specific instance value then it means that this
-            profile will answer only to calls with that value in this
-            variable input.</dd>
+<dd><code>leaf</code> - The Variable describing the type of the value that you want to
+            receive as variable input in the service. If it is built with
+            a specific instance value then it means that this profile will
+            answer only to calls with that value in this variable input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -673,14 +660,13 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID,
                   int&nbsp;minCard,
                   int&nbsp;maxCard)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that the created profile will receive as <b>variable
- input</b>, in the given branch of properties, <b>an instance of type</b>
- expressed with Variable argument, and with the specific allowed
- cardinality. However it can also be used to
- specify that the variable input that can only be handled by this profile
- is a specific instance. This can be done by using the byValue constructor
- of the Variable.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that the created profile will receive as <b>variable input</b>, in the
+ given branch of properties, <b>an instance of type</b> expressed with
+ Variable argument, and with the specific allowed cardinality. However it
+ can also be used to specify that the variable input that can only be
+ handled by this profile is a specific instance. This can be done by using
+ the byValue constructor of the Variable.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Variable(new LightSource()),REF_URI);
@@ -689,11 +675,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be received as input by the service</dd>
-<dd><code>leaf</code> - The Variable describing the type of the value that you
-            want to receive as variable input in the service. If it is
-            built with a specific instance value then it means that this
-            profile will answer only to calls with that value in this
-            variable input.</dd>
+<dd><code>leaf</code> - The Variable describing the type of the value that you want to
+            receive as variable input in the service. If it is built with
+            a specific instance value then it means that this profile will
+            answer only to calls with that value in this variable input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dd><code>minCard</code> - Minimum cardinality</dd>
@@ -713,10 +698,9 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;put(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
                   <a href="../../../../../../org/universAAL/support/utils/service/Output.html" title="class in org.universAAL.support.utils.service">Output</a>&nbsp;leaf,
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that <b>you will return an output</b> in the given branch of
- properties, and will be of the <b>type</b> specified with the Output
- argument.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that <b>you will return an output</b> in the given branch of properties,
+ and will be of the <b>type</b> specified with the Output argument.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Output(LightSource.MY_URI));
@@ -725,10 +709,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             output that you will return</dd>
-<dd><code>leaf</code> - The Output describing the type of Output you are
-            returning. Take into account that this differs from how it is
-            used in Request. Here you must create it with a Type URI
-            (a ManagedIndividual.MY_URI).</dd>
+<dd><code>leaf</code> - The Output describing the type of Output you are returning.
+            Take into account that this differs from how it is used in
+            Request. Here you must create it with a Type URI (a
+            ManagedIndividual.MY_URI).</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -746,10 +730,9 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;put(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
                   <a href="../../../../../../org/universAAL/support/utils/service/Output.html" title="class in org.universAAL.support.utils.service">Output</a>&nbsp;leaf,
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that <b>you will return an output</b> in the given branch of
- properties, and will be of the <b>type</b> specified with the Output
- argument.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that <b>you will return an output</b> in the given branch of properties,
+ and will be of the <b>type</b> specified with the Output argument.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Output(LightSource.MY_URI));
@@ -758,10 +741,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             output that you will return</dd>
-<dd><code>leaf</code> - The Output describing the type of Output you are
-            returning. Take into account that this differs from how it is
-            used in Request. Here you must create it with a Type URI
-            (a ManagedIndividual.MY_URI).</dd>
+<dd><code>leaf</code> - The Output describing the type of Output you are returning.
+            Take into account that this differs from how it is used in
+            Request. Here you must create it with a Type URI (a
+            ManagedIndividual.MY_URI).</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -781,10 +764,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID,
                   int&nbsp;minCard,
                   int&nbsp;maxCard)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that <b>you will return an output</b> in the given branch of
- properties, and will be of the <b>type</b> specified with the Output
- argument, and with the specific allowed cardinality.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that <b>you will return an output</b> in the given branch of properties,
+ and will be of the <b>type</b> specified with the Output argument, and
+ with the specific allowed cardinality.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Output(LightSource.MY_URI));
@@ -793,10 +776,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             output that you will return</dd>
-<dd><code>leaf</code> - The Output describing the type of Output you are
-            returning. Take into account that this differs from how it is
-            used in Request. Here you must create it with a Type URI
-            (a ManagedIndividual.MY_URI).</dd>
+<dd><code>leaf</code> - The Output describing the type of Output you are returning.
+            Take into account that this differs from how it is used in
+            Request. Here you must create it with a Type URI (a
+            ManagedIndividual.MY_URI).</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dd><code>minCard</code> - Minimum cardinality</dd>
@@ -816,12 +799,12 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;put(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
                   <a href="../../../../../../org/universAAL/support/utils/service/Add.html" title="class in org.universAAL.support.utils.service">Add</a>&nbsp;leaf,
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>add</b>, in the given branch of properties, a
- <b>value instance of type</b> expressed with Add argument. However
- it can also be used to specify that the added input that can only be
- handled by this profile is a specific instance. This can be done by using
- the byValue constructor of the Add.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>add</b>, in the given branch of properties, a <b>value
+ instance of type</b> expressed with Add argument. However it can also be
+ used to specify that the added input that can only be handled by this
+ profile is a specific instance. This can be done by using the byValue
+ constructor of the Add.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Add(new LightSource()));
@@ -830,10 +813,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be added</dd>
-<dd><code>leaf</code> - The Add describing the type of instance to be added at
-            the end of the branch. If it is built with a specific instance
-            value then it means that this profile will answer only to
-            calls with that value in this added input.</dd>
+<dd><code>leaf</code> - The Add describing the type of instance to be added at the end
+            of the branch. If it is built with a specific instance value
+            then it means that this profile will answer only to calls with
+            that value in this added input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -851,12 +834,12 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;put(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
                   <a href="../../../../../../org/universAAL/support/utils/service/Add.html" title="class in org.universAAL.support.utils.service">Add</a>&nbsp;leaf,
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>add</b>, in the given branch of properties, a
- <b>value instance of type</b> expressed with Add argument. However
- it can also be used to specify that the added input that can only be
- handled by this profile is a specific instance. This can be done by using
- the byValue constructor of the Add.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>add</b>, in the given branch of properties, a <b>value
+ instance of type</b> expressed with Add argument. However it can also be
+ used to specify that the added input that can only be handled by this
+ profile is a specific instance. This can be done by using the byValue
+ constructor of the Add.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Add(new LightSource()));
@@ -865,10 +848,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be added</dd>
-<dd><code>leaf</code> - The Add describing the type of instance to be added at
-            the end of the branch. If it is built with a specific instance
-            value then it means that this profile will answer only to
-            calls with that value in this added input.</dd>
+<dd><code>leaf</code> - The Add describing the type of instance to be added at the end
+            of the branch. If it is built with a specific instance value
+            then it means that this profile will answer only to calls with
+            that value in this added input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -888,13 +871,12 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID,
                   int&nbsp;minCard,
                   int&nbsp;maxCard)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>add</b>, in the given branch of properties, a
- <b>value instance of type</b> expressed with Add argument, and with
- the specific allowed cardinality. However it can also be used to specify
- that the added input that can only be handled by this profile is a
- specific instance. This can be done by using the byValue constructor of
- the Add.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>add</b>, in the given branch of properties, a <b>value
+ instance of type</b> expressed with Add argument, and with the specific
+ allowed cardinality. However it can also be used to specify that the
+ added input that can only be handled by this profile is a specific
+ instance. This can be done by using the byValue constructor of the Add.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Add(new LightSource()));
@@ -903,10 +885,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be added</dd>
-<dd><code>leaf</code> - The Add describing the type of instance to be added at
-            the end of the branch. If it is built with a specific instance
-            value then it means that this profile will answer only to
-            calls with that value in this added input.</dd>
+<dd><code>leaf</code> - The Add describing the type of instance to be added at the end
+            of the branch. If it is built with a specific instance value
+            then it means that this profile will answer only to calls with
+            that value in this added input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dd><code>minCard</code> - Minimum cardinality</dd>
@@ -926,12 +908,12 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;put(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
                   <a href="../../../../../../org/universAAL/support/utils/service/Remove.html" title="class in org.universAAL.support.utils.service">Remove</a>&nbsp;leaf,
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>remove</b>, from the given branch of
- properties, <b>a value instance of type</b> expressed with Remove
- argument. However it can also be used to specify that the removed input
- that can only be handled by this profile is a specific instance. This can
- be done by using the byValue constructor of the Remove.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>remove</b>, from the given branch of properties, <b>a
+ value instance of type</b> expressed with Remove argument. However it can
+ also be used to specify that the removed input that can only be handled
+ by this profile is a specific instance. This can be done by using the
+ byValue constructor of the Remove.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Remove(new LightSource()));
@@ -940,10 +922,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be removed</dd>
-<dd><code>leaf</code> - The Remove describing the type of instance to be removed
-            at the end of the branch. If it is built with a specific
-            instance value then it means that this profile will answer
-            only to calls with that value in this removed input.</dd>
+<dd><code>leaf</code> - The Remove describing the type of instance to be removed at
+            the end of the branch. If it is built with a specific instance
+            value then it means that this profile will answer only to
+            calls with that value in this removed input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -961,12 +943,12 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;put(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
                   <a href="../../../../../../org/universAAL/support/utils/service/Remove.html" title="class in org.universAAL.support.utils.service">Remove</a>&nbsp;leaf,
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>remove</b>, from the given branch of
- properties, <b>a value instance of type</b> expressed with Remove
- argument. However it can also be used to specify that the removed input
- that can only be handled by this profile is a specific instance. This can
- be done by using the byValue constructor of the Remove.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>remove</b>, from the given branch of properties, <b>a
+ value instance of type</b> expressed with Remove argument. However it can
+ also be used to specify that the removed input that can only be handled
+ by this profile is a specific instance. This can be done by using the
+ byValue constructor of the Remove.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Remove(new LightSource()));
@@ -975,10 +957,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be removed</dd>
-<dd><code>leaf</code> - The Remove describing the type of instance to be removed
-            at the end of the branch. If it is built with a specific
-            instance value then it means that this profile will answer
-            only to calls with that value in this removed input.</dd>
+<dd><code>leaf</code> - The Remove describing the type of instance to be removed at
+            the end of the branch. If it is built with a specific instance
+            value then it means that this profile will answer only to
+            calls with that value in this removed input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -998,13 +980,13 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID,
                   int&nbsp;minCard,
                   int&nbsp;maxCard)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>remove</b>, from the given branch of
- properties, <b>a value instance of type</b> expressed with Remove
- argument, and with the specific allowed cardinality. However it can also
- be used to specify that the removed input that can only be handled by
- this profile is a specific instance. This can be done by using the
- byValue constructor of the Remove.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>remove</b>, from the given branch of properties, <b>a
+ value instance of type</b> expressed with Remove argument, and with the
+ specific allowed cardinality. However it can also be used to specify that
+ the removed input that can only be handled by this profile is a specific
+ instance. This can be done by using the byValue constructor of the
+ Remove.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS}, new Remove(new LightSource()));
@@ -1013,10 +995,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be removed</dd>
-<dd><code>leaf</code> - The Remove describing the type of instance to be removed
-            at the end of the branch. If it is built with a specific
-            instance value then it means that this profile will answer
-            only to calls with that value in this removed input.</dd>
+<dd><code>leaf</code> - The Remove describing the type of instance to be removed at
+            the end of the branch. If it is built with a specific instance
+            value then it means that this profile will answer only to
+            calls with that value in this removed input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dd><code>minCard</code> - Minimum cardinality</dd>
@@ -1036,13 +1018,12 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;put(<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;branch,
                   <a href="../../../../../../org/universAAL/support/utils/service/Change.html" title="class in org.universAAL.support.utils.service">Change</a>&nbsp;leaf,
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>change</b>, at the given branch of
- properties, an old value with <b>the new one</b>, an instance of type
- expressed with Change argument. However it can also be used to
- specify that the changed input that can only be handled by this profile
- is a specific instance. This can be done by using the byValue constructor
- of the Change.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>change</b>, at the given branch of properties, an old
+ value with <b>the new one</b>, an instance of type expressed with Change
+ argument. However it can also be used to specify that the changed input
+ that can only be handled by this profile is a specific instance. This can
+ be done by using the byValue constructor of the Change.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_SOURCE_BRIGHTNESS }, new Change(new Integer(0)));
@@ -1051,10 +1032,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be changed</dd>
-<dd><code>leaf</code> - The Change describing the type of instance to be changed
-            at the end of the branch. If it is built with a specific
-            instance value then it means that this profile will answer
-            only to calls with that value in this changed input.</dd>
+<dd><code>leaf</code> - The Change describing the type of instance to be changed at
+            the end of the branch. If it is built with a specific instance
+            value then it means that this profile will answer only to
+            calls with that value in this changed input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -1072,13 +1053,12 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;put(<a href="../../../../../../org/universAAL/support/utils/service/Path.html" title="class in org.universAAL.support.utils.service">Path</a>&nbsp;branch,
                   <a href="../../../../../../org/universAAL/support/utils/service/Change.html" title="class in org.universAAL.support.utils.service">Change</a>&nbsp;leaf,
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>change</b>, at the given branch of
- properties, an old value with <b>the new one</b>, an instance of type
- expressed with Change argument. However it can also be used to
- specify that the changed input that can only be handled by this profile
- is a specific instance. This can be done by using the byValue constructor
- of the Change.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>change</b>, at the given branch of properties, an old
+ value with <b>the new one</b>, an instance of type expressed with Change
+ argument. However it can also be used to specify that the changed input
+ that can only be handled by this profile is a specific instance. This can
+ be done by using the byValue constructor of the Change.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_SOURCE_BRIGHTNESS }, new Change(new Integer(0)));
@@ -1088,9 +1068,9 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be changed</dd>
 <dd><code>leaf</code> - The Change describing the type of instance to be changed at
-            the end of the branch. If it is built with a specific
-            instance value then it means that this profile will answer
-            only to calls with that value in this changed input.</dd>
+            the end of the branch. If it is built with a specific instance
+            value then it means that this profile will answer only to
+            calls with that value in this changed input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -1110,13 +1090,13 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
                   <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;uriID,
                   int&nbsp;minCard,
                   int&nbsp;maxCard)</pre>
-<div class="block">Use this helper method to declare an argument over a Profile,
- specifying that you will <b>change</b>, at the given branch of
- properties, an old value with <b>the new one</b>, an instance of type
- expressed with Change argument, and with the specific allowed
- cardinality. However it can also be used to specify that the changed
- input that can only be handled by this profile is a specific instance.
- This can be done by using the byValue constructor of the Change.
+<div class="block">Use this helper method to declare an argument over a Profile, specifying
+ that you will <b>change</b>, at the given branch of properties, an old
+ value with <b>the new one</b>, an instance of type expressed with Change
+ argument, and with the specific allowed cardinality. However it can also
+ be used to specify that the changed input that can only be handled by
+ this profile is a specific instance. This can be done by using the
+ byValue constructor of the Change.
  <p/>
  Example: <code>
  req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_SOURCE_BRIGHTNESS }, new Change(new Integer(0)));
@@ -1125,10 +1105,10 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>branch</code> - The path of properties from the Service root class to the
             value to be changed</dd>
-<dd><code>leaf</code> - The Change describing the type of instance to be changed
-            at the end of the branch. If it is built with a specific
-            instance value then it means that this profile will answer
-            only to calls with that value in this changed input.</dd>
+<dd><code>leaf</code> - The Change describing the type of instance to be changed at
+            the end of the branch. If it is built with a specific instance
+            value then it means that this profile will answer only to
+            calls with that value in this changed input.</dd>
 <dd><code>uriID</code> - The reference URI to be used by the ServiceCallee when dealing
             with this value. Set to null to return an auto-generated one</dd>
 <dd><code>minCard</code> - Minimum cardinality</dd>
@@ -1146,11 +1126,11 @@ extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.h
 <li class="blockList">
 <h4>getTheProfile</h4>
 <pre>public&nbsp;org.universAAL.middleware.service.owls.profile.ServiceProfile&nbsp;getTheProfile()</pre>
-<div class="block">Use this method when you are done defining your Profile in order to
- get the actual ServiceProfile that you can use in your ProvidedService
- class. Assign the returned ServiceProfile to a value of the "profiles"
- array of that class. Or you can use it first to add it more restrictions
- or arguments the old-fashioned way.</div>
+<div class="block">Use this method when you are done defining your Profile in order to get
+ the actual ServiceProfile that you can use in your ProvidedService class.
+ Assign the returned ServiceProfile to a value of the "profiles" array of
+ that class. Or you can use it first to add it more restrictions or
+ arguments the old-fashioned way.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The resulting ServiceProfile of this Profile</dd>

@@ -113,70 +113,74 @@
 <tr class="a">
 <td>org/universAAL/support/utils/ui/low/SubDialog.java</td>
 <td>universAAL Support Utilities API</td>
-<td>138</td></tr>
+<td>139</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>	props.put(PROP_DIALOG_FORM, Form.newDialog(title, root));
-	props.put(PROP_DIALOG_PRIORITY, priority);
-	props.put(PROP_DIALOG_LANGUAGE, Locale.getDefault());
-	props.put(PROP_DIALOG_PRIVACY_LEVEL, privacy);
-    }
-    
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.utils.SimpleControl)
-     */
-    public String[] add(Control ctrl){
-	return ctrl.create(getDialogForm().getIOControls());
-    }
-    
-    /**
-     * Add a Submit Form Control to the Submit group of the Dialog. Submit group
-     * is for Submits that end the dialog or lead to new dialogs.
-     * 
-     * @param ctrl
-     *            The Submit to add
-     * @return The String representing the ID to be used to identify the Submit
-     *         in the response.
-     */
-    public String addSubmit(SubmitCmd ctrl){
-	String[] ref=ctrl.create(getDialogForm().getSubmits());
-	return ref[ref.length-1];
-    }
-    
-    /**
-     * Add a hidden object so it is sent within the UI request, but not shown to
-     * the user. When the UI response is being handled by the UI caller, this
-     * hidden input can be retrieved by calling
-     * &lt;code&gt;uiresponse.getUserInput(new String[]{ref});&lt;/code&gt; , being
-     * &lt;code&gt;ref&lt;/code&gt; the one you used in this method.
-     * 
-     * @param ref
-     *            The reference you will use to access the hidden object later
-     *            from the response
-     * @param hidden
-     *            The object you want to hide
-     */
-    public void addHidden(String ref, Object hidden){
-	this.getDialogForm().getData().setPropertyPath(new String[]{ref}, hidden);
-    }
-    
-    /**
-     * Add an extra property to the form used in this UI request. Extra
-     * properties may be used by I/O Handlers to allow the developer to
-     * fine-tune things like the layout. The equivalent in native API is to call
-     * setProperty() on a Form object. Use this only as recommended by the
-     * Handler you intend to use, since it is the Handler the one who will
-     * interpret the property.
-     * 
-     * @param property
-     *            The property of a Form that a certain Handler will inspect for
-     *            its own purposes.
-     * @param extra
-     *            The value to be set into the property.
-     */
-    public void addExtra(String property, Object extra){
-	this.getDialogForm().setProperty(property, extra);
-    }
+<pre>		props.put(PROP_DIALOG_FORM, Form.newDialog(title, root));
+		props.put(PROP_DIALOG_PRIORITY, priority);
+		props.put(PROP_DIALOG_LANGUAGE, Locale.getDefault());
+		props.put(PROP_DIALOG_PRIVACY_LEVEL, privacy);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.
+	 * utils.SimpleControl)
+	 */
+	public String[] add(Control ctrl) {
+		return ctrl.create(getDialogForm().getIOControls());
+	}
+
+	/**
+	 * Add a Submit Form Control to the Submit group of the Dialog. Submit group
+	 * is for Submits that end the dialog or lead to new dialogs.
+	 * 
+	 * @param ctrl
+	 *            The Submit to add
+	 * @return The String representing the ID to be used to identify the Submit
+	 *         in the response.
+	 */
+	public String addSubmit(SubmitCmd ctrl) {
+		String[] ref = ctrl.create(getDialogForm().getSubmits());
+		return ref[ref.length - 1];
+	}
+
+	/**
+	 * Add a hidden object so it is sent within the UI request, but not shown to
+	 * the user. When the UI response is being handled by the UI caller, this
+	 * hidden input can be retrieved by calling
+	 * &lt;code&gt;uiresponse.getUserInput(new String[]{ref});&lt;/code&gt; , being
+	 * &lt;code&gt;ref&lt;/code&gt; the one you used in this method.
+	 * 
+	 * @param ref
+	 *            The reference you will use to access the hidden object later
+	 *            from the response
+	 * @param hidden
+	 *            The object you want to hide
+	 */
+	public void addHidden(String ref, Object hidden) {
+		this.getDialogForm().getData().setPropertyPath(new String[] { ref }, hidden);
+	}
+
+	/**
+	 * Add an extra property to the form used in this UI request. Extra
+	 * properties may be used by I/O Handlers to allow the developer to
+	 * fine-tune things like the layout. The equivalent in native API is to call
+	 * setProperty() on a Form object. Use this only as recommended by the
+	 * Handler you intend to use, since it is the Handler the one who will
+	 * interpret the property.
+	 * 
+	 * @param property
+	 *            The property of a Form that a certain Handler will inspect for
+	 *            its own purposes.
+	 * @param extra
+	 *            The value to be set into the property.
+	 */
+	public void addExtra(String property, Object extra) {
+		this.getDialogForm().setProperty(property, extra);
+	}
 
 }</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
@@ -195,52 +199,56 @@
 <tr class="b">
 <td>org/universAAL/support/utils/ui/low/SubDialog.java</td>
 <td>universAAL Support Utilities API</td>
-<td>138</td></tr>
+<td>139</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>	props.put(PROP_DIALOG_FORM, Form.newDialog(title, root));
-	props.put(PROP_DIALOG_PRIORITY, priority);
-	props.put(PROP_DIALOG_LANGUAGE, Locale.getDefault());
-	props.put(PROP_DIALOG_PRIVACY_LEVEL, privacy);
-    }
-    
-    /* (non-Javadoc)
-     * @see org.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.utils.SimpleControl)
-     */
-    public String[] add(Control ctrl){
-	return ctrl.create(getDialogForm().getIOControls());
-    }
-    
-    /**
-     * Add a Submit Form Control to the Submit group of the Dialog. Submit group
-     * is for Submits that end the dialog or lead to new dialogs.
-     * 
-     * @param ctrl
-     *            The Submit to add
-     * @return The String representing the ID to be used to identify the Submit
-     *         in the response.
-     */
-    public String addSubmit(SubmitCmd ctrl){
-	String[] ref=ctrl.create(getDialogForm().getSubmits());
-	return ref[ref.length-1];
-    }
-    
-    /**
-     * Add a hidden object so it is sent within the UI request, but not shown to
-     * the user. When the UI response is being handled by the UI caller, this
-     * hidden input can be retrieved by calling
-     * &lt;code&gt;uiresponse.getUserInput(new String[]{ref});&lt;/code&gt; , being
-     * &lt;code&gt;ref&lt;/code&gt; the one you used in this method.
-     * 
-     * @param ref
-     *            The reference you will use to access the hidden object later
-     *            from the response
-     * @param hidden
-     *            The object you want to hide
-     */
-    public void addHidden(String ref, Object hidden){
-	this.getDialogForm().getData().setPropertyPath(new String[]{ref}, hidden);
-    }</pre></div></td></tr></table>
+<pre>		props.put(PROP_DIALOG_FORM, Form.newDialog(title, root));
+		props.put(PROP_DIALOG_PRIORITY, priority);
+		props.put(PROP_DIALOG_LANGUAGE, Locale.getDefault());
+		props.put(PROP_DIALOG_PRIVACY_LEVEL, privacy);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.
+	 * utils.SimpleControl)
+	 */
+	public String[] add(Control ctrl) {
+		return ctrl.create(getDialogForm().getIOControls());
+	}
+
+	/**
+	 * Add a Submit Form Control to the Submit group of the Dialog. Submit group
+	 * is for Submits that end the dialog or lead to new dialogs.
+	 * 
+	 * @param ctrl
+	 *            The Submit to add
+	 * @return The String representing the ID to be used to identify the Submit
+	 *         in the response.
+	 */
+	public String addSubmit(SubmitCmd ctrl) {
+		String[] ref = ctrl.create(getDialogForm().getSubmits());
+		return ref[ref.length - 1];
+	}
+
+	/**
+	 * Add a hidden object so it is sent within the UI request, but not shown to
+	 * the user. When the UI response is being handled by the UI caller, this
+	 * hidden input can be retrieved by calling
+	 * &lt;code&gt;uiresponse.getUserInput(new String[]{ref});&lt;/code&gt; , being
+	 * &lt;code&gt;ref&lt;/code&gt; the one you used in this method.
+	 * 
+	 * @param ref
+	 *            The reference you will use to access the hidden object later
+	 *            from the response
+	 * @param hidden
+	 *            The object you want to hide
+	 */
+	public void addHidden(String ref, Object hidden) {
+		this.getDialogForm().getData().setPropertyPath(new String[] { ref }, hidden);
+	}</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -249,35 +257,32 @@
 <tr class="a">
 <td>org/universAAL/support/utils/context/Pattern.java</td>
 <td>universAAL Support Utilities API</td>
-<td>164</td></tr>
+<td>154</td></tr>
 <tr class="b">
 <td>org/universAAL/support/utils/context/Pattern.java</td>
 <td>universAAL Support Utilities API</td>
-<td>210</td></tr>
+<td>196</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>    public Pattern(ManagedIndividual subj, String predicate, String objTypeURI){
-	super();
-	if (subj != null) {
-	    String uri = ManagedIndividual.getTypeURI(subj);
-	    if (uri != null &amp;&amp; Resource.isQualifiedName(uri)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(
-				ContextEvent.PROP_RDF_SUBJECT, subj));
-	    } else {
-		System.out.println(MSG_INST);
-	    }
-	}
-	if (predicate != null) {
-	    if (Resource.isQualifiedName(predicate)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE,
-				predicate));
-	    } else {
-		System.out.println(MSG_PRED);
-	    }
-	}
-	if (objTypeURI != null) {</pre></div></td></tr></table>
+<pre>	public Pattern(ManagedIndividual subj, String predicate, String objTypeURI) {
+		super();
+		if (subj != null) {
+			String uri = ManagedIndividual.getTypeURI(subj);
+			if (uri != null &amp;&amp; Resource.isQualifiedName(uri)) {
+				this.addRestriction(MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_SUBJECT, subj));
+			} else {
+				System.out.println(MSG_INST);
+			}
+		}
+		if (predicate != null) {
+			if (Resource.isQualifiedName(predicate)) {
+				this.addRestriction(
+						MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE, predicate));
+			} else {
+				System.out.println(MSG_PRED);
+			}
+		}
+		if (objTypeURI != null) {</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -286,36 +291,33 @@
 <tr class="a">
 <td>org/universAAL/support/utils/context/Pattern.java</td>
 <td>universAAL Support Utilities API</td>
-<td>127</td></tr>
+<td>120</td></tr>
 <tr class="b">
 <td>org/universAAL/support/utils/context/Pattern.java</td>
 <td>universAAL Support Utilities API</td>
-<td>219</td></tr>
+<td>203</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>		System.out.println(MSG_STR);
-	    }
-	}
-	if (predicate != null) {
-	    if (Resource.isQualifiedName(predicate)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE,
-				predicate));
-	    } else {
-		System.out.println(MSG_PRED);
-	    }
-	}
-	if (obj != null) {
-	    String uri = ManagedIndividual.getTypeURI(obj);
-	    if (uri != null &amp;&amp; Resource.isQualifiedName(uri)) {
-		this.addRestriction(MergedRestriction
-			.getFixedValueRestriction(
-				ContextEvent.PROP_RDF_OBJECT, obj));
-	    } else {
-		System.out.println(MSG_INST);
-	    }
-	}
-    }</pre></div></td></tr></table>
+<pre>				System.out.println(MSG_STR);
+			}
+		}
+		if (predicate != null) {
+			if (Resource.isQualifiedName(predicate)) {
+				this.addRestriction(
+						MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_PREDICATE, predicate));
+			} else {
+				System.out.println(MSG_PRED);
+			}
+		}
+		if (obj != null) {
+			String uri = ManagedIndividual.getTypeURI(obj);
+			if (uri != null &amp;&amp; Resource.isQualifiedName(uri)) {
+				this.addRestriction(MergedRestriction.getFixedValueRestriction(ContextEvent.PROP_RDF_OBJECT, obj));
+			} else {
+				System.out.println(MSG_INST);
+			}
+		}
+	}</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -339,40 +341,39 @@
 <td>73</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>    public Add(String byTypeURI) {
-	this.isByURI = true;
-	this.uri = byTypeURI;
-	this.value = Resource
-		.getResource(byTypeURI, Resource.generateAnonURI());
-	if (this.value == null) {
-	    if (TypeMapper.isRegisteredDatatypeURI(byTypeURI)) {
-		this.value = createEmptyInstance(byTypeURI);
-	    } else {
-		// An arbitrary String, not an URI, intended use is like byValue
-		this.isByURI = false;
-		this.uri = TypeMapper.getDatatypeURI(String.class);
-		this.value = byTypeURI;
-	    }
+<pre>	public Add(String byTypeURI) {
+		this.isByURI = true;
+		this.uri = byTypeURI;
+		this.value = Resource.getResource(byTypeURI, Resource.generateAnonURI());
+		if (this.value == null) {
+			if (TypeMapper.isRegisteredDatatypeURI(byTypeURI)) {
+				this.value = createEmptyInstance(byTypeURI);
+			} else {
+				// An arbitrary String, not an URI, intended use is like byValue
+				this.isByURI = false;
+				this.uri = TypeMapper.getDatatypeURI(String.class);
+				this.value = byTypeURI;
+			}
+		}
 	}
-    }
 
-    /**
-     * This is only supposed to be used internally.
-     * 
-     * @return The actual value of the value to add
-     */
-    public Object getObject() {
-	return value;
-    }
-    
-    /**
-     * This is only supposed to be used internally.
-     * 
-     * @return The type URI of the value to add
-     */
-    public String getURI() {
-	return uri;
-    }
+	/**
+	 * This is only supposed to be used internally.
+	 * 
+	 * @return The actual value of the value to add
+	 */
+	public Object getObject() {
+		return value;
+	}
+
+	/**
+	 * This is only supposed to be used internally.
+	 * 
+	 * @return The type URI of the value to add
+	 */
+	public String getURI() {
+		return uri;
+	}
 
 }</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
@@ -383,25 +384,24 @@
 <tr class="a">
 <td>org/universAAL/support/utils/service/mid/UtilActuator.java</td>
 <td>universAAL Support Utilities API</td>
-<td>136</td></tr>
+<td>129</td></tr>
 <tr class="b">
 <td>org/universAAL/support/utils/service/mid/UtilSensor.java</td>
 <td>universAAL Support Utilities API</td>
-<td>125</td></tr>
+<td>117</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>		DeviceService.PROP_CONTROLS, actuator);
+<pre>		MergedRestriction r = MergedRestriction.getFixedValueRestriction(DeviceService.PROP_CONTROLS, actuator);
 
-	Service getOnOff = (Service) OntologyManagement.getInstance()
-		.getResource(ontologyURI, namespace + SERVICE_GET_ON_OFF);
-	profiles[0] = getOnOff.getProfile();
-	ProcessOutput output = new ProcessOutput(namespace + OUT_GET_ON_OFF);
-	output.setCardinality(1, 1);
-	profiles[0].addOutput(output);
-	profiles[0].addSimpleOutputBinding(output, ppath.getThePath());
-	profiles[0].addInput(input);
-	profiles[0].getTheService().addInstanceLevelRestriction(r,
-		new String[] { DeviceService.PROP_CONTROLS });</pre></div></td></tr></table>
+		Service getOnOff = (Service) OntologyManagement.getInstance().getResource(ontologyURI,
+				namespace + SERVICE_GET_ON_OFF);
+		profiles[0] = getOnOff.getProfile();
+		ProcessOutput output = new ProcessOutput(namespace + OUT_GET_ON_OFF);
+		output.setCardinality(1, 1);
+		profiles[0].addOutput(output);
+		profiles[0].addSimpleOutputBinding(output, ppath.getThePath());
+		profiles[0].addInput(input);
+		profiles[0].getTheService().addInstanceLevelRestriction(r, new String[] { DeviceService.PROP_CONTROLS });</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -410,34 +410,34 @@
 <tr class="a">
 <td>org/universAAL/support/utils/ui/SubmitCmd.java</td>
 <td>universAAL Support Utilities API</td>
-<td>112</td></tr>
+<td>119</td></tr>
 <tr class="b">
 <td>org/universAAL/support/utils/ui/TriggerCmd.java</td>
 <td>universAAL Support Utilities API</td>
-<td>90</td></tr>
+<td>95</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>	Submit sub=new Submit(group, label, ref.getLastPathElement());
-	if(confirmMessage!=null){
-	    switch (confirmType) {
-	    case Submit.CONFIRMATION_TYPE_OK_CANCEL:
-		sub.setConfirmationOkCancel(confirmMessage);
-		break;
-	    case Submit.CONFIRMATION_TYPE_YES_NO:
-		sub.setConfirmationYesNo(confirmMessage);
-		break;
-	    default :
-		sub.setConfirmationOkCancel(confirmMessage);
-		break;
-	    }
-	}
-	if(!l.isEmpty()){
-	    Iterator iter=l.iterator();
-	    while(iter.hasNext()){
-		sub.addMandatoryInput((Input)iter.next());
-	    }
-	}
-	if(h!=null){</pre></div></td></tr></table></div>
+<pre>		Submit sub = new Submit(group, label, ref.getLastPathElement());
+		if (confirmMessage != null) {
+			switch (confirmType) {
+			case Submit.CONFIRMATION_TYPE_OK_CANCEL:
+				sub.setConfirmationOkCancel(confirmMessage);
+				break;
+			case Submit.CONFIRMATION_TYPE_YES_NO:
+				sub.setConfirmationYesNo(confirmMessage);
+				break;
+			default:
+				sub.setConfirmationOkCancel(confirmMessage);
+				break;
+			}
+		}
+		if (!l.isEmpty()) {
+			Iterator iter = l.iterator();
+			while (iter.hasNext()) {
+				sub.addMandatoryInput((Input) iter.next());
+			}
+		}
+		if (h != null) {</pre></div></td></tr></table></div>
       </div>
     </div>
     <div class="clear">

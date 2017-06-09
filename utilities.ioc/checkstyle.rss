@@ -27,8 +27,8 @@ under the License.
     <item>
       <title>File: 4,
              Errors: 56,
-             Warnings: 10,
-             Infos: 31
+             Warnings: 4,
+             Infos: 4
       </title>
             <link>http://xtras/utilities/utilities.ioc//checkstyle.html</link>
       <description>
@@ -49,10 +49,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.ioc.dependencies.impl.NPEDependencyProxy.java">org/universAAL/ioc/dependencies/impl/NPEDependencyProxy.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
-                  3
+                  2
                 </td>
                 <td>
                   13
@@ -63,7 +63,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.ioc.dependencies.DependencyProxy.java">org/universAAL/ioc/dependencies/DependencyProxy.java</a>
                 </td>
                 <td>
-                  5
+                  1
                 </td>
                 <td>
                   1
@@ -77,10 +77,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.ioc.dependencies.impl.PassiveDependencyProxy.java">org/universAAL/ioc/dependencies/impl/PassiveDependencyProxy.java</a>
                 </td>
                 <td>
-                  6
+                  3
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   18
@@ -91,10 +91,10 @@ under the License.
                   <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.ioc.dependencies.impl.WaitingDependencyProxy.java">org/universAAL/ioc/dependencies/impl/WaitingDependencyProxy.java</a>
                 </td>
                 <td>
-                  12
+                  0
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   20
