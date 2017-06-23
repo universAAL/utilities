@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="96" branches-covered="0" branches-valid="30" complexity="2.0" version="2.1.1" timestamp="1496980186332">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="96" branches-covered="0" branches-valid="30" complexity="2.0" version="2.1.1" timestamp="1498222502689">
 	<sources>
 		<source>/home/travis/build/universAAL/utilities/utilities.ioc/src/main/java</source>
 		<source>--source</source>
 	</sources>
 	<packages>
-		<package name="org.universAAL.ioc.dependencies" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+		<package name="org.universAAL.utilities.ioc.dependencies" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="org.universAAL.ioc.dependencies.DependencyProxy" filename="org/universAAL/ioc/dependencies/DependencyProxy.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.utilities.ioc.dependencies.DependencyProxy" filename="org/universAAL/utilities/ioc/dependencies/DependencyProxy.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
@@ -17,9 +17,9 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ioc.dependencies.impl" line-rate="0.0" branch-rate="0.0" complexity="2.2">
+		<package name="org.universAAL.utilities.ioc.dependencies.impl" line-rate="0.0" branch-rate="0.0" complexity="2.2">
 			<classes>
-				<class name="org.universAAL.ioc.dependencies.impl.NPEDependencyProxy" filename="org/universAAL/ioc/dependencies/impl/NPEDependencyProxy.java" line-rate="0.0" branch-rate="0.0" complexity="1.4">
+				<class name="org.universAAL.utilities.ioc.dependencies.impl.NPEDependencyProxy" filename="org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.java" line-rate="0.0" branch-rate="0.0" complexity="1.4">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lorg/universAAL/middleware/container/ModuleContext;[Ljava/lang/Object;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -97,7 +97,7 @@
 						<line number="69" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ioc.dependencies.impl.PassiveDependencyProxy" filename="org/universAAL/ioc/dependencies/impl/PassiveDependencyProxy.java" line-rate="0.0" branch-rate="0.0" complexity="2.857142857142857">
+				<class name="org.universAAL.utilities.ioc.dependencies.impl.PassiveDependencyProxy" filename="org/universAAL/utilities/ioc/dependencies/impl/PassiveDependencyProxy.java" line-rate="0.0" branch-rate="0.0" complexity="2.857142857142857">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lorg/universAAL/middleware/container/ModuleContext;[Ljava/lang/Object;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
@@ -257,7 +257,7 @@
 						<line number="117" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ioc.dependencies.impl.WaitingDependencyProxy" filename="org/universAAL/ioc/dependencies/impl/WaitingDependencyProxy.java" line-rate="0.0" branch-rate="0.0" complexity="2.125">
+				<class name="org.universAAL.utilities.ioc.dependencies.impl.WaitingDependencyProxy" filename="org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.java" line-rate="0.0" branch-rate="0.0" complexity="2.125">
 					<methods>
 						<method name="&lt;init&gt;" signature="([Ljava/lang/Object;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>

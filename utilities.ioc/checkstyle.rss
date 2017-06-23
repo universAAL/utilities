@@ -46,21 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.ioc.dependencies.impl.NPEDependencyProxy.java">org/universAAL/ioc/dependencies/impl/NPEDependencyProxy.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  13
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.ioc.dependencies.DependencyProxy.java">org/universAAL/ioc/dependencies/DependencyProxy.java</a>
+                  <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.utilities.ioc.dependencies.DependencyProxy.java">org/universAAL/utilities/ioc/dependencies/DependencyProxy.java</a>
                 </td>
                 <td>
                   1
@@ -74,7 +60,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.ioc.dependencies.impl.PassiveDependencyProxy.java">org/universAAL/ioc/dependencies/impl/PassiveDependencyProxy.java</a>
+                  <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.NPEDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.PassiveDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/PassiveDependencyProxy.java</a>
                 </td>
                 <td>
                   3
@@ -88,7 +88,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.ioc.dependencies.impl.WaitingDependencyProxy.java">org/universAAL/ioc/dependencies/impl/WaitingDependencyProxy.java</a>
+                  <a href="http://xtras/utilities/utilities.ioc//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.WaitingDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.java</a>
                 </td>
                 <td>
                   0

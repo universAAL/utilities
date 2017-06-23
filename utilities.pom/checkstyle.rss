@@ -214,6 +214,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.NPEDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.context.mid.UtilPublisher.java">org/universAAL/support/utils/context/mid/UtilPublisher.java</a>
                 </td>
                 <td>
@@ -298,6 +312,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.DependencyProxy.java">org/universAAL/utilities/ioc/dependencies/DependencyProxy.java</a>
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.mid.UtilSensor.java">org/universAAL/support/utils/service/mid/UtilSensor.java</a>
                 </td>
                 <td>
@@ -308,34 +336,6 @@ under the License.
                 </td>
                 <td>
                   1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.ioc.dependencies.impl.PassiveDependencyProxy.java">org/universAAL/ioc/dependencies/impl/PassiveDependencyProxy.java</a>
-                </td>
-                <td>
-                  3
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  18
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.ioc.dependencies.impl.WaitingDependencyProxy.java">org/universAAL/ioc/dependencies/impl/WaitingDependencyProxy.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  20
                 </td>
               </tr>
                           <tr>
@@ -406,20 +406,6 @@ under the License.
                 </td>
                 <td>
                   2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.ioc.dependencies.impl.NPEDependencyProxy.java">org/universAAL/ioc/dependencies/impl/NPEDependencyProxy.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  13
                 </td>
               </tr>
                           <tr>
@@ -578,6 +564,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.PassiveDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/PassiveDependencyProxy.java</a>
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  18
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.WrapperC.java">org/universAAL/support/utils/WrapperC.java</a>
                 </td>
                 <td>
@@ -588,6 +588,20 @@ under the License.
                 </td>
                 <td>
                   1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.WaitingDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  20
                 </td>
               </tr>
                           <tr>
@@ -742,20 +756,6 @@ under the License.
                 </td>
                 <td>
                   2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.ioc.dependencies.DependencyProxy.java">org/universAAL/ioc/dependencies/DependencyProxy.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  5
                 </td>
               </tr>
                           <tr>
