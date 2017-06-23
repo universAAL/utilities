@@ -21,12 +21,12 @@
     limitations under the License.
  */
 
-package org.universAAL.ioc.dependencies.impl;
+package org.universAAL.utilities.ioc.dependencies.impl;
 
-import org.universAAL.ioc.dependencies.DependencyProxy;
 import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.container.SharedObjectListener;
 import org.universAAL.middleware.container.utils.LogUtils;
+import org.universAAL.utilities.ioc.dependencies.DependencyProxy;
 
 /**
  * 

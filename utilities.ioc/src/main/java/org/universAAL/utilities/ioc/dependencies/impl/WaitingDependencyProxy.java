@@ -19,11 +19,11 @@
     limitations under the License.
  */
 
-package org.universAAL.ioc.dependencies.impl;
+package org.universAAL.utilities.ioc.dependencies.impl;
 
 import java.util.Arrays;
 
-import org.universAAL.ioc.dependencies.DependencyProxy;
+import org.universAAL.utilities.ioc.dependencies.DependencyProxy;
 
 /**
  *
