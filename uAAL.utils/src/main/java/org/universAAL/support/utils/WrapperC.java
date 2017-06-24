@@ -45,7 +45,7 @@ public class WrapperC extends ContextSubscriber {
 	 * Constructor that takes the listener to associate.
 	 *
 	 * @param context
-	 *            The uAAL Module Context.
+	 *            The universAAL Module Context.
 	 * @param initialSubscriptions
 	 *            Event Patterns to subscriber to.
 	 * @param l

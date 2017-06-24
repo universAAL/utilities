@@ -61,7 +61,7 @@ public abstract class UtilUICaller extends UICaller {
 	/**
 	 * The root directory of the runtime configuration.
 	 */
-	public static final String UAAL_CONF_ROOT_DIR = "bundles.configuration.location";
+	public static final String CONF_ROOT_DIR = "bundles.configuration.location";
 
 	/**
 	 * Associated Service Callee.
@@ -86,8 +86,8 @@ public abstract class UtilUICaller extends UICaller {
 	protected UtilUICaller(ModuleContext context, String namespace, String url, String title) {
 		super(context);
 		callee = new UIcallee(context, namespace, url, title, this);
-		File dm = new File(new File(System.getProperty(UAAL_CONF_ROOT_DIR, System.getProperty("user.dir"))), "ui.dm");
-		File dmmob = new File(new File(System.getProperty(UAAL_CONF_ROOT_DIR, System.getProperty("user.dir"))),
+		File dm = new File(new File(System.getProperty(CONF_ROOT_DIR, System.getProperty("user.dir"))), "ui.dm");
+		File dmmob = new File(new File(System.getProperty(CONF_ROOT_DIR, System.getProperty("user.dir"))),
 				"ui.dm.mobile");
 		try {
 			if (dm.exists()) {

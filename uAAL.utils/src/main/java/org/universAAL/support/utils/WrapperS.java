@@ -46,7 +46,7 @@ public class WrapperS extends ServiceCallee {
 	 * Constructor that takes the listener to associate.
 	 *
 	 * @param context
-	 *            The uAAL Module Context.
+	 *            The universAAL Module Context.
 	 * @param realizedServices
 	 *            Service Profiles describing the services to provide.
 	 * @param l

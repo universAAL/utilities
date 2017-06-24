@@ -45,40 +45,22 @@ public class WrapperUI extends UICaller {
 	 * Constructor.
 	 *
 	 * @param context
-	 *            The uAAL Module Context.
+	 *            The universAAL Module Context.
 	 */
 	protected WrapperUI(ModuleContext context) {
 		super(context);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see org.universAAL.middleware.ui.UICaller#communicationChannelBroken()
-	 */
 	@Override
 	public void communicationChannelBroken() {
 		// TODO Auto-generated method stub
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see
-	 * org.universAAL.middleware.ui.UICaller#dialogAborted(java.lang.String)
-	 */
 	@Override
 	public void dialogAborted(String arg0, Resource data) {
 		// TODO Auto-generated method stub
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see
-	 * org.universAAL.middleware.ui.UICaller#handleUIResponse(org.universAAL
-	 * .middleware.ui.UIResponse)
-	 */
 	@Override
 	public void handleUIResponse(UIResponse r) {
 		if (listener != null) {

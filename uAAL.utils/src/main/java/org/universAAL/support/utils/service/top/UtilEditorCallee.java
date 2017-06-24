@@ -58,7 +58,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
 	 * UtilEditor profile method, in addition to the ModuleContext.
 	 *
 	 * @param context
-	 *            The Module Context of uAAL
+	 *            The Module Context of universAAL
 	 * @param namespace
 	 *            The namespace of your server, ending with the character #
 	 * @param ontologyURI

@@ -51,32 +51,32 @@ import org.universAAL.support.utils.context.mid.UtilPublisher;
  * <li>Provide Services
  * <li>Request User Interaction and handle Response
  * <p>
- * And all of these without (virtually) having to implement extensions of uAAL
+ * And all of these without (virtually) having to implement extensions of universAAL
  * classes, which may come in handy for already existing applications which just
- * want to connect easily to uAAL. Actually some of these provided simplified
+ * want to connect easily to universAAL. Actually some of these provided simplified
  * features use a Listener Interface-oriented approach, for which it may be
  * necessary to create additional classes for implementing them or do it in
  * existing classes, although in general it is possible to create the
  * implementation in the method calls themselves without much complication.
  * <p>
- * Notice that for allowing this, this UAAL class takes care of instantiating
- * and maintaining all needed uAAL wrapper classes, so for as long as you don't
+ * Notice that for allowing this, this universAAL class takes care of instantiating
+ * and maintaining all needed universAAL wrapper classes, so for as long as you don't
  * call <code>terminate()</code> it will keep hold of these resources. This also
  * means that the performance might not be as polite as it could if you handled
- * your own implementations of uAAL wrappers with the native API or the other
- * sublayers of this utilities API. The purpose of this UAAL class was never to
+ * your own implementations of universAAL wrappers with the native API or the other
+ * sublayers of this utilities API. The purpose of this universAAL class was never to
  * improve the performance but to simplify the coding.
  * <p>
- * To use the class methods, just instantiate it with a valid uAAL
+ * To use the class methods, just instantiate it with a valid universAAL
  * ModuleContext. For instance, from an Activator: <code>
  * <pre>
-    private UAAL u;
+    private universAAL u;
 
     public void start(BundleContext bcontext) throws Exception {
 	Activator.osgiContext = bcontext;
-	Activator.context = uAALBundleContainer.THE_CONTAINER
+	Activator.context = OSGiContainer.THE_CONTAINER
 		.registerModule(new Object[] { bcontext });
-	u = new UAAL(context);
+	u = new universAAL(context);
 	...
     }
  * </pre>
@@ -91,43 +91,43 @@ import org.universAAL.support.utils.context.mid.UtilPublisher;
 public class UAAL {
 
 	/**
-	 * The single Context Publisher uAAL wrapper class used by this class to
+	 * The single Context Publisher universAAL wrapper class used by this class to
 	 * publish all Context Events.
 	 */
 	private ContextPublisher publisher;
 	/**
-	 * A list of all Context Subscriber uAAL wrapper classes used by this class
+	 * A list of all Context Subscriber universAAL wrapper classes used by this class
 	 * to receive subscribed Context Events. The reason for having a list of
 	 * subscribers is that it simplifies the association between the subscribed
 	 * pattern and the handling to perform associated to it.
 	 */
 	private ArrayList<WrapperC> subscribers;
 	/**
-	 * The single Service Caller uAAL wrapper class used by this class to call
+	 * The single Service Caller universAAL wrapper class used by this class to call
 	 * all Service Requests.
 	 */
 	private ServiceCaller caller;
 	/**
-	 * A list of all Service Callee uAAL wrapper classes used by this class to
+	 * A list of all Service Callee universAAL wrapper classes used by this class to
 	 * handle calls to provided Service Profiles. The reason for having a list
 	 * of callees is that it simplifies the association between the provided
 	 * profile and the handling to perform associated to it.
 	 */
 	private ArrayList<WrapperS> callees;
 	/**
-	 * The single UI Caller uAAL wrapper class used by this class to send all UI
+	 * The single UI Caller universAAL wrapper class used by this class to send all UI
 	 * Requests.
 	 */
 	private WrapperUI requester;
 	/**
-	 * The uAAL Module Context.
+	 * The universAAL Module Context.
 	 */
 	private ModuleContext context;
 
 	/**
 	 * This constructor just assigns the Module Context: the rest of resources
 	 * used by this class are not initialized. They will be automatically
-	 * initialized as they are needed when you use the uAAL features methods of
+	 * initialized as they are needed when you use the universAAL features methods of
 	 * the class, so you don't have to do anything else. All resources will be
 	 * maintained until you call <code>terminate()</code>.
 	 * <p>
@@ -137,7 +137,7 @@ public class UAAL {
 	 * your application code.
 	 *
 	 * @param context
-	 *            The uAAL Module Context.
+	 *            The universAAL Module Context.
 	 */
 	public UAAL(ModuleContext context) {
 		this.context = context;
@@ -146,7 +146,7 @@ public class UAAL {
 	/**
 	 * Sends a Context Event.
 	 * <p>
-	 * UAAL helper automatically creates its own internal Context Publisher if
+	 * universAAL helper automatically creates its own internal Context Publisher if
 	 * this is the first time the method is called. If the passed event contains
 	 * ContextProvider information, it is used to instantiate the Publisher.
 	 * Otherwise the missing information is automatically generated: The
@@ -205,7 +205,7 @@ public class UAAL {
 	/**
 	 * Calls a Service with a Service Request.
 	 * <p>
-	 * UAAL helper automatically creates its own internal Default Service Caller
+	 * universAAL helper automatically creates its own internal Default Service Caller
 	 * if this is the first time the method is called. The call to the service
 	 * is synchronous: this method returns the response of the call straight
 	 * from Service Bus. You will have to deal with it.
@@ -231,7 +231,7 @@ public class UAAL {
 	 * Requests User Interaction and specifies how the response would be
 	 * handled.
 	 * <p>
-	 * UAAL helper automatically creates its own internal UI Caller if this is
+	 * universAAL helper automatically creates its own internal UI Caller if this is
 	 * the first time the method is called. An implementation of
 	 * {@link IUIListener} must be passed that will handle the response to the
 	 * UI Request that is being sent. The response contains the user input to
@@ -268,7 +268,7 @@ public class UAAL {
 	 * Subscribes for Context Events and specifies how the events would be
 	 * handled.
 	 * <p>
-	 * UAAL helper automatically creates a new own internal Context Subscriber
+	 * universAAL helper automatically creates a new own internal Context Subscriber
 	 * each time this method is called. An implementation of {@link ICListener}
 	 * must be passed that will handle the reception of an event that matches
 	 * the passed patterns. The listener is associated to the patterns: All
@@ -303,7 +303,7 @@ public class UAAL {
 	 * Registers Service Profiles and specifies how the calls to these profiles
 	 * would be handled.
 	 * <p>
-	 * UAAL helper automatically creates a new own internal Service Callee each
+	 * universAAL helper automatically creates a new own internal Service Callee each
 	 * time this method is called. An implementation of {@link ISListener} must
 	 * be passed that will handle the call request that matches the provided
 	 * profiles. The listener is associated to the profiles: All call requests
@@ -334,11 +334,11 @@ public class UAAL {
 	}
 
 	/**
-	 * Closes all uAAL wrapper classes created by this UAAL helper until now (by
+	 * Closes all universAAL wrapper classes created by this universAAL helper until now (by
 	 * calling their <code>.close()</code> method) and eliminates them. The
 	 * reference to the Module Context is maintained, however. This allows to
-	 * perform new calls to the uAAL features methods, which will create new
-	 * uAAL wrappers in the helper.
+	 * perform new calls to the universAAL features methods, which will create new
+	 * universAAL wrappers in the helper.
 	 */
 	public void terminate() {
 		if (publisher != null) {

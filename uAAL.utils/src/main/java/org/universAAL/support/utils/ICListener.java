@@ -25,7 +25,7 @@ import org.universAAL.middleware.context.ContextEvent;
 
 /**
  * Implementations of this interface act like a Context Subscriber: When an
- * event matches a pattern associated to it by UAAL helper, it is passed to its
+ * event matches a pattern associated to it by universAAL helper, it is passed to its
  * hadleContextEvent method.
  *
  * @author alfiva
@@ -33,7 +33,7 @@ import org.universAAL.middleware.context.ContextEvent;
  */
 public interface ICListener {
 	/**
-	 * When an event matches a pattern associated to this listener by UAAL
+	 * When an event matches a pattern associated to this listener by universAAL
 	 * helper, this method is called and is passed the event.
 	 *
 	 * @param event

@@ -26,7 +26,7 @@ import org.universAAL.middleware.service.ServiceResponse;
 
 /**
  * Implementations of this interface act like a Service Callee: When a service
- * call request matches a service profile associated to it by UAAL helper, it is
+ * call request matches a service profile associated to it by universAAL helper, it is
  * passed to its hadleCall method.
  *
  * @author alfiva
@@ -35,7 +35,7 @@ import org.universAAL.middleware.service.ServiceResponse;
 public interface ISListener {
 	/**
 	 * When a service call request matches a service profile associated to this
-	 * listener by UAAL helper, this method is called and is passed the call. It
+	 * listener by universAAL helper, this method is called and is passed the call. It
 	 * must then act accordingly and return the appropriate Service Response.
 	 *
 	 * @param call

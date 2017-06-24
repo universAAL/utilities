@@ -25,7 +25,7 @@ import org.universAAL.middleware.ui.UIResponse;
 
 /**
  * Implementations of this interface act like a UI Caller: When a UI response is
- * received to a UI request associated to the listener by UAAL helper, it is
+ * received to a UI request associated to the listener by universAAL helper, it is
  * passed to its hadleUIResponse method.
  *
  * @author alfiva
@@ -34,7 +34,7 @@ import org.universAAL.middleware.ui.UIResponse;
 public interface IUIListener {
 	/**
 	 * When a UI response is received to a UI request associated to this
-	 * listener by UAAL helper, this method is called and is passed the
+	 * listener by universAAL helper, this method is called and is passed the
 	 * response.
 	 *
 	 * @param response

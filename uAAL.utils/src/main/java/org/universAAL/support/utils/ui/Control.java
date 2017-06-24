@@ -59,7 +59,7 @@ public abstract class Control {
 
 	/**
 	 * This method is for internal use of utils only. It creates the actual
-	 * official uaal control configured with the properties defined by this
+	 * official universAAL control configured with the properties defined by this
 	 * class. Once it is created it cannot be modified.
 	 *
 	 * @param group

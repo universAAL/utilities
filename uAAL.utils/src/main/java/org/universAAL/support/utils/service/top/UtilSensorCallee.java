@@ -63,7 +63,7 @@ public abstract class UtilSensorCallee extends ServiceCallee {
 	 * HAS_VALUE property. Others, like DimmerSensor, will throw an exception.
 	 *
 	 * @param context
-	 *            The Module Context of uAAL
+	 *            The Module Context of universAAL
 	 * @param namespace
 	 *            The namespace of your server, ending with the character #
 	 * @param sensor
