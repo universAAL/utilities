@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -38,9 +38,9 @@ package org.universAAL.support.utils.service;
  * <p/>caller.call(req);
  * </code>
  * <p/>
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Arg {
 
@@ -50,7 +50,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Add(byValue);.
-	 * 
+	 *
 	 * @param byValue
 	 *            Value to represent.
 	 * @return The argument.
@@ -61,7 +61,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Add(byTypeURI);.
-	 * 
+	 *
 	 * @param byTypeURI
 	 *            Type to represent.
 	 * @return The argument.
@@ -72,7 +72,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Change(inputNewValue);.
-	 * 
+	 *
 	 * @param byValue
 	 *            Value to represent.
 	 * @return The argument.
@@ -83,7 +83,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Change(byTypeURI);.
-	 * 
+	 *
 	 * @param byTypeURI
 	 *            Type to represent.
 	 * @return The argument.
@@ -94,7 +94,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Output(byTypeURIorPLACEHOLDER);.
-	 * 
+	 *
 	 * @param byTypeURIorPLACEHOLDER
 	 *            Type to represent, or placeholder URI.
 	 * @return The argument.
@@ -105,7 +105,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Output(byValue);.
-	 * 
+	 *
 	 * @param byValue
 	 *            Value to represent.
 	 * @return The argument.
@@ -116,7 +116,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Remove(byValue);.
-	 * 
+	 *
 	 * @param byValue
 	 *            Value to represent.
 	 * @return The argument.
@@ -127,7 +127,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Remove(byTypeURI);.
-	 * 
+	 *
 	 * @param byTypeURI
 	 *            Type to represent.
 	 * @return The argument.
@@ -138,7 +138,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Typematch(byTypeURI);.
-	 * 
+	 *
 	 * @param byTypeURI
 	 *            Type to represent.
 	 * @return The argument.
@@ -149,7 +149,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Typematch(byValue);.
-	 * 
+	 *
 	 * @param byValue
 	 *            Value to represent.
 	 * @return The argument.
@@ -160,7 +160,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Variable(byValue);.
-	 * 
+	 *
 	 * @param byValue
 	 *            Value to represent.
 	 * @return The argument.
@@ -171,7 +171,7 @@ public class Arg {
 
 	/**
 	 * Equivalent to new Variable(byTypeURI);.
-	 * 
+	 *
 	 * @param byTypeURI
 	 *            Type to represent.
 	 * @return The argument.

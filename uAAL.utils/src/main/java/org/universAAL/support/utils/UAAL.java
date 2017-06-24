@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -84,9 +84,9 @@ import org.universAAL.support.utils.context.mid.UtilPublisher;
  * <p>
  * Remember to release the resources when you stop your application (like in
  * <code>Activator.stop()</code> method) by calling <code>terminate()</code>.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class UAAL {
 
@@ -135,7 +135,7 @@ public class UAAL {
 	 * desired (no restrictions are set about it), it is recommended to maintain
 	 * just a single(ton) instance of it, and make it accessible to the rest of
 	 * your application code.
-	 * 
+	 *
 	 * @param context
 	 *            The uAAL Module Context.
 	 */
@@ -158,7 +158,7 @@ public class UAAL {
 	 * pattern that describes the provided events of this provider is empty,
 	 * which means it can publish any type of event. Notice this Provider info
 	 * is set ONLY THE FIRST TIME and cannot be changed by later calls.
-	 * 
+	 *
 	 * @param e
 	 *            The Context Event to send.
 	 */
@@ -213,11 +213,11 @@ public class UAAL {
 	 * Remember that the simplified API in this library (
 	 * <code>org.universAAL.support.utils.service</code> packages) can assist
 	 * you in creating Service Requests and handling Service Responses.
-	 * 
+	 *
 	 * @param r
 	 *            The Service Request describing the Service to call.
 	 * @return The Service Response to the call returned by the Service Bus.
-	 * 
+	 *
 	 * @see org.universAAL.support.utils.service.low.Request
 	 */
 	public ServiceResponse callS(ServiceRequest r) {
@@ -247,7 +247,7 @@ public class UAAL {
 	 * Remember that the simplified API in this library (
 	 * <code>org.universAAL.support.utils.ui</code> packages) can assist you in
 	 * creating UI Requests.
-	 * 
+	 *
 	 * @param ui
 	 *            The UI request with the output to display to the user.
 	 * @param l
@@ -283,7 +283,7 @@ public class UAAL {
 	 * Remember that the simplified API in this library (
 	 * <code>org.universAAL.support.utils.context</code> packages) can assist
 	 * you in creating Context Event Patterns.
-	 * 
+	 *
 	 * @param p
 	 *            An array of Context Event Patterns describing the Context
 	 *            Events that will be handled by the listener.
@@ -317,7 +317,7 @@ public class UAAL {
 	 * Remember that the simplified API in this library (
 	 * <code>org.universAAL.support.utils.service</code> packages) can assist
 	 * you in creating Service Profiles.
-	 * 
+	 *
 	 * @param p
 	 *            An array of Service Profiles describing the provided services
 	 *            that will be handled by the listener.

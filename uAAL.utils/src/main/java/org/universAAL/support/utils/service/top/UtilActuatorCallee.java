@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -39,9 +39,9 @@ import org.universAAL.support.utils.service.mid.UtilActuator;
  * default these 3 services. Those considering using UtilActuator could take
  * advantage of this class if they want only to handle those 3 typical services
  * profiles and no more.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public abstract class UtilActuatorCallee extends ServiceCallee {
 
@@ -61,7 +61,7 @@ public abstract class UtilActuatorCallee extends ServiceCallee {
 	 * <p>
 	 * BE CAREFUL: This will only work with actuators that have StatusValue as
 	 * HAS_VALUE property. Others, like DimmerActuator, will throw an exception.
-	 * 
+	 *
 	 * @param context
 	 *            The Module Context of uAAL
 	 * @param namespace
@@ -81,7 +81,7 @@ public abstract class UtilActuatorCallee extends ServiceCallee {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL
 	 * .middleware.service.ServiceCall)
@@ -128,7 +128,7 @@ public abstract class UtilActuatorCallee extends ServiceCallee {
 	/**
 	 * When a SET ON service request is received, this method is called
 	 * automatically.
-	 * 
+	 *
 	 * @return <code>true</code> if the actuator could be set to ON
 	 */
 	public abstract boolean executeOn();
@@ -136,7 +136,7 @@ public abstract class UtilActuatorCallee extends ServiceCallee {
 	/**
 	 * When a SET OFF service request is received, this method is called
 	 * automatically.
-	 * 
+	 *
 	 * @return <code>true</code> if the actuator could be set to OFF
 	 */
 	public abstract boolean executeOff();
@@ -144,7 +144,7 @@ public abstract class UtilActuatorCallee extends ServiceCallee {
 	/**
 	 * When a GET STATUS service request is received, this method is called
 	 * automatically.
-	 * 
+	 *
 	 * @return The Boolean value representing the status property of the
 	 *         actuator.
 	 */

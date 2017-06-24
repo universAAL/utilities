@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -60,22 +60,22 @@ import org.universAAL.middleware.ui.rdf.Repeat;
  * <p>
  * Example render:
  * <p>
- * 
+ *
  * <pre>
  * Label ---------------------------------------
  *      | Control1Label     | Control2Label     |
  *       ---------------------------------------
- *      | Control1Render(1) | Control2Render(1) | 
+ *      | Control1Render(1) | Control2Render(1) |
  *       ---------------------------------------
- *      | Control1Render(2) | Control2Render(2) | 
+ *      | Control1Render(2) | Control2Render(2) |
  *       ---------------------------------------
- *      | Control1Render(3) | Control2Render(3) | 
+ *      | Control1Render(3) | Control2Render(3) |
  *       ---------------------------------------
  *                         ...
  * </pre>
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class DataTable extends Control implements IContainer {
 
@@ -113,7 +113,7 @@ public class DataTable extends Control implements IContainer {
 	 * a single String (a single-property path). All other properties of the
 	 * input are set to defaults (empty). Use method setReference(String[] path)
 	 * to set a path through several properties.
-	 * 
+	 *
 	 * If a root Resource is used in the parent of the Table (to which it is
 	 * added) then the values reachable through the reference Path from the root
 	 * will be used as Data Model for the Table.
@@ -129,7 +129,7 @@ public class DataTable extends Control implements IContainer {
 	 * </code>
 	 * <p/>
 	 * take into account that the referenced property must allow cardinality > 1
-	 * 
+	 *
 	 * @param ref
 	 *            The simple reference identifying the Table Data Model from the
 	 *            parent root. Set to null to auto-generate and not use a Data
@@ -145,7 +145,7 @@ public class DataTable extends Control implements IContainer {
 	 * a single String (a single-property path). All other properties of the
 	 * input are set to defaults (empty). Use method setReference(String[] path)
 	 * to set a path through several properties.
-	 * 
+	 *
 	 * If a root Resource is used in the parent of the Table (to which it is
 	 * added) then the values reachable through the reference Path from the root
 	 * will be used as Data Model for the Table.
@@ -161,7 +161,7 @@ public class DataTable extends Control implements IContainer {
 	 * </code>
 	 * <p/>
 	 * take into account that the referenced property must allow cardinality > 1
-	 * 
+	 *
 	 * @param ref
 	 *            The simple reference identifying the Table Data Model from the
 	 *            parent root. Set to null to auto-generate and not use a Data
@@ -181,7 +181,7 @@ public class DataTable extends Control implements IContainer {
 	 * their properties will be used by the controls in the Entry Model, for
 	 * every entry. An automatic reference for the Table will be generated but
 	 * only to identify it in the response.
-	 * 
+	 *
 	 * @param label
 	 *            The label text that identifies the Table to the user.
 	 * @param initialEntries
@@ -194,7 +194,7 @@ public class DataTable extends Control implements IContainer {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.
 	 * ui.rdf.Group)
@@ -224,14 +224,14 @@ public class DataTable extends Control implements IContainer {
 	 * Model entry property specified by the reference. The Control�s reference
 	 * path must follow a valid path starting where the Table�s own path
 	 * finished. Example:
-	 * 
+	 *
 	 * <pre>
 	 * (Root) --PROP1-- (ResA) --PROP2-- (ResB)
 	 *      _____________
 	 *       Table Path      _____________
 	 *                        Control Path
 	 * </pre>
-	 * 
+	 *
 	 * If the Table used explicit entries instead of a reference path, then the
 	 * reference of the Controls must start with (or be) one of the properties
 	 * of the type of Resource used for the explicit entries.
@@ -244,7 +244,7 @@ public class DataTable extends Control implements IContainer {
 	 * automatic reference if none was set. This reference will be returned by
 	 * this method, in the form of an Array of Strings representing the
 	 * reference: a Path for Inputs, or a single String for Submits IDs.
-	 * 
+	 *
 	 * @param ctrl
 	 *            The Simple Control UI element to be added.
 	 * @return The Array of Strings representing the reference Property Path for
@@ -260,7 +260,7 @@ public class DataTable extends Control implements IContainer {
 
 	/**
 	 * Check if entries can be removed by the user.
-	 * 
+	 *
 	 * @return If entries can be removed by the user.
 	 */
 	public Boolean isDeletable() {
@@ -269,7 +269,7 @@ public class DataTable extends Control implements IContainer {
 
 	/**
 	 * Set if entries can be removed by the user.
-	 * 
+	 *
 	 * @param deletable
 	 *            If entries can be removed by the user.
 	 */
@@ -279,7 +279,7 @@ public class DataTable extends Control implements IContainer {
 
 	/**
 	 * Check if entries can be edited by the user.
-	 * 
+	 *
 	 * @return If entries can be edited by the user.
 	 */
 	public Boolean isEditable() {
@@ -288,7 +288,7 @@ public class DataTable extends Control implements IContainer {
 
 	/**
 	 * Set if entries can be edited by the user.
-	 * 
+	 *
 	 * @param editable
 	 *            If entries can be edited by the user.
 	 */
@@ -298,7 +298,7 @@ public class DataTable extends Control implements IContainer {
 
 	/**
 	 * Check if entries can be added by the user.
-	 * 
+	 *
 	 * @return If entries can be added by the user.
 	 */
 	public Boolean isExpandable() {
@@ -307,7 +307,7 @@ public class DataTable extends Control implements IContainer {
 
 	/**
 	 * Set if entries can be added by the user.
-	 * 
+	 *
 	 * @param expandable
 	 *            If entries can be added by the user.
 	 */
@@ -317,7 +317,7 @@ public class DataTable extends Control implements IContainer {
 
 	/**
 	 * Get the entries of the Data Model backing up this Data Table.
-	 * 
+	 *
 	 * @return An array of Resources representing the entries in the Data Model.
 	 */
 	public Resource[] getEntries() {
@@ -336,7 +336,7 @@ public class DataTable extends Control implements IContainer {
 	/**
 	 * Add an entry to the Data Model backing up this Data Table. Must be of the
 	 * same class of those already added.
-	 * 
+	 *
 	 * @param option
 	 *            The entry to add to the Data Model.
 	 */
@@ -347,7 +347,7 @@ public class DataTable extends Control implements IContainer {
 	/**
 	 * Set the entries of the Data Model backing up this Data Table. Overrides
 	 * any previous values.
-	 * 
+	 *
 	 * @param entries
 	 *            An array of Resources representing the entries the Data Model.
 	 */

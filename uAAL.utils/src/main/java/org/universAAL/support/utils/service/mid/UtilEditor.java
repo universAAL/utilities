@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -43,9 +43,9 @@ import org.universAAL.support.utils.service.low.Request;
  * methods for automatically generating service profiles and service requests
  * that can be used in ServiceCallees and ServiceCallers. If they are both with
  * he same parameters in both sides, the services are guaranteed to match.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class UtilEditor {
 	/**
@@ -101,7 +101,7 @@ public class UtilEditor {
 	 * new SCallee(context, getServiceProfiles("http://ontology.universAAL.org/ProfilingServer.owl#", ProfilingService.MY_URI, Path.start(ProfilingService.PROP_CONTROLS).path, Profilable.MY_URI))
 	 * </code>
 	 * <p>
-	 * 
+	 *
 	 * @param namespace
 	 *            The namespace of your server, ending with the character #. You
 	 *            can optionally add some prefix after the # if you use
@@ -186,7 +186,7 @@ public class UtilEditor {
 	/**
 	 * Gives you the typical GET service request for editor services. If the
 	 * editor service also used UtilEditor the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param path
@@ -213,7 +213,7 @@ public class UtilEditor {
 	/**
 	 * Gives you the typical GET service request for editor services. If the
 	 * editor service also used UtilEditor the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param path
@@ -239,7 +239,7 @@ public class UtilEditor {
 	/**
 	 * Gives you the typical ADD service request for editor services. If the
 	 * editor service also used UtilEditor the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param path
@@ -261,7 +261,7 @@ public class UtilEditor {
 	/**
 	 * Gives you the typical ADD service request for editor services. If the
 	 * editor service also used UtilEditor the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param path
@@ -283,7 +283,7 @@ public class UtilEditor {
 	/**
 	 * Gives you the typical CHANGE service request for editor services. If the
 	 * editor service also used UtilEditor the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param path
@@ -305,7 +305,7 @@ public class UtilEditor {
 	/**
 	 * Gives you the typical CHANGE service request for editor services. If the
 	 * editor service also used UtilEditor the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param path
@@ -327,7 +327,7 @@ public class UtilEditor {
 	/**
 	 * Gives you the typical REMOVE service request for editor services. If the
 	 * editor service also used UtilEditor the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param path
@@ -349,7 +349,7 @@ public class UtilEditor {
 	/**
 	 * Gives you the typical REMOVE service request for editor services. If the
 	 * editor service also used UtilEditor the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param path

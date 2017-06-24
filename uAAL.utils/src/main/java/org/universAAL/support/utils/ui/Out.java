@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -33,13 +33,13 @@ import org.universAAL.middleware.ui.rdf.SimpleOutput;
  * <p>
  * Example render:
  * <p>
- * 
+ *
  * <pre>
  * Label <b>Value</b>
  * </pre>
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Out extends Control {
 
@@ -58,7 +58,7 @@ public class Out extends Control {
 	/**
 	 * Constructor with the output value. All other properties of the input are
 	 * set to defaults (empty).
-	 * 
+	 *
 	 * @param value
 	 *            The output value to be displayed.
 	 */
@@ -68,7 +68,7 @@ public class Out extends Control {
 
 	/**
 	 * Constructor with the output value.
-	 * 
+	 *
 	 * @param label
 	 *            The label text that identifies the output to the user.
 	 * @param value
@@ -85,7 +85,7 @@ public class Out extends Control {
 	 * a single String (a single-property path). For outputs, references are
 	 * only used in conjunction with initial root Resources. Use method
 	 * setReference(String[] path) to set a path through several properties.
-	 * 
+	 *
 	 * @param ref
 	 *            The simple reference identifying the input. Set to null to
 	 *            auto-generate.
@@ -102,7 +102,7 @@ public class Out extends Control {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.
 	 * ui.rdf.Group)
@@ -117,7 +117,7 @@ public class Out extends Control {
 
 	/**
 	 * Get the output value to be displayed.
-	 * 
+	 *
 	 * @return The output value
 	 */
 	public String getValue() {
@@ -126,7 +126,7 @@ public class Out extends Control {
 
 	/**
 	 * Set the output value to be displayed.
-	 * 
+	 *
 	 * @param value
 	 *            The output value
 	 */

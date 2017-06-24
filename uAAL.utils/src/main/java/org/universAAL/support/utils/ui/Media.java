@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -33,16 +33,16 @@ import org.universAAL.middleware.ui.rdf.MediaObject;
  * <p>
  * Example render:
  * <p>
- * 
+ *
  * <pre>
  *        __________
  * Label |          |
  *       |    :)    |
  *       |__________|
  * </pre>
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Media extends Control {
 
@@ -65,7 +65,7 @@ public class Media extends Control {
 	/**
 	 * Constructor with only the url. All other properties of the input are set
 	 * to defaults (empty image).
-	 * 
+	 *
 	 * @param url
 	 *            The URL to the value to be displayed, from the Resource
 	 *            server.
@@ -76,7 +76,7 @@ public class Media extends Control {
 
 	/**
 	 * Constructor with the URL value.
-	 * 
+	 *
 	 * @param label
 	 *            The label text that identifies the output to the user.
 	 * @param url
@@ -90,7 +90,7 @@ public class Media extends Control {
 
 	/**
 	 * Constructor with the URL value.
-	 * 
+	 *
 	 * @param label
 	 *            The label text that identifies the output to the user.
 	 * @param url
@@ -107,7 +107,7 @@ public class Media extends Control {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.
 	 * ui.rdf.Group)
@@ -119,7 +119,7 @@ public class Media extends Control {
 
 	/**
 	 * Get the URL to the the value to be displayed, from the Resource server.
-	 * 
+	 *
 	 * @return The URL
 	 */
 	public String getUrl() {
@@ -128,7 +128,7 @@ public class Media extends Control {
 
 	/**
 	 * Set the URL to the the value to be displayed, from the Resource server.
-	 * 
+	 *
 	 * @param url
 	 *            The URL
 	 */
@@ -138,7 +138,7 @@ public class Media extends Control {
 
 	/**
 	 * Get the type of media element of the value.
-	 * 
+	 *
 	 * @return The media type
 	 */
 	public String getType() {
@@ -147,7 +147,7 @@ public class Media extends Control {
 
 	/**
 	 * Set the type of media element of the value.
-	 * 
+	 *
 	 * @param type
 	 *            The media type
 	 */

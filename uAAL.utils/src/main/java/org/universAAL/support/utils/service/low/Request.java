@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -56,9 +56,9 @@ import org.universAAL.support.utils.service.Variable;
  * This is not necessarily faster nor better than the usual way of doing it with
  * ServiceRequest. It's just an alternative way that might help those less
  * familiarized with universAAL.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Request extends ServiceRequest {
 
@@ -73,7 +73,7 @@ public class Request extends ServiceRequest {
 	 * <p/>
 	 * Example: <code>
 	 * Request req=new Request(new Lighting(null));</code>
-	 * 
+	 *
 	 * @param requestedServiceRoot
 	 *            An instance of the Service class that you want to call,
 	 *            created with null URI.
@@ -90,7 +90,7 @@ public class Request extends ServiceRequest {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_HAS_TYPE}, new Typematch(ElectricLight.MY_URI));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be restricted
@@ -104,7 +104,7 @@ public class Request extends ServiceRequest {
 
 	/**
 	 * Equivalent to put(String[] branch, Typematch leaf).
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be restricted
@@ -125,7 +125,7 @@ public class Request extends ServiceRequest {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Variable(new LightSource(exactURI)));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be received as input by the service
@@ -139,7 +139,7 @@ public class Request extends ServiceRequest {
 
 	/**
 	 * Equivalent to put(Path branch, Variable leaf).
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be received as input by the service
@@ -160,7 +160,7 @@ public class Request extends ServiceRequest {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Output("http://ontology.igd.fhg.de/LightingConsumer.owl#listOfLamps"));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            output that you want
@@ -174,7 +174,7 @@ public class Request extends ServiceRequest {
 
 	/**
 	 * Equivalent to put(String[] branch, Output leaf).
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            output that you want
@@ -194,7 +194,7 @@ public class Request extends ServiceRequest {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Add(new LightSource(addURI)));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be added
@@ -208,7 +208,7 @@ public class Request extends ServiceRequest {
 
 	/**
 	 * Equivalent to put(String[] branch, Add leaf).
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be added
@@ -228,7 +228,7 @@ public class Request extends ServiceRequest {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Remove(new LightSource(quitURI)));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be removed
@@ -244,7 +244,7 @@ public class Request extends ServiceRequest {
 
 	/**
 	 * Equivalent to put(String[] branch, Remove leaf).
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be removed
@@ -264,7 +264,7 @@ public class Request extends ServiceRequest {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_SOURCE_BRIGHTNESS }, new Change(new Integer(0)));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be changed
@@ -278,7 +278,7 @@ public class Request extends ServiceRequest {
 
 	/**
 	 * Equivalent to put(String[] branch, Change leaf).
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be changed
@@ -292,7 +292,7 @@ public class Request extends ServiceRequest {
 
 	/**
 	 * Equivalent to recoverOutputs(ServiceResponse sr, String outputURI).
-	 * 
+	 *
 	 * @param sr
 	 *            The ServiceResponse returned by the .call method
 	 * @param output
@@ -312,7 +312,7 @@ public class Request extends ServiceRequest {
 	 * Request) and you want to get an array containing all the outputs
 	 * returned.
 	 * <p/>
-	 * 
+	 *
 	 * @param sr
 	 *            The ServiceResponse returned by the .call method
 	 * @param outputURI
@@ -345,7 +345,7 @@ public class Request extends ServiceRequest {
 
 	/**
 	 * I have to put this because of all service refactoring stuff.
-	 * 
+	 *
 	 * @return Nothing, null.
 	 */
 	protected Hashtable getInput() {

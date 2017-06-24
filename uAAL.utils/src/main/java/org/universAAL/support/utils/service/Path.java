@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -38,9 +38,9 @@ package org.universAAL.support.utils.service;
  * <p/>caller.call(req);
  * </code>
  * <p/>
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Path {
 	/**
@@ -52,7 +52,7 @@ public class Path {
 	 * Main constructor. It can be used to type
 	 * <code>new Path(firstproperty)...</code> instead of
 	 * <code>Path.at(firstproperty)...</code>
-	 * 
+	 *
 	 * @param path
 	 *            The first property of the path, coming from the service root
 	 */
@@ -64,7 +64,7 @@ public class Path {
 	 * Additional constructor if you already have a property path but want to
 	 * turn it into a Path object. You can add more steps to the path
 	 * afterwards.
-	 * 
+	 *
 	 * @param path
 	 *            The property path, coming from the service root
 	 */
@@ -74,7 +74,7 @@ public class Path {
 
 	/**
 	 * Deprecated. Use at() instead. You save 2 letters.
-	 * 
+	 *
 	 * @param to
 	 *            The first property of the path, coming from the service root
 	 * @return New Path instance
@@ -86,7 +86,7 @@ public class Path {
 
 	/**
 	 * Return a new instance of Path starting its branch path at parameter to.
-	 * 
+	 *
 	 * @param to
 	 *            The first property of the path, coming from the service root
 	 * @return New Path instance
@@ -98,7 +98,7 @@ public class Path {
 	/**
 	 * Puts a new step (a new property) in the branch path. Allows successive
 	 * calls to add further properties.
-	 * 
+	 *
 	 * @param to
 	 *            The next property in the path, coming from a previous call to
 	 *            .start
@@ -116,7 +116,7 @@ public class Path {
 
 	/**
 	 * Get a Path object with the given property path.
-	 * 
+	 *
 	 * @param path
 	 *            The property path
 	 * @return The Path object representing it
@@ -127,7 +127,7 @@ public class Path {
 
 	/**
 	 * Get a Path object with the given property path.
-	 * 
+	 *
 	 * @param path
 	 *            The single step property path
 	 * @return The Path object representing it

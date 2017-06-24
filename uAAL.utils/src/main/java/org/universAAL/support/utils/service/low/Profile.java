@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -63,9 +63,9 @@ import org.universAAL.support.utils.service.Variable;
  * This is not necessarily faster nor better than the usual way of doing it with
  * ServiceProfile and Service. It's just an alternative way that might help
  * those less familiarized with universAAL.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Profile {
 
@@ -85,7 +85,7 @@ public class Profile {
 	 * <p/>
 	 * Example: <code>
 	 * Profile prof=new Profile(new ProvidedLightingService(REF_URI_NEW_SERVICE));</code>
-	 * 
+	 *
 	 * @param profiledServiceRoot
 	 *            An instance of the ProvidedService class that you are using to
 	 *            register the profiles, with an appropriate reference URI.
@@ -102,7 +102,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_HAS_TYPE}, new Typematch(ElectricLight.MY_URI));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be restricted
@@ -123,7 +123,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_HAS_TYPE}, new Typematch(ElectricLight.MY_URI));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be restricted
@@ -144,7 +144,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_HAS_TYPE}, new Typematch(ElectricLight.MY_URI));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be restricted
@@ -173,7 +173,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Variable(LightSource.MY_URI),REF_URI);
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be received as input by the service
@@ -220,7 +220,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Variable(new LightSource()),REF_URI);
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be received as input by the service
@@ -251,7 +251,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Variable(new LightSource()),REF_URI);
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be received as input by the service
@@ -297,7 +297,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Output(LightSource.MY_URI));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            output that you will return
@@ -333,7 +333,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Output(LightSource.MY_URI));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            output that you will return
@@ -361,7 +361,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Output(LightSource.MY_URI));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            output that you will return
@@ -403,7 +403,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Add(new LightSource()));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be added
@@ -447,7 +447,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Add(new LightSource()));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be added
@@ -477,7 +477,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Add(new LightSource()));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be added
@@ -523,7 +523,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Remove(new LightSource()));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be removed
@@ -572,7 +572,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Remove(new LightSource()));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be removed
@@ -603,7 +603,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS}, new Remove(new LightSource()));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be removed
@@ -653,7 +653,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_SOURCE_BRIGHTNESS }, new Change(new Integer(0)));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be changed
@@ -697,7 +697,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_SOURCE_BRIGHTNESS }, new Change(new Integer(0)));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be changed
@@ -728,7 +728,7 @@ public class Profile {
 	 * Example: <code>
 	 * req.put(new String[]{Lighting.PROP_CONTROLS,LightSource.PROP_SOURCE_BRIGHTNESS }, new Change(new Integer(0)));
 	 * </code>
-	 * 
+	 *
 	 * @param branch
 	 *            The path of properties from the Service root class to the
 	 *            value to be changed
@@ -769,7 +769,7 @@ public class Profile {
 	 * Assign the returned ServiceProfile to a value of the "profiles" array of
 	 * that class. Or you can use it first to add it more restrictions or
 	 * arguments the old-fashioned way.
-	 * 
+	 *
 	 * @return The resulting ServiceProfile of this Profile
 	 */
 	public ServiceProfile getTheProfile() {

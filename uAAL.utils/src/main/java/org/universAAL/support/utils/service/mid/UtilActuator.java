@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -45,9 +45,9 @@ import org.universAAL.support.utils.service.low.Request;
  * requests that can be used in ServiceCallees and ServiceCallers. If they are
  * both with the same parameters in both sides, the services are guaranteed to
  * match.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class UtilActuator {
 
@@ -87,7 +87,7 @@ public class UtilActuator {
 	 * new SCallee(context, getServiceProfiles("http://ontology.universAAL.org/OvenServer.owl#", OvenService.MY_URI, myOvenDevice))
 	 * </code>
 	 * <p>
-	 * 
+	 *
 	 * @param namespace
 	 *            The namespace of your server, ending with the character #. You
 	 *            can optionally add some prefix after the # if you use
@@ -165,7 +165,7 @@ public class UtilActuator {
 	 * <p>
 	 * BE CAREFUL: This will only work with actuators that have StatusValue as
 	 * HAS_VALUE property. Others, like DimmerActuator, will throw an exception.
-	 * 
+	 *
 	 * @param namespace
 	 *            The namespace of your server, ending with the character #. You
 	 *            can optionally add some prefix after the # if you use
@@ -186,7 +186,7 @@ public class UtilActuator {
 	/**
 	 * Gives you the typical GET STATUS service request for actuator services.
 	 * If the editor service also used UtilActuator the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param argIn
@@ -210,7 +210,7 @@ public class UtilActuator {
 	/**
 	 * Gives you the typical GET STATUS service request for actuator services.
 	 * If the editor service also used UtilActuator the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param actuator
@@ -230,7 +230,7 @@ public class UtilActuator {
 	/**
 	 * Gives you the typical GET STATUS service request for actuator services.
 	 * If the editor service also used UtilActuator the match is guaranteed.
-	 * 
+	 *
 	 * @param actuator
 	 *            The ontology instance of the actuator you want to get the
 	 *            status from.
@@ -248,7 +248,7 @@ public class UtilActuator {
 	/**
 	 * Gives you the typical SET ON service request for actuator services. If
 	 * the editor service also used UtilActuator the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param argIn
@@ -268,7 +268,7 @@ public class UtilActuator {
 	/**
 	 * Gives you the typical SET ON service request for actuator services. If
 	 * the editor service also used UtilActuator the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param actuator
@@ -283,7 +283,7 @@ public class UtilActuator {
 	/**
 	 * Gives you the typical SET ON service request for actuator services. If
 	 * the editor service also used UtilActuator the match is guaranteed.
-	 * 
+	 *
 	 * @param actuator
 	 *            The ontology instance of the actuator you want to set on.
 	 * @return The ServiceRequest that will call the matching SET ON service of
@@ -296,7 +296,7 @@ public class UtilActuator {
 	/**
 	 * Gives you the typical SET OFF service request for actuator services. If
 	 * the editor service also used UtilActuator the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param argIn
@@ -316,7 +316,7 @@ public class UtilActuator {
 	/**
 	 * Gives you the typical SET OFF service request for actuator services. If
 	 * the editor service also used UtilActuator the match is guaranteed.
-	 * 
+	 *
 	 * @param ontologyURI
 	 *            The MY_URI of the class of Service ontology you want to call
 	 * @param actuator
@@ -331,7 +331,7 @@ public class UtilActuator {
 	/**
 	 * Gives you the typical SET OFF service request for actuator services. If
 	 * the editor service also used UtilActuator the match is guaranteed.
-	 * 
+	 *
 	 * @param actuator
 	 *            The ontology instance of the actuator you want to set off.
 	 * @return The ServiceRequest that will call the matching SET OFF service of

@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -29,16 +29,16 @@ import org.universAAL.middleware.rdf.Resource;
  * the "leaf" objects at the end of a property path and can be of several types
  * depending on what you want to do with them. An Type-match argument means that
  * values in the property path must be of the type represented by this argument.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Typematch extends Value {
 
 	/**
 	 * <b>Recommended for use by SimpleRequests and SimpleProfiles</b>. Value
 	 * used to define types to match as arguments of a Request.
-	 * 
+	 *
 	 * @param byTypeURI
 	 *            The URI of the type that you want to match (you can get it
 	 *            with NameOfClass.MY_URI)
@@ -63,7 +63,7 @@ public class Typematch extends Value {
 	 * and extracts its type. The value of the instance is irrelevant, it's just
 	 * intended for situations in which you already have an instance which type
 	 * you want to match.
-	 * 
+	 *
 	 * @param byValue
 	 *            An instance of which type you want to match.
 	 */
@@ -74,7 +74,7 @@ public class Typematch extends Value {
 
 	/**
 	 * This is only supposed to be used internally.
-	 * 
+	 *
 	 * @return The type URI to match
 	 */
 	public String getURI() {

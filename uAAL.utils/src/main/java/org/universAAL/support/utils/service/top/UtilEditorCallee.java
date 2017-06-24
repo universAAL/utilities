@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -37,9 +37,9 @@ import org.universAAL.support.utils.service.mid.UtilEditor;
  * these 4 services. Those considering using UtilEditor could take advantage of
  * this class if they want only to handle those 4 typical services profiles and
  * no more.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public abstract class UtilEditorCallee extends ServiceCallee {
 
@@ -56,7 +56,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
 	/**
 	 * Default constructor of the class. Takes the same parameters needed by a
 	 * UtilEditor profile method, in addition to the ModuleContext.
-	 * 
+	 *
 	 * @param context
 	 *            The Module Context of uAAL
 	 * @param namespace
@@ -79,7 +79,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.universAAL.middleware.service.ServiceCallee#handleCall(org.universAAL
 	 * .middleware.service.ServiceCall)
@@ -152,7 +152,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
 	 * URI and return the matching complete Resource. Because it would be
 	 * pointless to call this method if the client had the complete Resource.
 	 * They only have the URI.
-	 * 
+	 *
 	 * @param input
 	 *            The Resource object with the instance URI for which the GET is
 	 *            issued. Take into account that only the instance URI is of
@@ -166,7 +166,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
 	/**
 	 * When a ADD service request is received, this method is called
 	 * automatically.
-	 * 
+	 *
 	 * @param input
 	 *            The Resource object to add. You can cast it to the right class
 	 *            as you defined it in the constructor for the managedURI
@@ -178,7 +178,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
 	/**
 	 * When a CHANGE service request is received, this method is called
 	 * automatically.
-	 * 
+	 *
 	 * @param input
 	 *            The Resource object to change. It is assumed, although that is
 	 *            up to the implementation, that the Resource to change already
@@ -191,7 +191,7 @@ public abstract class UtilEditorCallee extends ServiceCallee {
 	/**
 	 * When a REMOVE service request is received, this method is called
 	 * automatically.
-	 * 
+	 *
 	 * @param input
 	 *            The Resource object to remove. Take into account that only the
 	 *            instance URI is of interest here. It is assumed, although that

@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -32,9 +32,9 @@ import org.universAAL.middleware.rdf.TypeMapper;
  * Variable-Input-type argument means that you intend to call a service that
  * "handles" the value represented by this argument. The value of the argument
  * is passed onto the service so it can "handle" it.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Variable extends Value {
 	/**
@@ -48,7 +48,7 @@ public class Variable extends Value {
 	 * this constructor is used by Simple Profiles with a specific instance
 	 * value the input is not treated as a variable reference but as a explicit
 	 * required input.
-	 * 
+	 *
 	 * @param byValue
 	 *            An instance of a ManagedIndividual or native type representing
 	 *            the value that must be passed as variable input to the service
@@ -62,7 +62,7 @@ public class Variable extends Value {
 	/**
 	 * <b>Recommended for use by SimpleProfiles</b>. Value used to define values
 	 * to be used as variable inputs in arguments of a Profile.
-	 * 
+	 *
 	 * @param byTypeURI
 	 *            A type URI of a ManagedIndividual or native type representing
 	 *            the type of value that must be passed as variable input to the
@@ -89,7 +89,7 @@ public class Variable extends Value {
 
 	/**
 	 * This is only supposed to be used internally.
-	 * 
+	 *
 	 * @return The actual value of the variable
 	 */
 	public Object getObject() {
@@ -98,7 +98,7 @@ public class Variable extends Value {
 
 	/**
 	 * This is only supposed to be used internally.
-	 * 
+	 *
 	 * @return The type URI of the variable
 	 */
 	public String getURI() {

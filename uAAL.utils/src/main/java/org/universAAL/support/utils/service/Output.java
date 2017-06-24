@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -30,9 +30,9 @@ import org.universAAL.middleware.rdf.Resource;
  * types depending on what you want to do with them. An Output-type argument
  * means that you want to get in return the value represented by this argument
  * from the service you intend to call.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Output extends Value {
 
@@ -47,7 +47,7 @@ public class Output extends Value {
 	 * If you use it from a Profile, you must put the type URI of the kind of
 	 * Output the profile will be handling, like ManagedIndividual.MY_URI. Use
 	 * only this constructor
-	 * 
+	 *
 	 * @param byTypeURIorPLACEHOLDER
 	 *            In Request: An URI used by ServiceResponse to place matching
 	 *            outputs. In Profile: The URI of the type that is handled by
@@ -75,7 +75,7 @@ public class Output extends Value {
 	 * and extracts its type. The value of the instance is irrelevant, it's just
 	 * intended for situations in which you already have an instance which type
 	 * you want to output.
-	 * 
+	 *
 	 * @param byValue
 	 *            An instance of a ManagedIndividual or native type representing
 	 *            the value to output in this argument, but only its type is
@@ -88,7 +88,7 @@ public class Output extends Value {
 
 	/**
 	 * This is only supposed to be used internally.
-	 * 
+	 *
 	 * @return The type URI/placeholder to output
 	 */
 	public String getURI() {

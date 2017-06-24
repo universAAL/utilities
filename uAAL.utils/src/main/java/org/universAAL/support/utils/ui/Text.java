@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -33,13 +33,13 @@ import org.universAAL.middleware.ui.rdf.Label;
  * <p>
  * Example render:
  * <p>
- * 
+ *
  * <pre>
  * Label[_initialValue_____]
  * </pre>
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Text extends InputControl {
 
@@ -61,7 +61,7 @@ public class Text extends InputControl {
 	 * simplified as a single String (a single-property path). All other
 	 * properties of the input are set to defaults (empty). Use method
 	 * setReference(String[] path) to set a path through several properties.
-	 * 
+	 *
 	 * @param ref
 	 *            The simple reference identifying the input. Set to null to
 	 *            auto-generate.
@@ -75,7 +75,7 @@ public class Text extends InputControl {
 	 * response. The reference is a property path, but in this constructor it is
 	 * simplified as a single String (a single-property path). Use method
 	 * setReference(String[] path) to set a path through several properties.
-	 * 
+	 *
 	 * @param ref
 	 *            The simple reference identifying the input. Set to null to
 	 *            auto-generate.
@@ -92,7 +92,7 @@ public class Text extends InputControl {
 	 * response. The reference is a property path, but in this constructor it is
 	 * simplified as a single String (a single-property path). Use method
 	 * setReference(String[] path) to set a path through several properties.
-	 * 
+	 *
 	 * @param ref
 	 *            The simple reference identifying the input. Set to null to
 	 *            auto-generate.
@@ -111,7 +111,7 @@ public class Text extends InputControl {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.
 	 * ui.rdf.Group)
@@ -126,7 +126,7 @@ public class Text extends InputControl {
 
 	/**
 	 * Get the initial value of the input by default.
-	 * 
+	 *
 	 * @return The initial value.
 	 */
 	public String getInitialValue() {
@@ -135,7 +135,7 @@ public class Text extends InputControl {
 
 	/**
 	 * Set the initial value of the input by default.
-	 * 
+	 *
 	 * @param initialValue
 	 *            The initial value.
 	 */

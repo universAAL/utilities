@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -38,22 +38,22 @@ import org.universAAL.support.utils.context.low.Provider;
  * Example: A publisher that gives events about status of a Heater Actuator.
  * <code>
  * <p/>publisher = new UtilPublisher(context, DEVICE_INSTANCE_URI,
- * <p/>		ContextProviderType.controller, 
- * <p/>		new HeaterActuator(DEVICE_INSTANCE_URI), 
+ * <p/>		ContextProviderType.controller,
+ * <p/>		new HeaterActuator(DEVICE_INSTANCE_URI),
  * <p/>		HeaterActuator.PROP_STATUS,
  * <p/>		TypeMapper.getDatatypeURI(Boolean.class));
  * </code>
  * <p/>
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class UtilPublisher extends DefaultContextPublisher {
 
 	/**
 	 * Create a simple <b>gauge</b> Context Publisher which provided events can
 	 * be of any type and is identified with the given URI.
-	 * 
+	 *
 	 * @param context
 	 *            The universAAL module context.
 	 * @param uri
@@ -66,7 +66,7 @@ public class UtilPublisher extends DefaultContextPublisher {
 	/**
 	 * Create a simple Context Publisher of the given type which provided events
 	 * can be of any type and is identified with the given URI.
-	 * 
+	 *
 	 * @param context
 	 *            The universAAL module context.
 	 * @param uri
@@ -82,7 +82,7 @@ public class UtilPublisher extends DefaultContextPublisher {
 	/**
 	 * Create a simple Context Publisher of the given type which provided events
 	 * are described by a pattern and is identified with the given URI.
-	 * 
+	 *
 	 * @param context
 	 *            The universAAL module context.
 	 * @param uri
@@ -101,7 +101,7 @@ public class UtilPublisher extends DefaultContextPublisher {
 	/**
 	 * Create a simple Context Publisher of the given type which provided events
 	 * are described by the arguments and is identified with the given URI.
-	 * 
+	 *
 	 * @param context
 	 *            The universAAL module context.
 	 * @param uri
@@ -127,7 +127,7 @@ public class UtilPublisher extends DefaultContextPublisher {
 	/**
 	 * Create a simple Context Publisher of the given type which provided events
 	 * are described by the arguments and is identified with the given URI.
-	 * 
+	 *
 	 * @param context
 	 *            The universAAL module context.
 	 * @param uri

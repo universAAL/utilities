@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -31,9 +31,9 @@ import org.universAAL.middleware.rdf.TypeMapper;
  * depending on what you want to do with them. A Remove-type argument means that
  * the value represented by this argument must be "removed" by the service you
  * intend to call.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Remove extends Value {
 	/**
@@ -46,7 +46,7 @@ public class Remove extends Value {
 	 * to remove as arguments of a Request. If this constructor is used by
 	 * Simple Profiles with a specific instance value the input is not treated
 	 * as a variable reference but as a explicit added value.
-	 * 
+	 *
 	 * @param byValue
 	 *            An instance of a ManagedIndividual or native type representing
 	 *            the value to be removed
@@ -60,7 +60,7 @@ public class Remove extends Value {
 	/**
 	 * <b>Recommended for use by SimpleProfiles</b>. Value used to define values
 	 * to remove as arguments of a Profile.
-	 * 
+	 *
 	 * @param byTypeURI
 	 *            A type URI of a ManagedIndividual or native type representing
 	 *            the type of value to be removed. However if the parameter is
@@ -85,7 +85,7 @@ public class Remove extends Value {
 
 	/**
 	 * This is only supposed to be used internally.
-	 * 
+	 *
 	 * @return The actual value of the value to remove
 	 */
 	public Object getObject() {
@@ -94,7 +94,7 @@ public class Remove extends Value {
 
 	/**
 	 * This is only supposed to be used internally.
-	 * 
+	 *
 	 * @return The type URI of the value to remove
 	 */
 	public String getURI() {

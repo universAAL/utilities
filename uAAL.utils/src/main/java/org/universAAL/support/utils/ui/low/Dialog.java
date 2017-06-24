@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -70,9 +70,9 @@ import org.universAAL.support.utils.ui.SubmitCmd;
  * This is not necessarily faster nor better than the usual way of doing it with
  * Form and UIRequest. It's just an alternative way that might help those less
  * familiarized with universAAL.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class Dialog extends UIRequest implements IContainer {
 
@@ -80,7 +80,7 @@ public class Dialog extends UIRequest implements IContainer {
 	 * Use this helper class to create a UIRequest that is easy to use. This
 	 * Dialog extends UIRequest so you can use it with a UICaller. Default
 	 * values are used for priority (low) and privacy (insensible).
-	 * 
+	 *
 	 * @param user
 	 *            The user to which the request is addressed.
 	 * @param title
@@ -100,7 +100,7 @@ public class Dialog extends UIRequest implements IContainer {
 	 * root Resource to the right value and it will be set as initial value for
 	 * that Control. Default values are used for priority (low) and privacy
 	 * (insensible).
-	 * 
+	 *
 	 * @param user
 	 *            The user to which the request is addressed.
 	 * @param title
@@ -117,7 +117,7 @@ public class Dialog extends UIRequest implements IContainer {
 	/**
 	 * Use this helper class to create a UIRequest that is easy to use. This
 	 * Dialog extends UIRequest so you can use it with a UICaller.
-	 * 
+	 *
 	 * @param user
 	 *            The user to which the request is addressed.
 	 * @param title
@@ -140,7 +140,7 @@ public class Dialog extends UIRequest implements IContainer {
 	 * be reused. When creating a Form Control, pass it the property path in the
 	 * root Resource to the right value and it will be set as initial value for
 	 * that Control.
-	 * 
+	 *
 	 * @param user
 	 *            The user to which the request is addressed.
 	 * @param title
@@ -161,7 +161,7 @@ public class Dialog extends UIRequest implements IContainer {
 	/**
 	 * Sets the properties of the request to the right initial values specified
 	 * by the constructors.
-	 * 
+	 *
 	 * @param user
 	 *            The user to which the request is addressed.
 	 * @param title
@@ -183,7 +183,7 @@ public class Dialog extends UIRequest implements IContainer {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.universAAL.support.utils.ui.IContainer#add(org.universAAL.samples.ui.
 	 * utils.SimpleControl)
@@ -195,7 +195,7 @@ public class Dialog extends UIRequest implements IContainer {
 	/**
 	 * Add a Submit Form Control to the Submit group of the Dialog. Submit group
 	 * is for Submits that end the dialog or lead to new dialogs.
-	 * 
+	 *
 	 * @param ctrl
 	 *            The Submit to add
 	 * @return The String representing the ID to be used to identify the Submit
@@ -212,7 +212,7 @@ public class Dialog extends UIRequest implements IContainer {
 	 * hidden input can be retrieved by calling
 	 * <code>uiresponse.getUserInput(new String[]{ref});</code> , being
 	 * <code>ref</code> the one you used in this method.
-	 * 
+	 *
 	 * @param ref
 	 *            The reference you will use to access the hidden object later
 	 *            from the response
@@ -230,7 +230,7 @@ public class Dialog extends UIRequest implements IContainer {
 	 * setProperty() on a Form object. Use this only as recommended by the
 	 * Handler you intend to use, since it is the Handler the one who will
 	 * interpret the property.
-	 * 
+	 *
 	 * @param property
 	 *            The property of a Form that a certain Handler will inspect for
 	 *            its own purposes.

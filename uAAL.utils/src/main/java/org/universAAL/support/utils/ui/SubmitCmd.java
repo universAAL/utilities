@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -39,13 +39,13 @@ import org.universAAL.support.utils.service.Path;
  * <p>
  * Example render:
  * <p>
- * 
+ *
  * <pre>
  * [Label]
  * </pre>
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public class SubmitCmd extends Control {
 
@@ -81,7 +81,7 @@ public class SubmitCmd extends Control {
 	 * Constructor with the reference of the submit to be used in request and
 	 * response. The reference is a single ID String. All other properties of
 	 * the input are set to defaults (empty).
-	 * 
+	 *
 	 * @param ref
 	 *            The simple reference identifying the input. Set to null to
 	 *            auto-generate.
@@ -93,7 +93,7 @@ public class SubmitCmd extends Control {
 	/**
 	 * Constructor with the reference of the submit to be used in request and
 	 * response. The reference is a single ID String.
-	 * 
+	 *
 	 * @param ref
 	 *            The simple reference identifying the input. Set to null to
 	 *            auto-generate.
@@ -107,7 +107,7 @@ public class SubmitCmd extends Control {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.universAAL.support.utils.ui.Control#create(org.universAAL.middleware.
 	 * ui.rdf.Group)
@@ -146,7 +146,7 @@ public class SubmitCmd extends Control {
 	/**
 	 * Indicates that the InputControl passed as parameter must be filled with a
 	 * value by the user before this Submit is pressed.
-	 * 
+	 *
 	 * @param input
 	 *            The InputControl to make mandatory for this Submit.
 	 */
@@ -168,7 +168,7 @@ public class SubmitCmd extends Control {
 	 * listed submits start with the same string, so you can detect any of them
 	 * when handling the response, and then get the exact submission ID for use
 	 * as REFSUBMIT in the example above.
-	 * 
+	 *
 	 * @param hidden
 	 *            The InputControl to make mandatory for this Submit.
 	 */
@@ -180,7 +180,7 @@ public class SubmitCmd extends Control {
 	 * Get the confirmation message that will appear when this Submit is
 	 * selected by the user. Confirmation is for avoiding accidental selection
 	 * of important Submits.
-	 * 
+	 *
 	 * @return The confirmation message.
 	 */
 	public String getConfirmMessage() {
@@ -191,7 +191,7 @@ public class SubmitCmd extends Control {
 	 * Set the confirmation message that will appear when this Submit is
 	 * selected by the user. Confirmation is for avoiding accidental selection
 	 * of important Submits.
-	 * 
+	 *
 	 * @param confirmMessage
 	 *            The confirmation message.
 	 */
@@ -203,7 +203,7 @@ public class SubmitCmd extends Control {
 	 * Set the confirmation message that will appear when this Submit is
 	 * selected by the user. Confirmation is for avoiding accidental selection
 	 * of important Submits.
-	 * 
+	 *
 	 * @param confirmMessage
 	 *            The confirmation message.
 	 * @param confirmType
@@ -220,7 +220,7 @@ public class SubmitCmd extends Control {
 
 	/**
 	 * Get the type of confirmation message.
-	 * 
+	 *
 	 * @return The type of confirmation. One of org.universAAL.middleware.ui.rdf
 	 *         .Submit.CONFIRMATION_TYPE_OK_CANCEL (0) or
 	 *         org.universAAL.middleware .ui.rdf.Submit.CONFIRMATION_TYPE_YES_NO
@@ -232,7 +232,7 @@ public class SubmitCmd extends Control {
 
 	/**
 	 * Set the type of confirmation message.
-	 * 
+	 *
 	 * @param confirmType
 	 *            The type of confirmation. One of
 	 *            org.universAAL.middleware.ui.rdf

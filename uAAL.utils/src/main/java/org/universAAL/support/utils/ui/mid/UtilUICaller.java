@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -52,9 +52,9 @@ import org.universAAL.middleware.ui.UICaller;
  * 2: Main Menu is automatically updated to include the Submit for this
  * application. Until release 1.1.0 this is done with files "main_menu_*.txt"
  * which are modified to include this application ID.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public abstract class UtilUICaller extends UICaller {
 
@@ -71,7 +71,7 @@ public abstract class UtilUICaller extends UICaller {
 	/**
 	 * Constructor to create a Simple UI Caller that handles first call
 	 * interaction and addition to Main Menu.
-	 * 
+	 *
 	 * @param context
 	 *            The universAAL module context.
 	 * @param namespace
@@ -104,7 +104,7 @@ public abstract class UtilUICaller extends UICaller {
 	/**
 	 * Scans all Dialog Manager Main Menu files and inserts the application
 	 * button.
-	 * 
+	 *
 	 * @param dm
 	 *            Dialog Manger configuration folder.
 	 * @param namespace
@@ -151,7 +151,7 @@ public abstract class UtilUICaller extends UICaller {
 	 * This method is called whenever the user selects your application submit
 	 * from the Main Menu. You should initiate the interaction with the user
 	 * here by publishing some kind of Dialog.
-	 * 
+	 *
 	 * @param resource
 	 *            The User which initiated the interaction. May be an instance
 	 *            of User, AssistedPerson or Caregiver.
@@ -160,7 +160,7 @@ public abstract class UtilUICaller extends UICaller {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.universAAL.support.utils.ui.UICaller#communicationChannelBroken()
 	 */
@@ -171,7 +171,7 @@ public abstract class UtilUICaller extends UICaller {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.universAAL.middleware.ui.UICaller#close()
 	 */
 	@Override
@@ -184,9 +184,9 @@ public abstract class UtilUICaller extends UICaller {
 	 * Internal Service Callee that handles the call to the "start UI" service
 	 * from the Dialog Manager when a user selects the application Submit form
 	 * the Main Menu.
-	 * 
+	 *
 	 * @author alfiva
-	 * 
+	 *
 	 */
 	private class UIcallee extends ServiceCallee {
 
@@ -201,7 +201,7 @@ public abstract class UtilUICaller extends UICaller {
 
 		/**
 		 * Constructs a Service Callee for the "start UI" service.
-		 * 
+		 *
 		 * @param context
 		 *            The universAAL module context.
 		 * @param namespace
@@ -224,7 +224,7 @@ public abstract class UtilUICaller extends UICaller {
 
 		/*
 		 * (non-Javadoc)
-		 * 
+		 *
 		 * @see org.universAAL.middleware.service.ServiceCallee#
 		 * communicationChannelBroken()
 		 */
@@ -235,7 +235,7 @@ public abstract class UtilUICaller extends UICaller {
 
 		/*
 		 * (non-Javadoc)
-		 * 
+		 *
 		 * @see org.universAAL.middleware.service.ServiceCallee#handleCall(org.
 		 * universAAL .middleware.service.ServiceCall)
 		 */

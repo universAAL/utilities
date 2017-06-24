@@ -1,18 +1,18 @@
 /*
 	Copyright 2008-2014 ITACA-TSB, http://www.tsb.upv.es
-	Instituto Tecnologico de Aplicaciones de Comunicacion 
-	Avanzadas - Grupo Tecnologias para la Salud y el 
+	Instituto Tecnologico de Aplicaciones de Comunicacion
+	Avanzadas - Grupo Tecnologias para la Salud y el
 	Bienestar (TSB)
-	
-	See the NOTICE file distributed with this work for additional 
+
+	See the NOTICE file distributed with this work for additional
 	information regarding copyright ownership
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	  http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -28,9 +28,9 @@ import org.universAAL.middleware.ui.rdf.Input;
  * Input Form Controls are UI elements that can be filled with a value by the
  * user and later recovered in a response. All Inputs need a reference Property
  * Path for this.
- * 
+ *
  * @author alfiva
- * 
+ *
  */
 public abstract class InputControl extends Control {
 
@@ -42,7 +42,7 @@ public abstract class InputControl extends Control {
 	/**
 	 * Because Inputs can be mandatory when a Submit is activated, these have to
 	 * be represented by a model to be referenced by the Submit.
-	 * 
+	 *
 	 * @return The model of the Input.
 	 */
 	public Input getModel() {

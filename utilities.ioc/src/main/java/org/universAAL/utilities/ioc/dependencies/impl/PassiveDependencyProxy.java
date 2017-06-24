@@ -1,6 +1,6 @@
 /*
     Copyright 2014 Universidad Politécnica de Madrid UPM
-    
+
     Copyright 2014-2014 CNR-ISTI, http://isti.cnr.it
     Institute of Information Science and Technologies
     of the Italian National Research Council
@@ -29,12 +29,12 @@ import org.universAAL.middleware.container.utils.LogUtils;
 import org.universAAL.utilities.ioc.dependencies.DependencyProxy;
 
 /**
- * 
+ *
  * @author <a href="mailto:stefano.lenzi@isti.cnr.it">Stefano "Kismet" Lenzi</a>
  * @author amedrano
  * @version $LastChangedRevision: 386 $ ($LastChangedDate: 2014-07-22 11:47:16
  *          +0200 (mar, 22 jul 2014) $)
- * 
+ *
  * @param <T>
  */
 public class PassiveDependencyProxy<T> implements DependencyProxy<T>, SharedObjectListener {
