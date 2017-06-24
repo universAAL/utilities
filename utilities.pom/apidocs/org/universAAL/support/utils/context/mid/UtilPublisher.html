@@ -142,8 +142,8 @@ extends org.universAAL.middleware.context.DefaultContextPublisher</pre>
  Example: A publisher that gives events about status of a Heater Actuator.
  <code>
  <p/>publisher = new UtilPublisher(context, DEVICE_INSTANCE_URI,
- <p/>           ContextProviderType.controller, 
- <p/>           new HeaterActuator(DEVICE_INSTANCE_URI), 
+ <p/>           ContextProviderType.controller,
+ <p/>           new HeaterActuator(DEVICE_INSTANCE_URI),
  <p/>           HeaterActuator.PROP_STATUS,
  <p/>           TypeMapper.getDatatypeURI(Boolean.class));
  </code>
