@@ -1,25 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
     <groupId>org.universAAL.support</groupId>
     <artifactId>utilities.pom</artifactId>
-    <version>3.4.1-SNAPSHOT</version>
+    <version>3.4.2-SNAPSHOT</version>
     <relativePath>../utilities.pom</relativePath>
   </parent>
-  
   <artifactId>utilities.ioc</artifactId>
-  <version>3.4.1-SNAPSHOT</version>
+  <version>3.4.2-SNAPSHOT</version>
   <packaging>bundle</packaging>
-
   <name>universAAL Inversion of Control for Dependencies</name>
   <description>An utility library to help manage getting sharedObjects in an container independent way.</description>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-    
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -31,12 +27,12 @@
       <artifactId>mw.container.core</artifactId>
     </dependency>
   </dependencies>
-  
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
         <configuration>
           <instructions>
             <Bundle-Name>${project.name}</Bundle-Name>
@@ -46,7 +42,6 @@
             <DynamicImport-Package>*</DynamicImport-Package>
           </instructions>
         </configuration>
-        <extensions>true</extensions>
       </plugin>
     </plugins>
   </build>

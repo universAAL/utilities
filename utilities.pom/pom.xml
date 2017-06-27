@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.universAAL</groupId>
     <artifactId>uAAL.pom</artifactId>
-    <version>3.4.1-SNAPSHOT</version>
+    <version>3.4.2-SNAPSHOT</version>
   </parent>
   <groupId>org.universAAL.support</groupId>
   <artifactId>utilities.pom</artifactId>
-  <version>3.4.1-SNAPSHOT</version>
+  <version>3.4.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>universAAL Utilities Suite</name>
   <modules>
@@ -18,10 +19,10 @@
   </modules>
   <scm>
     <connection>scm:git:https://github.com/universAAL/utilities.git</connection>
-	<developerConnection>scm:git:git@github.com:universAAL/utilities.git</developerConnection>
+    <developerConnection>scm:git:git@github.com:universAAL/utilities.git</developerConnection>
   </scm>
   <properties>
-    <remoteOBR/>
+    <remoteOBR></remoteOBR>
     <maven.compile.source>1.5</maven.compile.source>
     <maven.compile.target>1.5</maven.compile.target>
   </properties>
@@ -30,38 +31,38 @@
       <dependency>
         <groupId>org.universAAL.middleware</groupId>
         <artifactId>mw.pom.core</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.middleware</groupId>
         <artifactId>mw.pom.osgi</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.ontology</groupId>
         <artifactId>ont.pom</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
-		<groupId>org.universAAL.support</groupId>
+        <groupId>org.universAAL.support</groupId>
         <artifactId>uAAL.utils</artifactId>
-		<version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
       </dependency>
       <dependency>
-		<groupId>org.universAAL.support</groupId>
+        <groupId>org.universAAL.support</groupId>
         <artifactId>utilities.ioc</artifactId>
-		<version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
       </dependency>
       <dependency>
-		<groupId>org.universAAL.support</groupId>
+        <groupId>org.universAAL.support</groupId>
         <artifactId>utilities.karaf.feature</artifactId>
-		<version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
