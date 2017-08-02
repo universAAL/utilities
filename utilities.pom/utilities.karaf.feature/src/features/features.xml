@@ -19,7 +19,8 @@
 		<feature>uAAL-MW</feature> 
 		<feature>uAAL-Ont.Profile</feature> 
 		<feature>uAAL-Ont.Device</feature> 
-		<bundle start-level='75' start='true'>wrap:mvn:org.universAAL.support/uAAL.utils/${uAAL.utils.version}</bundle>
+<!-- 		<bundle start-level='75' start='true'>wrap:mvn:org.universAAL.support/uAAL.utils/${uAAL.utils.version}</bundle> -->
+		<bundle start-level='75' start='true'>wrap:mvn:org.universAAL.support/utilities.api/${utilities.api.version}</bundle>
 	</feature>	
 
 	<feature name="uAAL-Support.IoC" description="Library for managing module dependencies."

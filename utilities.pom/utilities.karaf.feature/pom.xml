@@ -22,6 +22,10 @@
     </dependency>
     <dependency>
       <groupId>org.universAAL.support</groupId>
+      <artifactId>utilities.api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.universAAL.support</groupId>
       <artifactId>utilities.ioc</artifactId>
     </dependency>
     <dependency>

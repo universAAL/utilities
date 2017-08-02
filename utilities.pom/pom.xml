@@ -14,6 +14,7 @@
   <name>universAAL Utilities Suite</name>
   <modules>
     <module>../uAAL.utils</module>
+    <module>../utilities.api</module>
     <module>../utilities.ioc</module>
     <module>utilities.karaf.feature</module>
   </modules>
@@ -52,6 +53,11 @@
       <dependency>
         <groupId>org.universAAL.support</groupId>
         <artifactId>uAAL.utils</artifactId>
+        <version>3.4.2-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.universAAL.support</groupId>
+        <artifactId>utilities.api</artifactId>
         <version>3.4.2-SNAPSHOT</version>
       </dependency>
       <dependency>
