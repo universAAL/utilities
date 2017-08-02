@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="c1805" href="./UtilActuator.html" title="org.universAAL.utilities.api.service.mid.UtilActuator" alt="" coords="15,17,105,42"/>
+<area shape="rect" id="node1" href="./UtilActuator.html" title="&lt;TABLE&gt;" alt="" coords="5,5,115,53"/>
+<area shape="rect" id="c1806" href="./UtilSensor.html" title="org.universAAL.utilities.api.service.mid.UtilSensor" alt="" coords="149,17,230,42"/>
+<area shape="rect" id="node2" href="./UtilSensor.html" title="&lt;TABLE&gt;" alt="" coords="139,5,240,53"/>
+<area shape="rect" id="c1807" href="./InvalidOntologyUtilException.html" title="org.universAAL.utilities.api.service.mid.InvalidOntologyUtilException" alt="" coords="275,17,464,42"/>
+<area shape="rect" id="node3" href="./InvalidOntologyUtilException.html" title="&lt;TABLE&gt;" alt="" coords="264,5,475,53"/>
+<area shape="rect" id="c1808" href="./UtilEditor.html" title="org.universAAL.utilities.api.service.mid.UtilEditor" alt="" coords="509,17,584,42"/>
+<area shape="rect" id="node4" href="./UtilEditor.html" title="&lt;TABLE&gt;" alt="" coords="499,5,595,53"/>
+</map>

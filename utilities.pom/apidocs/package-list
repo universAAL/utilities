@@ -9,5 +9,16 @@ org.universAAL.support.utils.service.top
 org.universAAL.support.utils.ui
 org.universAAL.support.utils.ui.low
 org.universAAL.support.utils.ui.mid
+org.universAAL.utilities.api
+org.universAAL.utilities.api.context
+org.universAAL.utilities.api.context.low
+org.universAAL.utilities.api.context.mid
+org.universAAL.utilities.api.service
+org.universAAL.utilities.api.service.low
+org.universAAL.utilities.api.service.mid
+org.universAAL.utilities.api.service.top
+org.universAAL.utilities.api.ui
+org.universAAL.utilities.api.ui.low
+org.universAAL.utilities.api.ui.mid
 org.universAAL.utilities.ioc.dependencies
 org.universAAL.utilities.ioc.dependencies.impl

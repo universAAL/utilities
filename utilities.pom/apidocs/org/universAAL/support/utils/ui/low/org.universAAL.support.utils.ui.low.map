@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="c522" href="./Message.html" title="org.universAAL.support.utils.ui.low.Message" alt="" coords="15,17,89,42"/>
+<area shape="rect" id="c963" href="./Message.html" title="org.universAAL.support.utils.ui.low.Message" alt="" coords="15,17,89,42"/>
 <area shape="rect" id="node1" href="./Message.html" title="&lt;TABLE&gt;" alt="" coords="5,5,99,53"/>
-<area shape="rect" id="c523" href="./Dialog.html" title="org.universAAL.support.utils.ui.low.Dialog" alt="" coords="133,17,190,42"/>
+<area shape="rect" id="c964" href="./Dialog.html" title="org.universAAL.support.utils.ui.low.Dialog" alt="" coords="133,17,190,42"/>
 <area shape="rect" id="node2" href="./Dialog.html" title="&lt;TABLE&gt;" alt="" coords="123,5,200,53"/>
-<area shape="rect" id="c524" href="./SubDialog.html" title="org.universAAL.support.utils.ui.low.SubDialog" alt="" coords="234,17,315,42"/>
+<area shape="rect" id="c965" href="./SubDialog.html" title="org.universAAL.support.utils.ui.low.SubDialog" alt="" coords="234,17,315,42"/>
 <area shape="rect" id="node3" href="./SubDialog.html" title="&lt;TABLE&gt;" alt="" coords="224,5,325,53"/>
 </map>
