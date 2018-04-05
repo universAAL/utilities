@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="c3211" href="./DataTable.html" title="org.universAAL.support.utils.ui.DataTable" alt="" coords="65,118,146,143"/>
-<area shape="rect" id="node1" href="./DataTable.html" title="&lt;TABLE&gt;" alt="" coords="55,107,156,155"/>
-<area shape="rect" id="c3215" href="./Control.html" title="org.universAAL.support.utils.ui.Control" alt="" coords="15,19,78,45"/>
-<area shape="rect" id="node2" href="./Control.html" title="&lt;TABLE&gt;" alt="" coords="5,8,88,56"/>
-<area shape="rect" id="c3216" href="./IContainer.html" title="org.universAAL.support.utils.ui.IContainer" alt="" coords="123,11,208,53"/>
-<area shape="rect" id="node3" href="./IContainer.html" title="&lt;TABLE&gt;" alt="" coords="112,6,219,58"/>
+<area shape="rect" id="node1_0" href="./DataTable.html" title="org.universAAL.support.utils.ui.DataTable" alt="" coords="66,120,147,147"/>
+<area shape="rect" id="node1" href="./DataTable.html" title="&lt;TABLE&gt;" alt="" coords="55,109,158,157"/>
+<area shape="rect" id="node2_1" href="./Control.html" title="org.universAAL.support.utils.ui.Control" alt="" coords="15,20,78,47"/>
+<area shape="rect" id="node2" href="./Control.html" title="&lt;TABLE&gt;" alt="" coords="5,9,89,57"/>
+<area shape="rect" id="node3_2" href="./IContainer.html" title="org.universAAL.support.utils.ui.IContainer" alt="" coords="124,11,209,55"/>
+<area shape="rect" id="node3" href="./IContainer.html" title="&lt;TABLE&gt;" alt="" coords="113,6,220,61"/>
 </map>
