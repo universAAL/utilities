@@ -38,7 +38,7 @@
             <Bundle-Name>${project.name}</Bundle-Name>
             <Bundle-Description>${project.description}</Bundle-Description>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-            <Export-Package>org.universAAL.ioc.dependencies,org.universAAL.ioc.dependencies.impl</Export-Package>
+            <Export-Package>org.universAAL.utilities.ioc.dependencies,org.universAAL.utilities.ioc.dependencies.impl</Export-Package>
             <DynamicImport-Package>*</DynamicImport-Package>
           </instructions>
         </configuration>
