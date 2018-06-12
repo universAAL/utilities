@@ -13,7 +13,6 @@
   <packaging>pom</packaging>
   <name>universAAL Utilities Suite</name>
   <modules>
-    <module>../uAAL.utils</module>
     <module>../utilities.api</module>
     <module>../utilities.ioc</module>
     <module>utilities.karaf.feature</module>
@@ -49,11 +48,6 @@
         <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.universAAL.support</groupId>
-        <artifactId>uAAL.utils</artifactId>
-        <version>3.4.2-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.universAAL.support</groupId>
