@@ -25,10 +25,10 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2018 universAAL Consortium</copyright>
     <item>
-      <title>File: 102,
-             Errors: 392,
+      <title>File: 53,
+             Errors: 224,
              Warnings: 4,
-             Infos: 14
+             Infos: 7
       </title>
             <link>http://xtras/utilities/utilities.pom//checkstyle.html</link>
       <description>
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.IUIListener.java">org/universAAL/support/utils/IUIListener.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.Typematch.java">org/universAAL/utilities/api/service/Typematch.java</a>
                 </td>
                 <td>
                   0
@@ -55,12 +55,26 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
+                  1
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.Typematch.java">org/universAAL/utilities/api/service/Typematch.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.Area.java">org/universAAL/utilities/api/ui/Area.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.top.UtilActuatorCallee.java">org/universAAL/utilities/api/service/top/UtilActuatorCallee.java</a>
                 </td>
                 <td>
                   0
@@ -84,20 +98,6 @@ under the License.
                 </td>
                 <td>
                   10
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.low.Profile.java">org/universAAL/support/utils/service/low/Profile.java</a>
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  20
                 </td>
               </tr>
                           <tr>
@@ -130,21 +130,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.TriggerCmd.java">org/universAAL/support/utils/ui/TriggerCmd.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Output.java">org/universAAL/support/utils/service/Output.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.top.UtilEditorCallee.java">org/universAAL/utilities/api/service/top/UtilEditorCallee.java</a>
                 </td>
                 <td>
                   0
@@ -154,20 +140,6 @@ under the License.
                 </td>
                 <td>
                   1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Variable.java">org/universAAL/support/utils/service/Variable.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
                 </td>
               </tr>
                           <tr>
@@ -186,7 +158,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.low.Dialog.java">org/universAAL/support/utils/ui/low/Dialog.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.context.mid.UtilSubscriber.java">org/universAAL/utilities/api/context/mid/UtilSubscriber.java</a>
                 </td>
                 <td>
                   0
@@ -195,7 +167,35 @@ under the License.
                   0
                 </td>
                 <td>
-                  5
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.Arg.java">org/universAAL/utilities/api/service/Arg.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.mid.UtilActuator.java">org/universAAL/utilities/api/service/mid/UtilActuator.java</a>
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
                 </td>
               </tr>
                           <tr>
@@ -210,6 +210,20 @@ under the License.
                 </td>
                 <td>
                   2
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.Grouping.java">org/universAAL/utilities/api/ui/Grouping.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
                 </td>
               </tr>
                           <tr>
@@ -256,651 +270,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.context.mid.UtilSubscriber.java">org/universAAL/support/utils/context/mid/UtilSubscriber.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.mid.InvalidOntologyUtilException.java">org/universAAL/support/utils/service/mid/InvalidOntologyUtilException.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.Output.java">org/universAAL/utilities/api/service/Output.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.WrapperUI.java">org/universAAL/utilities/api/WrapperUI.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.mid.UtilSensor.java">org/universAAL/support/utils/service/mid/UtilSensor.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.mid.InvalidOntologyUtilException.java">org/universAAL/utilities/api/service/mid/InvalidOntologyUtilException.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Remove.java">org/universAAL/support/utils/service/Remove.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.UAAL.java">org/universAAL/utilities/api/UAAL.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  6
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ICListener.java">org/universAAL/utilities/api/ICListener.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.Out.java">org/universAAL/utilities/api/ui/Out.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.low.Message.java">org/universAAL/support/utils/ui/low/Message.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.low.Request.java">org/universAAL/utilities/api/service/low/Request.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  13
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.Add.java">org/universAAL/utilities/api/service/Add.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.SelectOne.java">org/universAAL/utilities/api/ui/SelectOne.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.SelectMulti.java">org/universAAL/support/utils/ui/SelectMulti.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  7
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ISListener.java">org/universAAL/support/utils/ISListener.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Media.java">org/universAAL/support/utils/ui/Media.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  6
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.WrapperS.java">org/universAAL/utilities/api/WrapperS.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.PassiveDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/PassiveDependencyProxy.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  18
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.WrapperC.java">org/universAAL/support/utils/WrapperC.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.WrapperS.java">org/universAAL/support/utils/WrapperS.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Area.java">org/universAAL/support/utils/ui/Area.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.DataTable.java">org/universAAL/utilities/api/ui/DataTable.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  14
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ISListener.java">org/universAAL/utilities/api/ISListener.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.Variable.java">org/universAAL/utilities/api/service/Variable.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.low.SubDialog.java">org/universAAL/support/utils/ui/low/SubDialog.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.mid.UtilUICaller.java">org/universAAL/support/utils/ui/mid/UtilUICaller.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.Text.java">org/universAAL/utilities/api/ui/Text.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.InputControl.java">org/universAAL/utilities/api/ui/InputControl.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.low.SubDialog.java">org/universAAL/utilities/api/ui/low/SubDialog.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.SubmitCmd.java">org/universAAL/support/utils/ui/SubmitCmd.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  10
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.Area.java">org/universAAL/utilities/api/ui/Area.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.top.UtilActuatorCallee.java">org/universAAL/utilities/api/service/top/UtilActuatorCallee.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Out.java">org/universAAL/support/utils/ui/Out.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.top.UtilEditorCallee.java">org/universAAL/utilities/api/service/top/UtilEditorCallee.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Arg.java">org/universAAL/support/utils/service/Arg.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.SelectRange.java">org/universAAL/support/utils/ui/SelectRange.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  13
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.context.mid.UtilSubscriber.java">org/universAAL/utilities/api/context/mid/UtilSubscriber.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Control.java">org/universAAL/support/utils/ui/Control.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  10
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.Arg.java">org/universAAL/utilities/api/service/Arg.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.top.UtilActuatorCallee.java">org/universAAL/support/utils/service/top/UtilActuatorCallee.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.mid.UtilActuator.java">org/universAAL/utilities/api/service/mid/UtilActuator.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.mid.UtilEditor.java">org/universAAL/support/utils/service/mid/UtilEditor.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.Grouping.java">org/universAAL/utilities/api/ui/Grouping.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.context.mid.UtilPublisher.java">org/universAAL/support/utils/context/mid/UtilPublisher.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Forms.java">org/universAAL/support/utils/ui/Forms.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Typematch.java">org/universAAL/support/utils/service/Typematch.java</a>
                 </td>
                 <td>
                   0
@@ -956,7 +326,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.SelectOne.java">org/universAAL/support/utils/ui/SelectOne.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.WrapperUI.java">org/universAAL/utilities/api/WrapperUI.java</a>
                 </td>
                 <td>
                   0
@@ -984,7 +354,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.IContainer.java">org/universAAL/support/utils/ui/IContainer.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.mid.InvalidOntologyUtilException.java">org/universAAL/utilities/api/service/mid/InvalidOntologyUtilException.java</a>
                 </td>
                 <td>
                   0
@@ -993,12 +363,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
+                  2
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.InputControl.java">org/universAAL/support/utils/ui/InputControl.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.UAAL.java">org/universAAL/utilities/api/UAAL.java</a>
                 </td>
                 <td>
                   0
@@ -1007,35 +377,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.context.low.Provider.java">org/universAAL/support/utils/context/low/Provider.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ICListener.java">org/universAAL/support/utils/ICListener.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
+                  6
                 </td>
               </tr>
                           <tr>
@@ -1068,35 +410,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Value.java">org/universAAL/support/utils/service/Value.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.top.UtilSensorCallee.java">org/universAAL/support/utils/service/top/UtilSensorCallee.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ICListener.java">org/universAAL/utilities/api/ICListener.java</a>
                 </td>
                 <td>
                   1
                 </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Add.java">org/universAAL/support/utils/service/Add.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.Out.java">org/universAAL/utilities/api/ui/Out.java</a>
                 </td>
                 <td>
                   0
@@ -1105,7 +433,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  2
+                  4
                 </td>
               </tr>
                           <tr>
@@ -1138,7 +466,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.WrapperUI.java">org/universAAL/support/utils/WrapperUI.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.low.Request.java">org/universAAL/utilities/api/service/low/Request.java</a>
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.Add.java">org/universAAL/utilities/api/service/Add.java</a>
                 </td>
                 <td>
                   0
@@ -1152,7 +494,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Change.java">org/universAAL/support/utils/service/Change.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.SelectOne.java">org/universAAL/utilities/api/ui/SelectOne.java</a>
                 </td>
                 <td>
                   0
@@ -1180,20 +522,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Check.java">org/universAAL/support/utils/ui/Check.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.Media.java">org/universAAL/utilities/api/ui/Media.java</a>
                 </td>
                 <td>
@@ -1204,20 +532,6 @@ under the License.
                 </td>
                 <td>
                   6
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.context.Pattern.java">org/universAAL/support/utils/context/Pattern.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
                 </td>
               </tr>
                           <tr>
@@ -1236,6 +550,34 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.WrapperS.java">org/universAAL/utilities/api/WrapperS.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.PassiveDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/PassiveDependencyProxy.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  18
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.WaitingDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.java</a>
                 </td>
                 <td>
@@ -1246,48 +588,6 @@ under the License.
                 </td>
                 <td>
                   20
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.UAAL.java">org/universAAL/support/utils/UAAL.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  6
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.low.Request.java">org/universAAL/support/utils/service/low/Request.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  13
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.DataTable.java">org/universAAL/support/utils/ui/DataTable.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  14
                 </td>
               </tr>
                           <tr>
@@ -1306,20 +606,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Grouping.java">org/universAAL/support/utils/ui/Grouping.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.SubmitCmd.java">org/universAAL/utilities/api/ui/SubmitCmd.java</a>
                 </td>
                 <td>
@@ -1330,34 +616,6 @@ under the License.
                 </td>
                 <td>
                   10
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.Path.java">org/universAAL/support/utils/service/Path.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.ui.Text.java">org/universAAL/support/utils/ui/Text.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
                 </td>
               </tr>
                           <tr>
@@ -1376,16 +634,44 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.mid.UtilActuator.java">org/universAAL/support/utils/service/mid/UtilActuator.java</a>
-                </td>
-                <td>
-                  1
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.DataTable.java">org/universAAL/utilities/api/ui/DataTable.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  1
+                  0
+                </td>
+                <td>
+                  14
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ISListener.java">org/universAAL/utilities/api/ISListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.service.Variable.java">org/universAAL/utilities/api/service/Variable.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
                 </td>
               </tr>
                           <tr>
@@ -1418,6 +704,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.Text.java">org/universAAL/utilities/api/ui/Text.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.low.Dialog.java">org/universAAL/utilities/api/ui/low/Dialog.java</a>
                 </td>
                 <td>
@@ -1446,7 +746,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.support.utils.service.top.UtilEditorCallee.java">org/universAAL/support/utils/service/top/UtilEditorCallee.java</a>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.InputControl.java">org/universAAL/utilities/api/ui/InputControl.java</a>
                 </td>
                 <td>
                   0
@@ -1456,6 +756,20 @@ under the License.
                 </td>
                 <td>
                   1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.api.ui.low.SubDialog.java">org/universAAL/utilities/api/ui/low/SubDialog.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
                 </td>
               </tr>
                           <tr>

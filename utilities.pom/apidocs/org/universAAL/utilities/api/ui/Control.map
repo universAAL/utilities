@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./Grouping.html" title="org.universAAL.utilities.api.ui.Grouping" alt="" coords="15,112,89,139"/>
+<area shape="rect" id="node1" href="./Grouping.html" title="&lt;TABLE&gt;" alt="" coords="5,101,99,149"/>
+<area shape="rect" id="node2_1" href="./Media.html" title="org.universAAL.utilities.api.ui.Media" alt="" coords="135,112,191,139"/>
+<area shape="rect" id="node2" href="./Media.html" title="&lt;TABLE&gt;" alt="" coords="124,101,201,149"/>
+<area shape="rect" id="node3_2" href="./Out.html" title="org.universAAL.utilities.api.ui.Out" alt="" coords="241,112,282,139"/>
+<area shape="rect" id="node3" href="./Out.html" title="&lt;TABLE&gt;" alt="" coords="225,101,297,149"/>
+<area shape="rect" id="node4_3" href="./DataTable.html" title="org.universAAL.utilities.api.ui.DataTable" alt="" coords="333,112,414,139"/>
+<area shape="rect" id="node4" href="./DataTable.html" title="&lt;TABLE&gt;" alt="" coords="322,101,425,149"/>
+<area shape="rect" id="node5_4" href="./SubmitCmd.html" title="org.universAAL.utilities.api.ui.SubmitCmd" alt="" coords="459,112,549,139"/>
+<area shape="rect" id="node5" href="./SubmitCmd.html" title="&lt;TABLE&gt;" alt="" coords="449,101,559,149"/>
+<area shape="rect" id="node6_5" href="./Control.html" title="org.universAAL.utilities.api.ui.Control" alt="" coords="286,16,349,43"/>
+<area shape="rect" id="node6" href="./Control.html" title="&lt;TABLE&gt;" alt="" coords="275,5,359,53"/>
+<area shape="rect" id="node7_6" href="./InputControl.html" title="org.universAAL.utilities.api.ui.InputControl" alt="" coords="594,112,686,139"/>
+<area shape="rect" id="node7" href="./InputControl.html" title="&lt;TABLE&gt;" alt="" coords="583,101,697,149"/>
+</map>
