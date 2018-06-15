@@ -124,6 +124,16 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">NPEDependencyProxy&lt;T&gt;</span>
 extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies">DependencyProxy</a>&lt;T&gt;</pre>
+<div class="block"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html" title="class in org.universAAL.utilities.ioc.dependencies.impl"><code>NPEDependencyProxy</code></a> or Null Pointer Exception Dependency Proxy will
+ wrap the shared object and attempt resolution only on
+ <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html#getObject--"><code>getObject()</code></a>. Resoultion might fail, thus you may
+ have an null (and therefore an <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang"><code>NullPointerException</code></a> when trying to
+ use the object.
+ 
+ This <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies"><code>DependencyProxy</code></a> might be useful in cases where the shared object
+ is optional and the requester needs to know whether the object is shared or
+ not; or the requester has mechanisms to handle other tasks when the object is
+ not shared.</div>
 <dl>
 <dt><span class="simpleTagLabel">Version:</span></dt>
 <dd>$LastChangedRevision$ ($LastChangedDate$)</dd>
@@ -168,19 +178,27 @@ implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html#getFilters--">getFilters</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html#getFilters--">getFilters</a></span>()</code>
+<div class="block">Retrieve the shared object filters.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html" title="type parameter in NPEDependencyProxy">T</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html#getObject--">getObject</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html#getObject--">getObject</a></span>()</code>
+<div class="block">Retrieve the shared object wrapped by this <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies"><code>DependencyProxy</code></a>.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html#isResolved--">isResolved</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html#isResolved--">isResolved</a></span>()</code>
+<div class="block">Inquiry as whether the object is resolved or not.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html#setObject-T-">setObject</a></span>(<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html" title="type parameter in NPEDependencyProxy">T</a>&nbsp;value)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html#setObject-T-">setObject</a></span>(<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html" title="type parameter in NPEDependencyProxy">T</a>&nbsp;value)</code>
+<div class="block">Change the wrapped object.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -229,9 +247,13 @@ implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/
 <li class="blockList">
 <h4>isResolved</h4>
 <pre>public&nbsp;boolean&nbsp;isResolved()</pre>
+<div class="block">Inquiry as whether the object is resolved or not. If returns true,
+ <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#getObject--"><code>DependencyProxy.getObject()</code></a> will not return null.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#isResolved--">isResolved</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies">DependencyProxy</a>&lt;<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html" title="type parameter in NPEDependencyProxy">T</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if object is resolved.</dd>
 </dl>
 </li>
 </ul>
@@ -242,9 +264,12 @@ implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/
 <li class="blockList">
 <h4>getFilters</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;getFilters()</pre>
+<div class="block">Retrieve the shared object filters.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#getFilters--">getFilters</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies">DependencyProxy</a>&lt;<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html" title="type parameter in NPEDependencyProxy">T</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The current object filters used.</dd>
 </dl>
 </li>
 </ul>
@@ -255,9 +280,13 @@ implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/
 <li class="blockList">
 <h4>getObject</h4>
 <pre>public&nbsp;<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html" title="type parameter in NPEDependencyProxy">T</a>&nbsp;getObject()</pre>
+<div class="block">Retrieve the shared object wrapped by this <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies"><code>DependencyProxy</code></a>. This
+ call may be blocking.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#getObject--">getObject</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies">DependencyProxy</a>&lt;<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html" title="type parameter in NPEDependencyProxy">T</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The object, or null if unable to resolve.</dd>
 </dl>
 </li>
 </ul>
@@ -270,9 +299,12 @@ implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/
 <li class="blockList">
 <h4>setObject</h4>
 <pre>public&nbsp;void&nbsp;setObject(<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html" title="type parameter in NPEDependencyProxy">T</a>&nbsp;value)</pre>
+<div class="block">Change the wrapped object. Requesters may not want to use this method.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#setObject-T-">setObject</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies">DependencyProxy</a>&lt;<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.html" title="type parameter in NPEDependencyProxy">T</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>value</code> - The wrapped object.</dd>
 </dl>
 </li>
 </ul>

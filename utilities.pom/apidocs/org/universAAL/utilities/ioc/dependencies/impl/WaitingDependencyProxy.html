@@ -124,6 +124,13 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">WaitingDependencyProxy&lt;T&gt;</span>
 extends <a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies">DependencyProxy</a>&lt;T&gt;</pre>
+<div class="block">This <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies"><code>DependencyProxy</code></a> will wait for a given time before automatically
+ re-attempting resolution again. This process is repeated until a given time
+ out.
+ 
+ This <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies"><code>DependencyProxy</code></a> may be used in instances where the shared object
+ is needed, and the requester thread can wait, but also can handle the case
+ when the shared object is not found.</div>
 <dl>
 <dt><span class="simpleTagLabel">Version:</span></dt>
 <dd>$LastChangedRevision$ ($LastChangedDate$)</dd>
@@ -172,19 +179,27 @@ implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html#getFilters--">getFilters</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html#getFilters--">getFilters</a></span>()</code>
+<div class="block">Retrieve the shared object filters.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html" title="type parameter in WaitingDependencyProxy">T</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html#getObject--">getObject</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html#getObject--">getObject</a></span>()</code>
+<div class="block">Retrieve the shared object wrapped by this <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies"><code>DependencyProxy</code></a>.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html#isResolved--">isResolved</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html#isResolved--">isResolved</a></span>()</code>
+<div class="block">Inquiry as whether the object is resolved or not.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html#setObject-T-">setObject</a></span>(<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html" title="type parameter in WaitingDependencyProxy">T</a>&nbsp;value)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html#setObject-T-">setObject</a></span>(<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html" title="type parameter in WaitingDependencyProxy">T</a>&nbsp;value)</code>
+<div class="block">Change the wrapped object.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -243,9 +258,14 @@ implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/
 <li class="blockList">
 <h4>isResolved</h4>
 <pre>public&nbsp;boolean&nbsp;isResolved()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#isResolved--">DependencyProxy</a></code></span></div>
+<div class="block">Inquiry as whether the object is resolved or not. If returns true,
+ <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#getObject--"><code>DependencyProxy.getObject()</code></a> will not return null.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#isResolved--">isResolved</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies">DependencyProxy</a>&lt;<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html" title="type parameter in WaitingDependencyProxy">T</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if object is resolved.</dd>
 </dl>
 </li>
 </ul>
@@ -256,9 +276,13 @@ implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/
 <li class="blockList">
 <h4>getFilters</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>[]&nbsp;getFilters()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#getFilters--">DependencyProxy</a></code></span></div>
+<div class="block">Retrieve the shared object filters.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#getFilters--">getFilters</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies">DependencyProxy</a>&lt;<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html" title="type parameter in WaitingDependencyProxy">T</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The current object filters used.</dd>
 </dl>
 </li>
 </ul>
@@ -269,9 +293,14 @@ implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/
 <li class="blockList">
 <h4>getObject</h4>
 <pre>public&nbsp;<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html" title="type parameter in WaitingDependencyProxy">T</a>&nbsp;getObject()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#getObject--">DependencyProxy</a></code></span></div>
+<div class="block">Retrieve the shared object wrapped by this <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies"><code>DependencyProxy</code></a>. This
+ call may be blocking.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#getObject--">getObject</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies">DependencyProxy</a>&lt;<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html" title="type parameter in WaitingDependencyProxy">T</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The object, or null if unable to resolve.</dd>
 </dl>
 </li>
 </ul>
@@ -284,9 +313,13 @@ implements <a href="../../../../../../org/universAAL/utilities/ioc/dependencies/
 <li class="blockList">
 <h4>setObject</h4>
 <pre>public&nbsp;void&nbsp;setObject(<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html" title="type parameter in WaitingDependencyProxy">T</a>&nbsp;value)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#setObject-T-">DependencyProxy</a></code></span></div>
+<div class="block">Change the wrapped object. Requesters may not want to use this method.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html#setObject-T-">setObject</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../org/universAAL/utilities/ioc/dependencies/DependencyProxy.html" title="interface in org.universAAL.utilities.ioc.dependencies">DependencyProxy</a>&lt;<a href="../../../../../../org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.html" title="type parameter in WaitingDependencyProxy">T</a>&gt;</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>value</code> - The wrapped object.</dd>
 </dl>
 </li>
 </ul>

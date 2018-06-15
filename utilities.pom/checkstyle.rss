@@ -26,9 +26,9 @@ under the License.
     <copyright>&#169;2018 universAAL Consortium</copyright>
     <item>
       <title>File: 53,
-             Errors: 224,
+             Errors: 216,
              Warnings: 4,
-             Infos: 7
+             Infos: 22
       </title>
             <link>http://xtras/utilities/utilities.pom//checkstyle.html</link>
       <description>
@@ -231,13 +231,13 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.NPEDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/NPEDependencyProxy.java</a>
                 </td>
                 <td>
-                  0
+                  3
                 </td>
                 <td>
                   2
                 </td>
                 <td>
-                  13
+                  9
                 </td>
               </tr>
                           <tr>
@@ -343,13 +343,13 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.DependencyProxy.java">org/universAAL/utilities/ioc/dependencies/DependencyProxy.java</a>
                 </td>
                 <td>
-                  0
+                  6
                 </td>
                 <td>
                   1
                 </td>
                 <td>
-                  5
+                  1
                 </td>
               </tr>
                           <tr>
@@ -567,7 +567,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.PassiveDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/PassiveDependencyProxy.java</a>
                 </td>
                 <td>
-                  0
+                  3
                 </td>
                 <td>
                   1
@@ -581,7 +581,7 @@ under the License.
                   <a href="http://xtras/utilities/utilities.pom//checkstyle.html#org.universAAL.utilities.ioc.dependencies.impl.WaitingDependencyProxy.java">org/universAAL/utilities/ioc/dependencies/impl/WaitingDependencyProxy.java</a>
                 </td>
                 <td>
-                  0
+                  3
                 </td>
                 <td>
                   0
