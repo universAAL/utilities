@@ -26,10 +26,17 @@ import java.util.Arrays;
 import org.universAAL.utilities.ioc.dependencies.DependencyProxy;
 
 /**
- *
+ * This {@link DependencyProxy} will wait for a given time before automatically
+ * re-attempting resolution again. This process is repeated until a given time
+ * out.
+ * 
+ * This {@link DependencyProxy} may be used in instances where the shared object
+ * is needed, and the requester thread can wait, but also can handle the case
+ * when the shared object is not found.
+ * 
  * @author <a href="mailto:stefano.lenzi@isti.cnr.it">Stefano "Kismet" Lenzi</a>
  * @version $LastChangedRevision$ ($LastChangedDate$)
- *
+ * 
  */
 public class WaitingDependencyProxy<T> implements DependencyProxy<T> {
 

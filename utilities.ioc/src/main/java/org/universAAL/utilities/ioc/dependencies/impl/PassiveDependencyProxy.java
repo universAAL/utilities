@@ -29,15 +29,25 @@ import org.universAAL.middleware.container.utils.LogUtils;
 import org.universAAL.utilities.ioc.dependencies.DependencyProxy;
 
 /**
- *
+ * This {@link DependencyProxy} can be created normally, resolution will be
+ * passively attempted on init. If the resolution was not The thread will be
+ * blocked indefinitely until the sharedObject is asynchronously notified. It
+ * will also adapt when the shared object is removed.
+ * 
+ * This {@link DependencyProxy} may be used when the shared object is required,
+ * but only on specific occasions, but these usages may be blocked until the
+ * shared object is available. It is also useful when the shared object may be
+ * shared and removed in a very dynamic manner.
+ * 
  * @author <a href="mailto:stefano.lenzi@isti.cnr.it">Stefano "Kismet" Lenzi</a>
  * @author amedrano
  * @version $LastChangedRevision: 386 $ ($LastChangedDate: 2014-07-22 11:47:16
  *          +0200 (mar, 22 jul 2014) $)
- *
+ * 
  * @param <T>
  */
-public class PassiveDependencyProxy<T> implements DependencyProxy<T>, SharedObjectListener {
+public class PassiveDependencyProxy<T> implements DependencyProxy<T>,
+		SharedObjectListener {
 
 	private final Object[] filters;
 	private T proxy;
@@ -45,7 +55,8 @@ public class PassiveDependencyProxy<T> implements DependencyProxy<T>, SharedObje
 	private Class<?> objectType;
 	private ModuleContext context;
 
-	public PassiveDependencyProxy(final ModuleContext ctxt, final Object[] filters) {
+	public PassiveDependencyProxy(final ModuleContext ctxt,
+			final Object[] filters) {
 		context = ctxt;
 		try {
 			this.objectType = Class.forName((String) filters[0]);
@@ -53,7 +64,8 @@ public class PassiveDependencyProxy<T> implements DependencyProxy<T>, SharedObje
 			throw new RuntimeException("Bad filtering", ex);
 		}
 		this.filters = filters;
-		final Object[] ref = context.getContainer().fetchSharedObject(context, filters, this);
+		final Object[] ref = context.getContainer().fetchSharedObject(context,
+				filters, this);
 		if (ref != null && ref.length > 0) {
 			try {
 				proxy = (T) ref[0];
@@ -92,9 +104,11 @@ public class PassiveDependencyProxy<T> implements DependencyProxy<T>, SharedObje
 		}
 	}
 
-	public void sharedObjectAdded(final Object sharedObj, final Object removeHook) {
+	public void sharedObjectAdded(final Object sharedObj,
+			final Object removeHook) {
 		try {
-			if (sharedObj == null || objectType.isAssignableFrom(sharedObj.getClass()) == false) {
+			if (sharedObj == null
+					|| objectType.isAssignableFrom(sharedObj.getClass()) == false) {
 				return;
 				/*
 				 * //XXX This is a workaround: Workaround to avoid issue in the
@@ -105,7 +119,8 @@ public class PassiveDependencyProxy<T> implements DependencyProxy<T>, SharedObje
 			setObject((T) sharedObj);
 			this.remH = removeHook;
 		} catch (final Exception e) {
-			LogUtils.logError(context, getClass(), "sharedObjectAdded", new String[] { "unexpected Exception" }, e);
+			LogUtils.logError(context, getClass(), "sharedObjectAdded",
+					new String[] { "unexpected Exception" }, e);
 		}
 	}
 

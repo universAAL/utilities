@@ -21,19 +21,44 @@
 package org.universAAL.utilities.ioc.dependencies;
 
 /**
- *
+ * This interface is used to wrap shared object. All implementations of this
+ * interface will implement different methods to find a shared object.
+ * 
  * @author <a href="mailto:stefano.lenzi@isti.cnr.it">Stefano "Kismet" Lenzi</a>
  * @version $LastChangedRevision$ ($LastChangedDate$)
- *
+ * 
  */
 public interface DependencyProxy<T> {
 
+	/**
+	 * Retrieve the shared object filters.
+	 * 
+	 * @return The current object filters used.
+	 */
 	public Object[] getFilters();
 
+	/**
+	 * Retrieve the shared object wrapped by this {@link DependencyProxy}. This
+	 * call may be blocking.
+	 * 
+	 * @return The object, or null if unable to resolve.
+	 */
 	public T getObject();
 
+	/**
+	 * Change the wrapped object. Requesters may not want to use this method.
+	 * 
+	 * @param value
+	 *            The wrapped object.
+	 */
 	public void setObject(T value);
 
+	/**
+	 * Inquiry as whether the object is resolved or not. If returns true,
+	 * {@link DependencyProxy#getObject()} will not return null.
+	 * 
+	 * @return true if object is resolved.
+	 */
 	public boolean isResolved();
 
 }
