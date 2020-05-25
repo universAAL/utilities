@@ -116,6 +116,10 @@ public class PassiveDependencyProxy<T> implements DependencyProxy<T>,
 				 * sharedObject that do not match the filters
 				 */
 			}
+			if (proxy != null) {
+				//already received a valid object, ignore.
+				return;
+			}
 			setObject((T) sharedObj);
 			this.remH = removeHook;
 		} catch (final Exception e) {
